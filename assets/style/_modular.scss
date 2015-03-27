@@ -1,0 +1,150 @@
+/* Modular Scale - 20px @ 1:1.618 - 700px @ 1:1.618
+
+Pixels		Ems			Ems @ 16
+
+939.408		46.97		58.713
+700.000		35			43.75
+580.598		29.03		36.287
+432.633		21.632		27.04
+358.837		17.942		22.427
+267.388		13.369		16.712
+221.778		11.089		13.861
+165.258		8.263		10.329
+137.069		6.853		8.567
+102.137		5.107		6.384
+84.715		4.236		5.295
+63.125		3.156		3.945
+52.358		2.618		3.272
+39.014		1.951		2.438
+32.360		1.618		2.023
+24.112		1.206		1.507
+20.000		1			1.25
+14.902		0.745		0.931
+12.361		0.618		0.773
+9.210		0.461		0.576
+7.640		0.382		0.478
+5.692		0.285		0.356
+4.722		0.236		0.295
+3.518		0.176		0.22
+2.918		0.146		0.182
+2.174		0.109		0.136
+1.803		0.09		0.113
+1.344		0.067		0.084
+1.114		0.056		0.07
+
+*/
+
+// Colors
+$wmRed:				#f70000;
+
+$colorTypeDark:		#3c3c3c;
+
+$facebookBlue:		#3b5998;
+$twitterBlue:		#55acee;
+$instagramBlue:		#517fa4;
+
+$linkNormal: 		#678bd5;
+$linkActive: 		#7198e9;
+$linkVisited: 		#6284ca;
+
+// $buttonNormal:		$colorDark;
+// $buttonHover:		$colorMedium;
+$buttonActive:		black;
+
+$buttonRedNormal:	#e74444;
+$buttonRedHover:	#f94949;
+$buttonRedActive:	#d53f3f;
+
+// Sizes
+$typeDefault:		100%;		// 16px
+$typeOptimal:		1.25em;		// 20px
+$typeMedium:		1.5em;		// 24px
+$typeLarger:		2em;		// 32px
+$typeLarge:			2.5em;		// 40px
+$typeVeryLarge:		4.2em;		// 64px
+
+$sizeTiny:			0.3rem;		// 5px
+$sizeSmall:			0.5rem;		// 8px
+$sizeDefault:		1rem;		// 16px
+$sizeMedium:		1.5rem;		// 24px
+$sizeLarger:		2rem;		// 32px
+$sizeMax:			43.75rem;	// 700px
+
+// Fonts
+$fontBody: 			"Open Sans", Helvetica, Sans-serif;
+$fontAvenir:		"Avenir Next", Georgia, Serif;
+
+.bold {
+	font-weight: 700;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.alignLeft {
+	text-align: left;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatCenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.floatRight {
+	float: right;
+}
+
+.lazy {
+	opacity: 0;
+}
+
+// Border Box
+body, article, section, footer, header, div, input, nav, article ol, article ul {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Clearfix
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.table {
+	display: table;
+}
+
+.fullScreen {
+	height: 100%;
+	width: 100%;
+}
+
+.hide {
+	display: none;
+}
+
+// Buttons

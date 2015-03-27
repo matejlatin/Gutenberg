@@ -1,0 +1,350 @@
+html {
+	color: $colorTypeDark;
+	font-family: $fontBody;
+	font-size: 100%; 						/* 16px */
+    line-height: 1.4375em; 					/* 23px */
+    // -webkit-font-smoothing: antialiased;
+    -moz-font-feature-settings:"salt" 1;
+	-moz-font-feature-settings:"salt=1";
+	-ms-font-feature-settings:"salt" 1;
+	-o-font-feature-settings:"salt" 1;
+	-webkit-font-feature-settings:"salt" 1;
+	font-feature-settings:"salt" 1;
+}
+
+* {
+	line-height: 1.4375em; 					/* 23px */
+}
+
+.verticalGrid {
+	background: url(../assets/images/vertical-grid-16px.gif);
+}
+
+a {
+	color: $linkNormal;
+	text-decoration: underline;
+}
+
+a:active {
+	color: $linkActive;
+}
+
+a:visited {
+	color: $linkVisited;
+}
+
+// Typographic Modular Scale: Minor Third, base: 16px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+table,
+blockquote,
+figure,
+pre{
+	margin-top: 0;
+    margin-bottom: 1.4375em; /* 23px */
+}
+
+h1 {
+  font-size: 34px;
+  font-size: 2.125rem;
+  line-height: 46px; 		// 46px = 2 x 23
+  line-height: 2.875rem; 	// 46px = 2 x 23
+  margin-top: 46px; 		// 46px = 2 x 23
+  margin-top: 2.875rem; 	// 46px = 2 x 23
+  margin-bottom: 23px; 		// 23px
+  margin-bottom: 1.4375rem; // 23px
+  text-transform: uppercase;
+  color: $wmRed;
+  font-family: $fontAvenir;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+h2 {
+  font-size: 23px; 			// 23px = 1.4375 x 16
+  font-size: 1.4375rem; 	// 23px = 1.4375 x 16
+  line-height: 23px; 		// 23px = 1 x 23
+  line-height: 1.4375rem; 	// 23px = 1.4375 x 16
+  margin-top: 46px; 		// 23px
+  margin-top: 2.875rem; 	// 23px
+  margin-bottom: 23px; 		// 23px
+  margin-bottom: 1.4375rem; // 23px
+}
+
+h3 {
+  font-size: 19px; 			// 19px = 1.1875 x 16
+  font-size: 1.1875rem; 	// 23px = 1.1875 x 16
+  line-height: 23px; 		// 23px = 1 x 23
+  line-height: 1.4375rem; 	// 23px = 1.4375 x 16
+  margin-top: 34.5px; 		// 23px
+  margin-top: 2.15625rem; 	// 23px
+  margin-bottom: 11.5px; 		// 23px
+  margin-bottom: 0.71875rem; // 11.5px
+}
+
+h4 {
+  margin-top: 34.5px; 		// 23px
+  margin-top: 2.15625rem; 	// 23px
+  margin-bottom: 11.5px; 		// 23px
+  margin-bottom: 0.71875rem; // 23px
+}
+
+h2 + h3 {
+	margin-top: 23px;
+	margin-top: 1.4375rem;
+	margin-bottom: 23px;
+	margin-bottom: 1.4375rem;
+}
+
+h3 + h4 {
+	margin-bottom: 11.5px;
+	margin-bottom: 0.71875rem;
+	margin-top: 23px;
+	margin-top: 1.4375rem;
+}
+
+ul, ol {
+	padding-left: 46px;
+	padding-left: 2.875rem;
+}
+
+ul li, ol li {
+		margin-bottom: 11.5px;
+		margin-bottom: 0.71875rem;
+	}
+
+blockquote {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+blockquote p {
+	font-size: 27px;
+	font-size: 1.6875rem;
+	line-height: 46px;
+	line-height: 2.875rem;
+	font-family: $fontAvenir;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 1.4375rem;
+}
+
+blockquote footer {
+	text-align: center;
+}
+
+figure + h3, figure + h4 {
+	margin-top: 57.5px;
+	margin-top: 3.59375rem;
+}
+
+img {
+	vertical-align: middle;
+	// max-height: 322px;
+}
+
+small {
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 23px;
+	line-height: 1.4375rem;
+}
+
+figure, figcaption {
+	max-width: 100%;
+	text-align: center;
+}
+
+figure {
+	margin-bottom: 46px;
+	margin-bottom: 2.875rem;
+}
+
+figcaption {
+	font-family: $fontAvenir;
+	margin: 23px auto;
+	margin: 1.4375rem auto;
+	line-height: 23px;
+	line-height: 1.4375rem;
+}
+
+.beWonderful {
+	text-transform: uppercase;
+	font-family: $fontAvenir;
+	font-weight: 700;
+	font-size: 32px;
+	font-size: 2rem;
+	line-height: 46px;
+	line-height: 2.875rem;
+	color: #bcbcbc;
+	margin-top: 46px;
+	margin-top: 2.875rem;
+	letter-spacing: -0.5px;
+  	letter-spacing: -0.03125rem;
+}
+
+@media screen and (min-width: 600px){
+	html {
+		font-size: 1.125em;
+		line-height: 1.6875rem; 					/* 27px */
+	}
+
+	* {
+		line-height: 1.5em; 					/* 23px */
+	}
+
+	// Typographic Modular Scale: Minor Third, base: 18px
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ol,
+	ul,
+	table,
+	blockquote,
+	pre {
+		max-width: 650px;
+		max-width: 36rem;
+		margin-top: 0;
+		margin-bottom: 1.5em; /* 27px */
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	article {
+		padding-top: 27px;
+		padding-top: 1.5rem;
+	}
+
+	img {
+		max-width: 800px;
+	}
+
+	h1 {
+	  font-size: 45px;
+	  font-size: 2.5rem;
+	  line-height: 54px; 		// 54px = 2 x 27
+	  line-height: 3rem; 		// 54px = 2 x 27
+	  margin-top: 54px; 		// 46px = 2 x 23
+	  margin-top: 3rem; 	// 46px = 2 x 23
+	  margin-bottom: 27px; 		// 23px
+	  margin-bottom: 1.5rem; // 23px
+	}
+
+	h2 {
+	  font-size: 24px; 			// 23px = 1.4375 x 16
+	  font-size: 1.3rem; 	// 23px = 1.4375 x 16
+	  line-height: 27px; 		// 23px = 1 x 23
+	  line-height: 1.5rem; 	// 23px = 1.4375 x 16
+	  margin-top: 54px;
+	  margin-top: 3rem;
+	  margin-bottom: 27px; 		// 23px
+	  margin-bottom: 1.5rem; // 23px
+	}
+
+	h3 {
+	  font-size: 21px; 			// 19px = 1.1875 x 16
+	  font-size: 1.16rem; 	// 23px = 1.1875 x 16
+	  line-height: 27px; 		// 23px = 1 x 23
+	  line-height: 1.5rem; 	// 23px = 1.4375 x 16
+	  margin-top: 40.5px; 		// 23px
+	  margin-top: 2.25rem; 	// 23px
+	  margin-bottom: 13.5px; 		// 23px
+	  margin-bottom: 0.75rem; // 23px
+	}
+
+	h4 {
+	  margin-top: 40.5px; 		// 23px
+	  margin-top: 2.25rem; 	// 23px
+	  margin-bottom: 13.5px; 		// 23px
+	  margin-bottom: 0.75rem; // 23px
+	}
+
+	h2 + h3 {
+		margin-top: 27px;
+		margin-top: 1.5rem;
+		margin-bottom: 27px;
+		margin-bottom: 1.5rem;
+	}
+
+	h3 + h4 {
+		margin-bottom: 0.75rem;
+		margin-top: 1.5rem;
+	}
+
+	ul, ol {
+		padding-left: 54px;
+		padding-left: 3rem;
+	}
+
+	ul li, ol li {
+		margin-bottom: 13.5px;
+		margin-bottom: 0.75rem;
+	}
+
+	blockquote {
+		margin-top: 54px;
+		margin-top: 3rem;
+		margin-bottom: 54px;
+		margin-bottom: 3rem;
+	}
+
+	blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
+		margin-top: 67.5px;
+		margin-top: 3.75rem;
+	}
+
+	blockquote p {
+		font-size: 36px;
+		font-size: 2rem;
+		line-height: 54px;
+		line-height: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	small {
+		font-size: 15px;
+		font-size: 0.8333333333rem;
+		line-height: 27px;
+		line-height: 1.5rem;
+	}
+
+	figure {
+		margin-top: 54px;
+		margin-top: 3rem;
+		margin-bottom: 54px;
+		margin-bottom: 3rem;
+	}
+
+	figcaption {
+		margin: 27px auto;
+		margin: 1.5rem auto;
+		line-height: 27px;
+		line-height: 1.5rem;
+	}
+
+	.beWonderful {
+		line-height: 54px;
+		line-height: 3rem;
+		margin-top: 54px;
+		margin-top: 3rem;
+		letter-spacing: -0.5px;
+	  	letter-spacing: -0.03125rem;
+	}
+
+	.verticalGrid {
+		background: url(../assets/images/vertical-grid-18px.gif);
+	}
+}
