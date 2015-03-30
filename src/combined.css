@@ -622,6 +622,8 @@ article, footer {
   padding: 5px 20px;
   background: #eaeaea;
   border: 1px solid #ccc;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 figure {
@@ -701,9 +703,6 @@ h1 {
   margin-top: 2.875rem;
   margin-bottom: 23px;
   margin-bottom: 1.4375rem;
-  text-transform: uppercase;
-  color: #f70000;
-  font-family: "Avenir Next", Helvetica, Sans-Serif;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
@@ -771,7 +770,6 @@ blockquote p {
   font-size: 1.6875rem;
   line-height: 46px;
   line-height: 2.875rem;
-  font-family: "Avenir Next", Helvetica, Sans-Serif;
   font-weight: 400;
   text-align: center;
   margin-bottom: 1.4375rem;
@@ -808,7 +806,6 @@ figure {
 }
 
 figcaption {
-  font-family: "Avenir Next", Helvetica, Sans-Serif;
   margin: 23px auto;
   margin: 1.4375rem auto;
   line-height: 23px;
@@ -817,7 +814,6 @@ figcaption {
 
 .beWonderful {
   text-transform: uppercase;
-  font-family: "Avenir Next", Helvetica, Sans-Serif;
   font-weight: 700;
   font-size: 32px;
   font-size: 2rem;

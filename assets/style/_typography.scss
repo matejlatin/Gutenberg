@@ -61,9 +61,8 @@ h1 {
   margin-top: 2.875rem; 	// 46px = 2 x 23
   margin-bottom: 23px; 		// 23px
   margin-bottom: 1.4375rem; // 23px
-  text-transform: uppercase;
-  color: $wmRed;
-  font-family: $fontAvenir;
+  // text-transform: uppercase;
+  // color: $wmRed;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
@@ -131,7 +130,6 @@ blockquote p {
 	font-size: 1.6875rem;
 	line-height: 46px;
 	line-height: 2.875rem;
-	font-family: $fontAvenir;
 	font-weight: 400;
 	text-align: center;
 	margin-bottom: 1.4375rem;
@@ -169,7 +167,6 @@ figure {
 }
 
 figcaption {
-	font-family: $fontAvenir;
 	margin: 23px auto;
 	margin: 1.4375rem auto;
 	line-height: 23px;
@@ -178,7 +175,6 @@ figcaption {
 
 .beWonderful {
 	text-transform: uppercase;
-	font-family: $fontAvenir;
 	font-weight: 700;
 	font-size: 32px;
 	font-size: 2rem;
