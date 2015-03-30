@@ -1,11 +1,13 @@
 // Responsive images compliant with vertical rhythm
 // *********
+//
+// How it works:
 // - Check img height
 // - Check screen width
-// - Compare screen width to break points
-// - Get line-height (LH) & breakpoint
-// - Check i x LH > img height  -- if NO -> iHeight = i x LH
-// 								-- if YES -> img height = iHeight
+// - Compare screen width to breakpoints
+// - Get line-height (lh) for the current breakpoint
+// - divide image height by line-height (div)
+// - set new height for the image: lh * div
 
 var params = [
 	{
