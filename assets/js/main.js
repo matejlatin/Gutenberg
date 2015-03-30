@@ -1,12 +1,14 @@
 // Responsive images compliant with vertical rhythm
 // *********
+// How it works:
 // - Check img height
 // - Check screen width
-// - Compare screen width to break points
-// - Get line-height (LH) & breakpoint
-// - Check i x LH > img height  -- if NO -> iHeight = i x LH
-// 								-- if YES -> img height = iHeight
+// - Compare screen width to breakpoints
+// - Get line-height (lh) for the current breakpoint
+// - divide image height by line-height (div)
+// - set new height for the image: lh * div
 
+// Set your breakpoints
 var params = [
 	{
 		breakpointStart: 0,  	// breakpoint to compare the screen width to (should match the breakpoint in you CSS that change the line-height)
@@ -18,9 +20,11 @@ var params = [
 		breakpointEnd: Infinity,
 		lh: 27
 	}
-]
+];
 
+// Construct the function
 $.fn.imgFixHeight = function(){
+
 	// get image original height & screen width
 	var imgOriginalHeight = this.height();
 	var screenWidth = $(window).width();
@@ -34,8 +38,10 @@ $.fn.imgFixHeight = function(){
 		};
 	};
 
+	// Calculate the new image height
 	var div = Math.floor(imgOriginalHeight/lineHeight);
 	var imgNewHeight = lineHeight * div;
 
+	// Apply the new image height
 	this.css("height", imgNewHeight);
 };
