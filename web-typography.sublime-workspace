@@ -4,16 +4,36 @@
 		"selected_items":
 		[
 			[
+				"line",
+				"lineHeight"
+			],
+			[
+				"img",
+				"imgOriginalHeight"
+			],
+			[
+				"break",
+				"breakpointEnd"
+			],
+			[
+				"scree",
+				"screenWidth"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
 				"text",
-				"textarea	Tag"
+				"text-align"
 			],
 			[
 				"cell",
 				"cellpadding	Attr"
-			],
-			[
-				"margin",
-				"margin-bottom"
 			],
 			[
 				"font-s",
@@ -27,7 +47,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2854,
+				"buffer_size": 10124,
 				"line_ending": "Unix"
 			}
 		}
@@ -35,7 +55,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 271.0,
+		"height": 400.0,
 		"selected_items":
 		[
 			[
@@ -116,6 +136,29 @@
 	},
 	"file_history":
 	[
+		"/Users/matejlatin/Web-Typography/.gitignore",
+		"/Users/matejlatin/Web-Typography/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/eazy-logger/node_modules/lodash/internal/assignOwnDefaults.js",
+		"/Users/matejlatin/Web-Typography/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/eazy-logger/node_modules/lodash/internal/getFuncName.js",
+		"/Users/matejlatin/Web-Typography/node_modules/grunt/node_modules/iconv-lite/encodings/gbk.js",
+		"/Users/matejlatin/Web-Typography/assets/style/main.css",
+		"/Users/matejlatin/Web-Typography/assets/style/main.scss",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-contrib-compress/node_modules/archiver/node_modules/lazystream/test/writable_test.js",
+		"/Users/matejlatin/wm-typography/node_modules/grunt/node_modules/iconv-lite/generation/generate-big5-table.js",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/minimist/test/all_bool.js",
+		"/Users/matejlatin/wm-typography/node_modules/grunt/node_modules/rimraf/test/test-async.js",
+		"/Users/matejlatin/wm-typography/wm-typo.sublime-project",
+		"/Users/matejlatin/wm-typography/assets/style/main.css",
+		"/Users/matejlatin/wm-typography/.sass-cache/80015dd00e3b21153b1a531cb28f0efbbaafc6cb/main.scssc",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/vinyl-fs/node_modules/graceful-fs/test/max-open.js",
+		"/Users/matejlatin/wm-typography/assets/style/main.scss",
+		"/Users/matejlatin/wm-typography/assets/style/_style.scss",
+		"/Users/matejlatin/wm-typography/assets/style/_normalize.scss",
+		"/Users/matejlatin/wm-typography/assets/style/_modular.scss",
+		"/Users/matejlatin/wm-typography/assets/style/_animate.scss",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/imagemin-svgo/node_modules/svgo/node_modules/sax/test/self-closing-child-strict.js",
+		"/Users/matejlatin/wm-typography/node_modules/grunt-contrib-compress/node_modules/chalk/node_modules/.bin/supports-color",
+		"/Users/matejlatin/wm-typography/sitemap.xml",
 		"/Users/matejlatin/wm-email/email-template-DE-newsletter-confirmation.html",
 		"/Users/matejlatin/wm-email/email-template-beta-SUS.html",
 		"/Users/matejlatin/wm-email/email-template-beta-invite.html",
@@ -171,6 +214,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bewon",
+			"max-width: 700",
+			"figcaption",
+			"2.15725",
+			"figure",
+			"xip",
 			"1 - Indirect Success",
 			"3 - Direct Success",
 			"&#13;",
@@ -208,7 +257,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2854,
+						"buffer_size": 10124,
 						"regions":
 						{
 						},
@@ -224,16 +273,16 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -244,41 +293,41 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
 							],
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
@@ -328,7 +377,7 @@
 	{
 		"height": 0.0
 	},
-	"project": "wm-typo.sublime-project",
+	"project": "web-typography.sublime-project",
 	"replace":
 	{
 		"height": 72.0
@@ -339,6 +388,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ignore",
+				".gitignore"
+			],
+			[
+				"ma",
+				"assets/style/main.scss"
+			],
+			[
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"modula",
+				"assets/style/_modular.scss"
+			],
+			[
+				"scss",
+				"assets/style/_typography.scss"
+			]
 		],
 		"width": 0.0
 	},
