@@ -9,21 +9,23 @@
 // - divide image height by line-height (div)
 // - set new height for the image: lh * div
 
+// Set your breakpoints
 var params = [
 	{
-		breakpointStart: 0, // breakpoint to compare the screen width to (should match the breakpoint in you CSS that change the line-height)
+		breakpointStart: 0,  	// breakpoint to compare the screen width to (should match the breakpoint in you CSS that change the line-height)
 		breakpointEnd: 600,
-		lh: 23 // line height to use
+		lh: 23					// line height to use
 	},
 	{
 		breakpointStart: 601,
 		breakpointEnd: Infinity,
 		lh: 27
 	}
-]
+];
 
 // Construct the function
 $.fn.imgFixHeight = function(){
+
 	// get image original height & screen width
 	var imgOriginalHeight = this.height();
 	var screenWidth = $(window).width();
@@ -37,10 +39,10 @@ $.fn.imgFixHeight = function(){
 		};
 	};
 
-	// Calculate the new height
+	// Calculate the new image height
 	var div = Math.floor(imgOriginalHeight/lineHeight);
 	var imgNewHeight = lineHeight * div;
 
-	// Apply the new height to the image
+	// Apply the new image height
 	this.css("height", imgNewHeight);
 };

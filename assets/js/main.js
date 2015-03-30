@@ -1,5 +1,6 @@
 // Responsive images compliant with vertical rhythm
 // *********
+//
 // How it works:
 // - Check img height
 // - Check screen width
