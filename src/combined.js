@@ -22,6 +22,7 @@ var params = [
 	}
 ]
 
+// Construct the function
 $.fn.imgFixHeight = function(){
 	// get image original height & screen width
 	var imgOriginalHeight = this.height();
@@ -36,8 +37,10 @@ $.fn.imgFixHeight = function(){
 		};
 	};
 
+	// Calculate the new height
 	var div = Math.floor(imgOriginalHeight/lineHeight);
 	var imgNewHeight = lineHeight * div;
 
+	// Apply the new height to the image
 	this.css("height", imgNewHeight);
 };
