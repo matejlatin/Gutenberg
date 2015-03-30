@@ -11,9 +11,9 @@
 
 var params = [
 	{
-		breakpointStart: 0,  	// breakpoint to compare the screen width to (should match the breakpoint in you CSS that change the line-height)
+		breakpointStart: 0, // breakpoint to compare the screen width to (should match the breakpoint in you CSS that change the line-height)
 		breakpointEnd: 600,
-		lh: 23					// line height to use
+		lh: 23 // line height to use
 	},
 	{
 		breakpointStart: 601,
