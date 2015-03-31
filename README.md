@@ -1,6 +1,8 @@
 # Web Typography
 Basic web typography set with Modular Scale compliant with vertical rhythm. Serves as a foundation for further projects.
 
+[View Example](http://matejlatin.github.io/Web-Typography/)
+
 
 ##Features
 - Modular scale: all font sizes are set based on the Minor Third modular scale (modularscale.com),
