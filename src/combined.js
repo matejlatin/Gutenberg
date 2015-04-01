@@ -44,7 +44,5 @@ $.fn.imgFixHeight = function(){
 	var imgNewHeight = lineHeight * div;
 
 	// Apply the new image height
-	this.load(function(){
-		this.css("height", imgNewHeight);
-	});
+	this.css("height", imgNewHeight);
 };
