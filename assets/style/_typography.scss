@@ -3,7 +3,6 @@ html {
 	font-family: $fontBody;
 	font-size: 100%; 						/* 16px */
     line-height: 1.4375em; 					/* 23px */
-    // -webkit-font-smoothing: antialiased;
     -moz-font-feature-settings:"salt" 1;
 	-moz-font-feature-settings:"salt=1";
 	-ms-font-feature-settings:"salt" 1;
@@ -50,6 +49,11 @@ figure,
 pre{
 	margin-top: 0;
     margin-bottom: 1.4375em; /* 23px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fontHeading;
+	font-weight: 800;
 }
 
 h1 {
@@ -187,17 +191,17 @@ figcaption {
   	letter-spacing: -0.03125rem;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 1025px){
 	html {
-		font-size: 1.125em;
-		line-height: 1.6875rem; 					/* 27px */
+		font-size: 1.25em;
+		line-height: 1.75em; 					/* 35px */
 	}
 
 	* {
-		line-height: 1.5em; 					/* 27px */
+		line-height: 1.75em; 					/* 35px */
 	}
 
-	// Typographic Modular Scale: Minor Third, base: 18px, line-height: 27px
+	// Typographic Modular Scale: Minor Third, base: 20px, line-height: 35px http://www.modularscale.com/?20&px&1.2&web&text
 
 	h1,
 	h2,
@@ -219,35 +223,35 @@ figcaption {
 		margin-right: auto;
 	}
 
-	article {
-		padding-top: 27px;
-		padding-top: 1.5rem;
-	}
+	// article {
+	// 	padding-top: 27px;
+	// 	padding-top: 1.5rem;
+	// }
 
 	img {
 		max-width: 800px;
 	}
 
 	h1 {
-	  font-size: 45px;
+	  font-size: 50px;
 	  font-size: 2.5rem;
-	  line-height: 54px; 		// 54px = 2 x 27
-	  line-height: 3rem; 		// 54px = 2 x 27
-	  margin-top: 54px; 		// 46px = 2 x 23
-	  margin-top: 3rem; 	// 46px = 2 x 23
-	  margin-bottom: 27px; 		// 23px
-	  margin-bottom: 1.5rem; // 23px
+	  line-height: 69px; 		// 54px = 2 x 27
+	  line-height: 2*$lhDesktop; 		// 54px = 2 x 27
+	  margin-top: 69px; 		// 46px = 2 x 23
+	  margin-top: 2*$lhDesktop; 	// 46px = 2 x 23
+	  margin-bottom: 35px; 		// 23px
+	  margin-bottom: $lhDesktop; // 23px
 	}
 
 	h2 {
-	  font-size: 24px; 			// 23px = 1.4375 x 16
-	  font-size: 1.3rem; 	// 23px = 1.4375 x 16
-	  line-height: 27px; 		// 23px = 1 x 23
-	  line-height: 1.5rem; 	// 23px = 1.4375 x 16
-	  margin-top: 54px;
-	  margin-top: 3rem;
-	  margin-bottom: 27px; 		// 23px
-	  margin-bottom: 1.5rem; // 23px
+	  font-size: 28px; 			// 23px = 1.4375 x 16
+	  font-size: 1.44rem; 	// 23px = 1.4375 x 16
+	  line-height: 35px; 		// 23px = 1 x 23
+	  line-height: $lhDesktop; 	// 23px = 1.4375 x 16
+	  margin-top: 70px;
+	  margin-top: 1.5*$lhDesktop;
+	  margin-bottom: 35px; 		// 23px
+	  margin-bottom: 0.5*$lhDesktop; // 23px
 	}
 
 	h3 {
