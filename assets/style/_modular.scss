@@ -70,8 +70,12 @@ $sizeMedium:		1.5rem;		// 24px
 $sizeLarger:		2rem;		// 32px
 $sizeMax:			43.75rem;	// 700px
 
+$lhMobile:			1.4375em;
+$lhDesktop:			1.75rem;
+
 // Fonts
-$fontBody: 			"Open Sans", Helvetica, Sans-serif;
+$fontBody: 			"Merriweather", serif;
+$fontHeading:		"Merriweather Sans", Sans-serif;
 
 .bold {
 	font-weight: 700;

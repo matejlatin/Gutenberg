@@ -641,7 +641,7 @@ img {
 
 html {
   color: #3c3c3c;
-  font-family: "Open Sans", Helvetica, Sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 100%;
   /* 16px */
   line-height: 1.4375em;
@@ -692,6 +692,11 @@ pre {
   margin-top: 0;
   margin-bottom: 1.4375em;
   /* 23px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather Sans", Sans-serif;
+  font-weight: 800;
 }
 
 h1 {
@@ -826,16 +831,16 @@ figcaption {
   letter-spacing: -0.03125rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
   html {
-    font-size: 1.125em;
-    line-height: 1.6875rem;
-    /* 27px */
+    font-size: 1.25em;
+    line-height: 1.75em;
+    /* 35px */
   }
 
   * {
-    line-height: 1.5em;
-    /* 27px */
+    line-height: 1.75em;
+    /* 35px */
   }
 
   h1,
@@ -859,35 +864,30 @@ figcaption {
     margin-right: auto;
   }
 
-  article {
-    padding-top: 27px;
-    padding-top: 1.5rem;
-  }
-
   img {
     max-width: 800px;
   }
 
   h1 {
-    font-size: 45px;
+    font-size: 50px;
     font-size: 2.5rem;
-    line-height: 54px;
-    line-height: 3rem;
-    margin-top: 54px;
-    margin-top: 3rem;
-    margin-bottom: 27px;
-    margin-bottom: 1.5rem;
+    line-height: 69px;
+    line-height: 3.5rem;
+    margin-top: 69px;
+    margin-top: 3.5rem;
+    margin-bottom: 35px;
+    margin-bottom: 1.75rem;
   }
 
   h2 {
-    font-size: 24px;
-    font-size: 1.3rem;
-    line-height: 27px;
-    line-height: 1.5rem;
-    margin-top: 54px;
-    margin-top: 3rem;
-    margin-bottom: 27px;
-    margin-bottom: 1.5rem;
+    font-size: 28px;
+    font-size: 1.44rem;
+    line-height: 35px;
+    line-height: 1.75rem;
+    margin-top: 70px;
+    margin-top: 2.625rem;
+    margin-bottom: 35px;
+    margin-bottom: 0.875rem;
   }
 
   h3 {
