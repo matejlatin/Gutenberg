@@ -1,8 +1,7 @@
 html {
-	color: $colorTypeDark;
+	color: $colorFontBody;
 	font-family: $fontBody;
-	font-size: 100%; 						/* 16px */
-    line-height: 1.4375em; 					/* 23px */
+	font-size: 1em; 						/* 16px */
     -moz-font-feature-settings:"salt" 1;
 	-moz-font-feature-settings:"salt=1";
 	-ms-font-feature-settings:"salt" 1;
@@ -20,16 +19,20 @@ html {
 }
 
 a {
-	color: $linkNormal;
+	color: $colorLinkNormal;
 	text-decoration: underline;
 }
 
 a:active {
-	color: $linkActive;
+	color: $colorLinkActive;
 }
 
 a:visited {
-	color: $linkVisited;
+	color: $colorLinkVisited;
+}
+
+a:visited:active {
+	color: $colorLinkActive;
 }
 
 // Typographic Modular Scale: Minor Third, base: 16px, line-height: 23px
@@ -46,13 +49,14 @@ ul,
 table,
 blockquote,
 figure,
-pre{
+pre,
+img {
 	margin-top: 0;
     margin-bottom: 1.4375em; /* 23px */
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $fontHeading;
+	font-family: $fontHeadings;
 	font-weight: 800;
 }
 
@@ -129,19 +133,13 @@ blockquote {
 	margin-right: 0;
 }
 
-blockquote p {
-	font-size: 27px;
-	font-size: 1.6875rem;
-	line-height: 46px;
-	line-height: 2.875rem;
-	font-weight: 400;
-	text-align: center;
-	margin-bottom: 1.4375rem;
-}
+// blockquote p {
+// 	margin-bottom: 1.4375rem;
+// }
 
-blockquote footer {
-	text-align: center;
-}
+// blockquote footer {
+// 	text-align: center;
+// }
 
 figure + h3, figure + h4 {
 	margin-top: 57.5px;
@@ -160,45 +158,13 @@ small {
 	line-height: 1.4375rem;
 }
 
-figure, figcaption {
-	max-width: 100%;
-	text-align: center;
-}
-
-figure {
-	margin-bottom: 46px;
-	margin-bottom: 2.875rem;
-}
-
-figcaption {
-	margin: 23px auto;
-	margin: 1.4375rem auto;
-	line-height: 23px;
-	line-height: 1.4375rem;
-}
-
-.beWonderful {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 32px;
-	font-size: 2rem;
-	line-height: 46px;
-	line-height: 2.875rem;
-	color: #bcbcbc;
-	margin-top: 46px;
-	margin-top: 2.875rem;
-	letter-spacing: -0.5px;
-  	letter-spacing: -0.03125rem;
-}
-
 @media screen and (min-width: 1025px){
 	html {
-		font-size: 1.25em;
-		line-height: 1.75em; 					/* 35px */
+		font-size: $sizeFontBase;
 	}
 
 	* {
-		line-height: 1.75em; 					/* 35px */
+		line-height: $lhDesktop;
 	}
 
 	// Typographic Modular Scale: Minor Third, base: 20px, line-height: 35px http://www.modularscale.com/?20&px&1.2&web&text
@@ -214,74 +180,45 @@ figcaption {
 	ul,
 	table,
 	blockquote,
-	pre {
+	pre,
+	img {
 		max-width: 650px;
 		max-width: 36rem;
 		margin-top: 0;
-		margin-bottom: 1.5em; /* 27px */
+		margin-bottom: $lhDesktop;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	// article {
-	// 	padding-top: 27px;
-	// 	padding-top: 1.5rem;
-	// }
-
-	img {
-		max-width: 800px;
+	h1 {
+	  	font-size: 2.5rem;
+	  	line-height: 2*$lhDesktop;
+	  	margin-top: 3*$lhDesktop;
+	  	margin-bottom: $lhDesktop;
 	}
 
-	h1 {
-	  font-size: 50px;
-	  font-size: 2.5rem;
-	  line-height: 69px; 		// 54px = 2 x 27
-	  line-height: 2*$lhDesktop; 		// 54px = 2 x 27
-	  margin-top: 69px; 		// 46px = 2 x 23
-	  margin-top: 2*$lhDesktop; 	// 46px = 2 x 23
-	  margin-bottom: 35px; 		// 23px
-	  margin-bottom: $lhDesktop; // 23px
+	h2, h3, h4, h5, h6 {
+		line-height: $lhDesktop;
+		margin-top: 1.75*$lhDesktop;
+		margin-bottom: 0.25*$lhDesktop;
 	}
 
 	h2 {
-	  font-size: 28px; 			// 23px = 1.4375 x 16
-	  font-size: 1.44rem; 	// 23px = 1.4375 x 16
-	  line-height: 35px; 		// 23px = 1 x 23
-	  line-height: $lhDesktop; 	// 23px = 1.4375 x 16
-	  margin-top: 70px;
-	  margin-top: 1.5*$lhDesktop;
-	  margin-bottom: 35px; 		// 23px
-	  margin-bottom: 0.5*$lhDesktop; // 23px
+	  	font-size: 1.44rem;
 	}
 
 	h3 {
-	  font-size: 21px; 			// 19px = 1.1875 x 16
-	  font-size: 1.16rem; 	// 23px = 1.1875 x 16
-	  line-height: 27px; 		// 23px = 1 x 23
-	  line-height: 1.5rem; 	// 23px = 1.4375 x 16
-	  margin-top: 40.5px; 		// 23px
-	  margin-top: 2.25rem; 	// 23px
-	  margin-bottom: 13.5px; 		// 23px
-	  margin-bottom: 0.75rem; // 23px
-	}
-
-	h4 {
-	  margin-top: 40.5px; 		// 23px
-	  margin-top: 2.25rem; 	// 23px
-	  margin-bottom: 13.5px; 		// 23px
-	  margin-bottom: 0.75rem; // 23px
+	  	font-size: 1.16rem;
 	}
 
 	h2 + h3 {
-		margin-top: 27px;
-		margin-top: 1.5rem;
-		margin-bottom: 27px;
-		margin-bottom: 1.5rem;
+		margin-top: $lhDesktop;
+		margin-bottom: 0.5*$lhDesktop;
 	}
 
 	h3 + h4 {
-		margin-bottom: 0.75rem;
-		margin-top: 1.5rem;
+		margin-top: $lhDesktop;
+		margin-bottom: 0.5*$lhDesktop;
 	}
 
 	ul, ol {
@@ -295,23 +232,20 @@ figcaption {
 	}
 
 	blockquote {
-		margin-top: 54px;
-		margin-top: 3rem;
-		margin-bottom: 54px;
-		margin-bottom: 3rem;
+		margin-top: 2*$lhDesktop;
+	  	margin-bottom: 2*$lhDesktop;
+
+	  	p {
+			margin-bottom: $lhDesktop;
+	  	}
+
+	  	footer {
+	  		font-style: regular;
+	  	}
 	}
 
 	blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
-		margin-top: 67.5px;
-		margin-top: 3.75rem;
-	}
-
-	blockquote p {
-		font-size: 36px;
-		font-size: 2rem;
-		line-height: 54px;
-		line-height: 3rem;
-		margin-bottom: 1.5rem;
+		margin-top: 2*$lhDesktop;
 	}
 
 	small {
@@ -322,27 +256,38 @@ figcaption {
 	}
 
 	figure {
-		margin-top: 54px;
-		margin-top: 3rem;
-		margin-bottom: 54px;
-		margin-bottom: 3rem;
+	padding: 0;
+	margin: 0;
+
+		img {
+			max-width: 100%;
+		}
+
+		figcaption {
+			text-align: center;
+		}
 	}
 
-	figcaption {
-		margin: 27px auto;
-		margin: 1.5rem auto;
-		line-height: 27px;
-		line-height: 1.5rem;
-	}
+	figure.floatLeft {
+			// margin-right: 1em;
+			padding: $lhDesktop;
+			max-width: 15em;
+			text-align: center;
 
-	.beWonderful {
-		line-height: 54px;
-		line-height: 3rem;
-		margin-top: 54px;
-		margin-top: 3rem;
-		letter-spacing: -0.5px;
-	  	letter-spacing: -0.03125rem;
-	}
+			figcaption {
+				max-width: 100%;
+			}
+		}
+	figure.floatRight {
+			// margin-left: 1em;
+			padding: $lhDesktop;
+			max-width: 15em;
+			text-align: center;
+
+			figcaption {
+				max-width: 100%;
+			}
+		}
 
 	.verticalGrid {
 		background: url(../assets/images/vertical-grid-18px.gif);

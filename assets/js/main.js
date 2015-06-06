@@ -19,7 +19,7 @@ var params = [
 	{
 		breakpointStart: 601,
 		breakpointEnd: Infinity,
-		lh: 27
+		lh: 35
 	}
 ];
 
@@ -42,6 +42,9 @@ $.fn.imgFixHeight = function(){
 	// Calculate the new image height
 	var div = Math.floor(imgOriginalHeight/lineHeight);
 	var imgNewHeight = lineHeight * div;
+
+	var lineHeight2 = $('p').css("line-height");
+	console.log(lineHeight2);
 
 	// Apply the new image height
 	this.css("height", imgNewHeight);
