@@ -139,8 +139,21 @@
 		</p>
 	</footer>
 	<script>
+	// Toggle Grid Functionality
+	var flip = 0;
 	$('#btnToggleGrid').on('click', function(){
-		$('html').toggleClass("verticalGrid");
+		// Get line-height
+		var vcLineHeight = parseInt($('p').css("line-height"));
+		// Compose the image URL
+		var vcImg = "url(assets/images/" + vcLineHeight + "px.gif)";
+		if(flip == 0){
+			$('html').addClass("verticalGrid");
+			$('.verticalGrid').css("background", vcImg);
+			flip = 1;
+		} else if (flip == 1) {
+			$('.verticalGrid').css("background", "none");
+			flip = 0;
+		};
 	});
 
 	// Fix image heights
