@@ -1,0 +1,31 @@
+// MOBILE
+// ...
+
+// DESKTOP
+// Fonts
+$fontBody: 						"Merriweather", Georgia, serif;
+$fontHeadings:					"Merriweather Sans", Helvetica, Sans-serif; // use $fontBody if headings font should be the same as body
+
+// Base Font Size
+$sizeFontBase:					1.25em;
+
+// Line-Height
+$lhDesktop:						1.75rem;
+
+// Colors
+$colorFontBody:					#3c3c3c;
+$colorFontHeadings: 			$colorFontBody;
+$colorFontLight:				#888;
+
+$colorLinkNormal: 				$colorFontBody;
+$colorLinkActive: 				red;
+$colorLinkVisited: 				$colorFontLight;
+
+
+
+
+
+
+
+
+$lhMobile:			1.4375em;

@@ -394,41 +394,6 @@ th {
   padding: 0;
 }
 
-/* Modular Scale - 20px @ 1:1.618 - 700px @ 1:1.618
-
-Pixels		Ems			Ems @ 16
-
-939.408		46.97		58.713
-700.000		35			43.75
-580.598		29.03		36.287
-432.633		21.632		27.04
-358.837		17.942		22.427
-267.388		13.369		16.712
-221.778		11.089		13.861
-165.258		8.263		10.329
-137.069		6.853		8.567
-102.137		5.107		6.384
-84.715		4.236		5.295
-63.125		3.156		3.945
-52.358		2.618		3.272
-39.014		1.951		2.438
-32.360		1.618		2.023
-24.112		1.206		1.507
-20.000		1			1.25
-14.902		0.745		0.931
-12.361		0.618		0.773
-9.210		0.461		0.576
-7.640		0.382		0.478
-5.692		0.285		0.356
-4.722		0.236		0.295
-3.518		0.176		0.22
-2.918		0.146		0.182
-2.174		0.109		0.136
-1.803		0.09		0.113
-1.344		0.067		0.084
-1.114		0.056		0.07
-
-*/
 .bold {
   font-weight: 700;
 }
@@ -499,109 +464,8 @@ body, article, section, footer, header, div, input, nav, article ol, article ul 
   display: none;
 }
 
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2014 Daniel Eden
-*/
-.animated {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated1s {
-  -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+cite {
+  display: block;
 }
 
 body, html {
@@ -610,7 +474,7 @@ body, html {
   padding: 0;
 }
 
-article, footer {
+article {
   width: 90%;
   margin: 0 auto;
 }
@@ -626,26 +490,15 @@ article, footer {
   text-decoration: none;
 }
 
-figure {
-  padding: 0;
-  margin: 0;
-}
-
-figcaption {
-  text-align: center;
-}
-
 img {
   max-width: 100%;
 }
 
 html {
   color: #3c3c3c;
-  font-family: "Merriweather", serif;
-  font-size: 100%;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1em;
   /* 16px */
-  line-height: 1.4375em;
-  /* 23px */
   -moz-font-feature-settings: "salt" 1;
   -moz-font-feature-settings: "salt=1";
   -ms-font-feature-settings: "salt" 1;
@@ -664,16 +517,20 @@ html {
 }
 
 a {
-  color: #678bd5;
+  color: #3c3c3c;
   text-decoration: underline;
 }
 
 a:active {
-  color: #7198e9;
+  color: red;
 }
 
 a:visited {
-  color: #6284ca;
+  color: #888;
+}
+
+a:visited:active {
+  color: red;
 }
 
 h1,
@@ -688,14 +545,15 @@ ul,
 table,
 blockquote,
 figure,
-pre {
+pre,
+img {
   margin-top: 0;
   margin-bottom: 1.4375em;
   /* 23px */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Merriweather Sans", Sans-serif;
+  font-family: "Merriweather Sans", Helvetica, Sans-serif;
   font-weight: 800;
 }
 
@@ -770,20 +628,6 @@ blockquote {
   margin-right: 0;
 }
 
-blockquote p {
-  font-size: 27px;
-  font-size: 1.6875rem;
-  line-height: 46px;
-  line-height: 2.875rem;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 1.4375rem;
-}
-
-blockquote footer {
-  text-align: center;
-}
-
 figure + h3, figure + h4 {
   margin-top: 57.5px;
   margin-top: 3.59375rem;
@@ -800,47 +644,13 @@ small {
   line-height: 1.4375rem;
 }
 
-figure, figcaption {
-  max-width: 100%;
-  text-align: center;
-}
-
-figure {
-  margin-bottom: 46px;
-  margin-bottom: 2.875rem;
-}
-
-figcaption {
-  margin: 23px auto;
-  margin: 1.4375rem auto;
-  line-height: 23px;
-  line-height: 1.4375rem;
-}
-
-.beWonderful {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 46px;
-  line-height: 2.875rem;
-  color: #bcbcbc;
-  margin-top: 46px;
-  margin-top: 2.875rem;
-  letter-spacing: -0.5px;
-  letter-spacing: -0.03125rem;
-}
-
 @media screen and (min-width: 1025px) {
   html {
     font-size: 1.25em;
-    line-height: 1.75em;
-    /* 35px */
   }
 
   * {
-    line-height: 1.75em;
-    /* 35px */
+    line-height: 1.75rem;
   }
 
   h1,
@@ -854,70 +664,45 @@ figcaption {
   ul,
   table,
   blockquote,
-  pre {
+  pre,
+  img {
     max-width: 650px;
     max-width: 36rem;
     margin-top: 0;
-    margin-bottom: 1.5em;
-    /* 27px */
+    margin-bottom: 1.75rem;
     margin-left: auto;
     margin-right: auto;
   }
 
-  img {
-    max-width: 800px;
-  }
-
   h1 {
-    font-size: 50px;
     font-size: 2.5rem;
-    line-height: 69px;
     line-height: 3.5rem;
-    margin-top: 69px;
-    margin-top: 3.5rem;
-    margin-bottom: 35px;
+    margin-top: 5.25rem;
     margin-bottom: 1.75rem;
   }
 
-  h2 {
-    font-size: 28px;
-    font-size: 1.44rem;
-    line-height: 35px;
+  h2, h3, h4, h5, h6 {
     line-height: 1.75rem;
-    margin-top: 70px;
-    margin-top: 2.625rem;
-    margin-bottom: 35px;
-    margin-bottom: 0.875rem;
+    margin-top: 3.0625rem;
+    margin-bottom: 0.4375rem;
+  }
+
+  h2 {
+    font-size: 1.44rem;
   }
 
   h3 {
-    font-size: 21px;
     font-size: 1.16rem;
-    line-height: 27px;
-    line-height: 1.5rem;
-    margin-top: 40.5px;
-    margin-top: 2.25rem;
-    margin-bottom: 13.5px;
-    margin-bottom: 0.75rem;
-  }
-
-  h4 {
-    margin-top: 40.5px;
-    margin-top: 2.25rem;
-    margin-bottom: 13.5px;
-    margin-bottom: 0.75rem;
   }
 
   h2 + h3 {
-    margin-top: 27px;
-    margin-top: 1.5rem;
-    margin-bottom: 27px;
-    margin-bottom: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.875rem;
   }
 
   h3 + h4 {
-    margin-bottom: 0.75rem;
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.875rem;
   }
 
   ul, ol {
@@ -931,23 +716,18 @@ figcaption {
   }
 
   blockquote {
-    margin-top: 54px;
-    margin-top: 3rem;
-    margin-bottom: 54px;
-    margin-bottom: 3rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+  blockquote p {
+    margin-bottom: 1.75rem;
+  }
+  blockquote footer {
+    font-style: regular;
   }
 
   blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
-    margin-top: 67.5px;
-    margin-top: 3.75rem;
-  }
-
-  blockquote p {
-    font-size: 36px;
-    font-size: 2rem;
-    line-height: 54px;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 3.5rem;
   }
 
   small {
@@ -958,30 +738,32 @@ figcaption {
   }
 
   figure {
-    margin-top: 54px;
-    margin-top: 3rem;
-    margin-bottom: 54px;
-    margin-bottom: 3rem;
+    padding: 0;
+    margin: 0;
+  }
+  figure img {
+    max-width: 100%;
+  }
+  figure figcaption {
+    text-align: center;
   }
 
-  figcaption {
-    margin: 27px auto;
-    margin: 1.5rem auto;
-    line-height: 27px;
-    line-height: 1.5rem;
+  figure.floatLeft {
+    padding: 1.75rem;
+    max-width: 15em;
+    text-align: center;
+  }
+  figure.floatLeft figcaption {
+    max-width: 100%;
   }
 
-  .beWonderful {
-    line-height: 54px;
-    line-height: 3rem;
-    margin-top: 54px;
-    margin-top: 3rem;
-    letter-spacing: -0.5px;
-    letter-spacing: -0.03125rem;
+  figure.floatRight {
+    padding: 1.75rem;
+    max-width: 15em;
+    text-align: center;
   }
-
-  .verticalGrid {
-    background: url(../assets/images/vertical-grid-18px.gif);
+  figure.floatRight figcaption {
+    max-width: 100%;
   }
 }
 

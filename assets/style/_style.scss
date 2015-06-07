@@ -4,7 +4,7 @@ body, html {
 	padding: 0;
 }
 
-article, footer {
+article {
 	width: 90%;
 	margin: 0 auto;
 }
@@ -18,15 +18,6 @@ article, footer {
 	border: 1px solid #ccc;
 	font-size: 14px;
 	text-decoration: none;
-}
-
-figure {
-	padding: 0;
-	margin: 0;
-}
-
-figcaption {
-	text-align: center;
 }
 
 img {
