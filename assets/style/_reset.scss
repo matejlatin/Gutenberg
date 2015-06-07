@@ -1,0 +1,78 @@
+.bold {
+	font-weight: 700;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.alignLeft {
+	text-align: left;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatCenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.floatRight {
+	float: right;
+}
+
+.lazy {
+	opacity: 0;
+}
+
+// Border Box
+body, article, section, footer, header, div, input, nav, article ol, article ul {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Clearfix
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.table {
+	display: table;
+}
+
+.fullScreen {
+	height: 100%;
+	width: 100%;
+}
+
+.hide {
+	display: none;
+}
+
+cite {
+	display: block;
+}
+
+// Buttons
