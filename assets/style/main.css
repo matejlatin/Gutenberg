@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:800);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -512,10 +513,6 @@ html {
   /* 23px */
 }
 
-.verticalGrid {
-  background: url(../assets/images/vertical-grid-16px.gif);
-}
-
 a {
   color: #3c3c3c;
   text-decoration: underline;
@@ -646,11 +643,11 @@ small {
 
 @media screen and (min-width: 1025px) {
   html {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
   * {
-    line-height: 1.75rem;
+    line-height: 1.8rem;
   }
 
   h1,
@@ -666,43 +663,46 @@ small {
   blockquote,
   pre,
   img {
-    max-width: 650px;
     max-width: 36rem;
     margin-top: 0;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.8rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   h1 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    margin-top: 5.25rem;
-    margin-bottom: 1.75rem;
+    font-size: 2.592rem;
+    line-height: 3.6rem;
+    margin-top: 5.4rem;
+    margin-bottom: 1.8rem;
   }
 
   h2, h3, h4, h5, h6 {
-    line-height: 1.75rem;
-    margin-top: 3.0625rem;
-    margin-bottom: 0.4375rem;
+    line-height: 1.8rem;
+    margin-top: 3.15rem;
+    margin-bottom: 0.45rem;
   }
 
   h2 {
-    font-size: 1.44rem;
+    font-size: 1.8rem;
   }
 
   h3 {
-    font-size: 1.16rem;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 
   h2 + h3 {
-    margin-top: 1.75rem;
-    margin-bottom: 0.875rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.9rem;
   }
 
   h3 + h4 {
-    margin-top: 1.75rem;
-    margin-bottom: 0.875rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.9rem;
   }
 
   ul, ol {
@@ -716,18 +716,18 @@ small {
   }
 
   blockquote {
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
   }
   blockquote p {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.8rem;
   }
   blockquote footer {
     font-style: regular;
   }
 
   blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
-    margin-top: 3.5rem;
+    margin-top: 3.6rem;
   }
 
   small {
@@ -749,7 +749,7 @@ small {
   }
 
   figure.floatLeft {
-    padding: 1.75rem;
+    padding: 1.8rem;
     max-width: 15em;
     text-align: center;
   }
@@ -758,7 +758,7 @@ small {
   }
 
   figure.floatRight {
-    padding: 1.75rem;
+    padding: 1.8rem;
     max-width: 15em;
     text-align: center;
   }
