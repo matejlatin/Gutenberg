@@ -3,14 +3,19 @@
 
 // DESKTOP
 // Fonts
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:800);
+
 $fontBody: 						"Merriweather", Georgia, serif;
 $fontHeadings:					"Merriweather Sans", Helvetica, Sans-serif; // use $fontBody if headings font should be the same as body
 
 // Base Font Size
-$sizeFontBase:					1.25em;
+$ms-base: 						1.25rem;
+
+// Modular Scale
+$ms-ratio: 						$minor-third;
 
 // Line-Height
-$lhDesktop:						1.75rem;
+$lhDesktop:						ms(2);
 
 // Colors
 $colorFontBody:					#3c3c3c;
@@ -20,12 +25,3 @@ $colorFontLight:				#888;
 $colorLinkNormal: 				$colorFontBody;
 $colorLinkActive: 				red;
 $colorLinkVisited: 				$colorFontLight;
-
-
-
-
-
-
-
-
-$lhMobile:			1.4375em;

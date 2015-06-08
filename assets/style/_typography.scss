@@ -14,9 +14,9 @@ html {
 	line-height: 1.4375em; 					/* 23px */
 }
 
-.verticalGrid {
-	background: url(../assets/images/vertical-grid-16px.gif);
-}
+// .verticalGrid {
+// 	background: url(../assets/images/vertical-grid-16px.gif);
+// }
 
 a {
 	color: $colorLinkNormal;
@@ -160,14 +160,12 @@ small {
 
 @media screen and (min-width: 1025px){
 	html {
-		font-size: $sizeFontBase;
+		font-size: $ms-base;
 	}
 
 	* {
 		line-height: $lhDesktop;
 	}
-
-	// Typographic Modular Scale: Minor Third, base: 20px, line-height: 35px http://www.modularscale.com/?20&px&1.2&web&text
 
 	h1,
 	h2,
@@ -182,7 +180,6 @@ small {
 	blockquote,
 	pre,
 	img {
-		max-width: 650px;
 		max-width: 36rem;
 		margin-top: 0;
 		margin-bottom: $lhDesktop;
@@ -191,7 +188,7 @@ small {
 	}
 
 	h1 {
-	  	font-size: 2.5rem;
+	  	font-size: ms(4);
 	  	line-height: 2*$lhDesktop;
 	  	margin-top: 3*$lhDesktop;
 	  	margin-bottom: $lhDesktop;
@@ -204,11 +201,15 @@ small {
 	}
 
 	h2 {
-	  	font-size: 1.44rem;
+	  	font-size: ms(2);
 	}
 
 	h3 {
-	  	font-size: 1.16rem;
+	  	font-size: ms(1);
+	}
+
+	h4 {
+		font-size: $ms-base;
 	}
 
 	h2 + h3 {
@@ -269,27 +270,24 @@ small {
 	}
 
 	figure.floatLeft {
-			// margin-right: 1em;
-			padding: $lhDesktop;
-			max-width: 15em;
-			text-align: center;
+		// margin-right: 1em;
+		padding: $lhDesktop;
+		max-width: 15em;
+		text-align: center;
 
-			figcaption {
-				max-width: 100%;
-			}
+		figcaption {
+			max-width: 100%;
 		}
+	}
+
 	figure.floatRight {
-			// margin-left: 1em;
-			padding: $lhDesktop;
-			max-width: 15em;
-			text-align: center;
+		// margin-left: 1em;
+		padding: $lhDesktop;
+		max-width: 15em;
+		text-align: center;
 
-			figcaption {
-				max-width: 100%;
-			}
+		figcaption {
+			max-width: 100%;
 		}
-
-	// .verticalGrid {
-	// 	background: url(../assets/images/vertical-grid-18px.gif);
-	// }
+	}
 }
