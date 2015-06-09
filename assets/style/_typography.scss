@@ -35,8 +35,6 @@ a:visited:active {
 	color: $colorLinkActive;
 }
 
-// Typographic Modular Scale: Minor Third, base: 16px, line-height: 23px
-
 h1,
 h2,
 h3,
@@ -212,6 +210,17 @@ small {
 		font-size: $ms-base;
 	}
 
+	h5 {
+		font-size: $ms-base;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	h6 {
+		font-size: $ms-base;
+		font-weight: normal;
+	}
+
 	h2 + h3 {
 		margin-top: $lhDesktop;
 		margin-bottom: 0.5*$lhDesktop;
@@ -223,25 +232,30 @@ small {
 	}
 
 	ul, ol {
-		padding-left: 54px;
-		padding-left: 3rem;
+		padding-left: ms(5);
 	}
 
 	ul li, ol li {
-		margin-bottom: 13.5px;
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5*$lhDesktop;
 	}
 
 	blockquote {
-		margin-top: 2*$lhDesktop;
-	  	margin-bottom: 2*$lhDesktop;
+		margin-top: -0.5*$lhDesktop;
+	  	margin-bottom: 0.5*$lhDesktop;
 
 	  	p {
 			margin-bottom: $lhDesktop;
+			padding-left: $lhDesktop;
+			font-size: $ms-base - 0.25*$ms-base;
 	  	}
 
 	  	footer {
 	  		font-style: regular;
+	  	}
+
+	  	p + footer cite {
+	  		padding-left: $lhDesktop;
+	  		font-size: $ms-base - 0.25*$ms-base;
 	  	}
 	}
 
@@ -250,15 +264,14 @@ small {
 	}
 
 	small {
-		font-size: 15px;
-		font-size: 0.8333333333rem;
-		line-height: 27px;
-		line-height: 1.5rem;
+		font-size: ms(-3);
+		line-height: $lhDesktop;
 	}
 
 	figure {
 	padding: 0;
-	margin: 0;
+	margin: 2*$lhDesktop auto;
+	max-width: 36rem;
 
 		img {
 			max-width: 100%;
@@ -266,28 +279,34 @@ small {
 
 		figcaption {
 			text-align: center;
+			font-size: ms(-2);
+			color: $colorFontLight;
 		}
 	}
 
 	figure.floatLeft {
 		// margin-right: 1em;
 		padding: $lhDesktop;
-		max-width: 15em;
+		max-width: 15rem;
 		text-align: center;
+		margin: 0;
 
 		figcaption {
 			max-width: 100%;
+			font-size: ms(-2);
 		}
 	}
 
 	figure.floatRight {
 		// margin-left: 1em;
 		padding: $lhDesktop;
-		max-width: 15em;
+		max-width: 15rem;
 		text-align: center;
+		margin: 0;
 
 		figcaption {
 			max-width: 100%;
+			font-size: ms(-2);
 		}
 	}
 }

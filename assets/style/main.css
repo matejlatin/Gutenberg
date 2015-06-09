@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,800);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -695,6 +695,17 @@ small {
     font-size: 1.25rem;
   }
 
+  h5 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
   h2 + h3 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem;
@@ -706,24 +717,28 @@ small {
   }
 
   ul, ol {
-    padding-left: 54px;
-    padding-left: 3rem;
+    padding-left: 3.1104rem;
   }
 
   ul li, ol li {
-    margin-bottom: 13.5px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.9rem;
   }
 
   blockquote {
-    margin-top: 3.6rem;
-    margin-bottom: 3.6rem;
+    margin-top: -0.9rem;
+    margin-bottom: 0.9rem;
   }
   blockquote p {
     margin-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    font-size: 0.9375rem;
   }
   blockquote footer {
     font-style: regular;
+  }
+  blockquote p + footer cite {
+    padding-left: 1.8rem;
+    font-size: 0.9375rem;
   }
 
   blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
@@ -731,39 +746,44 @@ small {
   }
 
   small {
-    font-size: 15px;
-    font-size: 0.8333333333rem;
-    line-height: 27px;
-    line-height: 1.5rem;
+    font-size: 0.72338rem;
+    line-height: 1.8rem;
   }
 
   figure {
     padding: 0;
-    margin: 0;
+    margin: 3.6rem auto;
+    max-width: 36rem;
   }
   figure img {
     max-width: 100%;
   }
   figure figcaption {
     text-align: center;
+    font-size: 0.86806rem;
+    color: #888;
   }
 
   figure.floatLeft {
     padding: 1.8rem;
-    max-width: 15em;
+    max-width: 15rem;
     text-align: center;
+    margin: 0;
   }
   figure.floatLeft figcaption {
     max-width: 100%;
+    font-size: 0.86806rem;
   }
 
   figure.floatRight {
     padding: 1.8rem;
-    max-width: 15em;
+    max-width: 15rem;
     text-align: center;
+    margin: 0;
   }
   figure.floatRight figcaption {
     max-width: 100%;
+    font-size: 0.86806rem;
   }
 }
 
