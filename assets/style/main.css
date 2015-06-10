@@ -498,7 +498,7 @@ img {
 html {
   color: #3c3c3c;
   font-family: "Merriweather", Georgia, serif;
-  font-size: 1em;
+  font-size: 1rem;
   /* 16px */
   -moz-font-feature-settings: "salt" 1;
   -moz-font-feature-settings: "salt=1";
@@ -509,7 +509,7 @@ html {
 }
 
 * {
-  line-height: 1.4375em;
+  line-height: 1.44rem;
   /* 23px */
 }
 
@@ -545,8 +545,7 @@ figure,
 pre,
 img {
   margin-top: 0;
-  margin-bottom: 1.4375em;
-  /* 23px */
+  margin-bottom: 1.44rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -555,45 +554,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 34px;
-  font-size: 2.125rem;
-  line-height: 46px;
-  line-height: 2.875rem;
-  margin-top: 46px;
-  margin-top: 2.875rem;
-  margin-bottom: 23px;
-  margin-bottom: 1.4375rem;
-  letter-spacing: -1px;
+  font-size: 2.48832rem;
+  line-height: 2.88rem;
+  margin-top: 4.32rem;
+  margin-bottom: 1.44rem;
   letter-spacing: -0.0625rem;
 }
 
 h2 {
-  font-size: 23px;
-  font-size: 1.4375rem;
-  line-height: 23px;
-  line-height: 1.4375rem;
-  margin-top: 46px;
-  margin-top: 2.875rem;
-  margin-bottom: 23px;
-  margin-bottom: 1.4375rem;
+  font-size: 1.728rem;
+  margin-top: 2.16rem;
+  margin-bottom: 0.72rem;
 }
 
 h3 {
-  font-size: 19px;
-  font-size: 1.1875rem;
-  line-height: 23px;
-  line-height: 1.4375rem;
-  margin-top: 34.5px;
-  margin-top: 2.15625rem;
-  margin-bottom: 11.5px;
-  margin-bottom: 0.71875rem;
+  font-size: 1.44rem;
+  margin-top: 2.16rem;
+  margin-bottom: 0.72rem;
 }
 
 h4 {
-  margin-top: 34.5px;
-  margin-top: 2.15625rem;
-  margin-bottom: 11.5px;
-  margin-bottom: 0.71875rem;
+  margin-top: 2.16rem;
+  margin-bottom: 0.72rem;
 }
 
 h2 + h3 {
@@ -611,8 +593,7 @@ h3 + h4 {
 }
 
 ul, ol {
-  padding-left: 46px;
-  padding-left: 2.875rem;
+  padding-left: 2.48832rem;
 }
 
 ul li, ol li {
@@ -621,8 +602,20 @@ ul li, ol li {
 }
 
 blockquote {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -0.72rem;
+  margin-bottom: 1.44rem;
+}
+blockquote p {
+  margin-bottom: 0.72rem;
+  padding-left: 1.44rem;
+  font-size: 0.9rem;
+}
+blockquote p + footer cite {
+  padding-left: 1.44rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
 }
 
 figure + h3, figure + h4 {
@@ -643,7 +636,7 @@ small {
 
 @media screen and (min-width: 1025px) {
   html {
-    font-size: 1.25rem;
+    font-size: 1rem, 1.25rem 1.25rem;
   }
 
   * {
@@ -671,7 +664,7 @@ small {
   }
 
   h1 {
-    font-size: 2.592rem;
+    font-size: 1.44rem;
     line-height: 3.6rem;
     margin-top: 5.4rem;
     margin-bottom: 1.8rem;
@@ -684,25 +677,25 @@ small {
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.04167rem;
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1rem, 1.25rem;
   }
 
   h5 {
-    font-size: 1.25rem;
+    font-size: 1rem, 1.25rem;
     font-weight: normal;
     font-style: italic;
   }
 
   h6 {
-    font-size: 1.25rem;
+    font-size: 1rem, 1.25rem;
     font-weight: normal;
   }
 
@@ -717,7 +710,7 @@ small {
   }
 
   ul, ol {
-    padding-left: 3.1104rem;
+    padding-left: 1.5rem;
   }
 
   ul li, ol li {
@@ -726,19 +719,14 @@ small {
 
   blockquote {
     margin-top: -0.9rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 1.8rem;
   }
   blockquote p {
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.9rem;
     padding-left: 1.8rem;
-    font-size: 0.9375rem;
-  }
-  blockquote footer {
-    font-style: regular;
   }
   blockquote p + footer cite {
     padding-left: 1.8rem;
-    font-size: 0.9375rem;
   }
 
   blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
@@ -754,36 +742,34 @@ small {
     padding: 0;
     margin: 3.6rem auto;
     max-width: 36rem;
+    text-align: center;
   }
   figure img {
     max-width: 100%;
   }
   figure figcaption {
-    text-align: center;
-    font-size: 0.86806rem;
+    font-size: 0.83333rem;
     color: #888;
   }
 
   figure.floatLeft {
     padding: 1.8rem;
     max-width: 15rem;
-    text-align: center;
     margin: 0;
   }
   figure.floatLeft figcaption {
     max-width: 100%;
-    font-size: 0.86806rem;
+    font-size: 0.83333rem;
   }
 
   figure.floatRight {
     padding: 1.8rem;
     max-width: 15rem;
-    text-align: center;
     margin: 0;
   }
   figure.floatRight figcaption {
     max-width: 100%;
-    font-size: 0.86806rem;
+    font-size: 0.83333rem;
   }
 }
 
