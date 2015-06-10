@@ -1,7 +1,7 @@
 html {
 	color: $colorFontBody;
 	font-family: $fontBody;
-	font-size: 1em; 						/* 16px */
+	font-size: ms(0); 						/* 16px */
     -moz-font-feature-settings:"salt" 1;
 	-moz-font-feature-settings:"salt=1";
 	-ms-font-feature-settings:"salt" 1;
@@ -11,7 +11,7 @@ html {
 }
 
 * {
-	line-height: 1.4375em; 					/* 23px */
+	line-height: $lhMobile; 					/* 23px */
 }
 
 // .verticalGrid {
@@ -50,7 +50,7 @@ figure,
 pre,
 img {
 	margin-top: 0;
-    margin-bottom: 1.4375em; /* 23px */
+    margin-bottom: $lhMobile;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,47 +59,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 34px;
-  font-size: 2.125rem;
-  line-height: 46px; 		// 46px = 2 x 23
-  line-height: 2.875rem; 	// 46px = 2 x 23
-  margin-top: 46px; 		// 46px = 2 x 23
-  margin-top: 2.875rem; 	// 46px = 2 x 23
-  margin-bottom: 23px; 		// 23px
-  margin-bottom: 1.4375rem; // 23px
-  // text-transform: uppercase;
-  // color: $wmRed;
-  letter-spacing: -1px;
+  font-size: ms(10);
+  line-height: 2*$lhMobile;
+  margin-top: 3*$lhMobile;
+  margin-bottom: $lhMobile;
   letter-spacing: -0.0625rem;
 }
 
 h2 {
-  font-size: 23px; 			// 23px = 1.4375 x 16
-  font-size: 1.4375rem; 	// 23px = 1.4375 x 16
-  line-height: 23px; 		// 23px = 1 x 23
-  line-height: 1.4375rem; 	// 23px = 1.4375 x 16
-  margin-top: 46px; 		// 23px
-  margin-top: 2.875rem; 	// 23px
-  margin-bottom: 23px; 		// 23px
-  margin-bottom: 1.4375rem; // 23px
+  font-size: ms(6);
+  margin-top: 1.5*$lhMobile;
+  margin-bottom: 0.5*$lhMobile;
 }
 
 h3 {
-  font-size: 19px; 			// 19px = 1.1875 x 16
-  font-size: 1.1875rem; 	// 23px = 1.1875 x 16
-  line-height: 23px; 		// 23px = 1 x 23
-  line-height: 1.4375rem; 	// 23px = 1.4375 x 16
-  margin-top: 34.5px; 		// 23px
-  margin-top: 2.15625rem; 	// 23px
-  margin-bottom: 11.5px; 		// 23px
-  margin-bottom: 0.71875rem; // 11.5px
+  font-size: ms(4);
+  margin-top: 1.5*$lhMobile;
+  margin-bottom: 0.5*$lhMobile;
 }
 
 h4 {
-  margin-top: 34.5px; 		// 23px
-  margin-top: 2.15625rem; 	// 23px
-  margin-bottom: 11.5px; 		// 23px
-  margin-bottom: 0.71875rem; // 23px
+  margin-top: 1.5*$lhMobile;
+  margin-bottom: 0.5*$lhMobile;
 }
 
 h2 + h3 {
@@ -117,8 +98,7 @@ h3 + h4 {
 }
 
 ul, ol {
-	padding-left: 46px;
-	padding-left: 2.875rem;
+	padding-left: ms(10);
 }
 
 ul li, ol li {
@@ -127,17 +107,23 @@ ul li, ol li {
 	}
 
 blockquote {
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -0.5*$lhMobile;
+  	margin-bottom: $lhMobile;
+
+  	p {
+		margin-bottom: 0.5*$lhMobile;
+		padding-left: $lhMobile;
+		font-size: ms(0) - 0.1*ms(0);
+  	}
+
+  	p + footer cite {
+  		padding-left: $lhMobile;
+  		vertical-align: middle;
+  		font-size: ms(0) - 0.1*ms(0);
+  	}
 }
-
-// blockquote p {
-// 	margin-bottom: 1.4375rem;
-// }
-
-// blockquote footer {
-// 	text-align: center;
-// }
 
 figure + h3, figure + h4 {
 	margin-top: 57.5px;
@@ -158,7 +144,7 @@ small {
 
 @media screen and (min-width: 1025px){
 	html {
-		font-size: $ms-base;
+		font-size: $ms-base(1.25rem);
 	}
 
 	* {
@@ -241,21 +227,17 @@ small {
 
 	blockquote {
 		margin-top: -0.5*$lhDesktop;
-	  	margin-bottom: 0.5*$lhDesktop;
+	  	margin-bottom: $lhDesktop;
 
 	  	p {
-			margin-bottom: $lhDesktop;
+			margin-bottom: 0.5*$lhDesktop;
 			padding-left: $lhDesktop;
-			font-size: $ms-base - 0.25*$ms-base;
-	  	}
-
-	  	footer {
-	  		font-style: regular;
+			// font-size: ms(0) - 0.25*ms(0);
 	  	}
 
 	  	p + footer cite {
 	  		padding-left: $lhDesktop;
-	  		font-size: $ms-base - 0.25*$ms-base;
+	  		// font-size: ms(0) - 0.25*ms(0);
 	  	}
 	}
 
@@ -272,13 +254,13 @@ small {
 	padding: 0;
 	margin: 2*$lhDesktop auto;
 	max-width: 36rem;
+	text-align: center;
 
 		img {
 			max-width: 100%;
 		}
 
 		figcaption {
-			text-align: center;
 			font-size: ms(-2);
 			color: $colorFontLight;
 		}
@@ -288,7 +270,6 @@ small {
 		// margin-right: 1em;
 		padding: $lhDesktop;
 		max-width: 15rem;
-		text-align: center;
 		margin: 0;
 
 		figcaption {
@@ -301,7 +282,6 @@ small {
 		// margin-left: 1em;
 		padding: $lhDesktop;
 		max-width: 15rem;
-		text-align: center;
 		margin: 0;
 
 		figcaption {
