@@ -1,3 +1,39 @@
+body, html {
+	font-family: $fontBody;
+}
+
+* {
+	line-height: $line-height;
+}
+
+article {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#btnToggleGrid {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+	padding: 5px 20px;
+	background: #eaeaea;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media screen and (min-width: 600px){
+	// img,
+	// figcaption,
+	// figure {
+	// 	max-width: 700px;
+	// }
+}
+
 .bold {
 	font-weight: 700;
 }
@@ -40,37 +76,4 @@ body, article, section, footer, header, div, input, nav, article ol, article ul 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-// Clearfix
-
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
-
-.table {
-	display: table;
-}
-
-.fullScreen {
-	height: 100%;
-	width: 100%;
-}
-
-.hide {
-	display: none;
-}
-
-cite {
-	display: block;
 }

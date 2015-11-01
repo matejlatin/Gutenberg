@@ -9,9 +9,9 @@ module.exports = function(grunt){
 				},
 				files: [{
 			        expand: true,
-			        cwd: 'assets/style/',
+			        cwd: 'src/style/',
 			        src: ['**/*.scss'],
-			        dest: 'assets/style/',
+			        dest: 'src/style/',
 			        ext: '.css'
 				}]
 			}
@@ -19,26 +19,26 @@ module.exports = function(grunt){
 		concat: {
 			css: {
 				files: {
-					'src/combined.css': ['assets/style/*.css']
+					'assets/combined.css': ['src/style/*.css']
 				}
 			},
 			js: {
 				files: {
-					'src/combined.js': ['assets/js/*.js']
+					'assets/combined.js': ['src/js/*.js']
 				}
 			}
 		},
 		cssmin: {
 			minify: {
 				files: {
-					'src/combined.min.css': ['src/combined.css']
+					'assets/combined.min.css': ['assets/combined.css']
 				}
 			}
 		},
 		uglify: {
 			js: {
 				files: {
-					'src/combined.min.js': ['src/combined.js']
+					'assets/combined.min.js': ['assets/combined.js']
 				}
 			}
 		},
@@ -48,7 +48,7 @@ module.exports = function(grunt){
 					mode: 'gzip'
 				},
 				files: [
-					{expand: true, src: ['src/combined.min.css'], dest: '', ext: '.gz.css'}
+					{expand: true, src: ['assets/combined.min.css'], dest: '', ext: '.gz.css'}
 				]
 			},
 			js: {
@@ -56,14 +56,14 @@ module.exports = function(grunt){
 					mode: 'gzip'
 				},
 				files: [
-					{expand: true, src: ['src/combined.min.js'], dest: '', ext: '.gz.js'}
+					{expand: true, src: ['assets/combined.min.js'], dest: '', ext: '.gz.js'}
 				]
 			}
 		},
 		// Browser Sync
 		browserSync: {
 			bsFiles: {
-				src: ['src/*.css', '*.html']
+				src: ['assets/*.css', '*.html']
 			},
 			options: {
 				server: {
@@ -95,21 +95,21 @@ module.exports = function(grunt){
 				}
 			},
 			scss: {
-				files: ['assets/style/*.scss'],
+				files: ['src/style/*.scss'],
 				tasks: ['sass', 'concat:css', 'cssmin', 'compress:css'],
 				options: {
 					livereload: true,
 				}
 			},
 			css: {
-				files: ['assets/style/*.css'],
+				files: ['src/style/*.css'],
 				tasks: ['concat:css', 'cssmin', 'compress:css'],
 				options: {
 					livereload: true,
 				}
 			},
 			js: {
-				files: ['assets/js/*.js'],
+				files: ['src/js/*.js'],
 				tasks: ['concat:js', 'uglify', 'compress:js'],
 				options: {
 					livereload: true,

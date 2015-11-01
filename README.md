@@ -1,7 +1,7 @@
-# Web Typography
+# Gutenberg: Web Typography Starter Kit
 Basic web typography set with Modular Scale compliant with vertical rhythm. Serves as a foundation for further projects.
 
-[View Example](http://matejlatin.github.io/Web-Typography/)
+[View Example](http://matejlatin.github.io/Gutenberg/)
 
 
 ##Features
