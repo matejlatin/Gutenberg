@@ -189,10 +189,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-figure {
-  margin: 1em 40px;
-}
-
 /**
  * Address differences between Firefox and other browsers.
  */
@@ -406,15 +402,8 @@ th {
 
 /* TODO:
  - fonts/theme function
- - headings sizes mixin/function */
-body, html {
-  font-family: "Merriweather", Georgia, serif;
-}
-
-* {
-  line-height: 1.625;
-}
-
+ - solve the decimals problem
+ */
 article {
   width: 80%;
   margin: 0 auto;
@@ -433,6 +422,12 @@ article {
 
 img {
   max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+cite {
+  display: block;
 }
 
 .bold {
@@ -478,7 +473,33 @@ body, article, section, footer, header, div, input, nav, article ol, article ul 
   box-sizing: border-box;
 }
 
+body, html {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.grid, .grid-double {
+  background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
+  background-size: 100% 26px;
+}
+
+.grid-double {
+  background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
+}
+
+* {
+  line-height: 1.625;
+  margin: 0 0 26px;
+  margin: 0 0 1.625rem;
+}
+
 h1 {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 52px;
+  line-height: 3.25rem;
   margin-top: 104px;
   margin-top: 6.5rem;
   margin-bottom: 26px;
@@ -486,6 +507,10 @@ h1 {
 }
 
 h2 {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 39px;
+  line-height: 2.4375rem;
   margin-top: 65px;
   margin-top: 4.0625rem;
   margin-bottom: 13px;
@@ -493,36 +518,76 @@ h2 {
 }
 
 h3 {
-  margin-top: 39px;
-  margin-top: 2.4375rem;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  margin-top: 52px;
+  margin-top: 3.25rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem;
 }
 
 h4 {
-  margin-top: 39px;
-  margin-top: 2.4375rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  margin-top: 65px;
+  margin-top: 4.0625rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem;
 }
 
 h5 {
-  margin-top: 26px;
-  margin-top: 1.625rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  margin-top: 65px;
+  margin-top: 4.0625rem;
+  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
 }
 
 h6 {
-  margin-top: 26px;
-  margin-top: 1.625rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  margin-top: 65px;
+  margin-top: 4.0625rem;
+  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  line-height: 3.25rem;
+h6 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+figcaption {
+  color: #888;
+  font-style: italic;
+  font-size: 0.8125rem;
+  text-align: center;
+  line-height: 26px;
+  line-height: 1.625rem;
+}
+
+blockquote {
+  padding-left: 1.4375rem;
+  font-style: italic;
+  margin-top: -13px;
+  margin-top: -0.8125rem;
+}
+
+cite {
+  font-style: normal;
+}
+
+ul li, ol li {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=gutenberg.css.map */

@@ -1,15 +1,74 @@
+body, html {
+	font-family: $fontBody;
+}
+
+// Grid setup
+.grid {
+	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
+	background-repeat: repeat;
+    background-position: 0% 0%;
+    box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
+    background-size: 100% #{$leading + 'px'};
+}
+
+// Double grid setup
+.grid-double {
+	@extend .grid;
+	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
+}
+
+// Reset the line-height for all elements to keep the vertical rhythm
+* {
+	line-height: $line-height;
+	margin: 0 0 #{$leading + 'px'};
+	margin: 0 0 #{$leading-rem + 'rem'};
+}
+
+// Heading sizes, line-heights and margins
 @each $heading, $properties in $headings {
     #{$heading} {
-        margin-top: #{nth($properties, 3)*$leading + 'px'};
-        margin-top: #{nth($properties, 3)*$leading-rem + 'rem'};
-        margin-bottom: #{nth($properties, 4)*$leading + 'px'};
-        margin-bottom: #{nth($properties, 4)*$leading-rem + 'rem'};
+    	font-size: #{nth($properties, 1) * $base + 'px'};
+    	font-size: #{nth($properties, 1) + 'rem'};
+    	line-height: #{nth($properties, 2)*$leading + 'px'};
+    	line-height: #{nth($properties, 2)*$leading-rem + 'rem'};
+        margin-top: #{nth($properties, 3) * $leading + 'px'};
+        margin-top: #{nth($properties, 3) * $leading-rem + 'rem'};
+        margin-bottom: #{nth($properties, 4) * $leading + 'px'};
+        margin-bottom: #{nth($properties, 4) * $leading-rem + 'rem'};
     }
 }
 
-h1 {
-	font-size: 2.5rem;
-	line-height: #{2*$leading-rem + 'rem'};
+h6 {
+	font-weight: normal;
+	font-style: italic;
+}
+
+figcaption {
+	color: $color-font-light;
+	font-style: italic;
+	font-size: 0.8125rem;
+	text-align: center;
+	line-height: #{$leading + 'px'};
+	line-height: #{$leading-rem + 'rem'};
+}
+
+blockquote {
+	padding-left: 1.4375rem;
+	// font-size: 0.8125rem;
+	font-style: italic;
+	// line-height: $line-height;
+	margin-top:  -#{0.5 * $leading + 'px'};
+	margin-top:  -#{0.5 * $leading-rem + 'rem'};
+}
+
+cite {
+	font-style: normal;
+}
+
+ul, ol {
+	li {
+		margin-bottom: 0;
+	}
 }
 
 
