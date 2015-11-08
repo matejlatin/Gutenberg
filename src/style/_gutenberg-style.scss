@@ -1,11 +1,3 @@
-body, html {
-	font-family: $fontBody;
-}
-
-* {
-	line-height: $line-height;
-}
-
 article {
 	width: 80%;
 	margin: 0 auto;
@@ -24,6 +16,12 @@ article {
 
 img {
 	max-width: 100%;
+	display: block;
+	margin: inherit auto;
+}
+
+cite {
+	display: block;
 }
 
 @media screen and (min-width: 600px){
