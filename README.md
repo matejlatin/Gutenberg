@@ -1,6 +1,6 @@
 # Gutenberg: Web Typography Starter Kit
 ## Producing beautiful web typography on a large scale
-Gutenberg is a work–in–progress project by [Matej Latin](http://matejlatin.co.uk). Its' main goal is to set up a vertical (baseline) grid and improves the layout by setting the proper vertical rhythm. This results in improved readability and reduced reader's eye fatigue.
+Gutenberg is a work–in–progress project by [Matej Latin](http://matejlatin.co.uk). Its' main goal is to set up a vertical (baseline) grid and to improve the layout by setting the proper vertical rhythm. This results in improved readability, visual hierarchy and reduced reader's eye fatigue.
 
 [View Example](http://matejlatin.github.io/Gutenberg/)
 
