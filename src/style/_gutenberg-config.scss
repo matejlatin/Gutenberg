@@ -1,7 +1,7 @@
 // Configuration
 // ---------------------------------- //
 
-$edit-mode: true !default; // Enable/disable the grid toggle button.
+$edit-mode: true; // Enables/disables the grid toggle button.
 
 // Theme / Fonts
 $theme: Georgia !default; // Merriweather, Georgia, OpenSans, Custom;
@@ -10,12 +10,13 @@ $custom-font-headings: TBD;
 $custom-font-body: TBD;
 
 // Base sizes
-$base-font-size: 100 !default;
+$base-font-size: 100 !default; // In %. Also used for mobile
+$base-font-size-desktop: 112.5; // In %. Used to calculate the desktop font size. May be the same as mobile.
 $line-height: 1.625;
 $base: 16 * ($base-font-size / 100);
 $leading: $base * $line-height;
 $leading-rem: $leading / $base;
-$max-width: 65;
+$max-width: 35;
 
 // Modular Scale
 $modular-scale: (

@@ -1,0 +1,29 @@
+@media screen and (min-width: 40rem){
+	* {
+		max-width: #{$max-width * $base + 'px'};
+		max-width: #{$max-width + 'rem'};
+		margin-left: auto!important;
+		margin-right: auto!important;
+	}
+
+	html {
+		font-size: #{$base-font-size-desktop + '%'};
+	}
+
+	body, html {
+		margin: 0;
+		width: 100%;
+		max-width: none;
+	}
+
+	article {
+		width: 80%;
+		max-width: none;
+	}
+
+	figure {
+		max-width: 40%;
+		padding: 0 #{$leading + 'px'};
+		padding: 0 #{$leading-rem + 'rem'};
+	}
+}

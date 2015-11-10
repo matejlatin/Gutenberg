@@ -473,7 +473,7 @@ body, article, section, footer, header, div, input, nav, article ol, article ul 
   box-sizing: border-box;
 }
 
-body, html {
+html {
   font-family: "Merriweather", Georgia, serif;
 }
 
@@ -483,6 +483,7 @@ body, html {
   background-position: 0% 0%;
   box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
   background-size: 100% 26px;
+  background-size: 100% 1.625rem;
 }
 
 .grid-double {
@@ -561,9 +562,34 @@ h6 {
   margin-bottom: 0.8125rem;
 }
 
+h1 + h2 {
+  margin-top: 26px;
+  margin-top: 1.625rem;
+}
+
+h2 + h3, h3 + h4, h4 + h5 {
+  margin-top: 13px;
+  margin-top: 0.8125rem;
+}
+
+h5 + h6 {
+  margin-top: -13px;
+  margin-top: -0.8125rem;
+}
+
 h6 {
   font-weight: normal;
   font-style: italic;
+}
+
+a {
+  color: #3c3c3c;
+}
+a:visited {
+  color: #888;
+}
+a:active {
+  color: red;
 }
 
 figcaption {
@@ -588,6 +614,46 @@ cite {
 
 ul li, ol li {
   margin-bottom: 0;
+}
+
+hr {
+  margin: 52px auto;
+  margin: 3.25rem auto;
+  width: 50%;
+  display: block;
+  background-color: #888;
+  height: 1px;
+  border: 0;
+}
+
+@media screen and (min-width: 40rem) {
+  * {
+    max-width: 560px;
+    max-width: 35rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  html {
+    font-size: 112.5%;
+  }
+
+  body, html {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  article {
+    width: 80%;
+    max-width: none;
+  }
+
+  figure {
+    max-width: 40%;
+    padding: 0 26px;
+    padding: 0 1.625rem;
+  }
 }
 
 /*# sourceMappingURL=gutenberg.css.map */
