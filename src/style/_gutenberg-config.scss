@@ -1,13 +1,13 @@
 // Configuration
 // ---------------------------------- //
 
-$edit-mode: true; // Enables/disables the grid toggle button.
+$edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
 // Theme / Fonts
-$theme: Georgia !default; // Merriweather, Georgia, OpenSans, Custom;
-$custom-font: false !default;
-$custom-font-headings: TBD;
+$theme: Merriweather !default; // [ Merriweather / Georgia / OpenSans / Custom ]
+$custom-font: false !default; // [ true / false ]
 $custom-font-body: TBD;
+$custom-font-headings: TBD;
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile
@@ -53,14 +53,8 @@ $color-link-visited: $color-font-light;
 
 
 /* TODO:
- - fonts/theme function
  - solve the decimals problem
+ - break dependency from Normalize
+ - responsive grid
+ - heading margins in px for desktop
  */
-
-
-
-// Custom Fonts
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,800);
-
-$fontBody: 						"Merriweather", Georgia, serif;
-$fontHeadings:					"Merriweather Sans", Helvetica, Sans-serif; // use $fontBody if headings font should be the same as body

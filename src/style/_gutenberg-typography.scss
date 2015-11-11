@@ -1,6 +1,36 @@
+$font-body: null;
+$font-headings: null;
+
+@if $theme == Merriweather {
+	@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,800);
+	$font-body: "Merriweather", Georgia, serif;
+	$font-headings: "Merriweather Sans", Helvetica, Sans-serif;
+} @else if $theme == Georgia {
+	$font-body: Georgia, serif;
+} @else if $theme == OpenSans {
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+	$font-body: "Open Sans", Arial, Helvetica, Sans-serif;
+} @else if $theme == custom {
+	$font-body: $custom-font-body;
+	@if $custom-font-headings != $custom-font-body {
+		$font-headings: $custom-font-headings;
+	}
+}
+
 html {
-	// font-size: #{$base + 'px'};
-	font-family: $fontBody;
+	// font-size: #{$base + 'px'}; percentage instead?
+	font-family: $font-body;
+}
+
+@if $font-headings != null {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-headings;
+	}
 }
 
 // Grid setup
