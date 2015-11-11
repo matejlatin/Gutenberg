@@ -401,8 +401,10 @@ th {
 }
 
 /* TODO:
- - fonts/theme function
  - solve the decimals problem
+ - break dependency from Normalize
+ - responsive grid
+ - heading margins in px for desktop
  */
 article {
   width: 80%;
@@ -410,6 +412,7 @@ article {
 }
 
 #btnToggleGrid {
+  display: block;
   position: fixed;
   top: 5%;
   right: 5%;
@@ -475,6 +478,15 @@ body, article, section, footer, header, div, input, nav, article ol, article ul 
 
 html {
   font-family: "Merriweather", Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather Sans", Helvetica, Sans-serif;
 }
 
 .grid, .grid-double {
@@ -632,6 +644,7 @@ hr {
     max-width: 35rem;
     margin-left: auto !important;
     margin-right: auto !important;
+    line-height: 29px;
   }
 
   html {
@@ -649,7 +662,7 @@ hr {
     max-width: none;
   }
 
-  figure {
+  figure.floatLeft, figure.floatRight {
     max-width: 40%;
     padding: 0 26px;
     padding: 0 1.625rem;

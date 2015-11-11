@@ -4,6 +4,11 @@ article {
 }
 
 #btnToggleGrid {
+	@if $edit-mode == true {
+		display: block;
+	} @else if $edit-mode == false {
+		display: none;
+	}
 	position: fixed;
 	top: 5%;
 	right: 5%;
