@@ -1,12 +1,20 @@
+// Calculations
+$base: 16 * ($base-font-size / 100);
+$leading: $base * $line-height;
+$leading-rem: $leading / $base;
+
+$base-desktop: 16 * ($base-font-size-desktop / 100);
+$leading-desktop: $base-desktop * $line-height-desktop;
+$leading-rem-desktop: $leading-desktop / $base-desktop;
+
+// Set font variables
 $font-body: null;
 $font-headings: null;
 
 @if $theme == Merriweather {
-	@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,800);
+	@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 	$font-body: "Merriweather", Georgia, serif;
-	$font-headings: "Merriweather Sans", Helvetica, Sans-serif;
-} @else if $theme == Georgia {
-	$font-body: Georgia, serif;
+	// $font-headings: "Playfair Display", Georgia, Serif;
 } @else if $theme == OpenSans {
 	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
 	$font-body: "Open Sans", Arial, Helvetica, Sans-serif;
@@ -18,8 +26,17 @@ $font-headings: null;
 }
 
 html {
-	// font-size: #{$base + 'px'}; percentage instead?
+	font-size: #{$base + 'px'};
+	font-size: #{$base-font-size + '%'};
 	font-family: $font-body;
+	color: $color-font-body;
+}
+
+// Reset the line-height for all elements to keep the vertical rhythm
+* {
+	line-height: $line-height;
+	margin: 0 0 #{$leading + 'px'};
+	margin: 0 0 #{$leading-rem + 'rem'};
 }
 
 @if $font-headings != null {
@@ -37,7 +54,7 @@ html {
 .grid {
 	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
 	background-repeat: repeat;
-    background-position: 0% 0%;
+    background-position: top left;
     box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
     background-size: 100% #{$leading + 'px'};
     background-size: 100% #{$leading-rem + 'rem'};
@@ -47,13 +64,6 @@ html {
 .grid-double {
 	@extend .grid;
 	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
-}
-
-// Reset the line-height for all elements to keep the vertical rhythm
-* {
-	line-height: $line-height;
-	margin: 0 0 #{$leading + 'px'};
-	margin: 0 0 #{$leading-rem + 'rem'};
 }
 
 // Heading sizes, line-heights and margins
@@ -109,15 +119,14 @@ figcaption {
 	text-align: center;
 	line-height: #{$leading + 'px'};
 	line-height: #{$leading-rem + 'rem'};
+	margin-bottom: 0;
 }
 
 blockquote {
 	padding-left: 1.4375rem;
 	// font-size: 0.8125rem;
 	font-style: italic;
-	// line-height: $line-height;
-	margin-top:  -#{0.5 * $leading + 'px'};
-	margin-top:  -#{0.5 * $leading-rem + 'rem'};
+	// font-size: 95%;
 }
 
 cite {
@@ -140,297 +149,3 @@ hr {
     border: 0;
     // border-top: 1px solid #ccc;
 }
-
-
-// html {
-// 	color: $colorFontBody;
-// 	font-family: $fontBody;
-// 	font-size: ms(0); 						/* 16px */
-//     -moz-font-feature-settings:"salt" 1;
-// 	-moz-font-feature-settings:"salt=1";
-// 	-ms-font-feature-settings:"salt" 1;
-// 	-o-font-feature-settings:"salt" 1;
-// 	-webkit-font-feature-settings:"salt" 1;
-// 	font-feature-settings:"salt" 1;
-// }
-
-// * {
-// 	// line-height: $lhMobile; 					/* 23px */
-// }
-
-// // .verticalGrid {
-// // 	background: url(../assets/images/vertical-grid-16px.gif);
-// // }
-
-// a {
-// 	color: $colorLinkNormal;
-// 	text-decoration: underline;
-// }
-
-// a:active {
-// 	color: $colorLinkActive;
-// }
-
-// a:visited {
-// 	color: $colorLinkVisited;
-// }
-
-// a:visited:active {
-// 	color: $colorLinkActive;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p,
-// ol,
-// ul,
-// table,
-// blockquote,
-// figure,
-// pre,
-// img {
-// 	margin-top: 0;
-//     // margin-bottom: $lhMobile;
-// }
-
-// h1, h2, h3, h4, h5, h6 {
-// 	font-family: $fontHeadings;
-// 	font-weight: 800;
-// }
-
-// h1 {
-//   font-size: ms(10);
-//   line-height: 2*$lhMobile;
-//   margin-top: 3*$lhMobile;
-//   margin-bottom: $lhMobile;
-//   letter-spacing: -0.0625rem;
-// }
-
-// h2 {
-//   font-size: ms(6);
-//   margin-top: 1.5*$lhMobile;
-//   margin-bottom: 0.5*$lhMobile;
-// }
-
-// h3 {
-//   font-size: ms(4);
-//   margin-top: 1.5*$lhMobile;
-//   margin-bottom: 0.5*$lhMobile;
-// }
-
-// h4 {
-//   margin-top: 1.5*$lhMobile;
-//   margin-bottom: 0.5*$lhMobile;
-// }
-
-// h2 + h3 {
-// 	margin-top: 23px;
-// 	margin-top: 1.4375rem;
-// 	margin-bottom: 23px;
-// 	margin-bottom: 1.4375rem;
-// }
-
-// h3 + h4 {
-// 	margin-bottom: 11.5px;
-// 	margin-bottom: 0.71875rem;
-// 	margin-top: 23px;
-// 	margin-top: 1.4375rem;
-// }
-
-// ul, ol {
-// 	padding-left: ms(10);
-// }
-
-// ul li, ol li {
-// 		margin-bottom: 11.5px;
-// 		margin-bottom: 0.71875rem;
-// 	}
-
-// blockquote {
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	margin-top: -0.5*$lhMobile;
-//   	margin-bottom: $lhMobile;
-
-//   	p {
-// 		margin-bottom: 0.5*$lhMobile;
-// 		padding-left: $lhMobile;
-// 		font-size: ms(0) - 0.1*ms(0);
-//   	}
-
-//   	p + footer cite {
-//   		padding-left: $lhMobile;
-//   		vertical-align: middle;
-//   		font-size: ms(0) - 0.1*ms(0);
-//   	}
-// }
-
-// figure + h3, figure + h4 {
-// 	margin-top: 57.5px;
-// 	margin-top: 3.59375rem;
-// }
-
-// img {
-// 	vertical-align: middle;
-// 	// max-height: 322px;
-// }
-
-// small {
-// 	font-size: 13px;
-// 	font-size: 0.8125rem;
-// 	line-height: 23px;
-// 	line-height: 1.4375rem;
-// }
-
-// @media screen and (min-width: 1025px){
-// 	html {
-// 		font-size: $ms-base(1.25rem);
-// 	}
-
-// 	* {
-// 		line-height: $lhDesktop;
-// 	}
-
-// 	h1,
-// 	h2,
-// 	h3,
-// 	h4,
-// 	h5,
-// 	h6,
-// 	p,
-// 	ol,
-// 	ul,
-// 	table,
-// 	blockquote,
-// 	pre,
-// 	img {
-// 		max-width: 36rem;
-// 		margin-top: 0;
-// 		margin-bottom: $lhDesktop;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 	}
-
-// 	h1 {
-// 	  	font-size: ms(4);
-// 	  	line-height: 2*$lhDesktop;
-// 	  	margin-top: 3*$lhDesktop;
-// 	  	margin-bottom: $lhDesktop;
-// 	}
-
-// 	h2, h3, h4, h5, h6 {
-// 		line-height: $lhDesktop;
-// 		margin-top: 1.75*$lhDesktop;
-// 		margin-bottom: 0.25*$lhDesktop;
-// 	}
-
-// 	h2 {
-// 	  	font-size: ms(2);
-// 	}
-
-// 	h3 {
-// 	  	font-size: ms(1);
-// 	}
-
-// 	h4 {
-// 		font-size: $ms-base;
-// 	}
-
-// 	h5 {
-// 		font-size: $ms-base;
-// 		font-weight: normal;
-// 		font-style: italic;
-// 	}
-
-// 	h6 {
-// 		font-size: $ms-base;
-// 		font-weight: normal;
-// 	}
-
-// 	h2 + h3 {
-// 		margin-top: $lhDesktop;
-// 		margin-bottom: 0.5*$lhDesktop;
-// 	}
-
-// 	h3 + h4 {
-// 		margin-top: $lhDesktop;
-// 		margin-bottom: 0.5*$lhDesktop;
-// 	}
-
-// 	ul, ol {
-// 		padding-left: ms(5);
-// 	}
-
-// 	ul li, ol li {
-// 		margin-bottom: 0.5*$lhDesktop;
-// 	}
-
-// 	blockquote {
-// 		margin-top: -0.5*$lhDesktop;
-// 	  	margin-bottom: $lhDesktop;
-
-// 	  	p {
-// 			margin-bottom: 0.5*$lhDesktop;
-// 			padding-left: $lhDesktop;
-// 			// font-size: ms(0) - 0.25*ms(0);
-// 	  	}
-
-// 	  	p + footer cite {
-// 	  		padding-left: $lhDesktop;
-// 	  		// font-size: ms(0) - 0.25*ms(0);
-// 	  	}
-// 	}
-
-// 	blockquote + h3, blockquote + h4, figure + h3, figure + h4 {
-// 		margin-top: 2*$lhDesktop;
-// 	}
-
-// 	small {
-// 		font-size: ms(-3);
-// 		line-height: $lhDesktop;
-// 	}
-
-// 	figure {
-// 	padding: 0;
-// 	margin: 2*$lhDesktop auto;
-// 	max-width: 36rem;
-// 	text-align: center;
-
-// 		img {
-// 			max-width: 100%;
-// 		}
-
-// 		figcaption {
-// 			font-size: ms(-2);
-// 			color: $colorFontLight;
-// 		}
-// 	}
-
-// 	figure.floatLeft {
-// 		// margin-right: 1em;
-// 		padding: $lhDesktop;
-// 		max-width: 15rem;
-// 		margin: 0;
-
-// 		figcaption {
-// 			max-width: 100%;
-// 			font-size: ms(-2);
-// 		}
-// 	}
-
-// 	figure.floatRight {
-// 		// margin-left: 1em;
-// 		padding: $lhDesktop;
-// 		max-width: 15rem;
-// 		margin: 0;
-
-// 		figcaption {
-// 			max-width: 100%;
-// 			font-size: ms(-2);
-// 		}
-// 	}
-// }

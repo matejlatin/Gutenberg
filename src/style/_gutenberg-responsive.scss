@@ -1,14 +1,22 @@
 @media screen and (min-width: 40rem){
 	* {
-		max-width: #{$max-width * $base + 'px'};
+		max-width: #{$max-width * $base-desktop + 'px'};
 		max-width: #{$max-width + 'rem'};
 		margin-left: auto!important;
 		margin-right: auto!important;
-		line-height: 29px;
+		line-height: $line-height-desktop;
 	}
 
 	html {
-		font-size: #{$base-font-size-desktop + '%'};
+		// font-size: #{$base-font-size-desktop + '%'};
+		font-size: #{$base-desktop + 'px'};
+		font-size: #{$base-font-size-desktop / 100 + 'rem'};
+	}
+
+	.grid {
+		background-size: 100% #{$leading-desktop + 'px'};
+    	background-size: 100% #{$leading-rem-desktop + 'rem'};
+    	// background-size: 100% 30px;
 	}
 
 	body, html {
@@ -22,9 +30,40 @@
 		max-width: none;
 	}
 
+	// Heading sizes, line-heights and margins
+	@each $heading, $properties in $headings {
+	    #{$heading} {
+	    	font-size: #{nth($properties, 1) * $base-desktop + 'px'};
+	    	font-size: #{nth($properties, 1) + 'rem'};
+	    	line-height: #{nth($properties, 2)*$leading-desktop + 'px'};
+	    	line-height: #{nth($properties, 2)*$leading-rem-desktop + 'rem'};
+	        margin-top: #{nth($properties, 3) * $leading-desktop + 'px'};
+	        margin-top: #{nth($properties, 3) * $leading-rem-desktop + 'rem'};
+	        margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
+	        margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
+	    }
+	}
+
 	figure.floatLeft, figure.floatRight {
-		max-width: 40%;
+		max-width: 30%;
 		padding: 0 #{$leading + 'px'};
 		padding: 0 #{$leading-rem + 'rem'};
+	}
+
+	.floatLeft {
+	float: left;
+}
+
+	.floatCenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.floatRight {
+		float: right;
+	}
+
+	blockquote {
+		padding-left: 2rem;
 	}
 }
