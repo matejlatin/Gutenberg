@@ -13,7 +13,7 @@ License URL ... TBD
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,800);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -402,9 +402,8 @@ th {
 
 /* TODO:
  - solve the decimals problem
- - break dependency from Normalize
- - responsive grid
- - heading margins in px for desktop
+ - break dependency from Normalize (?)
+ - responsive grid (Chrome only)
  */
 article {
   width: 80%;
@@ -453,46 +452,33 @@ cite {
   text-align: right;
 }
 
-.floatLeft {
-  float: left;
-}
-
-.floatCenter {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.floatRight {
-  float: right;
-}
-
 .lazy {
   opacity: 0;
 }
 
-body, article, section, footer, header, div, input, nav, article ol, article ul {
+body, article, section, footer, header, div, input, nav, article ol, article ul, blockquote {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 html {
+  font-size: 16px;
+  font-size: 100%;
   font-family: "Merriweather", Georgia, serif;
+  color: #222222;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Merriweather Sans", Helvetica, Sans-serif;
+* {
+  line-height: 1.625;
+  margin: 0 0 26px;
+  margin: 0 0 1.625rem;
 }
 
 .grid, .grid-double {
   background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
   background-repeat: repeat;
-  background-position: 0% 0%;
+  background-position: top left;
   box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
@@ -500,12 +486,6 @@ h6 {
 
 .grid-double {
   background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
-}
-
-* {
-  line-height: 1.625;
-  margin: 0 0 26px;
-  margin: 0 0 1.625rem;
 }
 
 h1 {
@@ -595,7 +575,7 @@ h6 {
 }
 
 a {
-  color: #3c3c3c;
+  color: #222222;
 }
 a:visited {
   color: #888;
@@ -611,13 +591,12 @@ figcaption {
   text-align: center;
   line-height: 26px;
   line-height: 1.625rem;
+  margin-bottom: 0;
 }
 
 blockquote {
   padding-left: 1.4375rem;
   font-style: italic;
-  margin-top: -13px;
-  margin-top: -0.8125rem;
 }
 
 cite {
@@ -640,15 +619,21 @@ hr {
 
 @media screen and (min-width: 40rem) {
   * {
-    max-width: 560px;
+    max-width: 630px;
     max-width: 35rem;
     margin-left: auto !important;
     margin-right: auto !important;
-    line-height: 29px;
+    line-height: 1.6875;
   }
 
   html {
-    font-size: 112.5%;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+
+  .grid, .grid-double {
+    background-size: 100% 30.375px;
+    background-size: 100% 1.6875rem;
   }
 
   body, html {
@@ -662,10 +647,93 @@ hr {
     max-width: none;
   }
 
+  h1 {
+    font-size: 45px;
+    font-size: 2.5rem;
+    line-height: 60.75px;
+    line-height: 3.375rem;
+    margin-top: 121.5px;
+    margin-top: 6.75rem;
+    margin-bottom: 30.375px;
+    margin-bottom: 1.6875rem;
+  }
+
+  h2 {
+    font-size: 30.375px;
+    font-size: 1.6875rem;
+    line-height: 45.5625px;
+    line-height: 2.53125rem;
+    margin-top: 75.9375px;
+    margin-top: 4.21875rem;
+    margin-bottom: 15.1875px;
+    margin-bottom: 0.84375rem;
+  }
+
+  h3 {
+    font-size: 24.75px;
+    font-size: 1.375rem;
+    line-height: 30.375px;
+    line-height: 1.6875rem;
+    margin-top: 60.75px;
+    margin-top: 3.375rem;
+    margin-bottom: 15.1875px;
+    margin-bottom: 0.84375rem;
+  }
+
+  h4 {
+    font-size: 21.6px;
+    font-size: 1.2rem;
+    line-height: 30.375px;
+    line-height: 1.6875rem;
+    margin-top: 75.9375px;
+    margin-top: 4.21875rem;
+    margin-bottom: 15.1875px;
+    margin-bottom: 0.84375rem;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 30.375px;
+    line-height: 1.6875rem;
+    margin-top: 75.9375px;
+    margin-top: 4.21875rem;
+    margin-bottom: 15.1875px;
+    margin-bottom: 0.84375rem;
+  }
+
+  h6 {
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 30.375px;
+    line-height: 1.6875rem;
+    margin-top: 75.9375px;
+    margin-top: 4.21875rem;
+    margin-bottom: 15.1875px;
+    margin-bottom: 0.84375rem;
+  }
+
   figure.floatLeft, figure.floatRight {
-    max-width: 40%;
+    max-width: 30%;
     padding: 0 26px;
     padding: 0 1.625rem;
+  }
+
+  .floatLeft {
+    float: left;
+  }
+
+  .floatCenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .floatRight {
+    float: right;
+  }
+
+  blockquote {
+    padding-left: 2rem;
   }
 }
 

@@ -57,25 +57,12 @@ cite {
 	text-align: right;
 }
 
-.floatLeft {
-	float: left;
-}
-
-.floatCenter {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.floatRight {
-	float: right;
-}
-
 .lazy {
 	opacity: 0;
 }
 
 // Border Box
-body, article, section, footer, header, div, input, nav, article ol, article ul {
+body, article, section, footer, header, div, input, nav, article ol, article ul, blockquote {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
