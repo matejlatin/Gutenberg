@@ -2,7 +2,7 @@
 Gutenberg: Web Typography Starter Kit
 URL ........... TBD
 Version ....... 0.1
-Github ........ https://github.com/matejlatin/Guthenberg
+Github ........ https://github.com/matejlatin/Gutenberg
 Authors ....... Matej Latin (@matejlatin)
 License ....... Creative Commmons Attribution 3.0
 License URL ... TBD
@@ -10,6 +10,6 @@ License URL ... TBD
 
 @import "normalize";
 @import "gutenberg-config";
-@import "gutenberg-style";
 @import "gutenberg-typography";
+@import "gutenberg-style";
 @import "gutenberg-responsive";

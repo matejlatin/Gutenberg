@@ -29,14 +29,6 @@ cite {
 	display: block;
 }
 
-@media screen and (min-width: 600px){
-	// img,
-	// figcaption,
-	// figure {
-	// 	max-width: 700px;
-	// }
-}
-
 .bold {
 	font-weight: 700;
 }
@@ -57,12 +49,18 @@ cite {
 	text-align: right;
 }
 
-.lazy {
-	opacity: 0;
-}
-
 // Border Box
-body, article, section, footer, header, div, input, nav, article ol, article ul, blockquote {
+body,
+article,
+section,
+footer,
+header,
+div,
+input,
+nav,
+article ol,
+article ul,
+blockquote {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

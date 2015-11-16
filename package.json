@@ -1,6 +1,6 @@
 {
-  "name": "project-name",
-  "version": "0.1.0",
+  "name": "gutenberg-web-type",
+  "version": "0.1",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-cssmin": "~0.10.0",

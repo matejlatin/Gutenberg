@@ -87,7 +87,7 @@
 			"file": "src/style/_gutenberg-typography.scss",
 			"settings":
 			{
-				"buffer_size": 8252,
+				"buffer_size": 3570,
 				"line_ending": "Unix"
 			}
 		},
@@ -95,7 +95,7 @@
 			"file": "src/style/_gutenberg-config.scss",
 			"settings":
 			{
-				"buffer_size": 1509,
+				"buffer_size": 1522,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,7 +103,7 @@
 			"file": "src/style/_gutenberg-style.scss",
 			"settings":
 			{
-				"buffer_size": 1014,
+				"buffer_size": 773,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,7 +111,7 @@
 			"file": "src/style/_gutenberg-responsive.scss",
 			"settings":
 			{
-				"buffer_size": 514,
+				"buffer_size": 1634,
 				"line_ending": "Unix"
 			}
 		},
@@ -127,7 +127,15 @@
 			"file": "src/style/gutenberg.scss",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 410,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,7 +143,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1251,
+				"buffer_size": 1379,
 				"line_ending": "Unix"
 			}
 		}
@@ -372,20 +380,8 @@
 						"selection":
 						[
 							[
-								19649,
-								19653
-							],
-							[
-								19770,
-								19774
-							],
-							[
-								19847,
-								19851
-							],
-							[
-								19888,
-								19892
+								6883,
+								6883
 							]
 						],
 						"settings":
@@ -453,10 +449,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 732.0,
+						"translation.y": 755.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -484,7 +480,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -493,15 +489,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8252,
+						"buffer_size": 3570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								540,
-								540
+								3219,
+								3219
 							]
 						],
 						"settings":
@@ -509,7 +505,7 @@
 							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1442.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -521,15 +517,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1509,
+						"buffer_size": 1522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1413,
-								1413
+								1518,
+								1518
 							]
 						],
 						"settings":
@@ -539,7 +535,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 92.0,
+						"translation.y": 47.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -551,15 +547,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1014,
+						"buffer_size": 773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								671,
+								671
 							]
 						],
 						"settings":
@@ -580,15 +576,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 514,
+						"buffer_size": 1634,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								205,
-								205
+								229,
+								229
 							]
 						],
 						"settings":
@@ -600,7 +596,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -630,7 +626,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -639,15 +635,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								391,
-								391
+								248,
+								248
 							]
 						],
 						"settings":
@@ -658,24 +654,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "README.md",
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1251,
+						"buffer_size": 410,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1251,
-								1251
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								179,
+								179
 							]
 						],
 						"settings":
@@ -740,6 +766,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pa",
+				"package.json"
+			],
 			[
 				"normal",
 				"src/style/_normalize.scss"
