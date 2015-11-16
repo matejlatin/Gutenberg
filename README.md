@@ -7,7 +7,7 @@ Gutenberg is a work–in–progress project by [Matej Latin](http://matejlatin.c
 
 ##Features
 - **Modular scale**: all sizes are based on calculations from Minor Third scale — [modularscale.com](http://modularscale.com).
-- **3 predefined themes**: use on of the 3 predefined themes or load custom fonts.
+- **3 predefined themes**: use one of the 3 predefined themes or load custom fonts.
 - **Vertical rhythm**: margins and element sizes fall nicely into the baseline grid (Toggle Grid button in example).
 - **Mobile First**: displays beautifully on both mobile and desktop screens.
 - **Image resize**: a lightweight and easy to use jQuery script that resizes the images so their heights don't break the vertical rhythm (baseline grid).
@@ -17,4 +17,4 @@ Gutenberg is a work–in–progress project by [Matej Latin](http://matejlatin.c
 
 ##To Do
 - fix the issue of decimals seemingly breaking the grid
-- check  for browser support issues
+- check browser compatibility

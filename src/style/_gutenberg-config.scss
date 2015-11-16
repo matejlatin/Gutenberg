@@ -10,7 +10,7 @@ $custom-font-headings: null;
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
-$base-font-size-desktop: 112.5; // In %. Used to calculate the desktop font size. Number only, no units.
+$base-font-size-desktop: 112.5 !default; // In %. Used to calculate the desktop font size. Number only, no units.
 $line-height: 1.625;
 $line-height-desktop: 1.6875;
 $max-width: 35; // Number only, no units. Gets converted to REMs and pixels.
@@ -51,6 +51,8 @@ $color-link-visited: $color-font-light;
 
 /* TODO:
  - solve the decimals problem
- - break dependency from Normalize (?)
+ - break dependency from Normalize (?) -> custom reset
  - responsive grid (Chrome only)
+ - create license.txt and add URL to main file
+ - style file for micro typography customization
  */
