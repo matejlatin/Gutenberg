@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
 Gutenberg: Web Typography Starter Kit
-URL ........... TBD
+Website ....... TBD
 Version ....... 0.1
 Github ........ https://github.com/matejlatin/Gutenberg
 Authors ....... Matej Latin (@matejlatin)
 License ....... Creative Commmons Attribution 3.0
-License URL ... TBD
+License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/license.txt
 */
 /*! Gutenberg reset — adapted from Normalize */
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
@@ -179,8 +179,6 @@ img {
 /* TODO:
  - solve the decimals problem
  - responsive grid (Chrome only)
- - add license URL to main file
- - style file for micro typography customization
  - imgFixHeight break free from jQuery
  */
 /* Calculations
