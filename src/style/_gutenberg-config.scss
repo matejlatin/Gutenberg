@@ -1,5 +1,5 @@
-// Configuration
-// ---------------------------------- //
+/* Configuration
+   ========================================================================== */
 
 $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
@@ -7,6 +7,9 @@ $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 $theme: Merriweather !default; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: null;
 $custom-font-headings: null;
+
+// Load custom fonts (uncomment / set up when using custom theme)
+// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
@@ -29,7 +32,8 @@ $modular-scale: (
   xxxxs: 0.8125
 ) !default;
 
-// Headings Options [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
+// Headings Options
+// [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
 $headings: (
   h1: (2.5, 2, 4, 1),
   h2: (1.6875, 1.5, 2.5, 0.5),
@@ -51,8 +55,6 @@ $color-link-visited: $color-font-light;
 
 /* TODO:
  - solve the decimals problem
- - break dependency from Normalize (?) -> custom reset
  - responsive grid (Chrome only)
- - create license.txt and add URL to main file
- - style file for micro typography customization
+ - imgFixHeight break free from jQuery
  */

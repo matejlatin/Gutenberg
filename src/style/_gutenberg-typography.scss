@@ -1,4 +1,6 @@
-// Calculations
+/* Calculations
+   ========================================================================== */
+
 $base: 16 * ($base-font-size / 100);
 $leading: $base * $line-height;
 $leading-rem: $leading / $base;
@@ -7,7 +9,10 @@ $base-desktop: 16 * ($base-font-size-desktop / 100);
 $leading-desktop: $base-desktop * $line-height-desktop;
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
-// Set font variables
+
+/* Font themes
+   ========================================================================== */
+
 $font-body: null;
 $font-headings: null;
 
@@ -25,6 +30,11 @@ $font-headings: null;
 	}
 }
 
+
+/* Defaults
+   ========================================================================== */
+
+// Font defaults
 html {
 	font-size: #{$base + 'px'};
 	font-size: #{$base-font-size + '%'};
@@ -32,41 +42,18 @@ html {
 	color: $color-font-body;
 }
 
-// Reset the line-height for all elements to keep the vertical rhythm
+// Line-height reset
 * {
 	line-height: $line-height;
 	margin: 0 0 #{$leading + 'px'};
 	margin: 0 0 #{$leading-rem + 'rem'};
 }
 
-@if $font-headings != null {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: $font-headings;
-	}
-}
 
-// Grid setup
-.grid {
-	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
-	background-repeat: repeat;
-    background-position: top left;
-    box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
-    background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
-}
+/* Headings
+   ========================================================================== */
 
-// Double grid setup
-.grid-double {
-	@extend .grid;
-	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
-}
-
-// Heading sizes, line-heights and margins
+// Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
     #{$heading} {
     	font-size: #{nth($properties, 1) * $base + 'px'};
@@ -80,6 +67,7 @@ html {
     }
 }
 
+// Set margins between headings
 h1 + h2 {
 	margin-top: #{$leading + 'px'};
     margin-top: #{$leading-rem + 'rem'};
@@ -100,6 +88,21 @@ h6 {
 	font-style: italic;
 }
 
+// Change headings font if a font is set
+@if $font-headings != null {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-headings;
+	}
+}
+
+/* Links
+   ========================================================================== */
+
 a {
 	color: $color-link-normal;
 
@@ -111,6 +114,9 @@ a {
 		color: $color-link-active;
 	}
 }
+
+/* Figures & other elements
+   ========================================================================== */
 
 figcaption {
 	color: $color-font-light;
@@ -133,12 +139,14 @@ cite {
 	font-style: normal;
 }
 
+// Lists
 ul, ol {
 	li {
 		margin-bottom: 0;
 	}
 }
 
+// Horizontal rule
 hr {
 	margin: #{2 * $leading + 'px'} auto;
     margin: #{2 * $leading-rem + 'rem'} auto;
@@ -148,4 +156,24 @@ hr {
     height: 1px;
     border: 0;
     // border-top: 1px solid #ccc;
+}
+
+
+/* Grid
+   ========================================================================== */
+
+// Grid setup
+.grid {
+	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
+	background-repeat: repeat;
+    background-position: top left;
+    box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
+    background-size: 100% #{$leading + 'px'};
+    background-size: 100% #{$leading-rem + 'rem'};
+}
+
+// Double grid setup
+.grid-double {
+	@extend .grid;
+	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
 }
