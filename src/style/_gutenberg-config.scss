@@ -1,5 +1,5 @@
-// Configuration
-// ---------------------------------- //
+/* Configuration
+   ========================================================================== */
 
 $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
@@ -51,8 +51,8 @@ $color-link-visited: $color-font-light;
 
 /* TODO:
  - solve the decimals problem
- - break dependency from Normalize (?) -> custom reset
  - responsive grid (Chrome only)
- - create license.txt and add URL to main file
+ - add license URL to main file
  - style file for micro typography customization
+ - imgFixHeight break free from jQuery
  */

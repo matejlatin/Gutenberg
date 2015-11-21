@@ -44,15 +44,16 @@
 	    }
 	}
 
-	figure.floatLeft, figure.floatRight {
+	figure.floatLeft,
+	figure.floatRight {
 		max-width: 30%;
 		padding: 0 #{$leading + 'px'};
 		padding: 0 #{$leading-rem + 'rem'};
 	}
 
 	.floatLeft {
-	float: left;
-}
+		float: left;
+	}
 
 	.floatCenter {
 		margin-left: auto;

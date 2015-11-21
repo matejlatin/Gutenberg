@@ -19,24 +19,6 @@ article {
 	text-decoration: none;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-	margin: inherit auto;
-}
-
-cite {
-	display: block;
-}
-
-.bold {
-	font-weight: 700;
-}
-
-.light {
-	font-weight: 300;
-}
-
 .alignLeft {
 	text-align: left;
 }
@@ -47,21 +29,4 @@ cite {
 
 .alignRight {
 	text-align: right;
-}
-
-// Border Box
-body,
-article,
-section,
-footer,
-header,
-div,
-input,
-nav,
-article ol,
-article ul,
-blockquote {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
