@@ -27,8 +27,9 @@
 	}
 
 	article {
-		width: 80%;
-		max-width: none;
+		max-width: #{1.5 * $max-width * $base-desktop + 'px'};
+		max-width: #{1.5 * $max-width + 'rem'};
+		// max-width: none;
 	}
 
 	// Heading sizes, line-heights and margins
@@ -47,7 +48,8 @@
 
 	figure.floatLeft,
 	figure.floatRight {
-		max-width: 30%;
+		max-width: #{0.5 * $max-width * $base-desktop + 'px'};
+		max-width: #{0.5 * $max-width + 'rem'};
 		padding: 0 #{$leading-desktop + 'px'};
 		padding: 0 #{$leading-rem-desktop + 'rem'};
 	}
@@ -77,6 +79,6 @@
 
 	small {
 		line-height: #{0.5 * $leading-desktop + 'px'};
-		line-height: #{0.5* $leading-rem-desktop + 'rem'};
+		line-height: #{0.5 * $leading-rem-desktop + 'rem'};
 	}
 }
