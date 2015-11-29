@@ -3,24 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	<title>Gutenberg—Web Typography</title>
+	<title>Gutenberg — Web Typography</title>
 	<link rel="stylesheet" href="assets/combined.min.css">
-	<!-- <link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Merriweather+Sans:400,700,800' rel='stylesheet' type='text/css'> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/combined.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/odo6ird.js"></script>
-	<meta property="og:title" content="Web Typography">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://website.com/">
-	<meta property="og:image" content="http://website.com/image.jpg" />
-	<meta property="og:description" content="Web typography + images set with modular scale and compliant to vertical rhythm." />
-	<meta name="twitter:creator" content="@matejlatin">
-	<meta name="twitter:site" content="@matejlatin">
-	<meta name="twitter:description" content="Web typography + images set with modular scale and compliant to vertical rhythm.." />
-	<meta name="twitter:url" content="http://website.com/" />
-	<meta name="twitter:domain" content="website.com" />
-	<meta name="twitter:image:src" content="http://website.com/image.jpg" />
-	<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 	<a id="btnToggleGrid" href="javascript:void(0)">Toggle Grid</a>
@@ -33,6 +20,12 @@
 			<figcaption>Johannes Gutebnerg</figcaption>
 		</figure>
 		<p>With his invention of the printing press, Gutenberg was the first European to use movable type printing, in around 1439. Among his many contributions to printing are: the invention of a process for mass-producing movable type; the use of oil-based ink; and the use of a wooden printing press similar to the agricultural screw presses of the period. His truly epochal invention was the combination of these elements into a practical system that allowed the mass production of printed books and was economically viable for printers and readers alike. Gutenberg's method for making type is traditionally considered to have included a type metal alloy and a hand mould for casting type. The alloy was a mixture of lead, tin, and antimony that melted at a relatively low temperature for faster and more economical casting, cast well, and created a durable type.</p>
+
+		<code>
+			.hello { <br>
+				test <br>
+			} <br>
+		</code>
 
 		<p>In Renaissance Europe, the arrival of mechanical movable type printing introduced the era of mass communication which permanently altered the structure of society. The relatively unrestricted circulation of information—including revolutionary ideas—transcended borders, captured the masses in the Reformation and threatened the power of political and religious authorities; the sharp increase in literacy broke the monopoly of the literate elite on education and learning and bolstered the emerging middle class. Across Europe, the increasing cultural self-awareness of its people led to the rise of proto-nationalism, accelerated by the flowering of the European vernacular languages to the detriment of Latin's status as lingua franca. In the 19th century, the replacement of the hand-operated Gutenberg-style press by steam-powered rotary presses allowed printing on an industrial scale, while Western-style printing was adopted all over the world, becoming practically the sole medium for modern bulk printing.</p>
 
@@ -131,40 +124,25 @@
 	<footer>
 		<p>
 			<small>
-				&copy; website.com, copyright 2015</a>
+				&copy; website.com, copyright 2015
 			</small>
 		</p>
 	</footer>
 	<script>
 	// Toggle Grid Functionality
-	var flip = 0;
-	$('#btnToggleGrid').on('click', function(){
-		// Get line-height
-		var vcLineHeight = parseInt($('p').css("line-height"));
-		console.log(vcLineHeight);
-		// Compose the image URL
-		// var vcImg = "url(assets/images/" + vcLineHeight + "px2x.gif)";
-		if(flip == 0){
-			$('body').addClass("grid");
-			// $('.verticalGrid').css("background", vcImg);
-			flip = 1;
-		} else if (flip == 1) {
-			$('body').addClass("grid-double");
-			flip = 2;
-		} else if (flip == 2) {
-			$('body').removeClass("grid-double");
-			$('body').removeClass("grid");
-			// $('.verticalGrid').css("background", "none");
-			flip = 0;
-		};
-	});
+	document.getElementById("btnToggleGrid").onclick = toggleGrid;
 
-	// Fix image heights
+	// Fix image heights (JavaScript)
+	window.onload = fixImgHeight;
+
+	/*
+	// Fix image heights (jQuery)
 	$(window).load(function(){
 		$('img').each(function(){
 			$(this).imgFixHeight();
 		});
 	});
+	*/
 	</script>
 </body>
 </html>

@@ -30,3 +30,12 @@ article {
 .alignRight {
 	text-align: right;
 }
+
+.uppercase {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-variant-caps: all-small-caps;
+	-moz-font-feature-settings: "c2sc", "smcp";
+	-webkit-font-feature-settings: "c2sc", "smcp";
+	font-feature-settings: "c2sc", "smcp";
+}

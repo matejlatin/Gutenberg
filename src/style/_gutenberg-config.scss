@@ -4,18 +4,15 @@
 $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
 // Theme / Fonts
-$theme: Merriweather !default; // [ Merriweather / OpenSans / custom ]
-$custom-font-body: null;
-$custom-font-headings: null;
-
-// Load custom fonts (uncomment / set up when using custom theme)
-// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+$theme: Merriweather; // [ Merriweather / OpenSans / custom ]
+$custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
+$custom-font-headings: null !default;
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
 $base-font-size-desktop: 112.5 !default; // In %. Used to calculate the desktop font size. Number only, no units.
 $line-height: 1.625;
-$line-height-desktop: 1.6875;
+$line-height-desktop: 1.7;
 $max-width: 35; // Number only, no units. Gets converted to REMs and pixels.
 
 // Modular Scale
@@ -51,10 +48,3 @@ $color-font-light: #888;
 $color-link-normal: $color-font-body;
 $color-link-active: red;
 $color-link-visited: $color-font-light;
-
-
-/* TODO:
- - solve the decimals problem
- - responsive grid (Chrome only)
- - imgFixHeight break free from jQuery
- */

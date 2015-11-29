@@ -31,7 +31,9 @@ main,
 nav,
 section,
 summary,
-cite {
+cite,
+code,
+small {
   display: block;
 }
 
@@ -92,6 +94,10 @@ a:hover {
 
 /* Text-level semantics
    ========================================================================== */
+// Enable small caps if available & fix letter spacing
+abbr {
+  letter-spacing: 0.1em;
+}
 
 // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
 abbr[title] {
@@ -117,7 +123,7 @@ mark {
 
 // Address inconsistent and variable font size in all browsers.
 small {
-  font-size: 80%;
+  font-size: 70%;
 }
 
 // Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -171,7 +177,6 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em;
 }
 
 /* Tables

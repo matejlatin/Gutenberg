@@ -2,11 +2,11 @@
    ========================================================================== */
 
 $base: 16 * ($base-font-size / 100);
-$leading: $base * $line-height;
+$leading: round($base * $line-height);
 $leading-rem: $leading / $base;
 
 $base-desktop: 16 * ($base-font-size-desktop / 100);
-$leading-desktop: $base-desktop * $line-height-desktop;
+$leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
 
@@ -17,14 +17,27 @@ $font-body: null;
 $font-headings: null;
 
 @if $theme == Merriweather {
+
+	// Import Merriweather
 	@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+
+	// Set body font
 	$font-body: "Merriweather", Georgia, serif;
-	// $font-headings: "Playfair Display", Georgia, Serif;
+
 } @else if $theme == OpenSans {
+
+	// Import Open Sans
 	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+	// Set body font
 	$font-body: "Open Sans", Arial, Helvetica, Sans-serif;
+
 } @else if $theme == custom {
+
+	// Set custom body font
 	$font-body: $custom-font-body;
+
+	// Set custom headings font
 	@if $custom-font-headings != $custom-font-body {
 		$font-headings: $custom-font-headings;
 	}
@@ -42,9 +55,10 @@ html {
 	color: $color-font-body;
 }
 
-// Line-height reset
+// Line-height & margin reset
 * {
-	line-height: $line-height;
+	line-height: #{$leading + 'px'};
+	line-height: #{$leading-rem + 'rem'};
 	margin: 0 0 #{$leading + 'px'};
 	margin: 0 0 #{$leading-rem + 'rem'};
 }
@@ -150,12 +164,16 @@ ul, ol {
 hr {
 	margin: #{2 * $leading + 'px'} auto;
     margin: #{2 * $leading-rem + 'rem'} auto;
-    width: 50%;
+    width: 100%;
     display: block;
     background-color: $color-font-light;
     height: 1px;
     border: 0;
-    // border-top: 1px solid #ccc;
+}
+
+small {
+	line-height: #{0.5 * $leading + 'px'};
+	line-height: #{0.5* $leading-rem + 'rem'};
 }
 
 
