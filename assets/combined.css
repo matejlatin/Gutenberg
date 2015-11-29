@@ -49,7 +49,8 @@ input,
 nav,
 article ol,
 article ul,
-blockquote {
+blockquote,
+figure {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -422,8 +423,8 @@ article {
   }
 
   article {
-    width: 80%;
-    max-width: none;
+    max-width: 945px;
+    max-width: 52.5rem;
   }
 
   h1 {
@@ -494,7 +495,8 @@ article {
 
   figure.floatLeft,
   figure.floatRight {
-    max-width: 30%;
+    max-width: 315px;
+    max-width: 17.5rem;
     padding: 0 31px;
     padding: 0 1.722222222222222rem;
   }
@@ -529,7 +531,6 @@ article {
 }
 /* TODO:
  - responsive grid (Chrome only) (?)
- - calculate the article width (in combination with figures)
  - github organisation + transfer ownership
  - button behaviour (icon + changes)
  - some line heights produce margins with .5 results (?)
