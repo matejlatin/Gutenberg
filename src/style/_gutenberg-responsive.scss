@@ -4,7 +4,9 @@
 		max-width: #{$max-width + 'rem'};
 		margin-left: auto!important;
 		margin-right: auto!important;
-		line-height: $line-height-desktop;
+		line-height: #{$leading-desktop + 'px'};
+		line-height: #{$leading-rem-desktop + 'rem'};
+		margin-bottom: #{$leading-rem-desktop + 'rem'};
 	}
 
 	html {
@@ -16,7 +18,6 @@
 	.grid {
 		background-size: 100% #{$leading-desktop + 'px'};
     	background-size: 100% #{$leading-rem-desktop + 'rem'};
-    	// background-size: 100% 30px;
 	}
 
 	body, html {
@@ -47,8 +48,14 @@
 	figure.floatLeft,
 	figure.floatRight {
 		max-width: 30%;
-		padding: 0 #{$leading + 'px'};
-		padding: 0 #{$leading-rem + 'rem'};
+		padding: 0 #{$leading-desktop + 'px'};
+		padding: 0 #{$leading-rem-desktop + 'rem'};
+	}
+
+	figcaption {
+		line-height: #{$leading-desktop + 'px'};
+		line-height: #{$leading-rem-desktop + 'rem'};
+		margin-bottom: 0;
 	}
 
 	.floatLeft {
@@ -66,5 +73,10 @@
 
 	blockquote {
 		padding-left: 2rem;
+	}
+
+	small {
+		line-height: #{0.5 * $leading-desktop + 'px'};
+		line-height: #{0.5* $leading-rem-desktop + 'rem'};
 	}
 }
