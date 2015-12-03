@@ -32,6 +32,11 @@
 		// max-width: none;
 	}
 
+	.btnToggleGrid {
+		top: #{$leading-desktop + 'px'};
+		right: #{$leading-desktop + 'px'};
+	}
+
 	// Heading sizes, line-heights and margins
 	@each $heading, $properties in $headings {
 	    #{$heading} {
@@ -46,6 +51,7 @@
 	    }
 	}
 
+	// Floated images width & padding
 	figure.floatLeft,
 	figure.floatRight {
 		max-width: #{0.5 * $max-width * $base-desktop + 'px'};
