@@ -1,10 +1,12 @@
 /* Calculations
    ========================================================================== */
 
+// Mobile base & leading
 $base: 16 * ($base-font-size / 100);
 $leading: round($base * $line-height);
 $leading-rem: $leading / $base;
 
+// Desktop base & leading
 $base-desktop: 16 * ($base-font-size-desktop / 100);
 $leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
@@ -102,7 +104,7 @@ h6 {
 	font-style: italic;
 }
 
-// Change headings font if a font is set
+// Change headings font if a heading font is set
 @if $font-headings != null {
 	h1,
 	h2,
@@ -180,7 +182,7 @@ small {
 /* Grid
    ========================================================================== */
 
-// Grid setup
+// Grid background
 .grid {
 	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
 	background-repeat: repeat;
@@ -190,7 +192,7 @@ small {
     background-size: 100% #{$leading-rem + 'rem'};
 }
 
-// Double grid setup
+// Double grid background
 .grid-double {
 	@extend .grid;
 	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);

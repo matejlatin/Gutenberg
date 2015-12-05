@@ -1,4 +1,11 @@
-@media screen and (min-width: 40rem){
+@media screen and (min-width: #{ $max-width + 5 + 'em'}){
+	body, html {
+		margin: 0;
+		width: 100%;
+		max-width: none;
+	}
+
+	// Reset line-height and margins for desktop, set max-width
 	* {
 		max-width: #{$max-width * $base-desktop + 'px'};
 		max-width: #{$max-width + 'rem'};
@@ -9,27 +16,22 @@
 		margin-bottom: #{$leading-rem-desktop + 'rem'};
 	}
 
+	// Reset base font size for desktop
 	html {
-		// font-size: #{$base-font-size-desktop + '%'};
 		font-size: #{$base-desktop + 'px'};
 		font-size: #{$base-font-size-desktop / 100 + 'rem'};
 	}
 
+	// Reset grid for desktop line-height
 	.grid {
 		background-size: 100% #{$leading-desktop + 'px'};
     	background-size: 100% #{$leading-rem-desktop + 'rem'};
 	}
 
-	body, html {
-		margin: 0;
-		width: 100%;
-		max-width: none;
-	}
-
+	// Set max-wdith for article
 	article {
 		max-width: #{1.5 * $max-width * $base-desktop + 'px'};
 		max-width: #{1.5 * $max-width + 'rem'};
-		// max-width: none;
 	}
 
 	.btnToggleGrid {
@@ -60,12 +62,14 @@
 		padding: 0 #{$leading-rem-desktop + 'rem'};
 	}
 
+	// Set figcaption line-height for desktop
 	figcaption {
 		line-height: #{$leading-desktop + 'px'};
 		line-height: #{$leading-rem-desktop + 'rem'};
 		margin-bottom: 0;
 	}
 
+	// Float defaults
 	.floatLeft {
 		float: left;
 	}
@@ -79,10 +83,12 @@
 		float: right;
 	}
 
+	// Blockquote indent
 	blockquote {
 		padding-left: 2rem;
 	}
 
+	// Set small line-height
 	small {
 		line-height: #{0.5 * $leading-desktop + 'px'};
 		line-height: #{0.5 * $leading-rem-desktop + 'rem'};

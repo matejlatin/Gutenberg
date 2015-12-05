@@ -1,8 +1,13 @@
+/* Gutenberg defaults
+   ========================================================================== */
+
+// Maximum width of the article (Mobile)
 article {
 	width: 80%;
 	margin: 0 auto;
 }
 
+// Grid button
 .btnToggleGrid {
 	@if $edit-mode == true {
 		display: block;
@@ -30,6 +35,7 @@ article {
 	background-position-y: -64px;
 }
 
+// Text Alignment
 .alignLeft {
 	text-align: left;
 }
@@ -42,11 +48,11 @@ article {
 	text-align: right;
 }
 
+// Fix letter spacing for uppercase
 .uppercase {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	font-variant-caps: all-small-caps;
-	-moz-font-feature-settings: "c2sc", "smcp";
-	-webkit-font-feature-settings: "c2sc", "smcp";
-	font-feature-settings: "c2sc", "smcp";
 }
+
+/* Your styles come here
+   ========================================================================== */

@@ -357,6 +357,8 @@ small {
   background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
 }
 
+/* Gutenberg defaults
+   ========================================================================== */
 article {
   width: 80%;
   margin: 0 auto;
@@ -399,13 +401,17 @@ article {
 .uppercase {
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-variant-caps: all-small-caps;
-  -moz-font-feature-settings: "c2sc", "smcp";
-  -webkit-font-feature-settings: "c2sc", "smcp";
-  font-feature-settings: "c2sc", "smcp";
 }
 
-@media screen and (min-width: 40rem) {
+/* Your styles come here
+   ========================================================================== */
+@media screen and (min-width: 40em) {
+  body, html {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+
   * {
     max-width: 630px;
     max-width: 35rem;
@@ -424,12 +430,6 @@ article {
   .grid, .grid-double {
     background-size: 100% 31px;
     background-size: 100% 1.722222222222222rem;
-  }
-
-  body, html {
-    margin: 0;
-    width: 100%;
-    max-width: none;
   }
 
   article {
@@ -544,11 +544,10 @@ article {
     line-height: 0.861111111111111rem;
   }
 }
-/* TODO:
- - responsive grid (Chrome only) (?)
- - github organisation + transfer ownership
- - button behaviour (icon + changes)
- - some line heights produce margins with .5 results (?)
+/* TODOs:
+ - The grid doesn't readjust when resizing browser window in Chrome (?),
+ - some line heights produce margins with .5 results, seemingly breaking the gird (?),
+ - check browser compatibility.
  */
 
 /*# sourceMappingURL=gutenberg.css.map */
