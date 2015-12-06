@@ -162,9 +162,9 @@ ul, ol {
 
 // Horizontal rule
 hr {
-	margin: #{2 * $leading + 'px'} auto;
-    margin: #{2 * $leading-rem + 'rem'} auto;
-    width: 100%;
+	margin: #{4 * $leading + 'px'} auto;
+    margin: #{4 * $leading-rem + 'rem'} auto;
+    width: 100px;
     display: block;
     background-color: $color-font-light;
     height: 1px;

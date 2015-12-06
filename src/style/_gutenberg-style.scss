@@ -45,8 +45,65 @@ article {
 .uppercase {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	font-variant-caps: all-small-caps;
-	-moz-font-feature-settings: "c2sc", "smcp";
-	-webkit-font-feature-settings: "c2sc", "smcp";
-	font-feature-settings: "c2sc", "smcp";
+}
+
+@font-face {font-family: 'ALOTGutenbergA';src: url('webfonts/2FDCFA_0_0.eot');src: url('webfonts/2FDCFA_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2FDCFA_0_0.woff2') format('woff2'),url('webfonts/2FDCFA_0_0.woff') format('woff'),url('webfonts/2FDCFA_0_0.ttf') format('truetype');}
+
+.gutenbergA {
+	font-family: ALOTGutenbergA, Georgia, Serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+hgroup {
+
+	small {
+		position: relative;
+		top: -50px;
+		right: 160px;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+		margin: 0;
+		line-height: 0;
+	}
+
+	h2 {
+		font-weight: normal;
+		margin-top: 0;
+	}
+}
+
+.buttons {
+
+	margin-top: #{ 1.5 * $leading-desktop + 'px' };
+	margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
+
+	a {
+		font-size: 12px;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+		width: 150px;
+		background: #F4F4F4;
+		border: 1px solid #D5D5D5;
+		display: inline-block;
+		box-sizing: border-box;
+		height: 32px;
+		line-height: 30px;
+		text-decoration: none;
+		border-radius: 3px;
+		font-weight: bold;
+		margin-left: 5px!important;
+		margin-right: 5px!important;
+
+		div {
+			height: 20px;
+			padding: 1px;
+			padding-left: 22px;
+			display: inline;
+			background: url('../assets/images/button-icons.png') no-repeat;
+			background-size: 20px;
+
+			&.twitter {
+				background-position-y: -20px;
+			}
+		}
+	}
 }

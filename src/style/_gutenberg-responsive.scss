@@ -87,4 +87,9 @@
 		line-height: #{0.5 * $leading-desktop + 'px'};
 		line-height: #{0.5 * $leading-rem-desktop + 'rem'};
 	}
+
+	hr {
+		margin: #{4 * $leading-desktop + 'px'} auto;
+    	margin: #{4 * $leading-rem-desktop + 'rem'} auto;
+	}
 }

@@ -4,15 +4,15 @@
 $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
 // Theme / Fonts
-$theme: Merriweather; // [ Merriweather / OpenSans / custom ]
-$custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
-$custom-font-headings: null !default;
+$theme: custom; // [ Merriweather / OpenSans / custom ]
+$custom-font-body: Merriweather, Georgia, Times, serif; // [ "Libre Baskerville", Georgia, serif ]
+$custom-font-headings: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
 $base-font-size-desktop: 112.5 !default; // In %. Used to calculate the desktop font size. Number only, no units.
 $line-height: 1.625;
-$line-height-desktop: 1.7;
+$line-height-desktop: 1.8;
 $max-width: 35; // Number only, no units. Gets converted to REMs and pixels.
 
 // Modular Scale
@@ -32,8 +32,8 @@ $modular-scale: (
 // Headings Options
 // [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
 $headings: (
-  h1: (2.5, 2, 4, 1),
-  h2: (1.6875, 1.5, 2.5, 0.5),
+  h1: (6.2, 4, 5, 1),
+  h2: (1.4375, 1.5, 2.5, 0.5),
   h3: (1.375, 1, 2, 0.5),
   h4: (1.2, 1, 2.5, 0.5),
   h5: (1, 1, 2.5, 0.5),
