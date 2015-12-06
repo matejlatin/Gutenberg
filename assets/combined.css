@@ -543,6 +543,11 @@ article {
     line-height: 15.5px;
     line-height: 0.861111111111111rem;
   }
+
+  hr {
+    margin: 62px auto;
+    margin: 3.444444444444445rem auto;
+  }
 }
 /* TODOs:
  - The grid doesn't readjust when resizing browser window in Chrome (?),
