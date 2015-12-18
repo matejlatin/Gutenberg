@@ -144,6 +144,14 @@ sub {
   bottom: -0.25em;
 }
 
+// Prevent `em` and `i` affecting `line-height` in all browsers.
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
 /* Embedded content
    ========================================================================== */
 
@@ -201,4 +209,11 @@ img {
   max-width: 100%;
   display: block;
   margin: inherit auto;
+}
+
+/* Clearfix
+   ========================================================================== */
+
+.clearfix {
+  overflow: auto;
 }

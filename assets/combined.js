@@ -32,22 +32,27 @@ var flip = 0;
 
 function toggleGrid(){
 	var body = document.getElementsByTagName("body")[0];
+	var hero = document.getElementsByClassName("heroGrid")[0];
 	var button = document.getElementById("btnToggleGrid");
 
 	if(flip == 0){
 		body.classList.add("grid");
+		hero.classList.add("grid");
 		button.textContent = "Turn Double Grid On";
 		button.classList.add("double-grid");
 		flip = 1;
 	} else if (flip == 1) {
 		body.classList.add("grid-double");
+		hero.classList.add("grid-double");
 		button.textContent = "Turn Grid Off";
 		button.classList.remove("double-grid");
 		button.classList.add("grid-off");
 		flip = 2;
 	} else if (flip == 2) {
 		body.classList.remove("grid");
+		hero.classList.remove("grid");
 		body.classList.remove("grid-double");
+		hero.classList.remove("grid-double");
 		button.classList.remove("grid-off");
 		button.textContent = "Turn Grid On";
 		flip = 0;

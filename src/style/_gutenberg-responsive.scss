@@ -20,6 +20,10 @@
     	background-size: 100% #{$leading-rem-desktop + 'rem'};
 	}
 
+	.grid-double {
+		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+	}
+
 	body, html {
 		margin: 0;
 		width: 100%;
@@ -49,6 +53,22 @@
 	        margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
 	        margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
 	    }
+	}
+
+	// Set margins between headings
+	h1 + h2 {
+		margin-top: #{$leading-desktop + 'px'};
+	    margin-top: #{$leading-rem-desktop + 'rem'};
+	}
+
+	h2 + h3, h3 + h4, h4 + h5 {
+		margin-top: #{0.5 * $leading-desktop + 'px'};
+	    margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
+	}
+
+	h5 + h6 {
+		margin-top: -#{0.5 * $leading-desktop + 'px'};
+	    margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
 	}
 
 	// Floated images width & padding
@@ -91,5 +111,40 @@
 	hr {
 		margin: #{4 * $leading-desktop + 'px'} auto;
     	margin: #{4 * $leading-rem-desktop + 'rem'} auto;
+	}
+
+	code {
+		padding: #{$leading-desktop + 'px'};
+		padding: #{$leading-rem-desktop + 'rem'};
+	}
+
+	.example {
+		padding: #{ $leading-desktop + 'px' };
+		padding: #{ $leading-rem-desktop + 'rem' };
+
+		p {
+			margin-bottom: 0;
+		}
+
+		h1 {
+			font-size: #{ 3.5 * $base-desktop + 'px'};
+	    	font-size: #{ 3.5 + 'rem'};
+	    	line-height: #{3 * $leading-desktop + 'px'};
+	    	line-height: #{ 3 * $leading-rem-desktop + 'rem'};
+	    	margin-top: #{ $leading-desktop + 'px'};
+	    	margin-top: #{ $leading-rem-desktop + 'rem'};
+	    	margin-bottom: #{ 0.5 * $leading-desktop + 'px'};
+	    	margin-bottom: #{ 0.5 * $leading-rem-desktop + 'rem'};
+		}
+
+		h6 {
+			margin-top: #{ 0.5 * $leading-desktop + 'px'};
+	    	margin-top: #{ 0.5 * $leading-rem-desktop + 'rem'};
+		}
+	}
+
+	.heading2 h2 {
+		margin-top: #{ 1.5 * $leading-desktop + 'px'};
+    	margin-top: #{ 1.5 * $leading-rem-desktop + 'rem'};
 	}
 }

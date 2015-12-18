@@ -1,3 +1,11 @@
+body {
+	-moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+}
+
 article {
 	width: 80%;
 	margin: 0 auto;
@@ -12,14 +20,15 @@ article {
 	position: fixed;
 	top: #{$leading + 'px'};
 	right: #{$leading + 'px'};
-	background: url('../src/images/bg-grid.png') top right no-repeat;
+	background: url('../assets/images/grid-icons.png') top right no-repeat;
 	background-size: 32px;
-	// border: 1px solid #ccc;
-	font-size: 14px;
+	font-size: 18px;
 	text-decoration: none;
 	padding-right: 40px;
 	height: 32px;
 	line-height: 34px;
+	font-family: $custom-font-headings;
+	text-transform: uppercase;
 }
 
 .double-grid {
@@ -47,28 +56,62 @@ article {
 	text-transform: uppercase;
 }
 
-@font-face {font-family: 'ALOTGutenbergA';src: url('webfonts/2FDCFA_0_0.eot');src: url('webfonts/2FDCFA_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2FDCFA_0_0.woff2') format('woff2'),url('webfonts/2FDCFA_0_0.woff') format('woff'),url('webfonts/2FDCFA_0_0.ttf') format('truetype');}
+.heroGrid {
+	max-width: none;
+	width: 100%;
+	padding-bottom: #{ 3 * $leading-desktop + 'px' };
+	padding-bottom: #{ 3 * $leading-rem-desktop + 'rem' };
+	margin: 0;
+}
 
-.gutenbergA {
-	font-family: ALOTGutenbergA, Georgia, Serif;
-	font-weight: normal;
-	font-style: normal;
+.hero {
+	@extend .heroGrid;
+	background: #FCF5A0;
+	padding-bottom: 0;
+
+	a:visited {
+		color: $color-font-body;
+	}
 }
 
 hgroup {
 
-	small {
-		position: relative;
-		top: -50px;
-		right: 160px;
-		font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-		margin: 0;
-		line-height: 0;
+	h1 {
+		text-transform: uppercase;
+		font-weight: normal;
+		-moz-font-feature-settings: "salt";
+  		-webkit-font-feature-settings: "salt";
+  		font-feature-settings: "salt";
+  		text-shadow:
+  				0.5px 0.5px #C5BD5A,
+  				1px 1px #C5BD5A,
+  				1.5px 1.5px #C5BD5A,
+                2px 2px #C5BD5A,
+                2.5px 2.5px #C5BD5A,
+                3px 3px #C5BD5A,
+                3.5px 3.5px #C5BD5A,
+                4px 4px #C5BD5A,
+                4.5px 4.5px #C5BD5A,
+                5px 5px #C5BD5A,
+                5.5px 5.5px #C5BD5A,;
+        letter-spacing: 0.2rem;
 	}
 
 	h2 {
 		font-weight: normal;
+		font-style: italic;
 		margin-top: 0;
+		font-family: Merriweather, Georgia, Times, serif;
+		font-size: 20px;
+		// border-top: 2px solid $color-font-body;
+
+		span {
+			background: #FCF5A0;
+			padding: 0 1rem;
+			top: #{ -0.75 * $leading-desktop + 'px' };
+			top: #{ -0.75 * $leading-rem-desktop + 'rem' };
+			position: relative;
+		}
 	}
 }
 
@@ -79,31 +122,111 @@ hgroup {
 
 	a {
 		font-size: 12px;
-		font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+		font-family: sans-serif;
 		width: 150px;
-		background: #F4F4F4;
-		border: 1px solid #D5D5D5;
 		display: inline-block;
-		box-sizing: border-box;
 		height: 32px;
-		line-height: 30px;
 		text-decoration: none;
 		border-radius: 3px;
 		font-weight: bold;
 		margin-left: 5px!important;
 		margin-right: 5px!important;
+		color: white;
+		vertical-align: middle;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+
+		&.github {
+			background: #231F20;
+
+			&:hover {
+				background: lighten(#231F20, 10);
+			}
+
+			&:active {
+				background: darken(#231F20, 10);
+			}
+
+			&:visited {
+				color: white;
+			}
+		}
+
+		&.tweet {
+			background: #4099ff;
+
+			&:hover {
+				background: lighten(#4099ff, 5);
+			}
+
+			&:active {
+				background: darken(#4099ff, 5);
+			}
+
+			&:visited {
+				color: white;
+			}
+		}
 
 		div {
 			height: 20px;
 			padding: 1px;
+			padding-top: 2px;
 			padding-left: 22px;
 			display: inline;
 			background: url('../assets/images/button-icons.png') no-repeat;
-			background-size: 20px;
+			background-size: 18px;
 
 			&.twitter {
-				background-position-y: -20px;
+				background-position-y: -18px;
 			}
 		}
+	}
+}
+
+.example {
+	padding: #{ $leading + 'px' };
+	padding: #{ $leading-rem + 'rem' };
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: Merriweather, Georgia, Serif;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	h1 {
+		font-size: #{ 3.5 * $base + 'px'};
+    	font-size: #{ 3.5 + 'rem'};
+    	line-height: #{3 * $leading + 'px'};
+    	line-height: #{ 3 * $leading-rem + 'rem'};
+    	margin-top: #{ $leading + 'px'};
+    	margin-top: #{ $leading-rem + 'rem'};
+    	margin-bottom: #{ 0.5 * $leading + 'px'};
+    	margin-bottom: #{ 0.5 * $leading-rem + 'rem'};
+	}
+
+	h2, h6 {
+		margin-top: #{ 0.5 * $leading + 'px'};
+    	margin-top: #{ 0.5 * $leading-rem + 'rem'};
+	}
+}
+
+code {
+	font-family: 'Roboto Mono' monospace;
+}
+
+.heading2 {
+	h2 {
+		background: rgba(215,228,244,0.3);
+		margin-top: #{ 1.5 * $leading + 'px'};
+    	margin-top: #{ 1.5 * $leading-rem + 'rem'};
 	}
 }
