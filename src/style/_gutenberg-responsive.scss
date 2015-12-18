@@ -28,6 +28,10 @@
     	background-size: 100% #{$leading-rem-desktop + 'rem'};
 	}
 
+	.grid-double {
+		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+	}
+
 	// Set max-wdith for article
 	article {
 		max-width: #{1.5 * $max-width * $base-desktop + 'px'};
@@ -51,6 +55,22 @@
 	        margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
 	        margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
 	    }
+	}
+
+	// Set margins between headings
+	h1 + h2 {
+		margin-top: #{$leading-desktop + 'px'};
+	    margin-top: #{$leading-rem-desktop + 'rem'};
+	}
+
+	h2 + h3, h3 + h4, h4 + h5 {
+		margin-top: #{0.5 * $leading-desktop + 'px'};
+	    margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
+	}
+
+	h5 + h6 {
+		margin-top: -#{0.5 * $leading-desktop + 'px'};
+	    margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
 	}
 
 	// Floated images width & padding
@@ -97,5 +117,10 @@
 	hr {
 		margin: #{2 * $leading-desktop + 'px'} auto;
     	margin: #{2 * $leading-rem-desktop + 'rem'} auto;
+	}
+
+	code {
+		padding: #{$leading-desktop + 'px'};
+		padding: #{$leading-rem-desktop + 'rem'};
 	}
 }

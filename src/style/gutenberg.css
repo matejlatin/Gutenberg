@@ -131,6 +131,13 @@ sub {
   bottom: -0.25em;
 }
 
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
 /* Embedded content
    ========================================================================== */
 img {
@@ -242,8 +249,8 @@ h4 {
   font-size: 1.2rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 65px;
-  margin-top: 4.0625rem;
+  margin-top: 39px;
+  margin-top: 2.4375rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem;
 }
@@ -342,19 +349,23 @@ small {
   line-height: 0.8125rem;
 }
 
+code {
+  padding: 26px;
+  padding: 1.625rem;
+}
+
 /* Grid
    ========================================================================== */
 .grid, .grid-double {
-  background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+  background-position: left top;
   background-repeat: repeat;
-  background-position: top left;
-  box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
 }
 
 .grid-double {
-  background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px);
 }
 
 /* Gutenberg defaults
@@ -432,6 +443,10 @@ article {
     background-size: 100% 1.722222222222222rem;
   }
 
+  .grid-double {
+    background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 15.5px, rgba(0, 170, 255, 0.2) 15.5px, transparent 16.5px, transparent 31px);
+  }
+
   article {
     max-width: 945px;
     max-width: 52.5rem;
@@ -480,8 +495,8 @@ article {
     font-size: 1.2rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
-    margin-top: 77.5px;
-    margin-top: 4.305555555555556rem;
+    margin-top: 46.5px;
+    margin-top: 2.583333333333334rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.861111111111111rem;
   }
@@ -506,6 +521,21 @@ article {
     margin-top: 4.305555555555556rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.861111111111111rem;
+  }
+
+  h1 + h2 {
+    margin-top: 31px;
+    margin-top: 1.722222222222222rem;
+  }
+
+  h2 + h3, h3 + h4, h4 + h5 {
+    margin-top: 15.5px;
+    margin-top: 0.861111111111111rem;
+  }
+
+  h5 + h6 {
+    margin-top: -15.5px;
+    margin-top: -0.861111111111111rem;
   }
 
   figure.floatLeft,
@@ -547,6 +577,11 @@ article {
   hr {
     margin: 62px auto;
     margin: 3.444444444444445rem auto;
+  }
+
+  code {
+    padding: 31px;
+    padding: 1.722222222222222rem;
   }
 }
 /* TODOs:

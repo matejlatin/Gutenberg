@@ -144,6 +144,14 @@ sub {
   bottom: -0.25em;
 }
 
+// Prevent `em` and `i` affecting `line-height` in all browsers.
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
 /* Embedded content
    ========================================================================== */
 

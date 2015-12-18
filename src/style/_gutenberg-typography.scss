@@ -178,16 +178,20 @@ small {
 	line-height: #{0.5* $leading-rem + 'rem'};
 }
 
+code {
+	padding: #{$leading + 'px'};
+	padding: #{$leading-rem + 'rem'};
+}
+
 
 /* Grid
    ========================================================================== */
 
 // Grid background
 .grid {
-	background-image: linear-gradient(#d7e4f4 0%, transparent 5%, transparent 100%);
+	background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+  	background-position: left top;
 	background-repeat: repeat;
-    background-position: top left;
-    box-shadow: rgba(215, 228, 244, 0.3) 1px 0px 0px, rgba(215, 228, 244, 0.3) -1px 0px 0px;
     background-size: 100% #{$leading + 'px'};
     background-size: 100% #{$leading-rem + 'rem'};
 }
@@ -195,5 +199,5 @@ small {
 // Double grid background
 .grid-double {
 	@extend .grid;
-	background-image: linear-gradient(rgba(215, 228, 244, 1) 0%, transparent 5%, transparent 50%, rgba(215, 228, 244, 0.4) 50%, transparent 55%, transparent 100%);
+	background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
 }
