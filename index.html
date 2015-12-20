@@ -44,13 +44,13 @@
 <body>
 	<a id="btnToggleGrid" class="btnToggleGrid" href="javascript:void(0)">Turn Grid On</a>
 	<div class="hero clearfix">
-		<div class="heroGrid clearfix">
+		<div class="grid-overlay clearfix">
 			<hgroup>
 				<h1 class="alignCenter">Gutenberg</h1>
 				<h2 class="alignCenter"><span>A Meaningful Web Typography Starter Kit</span></h2>
 			</hgroup>
 			<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" onclick="ga('send', 'event', 'Buttons', 'github');" class="github"><div>Fork on Github</div></a> <a class="tweet" href="#" onclick="fbs_click(); ga('send', 'event', 'Buttons', 'twitter');"><div class="twitter">Tweet this</div></a></div>
-			<p class="alignCenter">Gutenberg is a work–in–progress project by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a> that brings meaning and craftsmanship to web typography.</p>
+			<p class="alignCenter">Gutenberg is a work–in–progress project by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'twitter');" target="_blank">Matej Latin</a> that brings meaning and craftsmanship to web typography.</p>
 		</div>
 	</div>
 	<article>
@@ -58,7 +58,7 @@
 		<p>Typography is a living thing. It’s flexible. And this is exactly how Gutenberg is made. It sets the macrotypography so you can focus on the microtypographic details. Flexibility is the most important feature of Gutenberg and Sass makes this possible. Creating a unique and beautiful typographic style is a matter of changing variables. </p>
 
 		<h3>Base type &amp; line-height</h3>
-		<p>All calculations in Gutenberg depend on base type size and <em>line-height</em>. Multiplication of these two results in <em>leading</em> which is essential for setting a correct vertical rhythm and a baseline grid.</p>
+		<p>All calculations in Gutenberg depend on <em>base type size</em> and <em>line-height</em>. Multiplication of these two results in <em>leading</em> which is essential for setting a correct vertical rhythm and a baseline grid.</p>
 		<pre><code class="scss">$base-type: 100;
 $line-height: 1.6;
 $leading: $base-type * $line-height;</code></pre>
@@ -73,7 +73,7 @@ $leading: $base-type * $line-height;</code></pre>
 	<figure>
 	<div class="example grid">
 		<b>Johannes Gutenberg</b>
-		<p>Johannes Gensfleisch zur Laden zum Gutenberg (c. 1398 – February 3, 1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe.<br><br></p>
+		<p>Johannes Gensfleisch zur Laden zum Gutenberg (c. 1398&nbsp;–&nbsp;1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe.<br><br></p>
 	</div>
 	</figure>
 
@@ -108,33 +108,41 @@ $line-height: 1.625;
 $line-height-desktop: 1.8;
 $max-width: 35;</code></pre>
 
-	<h3>Themes &amp; custmoization</h3>
+	<h3>Themes &amp; customization</h3>
 	<p>Gutenberg comes with two beautiful pre–defined themes based on two high–quality but free fonts provided by Google Fonts: Merriweather and Open Sans.</p>
 	<p>Feeling creative? Load your own fonts and create a unique typographic style in minutes.</p>
 	<pre><code>$theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, serif;
 $custom-font-headings: "Open Sans", sans-serif;</code></pre>
-	<h4>Examples</h4>
-	<p>Theme examples</p>
+	<p>
+		<a href="/example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">View an example</a>
+	</p>
 
 	<h3>Fix image height</h3>
 	<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of leading.</p>
 
-	<h3>Why Gutemberg?</h3>
+	<figure>
+		<img src="assets/images/grid-image.png" alt="Fix image height">
+		<figcaption>Resizing images so they fit in the grid.</figcaption>
+	</figure>
+
+	<h2>Why Gutenberg?</h2>
 	<p>More than 500 years ago, Johannes Gutenberg invented a printing press with movable type which lead to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.</p>
 	<hr>
 	<h2 class="alignCenter">Gutenberg v1.0</h2>
+	<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
 	<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="#" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
-	<!-- <h3 class="alignCenter">Contribute</h3>
-	<p class="alignCenter">Gutenberg is an open source project so feel free to fork it on GitHub and contribute.</p> -->
 </article>
-<hr>
-<footer class="alignCenter">
-	<p>
-		<small>
-			Handcrafted by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a>.
-		</small>
-	</p>
+<footer class="alignCenter clearfix">
+	<div class="grid-overlay clearfix">
+		<h2>Gutenberg</h2>
+		<p>
+			<small>
+				<em>A Meaningful Web Typography Starter Kit</em><br>
+				Handcrafted by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');" target="_blank">Matej Latin</a>.
+			</small>
+		</p>
+	</div>
 </footer>
 <script>
 // Toggle Grid Functionality
@@ -142,15 +150,6 @@ document.getElementById("btnToggleGrid").onclick = toggleGrid;
 
 // Fix image heights (JavaScript)
 window.onload = fixImgHeight;
-
-/*
-// Fix image heights (jQuery)
-$(window).load(function(){
-	$('img').each(function(){
-		$(this).imgFixHeight();
-	});
-});
-*/
 
 // Highlight.js
 hljs.initHighlightingOnLoad();

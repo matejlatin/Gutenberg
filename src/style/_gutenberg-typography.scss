@@ -162,18 +162,22 @@ ul, ol {
 
 // Horizontal rule
 hr {
-	margin: #{4 * $leading + 'px'} auto;
-    margin: #{4 * $leading-rem + 'rem'} auto;
+	margin: #{3 * $leading + 'px'} auto;
+    margin: #{3 * $leading-rem + 'rem'} auto;
     width: 100px;
     display: block;
-    background-color: $color-font-light;
-    height: 1px;
+    height: #{$leading + 'px'};
+    height: #{$leading-rem + 'rem'};
     border: 0;
+    // background-color: none;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  $color-font-body #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+    background-size: 100% #{$leading + 'px'};
+    background-size: 100% #{$leading-rem + 'rem'};
 }
 
 small {
 	line-height: #{0.5 * $leading + 'px'};
-	line-height: #{0.5* $leading-rem + 'rem'};
+	line-height: #{0.5 * $leading-rem + 'rem'};
 }
 
 code {

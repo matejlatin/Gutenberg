@@ -56,7 +56,7 @@ article {
 	text-transform: uppercase;
 }
 
-.heroGrid {
+.grid-overlay {
 	max-width: none;
 	width: 100%;
 	padding-bottom: #{ 3 * $leading-desktop + 'px' };
@@ -65,7 +65,7 @@ article {
 }
 
 .hero {
-	@extend .heroGrid;
+	@extend .grid-overlay;
 	background: #FCF5A0;
 	padding-bottom: 0;
 
@@ -93,7 +93,8 @@ hgroup {
                 4px 4px #C5BD5A,
                 4.5px 4.5px #C5BD5A,
                 5px 5px #C5BD5A,
-                5.5px 5.5px #C5BD5A,;
+                5.5px 5.5px #C5BD5A,
+                6px 6px #C5BD5A;
         letter-spacing: 0.2rem;
 	}
 
@@ -104,6 +105,10 @@ hgroup {
 		font-family: Merriweather, Georgia, Times, serif;
 		font-size: 20px;
 		// border-top: 2px solid $color-font-body;
+		background-image: linear-gradient(to bottom, $color-font-body 2px, transparent 2px);
+	  	background-position: center top;
+		background-repeat: no-repeat;
+		background-size: 520px;
 
 		span {
 			background: #FCF5A0;
@@ -229,4 +234,34 @@ code {
 		margin-top: #{ 1.5 * $leading + 'px'};
     	margin-top: #{ 1.5 * $leading-rem + 'rem'};
 	}
+}
+
+footer {
+	width: 100%;
+	max-width: none;
+	background: #f3f3f3;
+	margin-bottom: 0;
+	margin-top: #{ 3.5 * $leading + 'px'};
+    margin-top: #{ 3.5 * $leading-rem + 'rem'};
+
+    .grid-overlay {
+    	padding-bottom: #{ 2 * $leading + 'px'};
+		padding-bottom: #{ 2 * $leading-rem + 'rem'};
+    }
+
+	h2 {
+		text-transform: uppercase;
+		text-shadow:
+  				0.5px 0.5px #b2b2b2,
+  				1px 1px #b2b2b2,
+  				1.5px 1.5px #b2b2b2,
+                2px 2px #b2b2b2;
+	}
+}
+
+#ads {
+	display: none;
+	height: 0;
+	margin: 0;
+	line-height: 0;
 }

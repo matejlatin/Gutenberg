@@ -408,7 +408,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "acumin-pro-extra-condensed", sans-serif;
+  font-family: "jaf-bernino-sans-comp", sans-serif;
 }
 
 /* Links
@@ -449,13 +449,16 @@ ul li, ol li {
 }
 
 hr {
-  margin: 104px auto;
-  margin: 6.5rem auto;
+  margin: 78px auto;
+  margin: 4.875rem auto;
   width: 100px;
   display: block;
-  background-color: #888;
-  height: 1px;
+  height: 26px;
+  height: 1.625rem;
   border: 0;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 13px, #222222 13px, transparent 14px, transparent 26px);
+  background-size: 100% 26px;
+  background-size: 100% 1.625rem;
 }
 
 small {
@@ -507,7 +510,7 @@ article {
   padding-right: 40px;
   height: 32px;
   line-height: 34px;
-  font-family: "acumin-pro-extra-condensed", sans-serif;
+  font-family: "jaf-bernino-sans-comp", sans-serif;
   text-transform: uppercase;
 }
 
@@ -536,7 +539,7 @@ article {
   text-transform: uppercase;
 }
 
-.heroGrid, .hero {
+.grid-overlay, .hero {
   max-width: none;
   width: 100%;
   padding-bottom: 96px;
@@ -558,7 +561,7 @@ hgroup h1 {
   -moz-font-feature-settings: "salt";
   -webkit-font-feature-settings: "salt";
   font-feature-settings: "salt";
-  text-shadow: 0.5px 0.5px #C5BD5A, 1px 1px #C5BD5A, 1.5px 1.5px #C5BD5A, 2px 2px #C5BD5A, 2.5px 2.5px #C5BD5A, 3px 3px #C5BD5A, 3.5px 3.5px #C5BD5A, 4px 4px #C5BD5A, 4.5px 4.5px #C5BD5A, 5px 5px #C5BD5A, 5.5px 5.5px #C5BD5A;
+  text-shadow: 0.5px 0.5px #C5BD5A, 1px 1px #C5BD5A, 1.5px 1.5px #C5BD5A, 2px 2px #C5BD5A, 2.5px 2.5px #C5BD5A, 3px 3px #C5BD5A, 3.5px 3.5px #C5BD5A, 4px 4px #C5BD5A, 4.5px 4.5px #C5BD5A, 5px 5px #C5BD5A, 5.5px 5.5px #C5BD5A, 6px 6px #C5BD5A;
   letter-spacing: 0.2rem;
 }
 hgroup h2 {
@@ -567,6 +570,10 @@ hgroup h2 {
   margin-top: 0;
   font-family: Merriweather, Georgia, Times, serif;
   font-size: 20px;
+  background-image: linear-gradient(to bottom, #222222 2px, transparent 2px);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 520px;
 }
 hgroup h2 span {
   background: #FCF5A0;
@@ -672,6 +679,30 @@ code {
   background: rgba(215, 228, 244, 0.3);
   margin-top: 39px;
   margin-top: 2.4375rem;
+}
+
+footer {
+  width: 100%;
+  max-width: none;
+  background: #f3f3f3;
+  margin-bottom: 0;
+  margin-top: 91px;
+  margin-top: 5.6875rem;
+}
+footer .grid-overlay, footer .hero {
+  padding-bottom: 52px;
+  padding-bottom: 3.25rem;
+}
+footer h2 {
+  text-transform: uppercase;
+  text-shadow: 0.5px 0.5px #b2b2b2, 1px 1px #b2b2b2, 1.5px 1.5px #b2b2b2, 2px 2px #b2b2b2;
+}
+
+#ads {
+  display: none;
+  height: 0;
+  margin: 0;
+  line-height: 0;
 }
 
 @media screen and (min-width: 40rem) {
@@ -833,8 +864,13 @@ code {
   }
 
   hr {
-    margin: 128px auto;
-    margin: 7.111111111111111rem auto;
+    margin: 96px auto;
+    margin: 5.333333333333333rem auto;
+    height: 32px;
+    height: 1.777777777777778rem;
+    background-size: 100% 32px;
+    background-size: 100% 1.777777777777778rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 16px, #222222 16px, transparent 17px, transparent 32px);
   }
 
   code {
@@ -867,6 +903,15 @@ code {
   .heading2 h2 {
     margin-top: 48px;
     margin-top: 2.666666666666667rem;
+  }
+
+  footer {
+    margin-top: 96px;
+    margin-top: 5.333333333333333rem;
+  }
+  footer .grid-overlay, footer .hero {
+    padding-bottom: 64px;
+    padding-bottom: 3.555555555555556rem;
   }
 }
 /* TODO:
