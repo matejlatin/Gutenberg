@@ -115,8 +115,13 @@
 	}
 
 	hr {
-		margin: #{2 * $leading-desktop + 'px'} auto;
-    	margin: #{2 * $leading-rem-desktop + 'rem'} auto;
+		margin: #{3 * $leading-desktop + 'px'} auto;
+    	margin: #{3 * $leading-rem-desktop + 'rem'} auto;
+    	height: #{$leading-desktop + 'px'};
+    	height: #{$leading-rem-desktop + 'rem'};
+    	background-size: 100% #{$leading-desktop + 'px'};
+    	background-size: 100% #{$leading-rem-desktop + 'rem'};
+    	background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  $color-font-body #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
 	}
 
 	code {

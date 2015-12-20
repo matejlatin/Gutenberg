@@ -575,8 +575,13 @@ article {
   }
 
   hr {
-    margin: 62px auto;
-    margin: 3.444444444444445rem auto;
+    margin: 93px auto;
+    margin: 5.166666666666667rem auto;
+    height: 31px;
+    height: 1.722222222222222rem;
+    background-size: 100% 31px;
+    background-size: 100% 1.722222222222222rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 15.5px, #222222 15.5px, transparent 16.5px, transparent 31px);
   }
 
   code {
