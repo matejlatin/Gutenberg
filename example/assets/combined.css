@@ -480,7 +480,7 @@ article {
   position: fixed;
   top: 26px;
   right: 26px;
-  background: url("../src/images/bg-grid.png") top right no-repeat;
+  background: url("grid-icons.png") top right no-repeat;
   background-size: 32px;
   font-size: 14px;
   text-decoration: none;
