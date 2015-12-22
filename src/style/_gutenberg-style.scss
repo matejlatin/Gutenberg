@@ -59,8 +59,8 @@ article {
 .grid-overlay {
 	max-width: none;
 	width: 100%;
-	padding-bottom: #{ 3 * $leading-desktop + 'px' };
-	padding-bottom: #{ 3 * $leading-rem-desktop + 'rem' };
+	padding-bottom: #{ 3 * $leading + 'px' };
+	padding-bottom: #{ 3 * $leading-rem + 'rem' };
 	margin: 0;
 }
 
@@ -71,6 +71,12 @@ article {
 
 	a:visited {
 		color: $color-font-body;
+	}
+
+	p {
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -102,35 +108,30 @@ hgroup {
 		font-weight: normal;
 		font-style: italic;
 		margin-top: 0;
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 		font-family: Merriweather, Georgia, Times, serif;
-		font-size: 20px;
-		// border-top: 2px solid $color-font-body;
-		background-image: linear-gradient(to bottom, $color-font-body 2px, transparent 2px);
-	  	background-position: center top;
-		background-repeat: no-repeat;
-		background-size: 520px;
-
-		span {
-			background: #FCF5A0;
-			padding: 0 1rem;
-			top: #{ -0.75 * $leading-desktop + 'px' };
-			top: #{ -0.75 * $leading-rem-desktop + 'rem' };
-			position: relative;
-		}
+		font-size: 16px;
+		line-height: #{ 1 * $leading + 'px' };
+		line-height: #{ 1 * $leading-rem + 'rem' };
 	}
 }
 
 .buttons {
 
-	margin-top: #{ 1.5 * $leading-desktop + 'px' };
-	margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
+	margin-top: #{ 1.5 * $leading + 'px' };
+	margin-top: #{ 1.5 * $leading-rem + 'rem' };
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 
 	a {
 		font-size: 12px;
 		font-family: sans-serif;
 		width: 150px;
 		display: inline-block;
-		height: 32px;
+		height: 26px;
 		text-decoration: none;
 		border-radius: 3px;
 		font-weight: bold;
@@ -208,10 +209,10 @@ hgroup {
 	}
 
 	h1 {
-		font-size: #{ 3.5 * $base + 'px'};
-    	font-size: #{ 3.5 + 'rem'};
-    	line-height: #{3 * $leading + 'px'};
-    	line-height: #{ 3 * $leading-rem + 'rem'};
+		font-size: #{ 2.5 * $base + 'px'};
+    	font-size: #{ 2.5 + 'rem'};
+    	line-height: #{ 2 * $leading + 'px'};
+    	line-height: #{ 2 * $leading-rem + 'rem'};
     	margin-top: #{ $leading + 'px'};
     	margin-top: #{ $leading-rem + 'rem'};
     	margin-bottom: #{ 0.5 * $leading + 'px'};

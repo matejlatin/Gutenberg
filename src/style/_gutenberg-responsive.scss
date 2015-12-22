@@ -17,7 +17,7 @@
 
 	.grid {
 		background-size: 100% #{$leading-desktop + 'px'};
-    	background-size: 100% #{$leading-rem-desktop + 'rem'};
+		background-size: 100% #{$leading-rem-desktop + 'rem'};
 	}
 
 	.grid-double {
@@ -43,32 +43,39 @@
 
 	// Heading sizes, line-heights and margins
 	@each $heading, $properties in $headings {
-	    #{$heading} {
-	    	font-size: #{nth($properties, 1) * $base-desktop + 'px'};
-	    	font-size: #{nth($properties, 1) + 'rem'};
-	    	line-height: #{nth($properties, 2)*$leading-desktop + 'px'};
-	    	line-height: #{nth($properties, 2)*$leading-rem-desktop + 'rem'};
-	        margin-top: #{nth($properties, 3) * $leading-desktop + 'px'};
-	        margin-top: #{nth($properties, 3) * $leading-rem-desktop + 'rem'};
-	        margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
-	        margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
-	    }
+		#{$heading} {
+			font-size: #{nth($properties, 1) * $base-desktop + 'px'};
+			font-size: #{nth($properties, 1) + 'rem'};
+			line-height: #{nth($properties, 2)*$leading-desktop + 'px'};
+			line-height: #{nth($properties, 2)*$leading-rem-desktop + 'rem'};
+			margin-top: #{nth($properties, 3) * $leading-desktop + 'px'};
+			margin-top: #{nth($properties, 3) * $leading-rem-desktop + 'rem'};
+			margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
+			margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
+		}
+	}
+
+	h1 {
+		font-size: #{ 8 * $base-desktop + 'px'};
+		font-size: #{ 8 + 'rem'};
+		margin-bottom: #{ 1 * $leading-desktop + 'px'};
+		margin-bottom: #{ 1 * $leading-rem-desktop + 'rem'};
 	}
 
 	// Set margins between headings
 	h1 + h2 {
 		margin-top: #{$leading-desktop + 'px'};
-	    margin-top: #{$leading-rem-desktop + 'rem'};
+		margin-top: #{$leading-rem-desktop + 'rem'};
 	}
 
 	h2 + h3, h3 + h4, h4 + h5 {
 		margin-top: #{0.5 * $leading-desktop + 'px'};
-	    margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
+		margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
 	}
 
 	h5 + h6 {
 		margin-top: -#{0.5 * $leading-desktop + 'px'};
-	    margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
+		margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
 	}
 
 	// Floated images width & padding
@@ -110,12 +117,12 @@
 
 	hr {
 		margin: #{3 * $leading-desktop + 'px'} auto;
-    	margin: #{3 * $leading-rem-desktop + 'rem'} auto;
-    	height: #{$leading-desktop + 'px'};
-    	height: #{$leading-rem-desktop + 'rem'};
-    	background-size: 100% #{$leading-desktop + 'px'};
-    	background-size: 100% #{$leading-rem-desktop + 'rem'};
-    	background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  $color-font-body #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+		margin: #{3 * $leading-rem-desktop + 'rem'} auto;
+		height: #{$leading-desktop + 'px'};
+		height: #{$leading-rem-desktop + 'rem'};
+		background-size: 100% #{$leading-desktop + 'px'};
+		background-size: 100% #{$leading-rem-desktop + 'rem'};
+		background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  $color-font-body #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
 	}
 
 	code {
@@ -133,33 +140,98 @@
 
 		h1 {
 			font-size: #{ 3.5 * $base-desktop + 'px'};
-	    	font-size: #{ 3.5 + 'rem'};
-	    	line-height: #{3 * $leading-desktop + 'px'};
-	    	line-height: #{ 3 * $leading-rem-desktop + 'rem'};
-	    	margin-top: #{ $leading-desktop + 'px'};
-	    	margin-top: #{ $leading-rem-desktop + 'rem'};
-	    	margin-bottom: #{ 0.5 * $leading-desktop + 'px'};
-	    	margin-bottom: #{ 0.5 * $leading-rem-desktop + 'rem'};
+			font-size: #{ 3.5 + 'rem'};
+			line-height: #{3 * $leading-desktop + 'px'};
+			line-height: #{ 3 * $leading-rem-desktop + 'rem'};
+			margin-top: #{ $leading-desktop + 'px'};
+			margin-top: #{ $leading-rem-desktop + 'rem'};
+			margin-bottom: #{ 0.5 * $leading-desktop + 'px'};
+			margin-bottom: #{ 0.5 * $leading-rem-desktop + 'rem'};
 		}
 
 		h6 {
 			margin-top: #{ 0.5 * $leading-desktop + 'px'};
-	    	margin-top: #{ 0.5 * $leading-rem-desktop + 'rem'};
+			margin-top: #{ 0.5 * $leading-rem-desktop + 'rem'};
 		}
 	}
 
 	.heading2 h2 {
 		margin-top: #{ 1.5 * $leading-desktop + 'px'};
-    	margin-top: #{ 1.5 * $leading-rem-desktop + 'rem'};
+		margin-top: #{ 1.5 * $leading-rem-desktop + 'rem'};
 	}
 
 	footer {
 		margin-top: #{ 3 * $leading-desktop + 'px'};
-    	margin-top: #{ 3 * $leading-rem-desktop + 'rem'};
+		margin-top: #{ 3 * $leading-rem-desktop + 'rem'};
 
-    	.grid-overlay {
-	    	padding-bottom: #{ 2 * $leading-desktop + 'px'};
+		.grid-overlay {
+			padding-bottom: #{ 2 * $leading-desktop + 'px'};
 			padding-bottom: #{ 2 * $leading-rem-desktop + 'rem'};
-	    }
+		}
+	}
+
+	hgroup {
+
+		h2 {
+			font-weight: normal;
+			font-style: italic;
+			margin-top: 0;
+			font-family: Merriweather, Georgia, Times, serif;
+			font-size: 20px;
+			background-image: linear-gradient(to bottom, $color-font-body 2px, transparent 2px);
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: 520px;
+			line-height: #{ 1.5 * $leading-desktop + 'px' };
+			line-height: #{ 1.5 * $leading-rem-desktop + 'rem' };
+
+			span {
+				background: #FCF5A0;
+				padding: 0 1rem;
+				top: #{ -0.75 * $leading-desktop + 'px' };
+				top: #{ -0.75 * $leading-rem-desktop + 'rem' };
+				position: relative;
+			}
+		}
+	}
+
+	.buttons {
+
+		margin-top: #{ 1.5 * $leading-desktop + 'px' };
+		margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
+		max-width: #{$max-width * $base-desktop + 'px'};
+		max-width: #{$max-width + 'rem'};
+
+		a {
+			height: 32px;
+
+			div {
+				height: 20px;
+				padding: 1px;
+				padding-top: 2px;
+				padding-left: 22px;
+				display: inline;
+				background: url('../assets/images/button-icons.png') no-repeat;
+				background-size: 18px;
+
+				&.twitter {
+					background-position-y: -18px;
+				}
+			}
+		}
+	}
+
+	.grid-overlay {
+		padding-bottom: #{ 3 * $leading-desktop + 'px' };
+		padding-bottom: #{ 3 * $leading-rem-desktop + 'rem' };
+	}
+
+	.hero {
+		padding-bottom: 0;
+
+		p {
+			max-width: #{$max-width * $base-desktop + 'px'};
+			max-width: #{$max-width + 'rem'};
+		}
 	}
 }

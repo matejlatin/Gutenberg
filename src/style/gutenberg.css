@@ -217,14 +217,14 @@ html {
 /* Headings
    ========================================================================== */
 h1 {
-  font-size: 128px;
-  font-size: 8rem;
+  font-size: 68.8px;
+  font-size: 4.3rem;
   line-height: 104px;
   line-height: 6.5rem;
   margin-top: 130px;
   margin-top: 8.125rem;
-  margin-bottom: 26px;
-  margin-bottom: 1.625rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 
 h2 {
@@ -442,8 +442,8 @@ article {
 .grid-overlay, .hero {
   max-width: none;
   width: 100%;
-  padding-bottom: 96px;
-  padding-bottom: 5.333333333333333rem;
+  padding-bottom: 78px;
+  padding-bottom: 4.875rem;
   margin: 0;
 }
 
@@ -453,6 +453,11 @@ article {
 }
 .hero a:visited {
   color: #222222;
+}
+.hero p {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hgroup h1 {
@@ -468,31 +473,28 @@ hgroup h2 {
   font-weight: normal;
   font-style: italic;
   margin-top: 0;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Merriweather, Georgia, Times, serif;
-  font-size: 20px;
-  background-image: linear-gradient(to bottom, #222222 2px, transparent 2px);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 520px;
-}
-hgroup h2 span {
-  background: #FCF5A0;
-  padding: 0 1rem;
-  top: -24px;
-  top: -1.333333333333333rem;
-  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  line-height: 1.625rem;
 }
 
 .buttons {
-  margin-top: 48px;
-  margin-top: 2.666666666666667rem;
+  margin-top: 39px;
+  margin-top: 2.4375rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .buttons a {
   font-size: 12px;
   font-family: sans-serif;
   width: 150px;
   display: inline-block;
-  height: 32px;
+  height: 26px;
   text-decoration: none;
   border-radius: 3px;
   font-weight: bold;
@@ -557,10 +559,10 @@ hgroup h2 span {
   margin-bottom: 0;
 }
 .example h1 {
-  font-size: 56px;
-  font-size: 3.5rem;
-  line-height: 78px;
-  line-height: 4.875rem;
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 52px;
+  line-height: 3.25rem;
   margin-top: 26px;
   margin-top: 1.625rem;
   margin-bottom: 13px;
@@ -746,14 +748,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h1 {
-    font-size: 144px;
-    font-size: 8rem;
+    font-size: 77.39999999999998px;
+    font-size: 4.3rem;
     line-height: 128px;
     line-height: 7.111111111111111rem;
     margin-top: 160px;
     margin-top: 8.88888888888889rem;
-    margin-bottom: 32px;
-    margin-bottom: 1.777777777777778rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
   }
 
   h2 {
@@ -809,6 +811,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-top: 4.444444444444445rem;
     margin-bottom: 16px;
     margin-bottom: 0.888888888888889rem;
+  }
+
+  h1 {
+    font-size: 144px;
+    font-size: 8rem;
+    margin-bottom: 32px;
+    margin-bottom: 1.777777777777778rem;
   }
 
   h1 + h2 {
@@ -911,6 +920,62 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   footer .grid-overlay, footer .hero {
     padding-bottom: 64px;
     padding-bottom: 3.555555555555556rem;
+  }
+
+  hgroup h2 {
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 0;
+    font-family: Merriweather, Georgia, Times, serif;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom, #222222 2px, transparent 2px);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 520px;
+    line-height: 48px;
+    line-height: 2.666666666666667rem;
+  }
+  hgroup h2 span {
+    background: #FCF5A0;
+    padding: 0 1rem;
+    top: -24px;
+    top: -1.333333333333333rem;
+    position: relative;
+  }
+
+  .buttons {
+    margin-top: 48px;
+    margin-top: 2.666666666666667rem;
+    max-width: 630px;
+    max-width: 35rem;
+  }
+  .buttons a {
+    height: 32px;
+  }
+  .buttons a div {
+    height: 20px;
+    padding: 1px;
+    padding-top: 2px;
+    padding-left: 22px;
+    display: inline;
+    background: url("../assets/images/button-icons.png") no-repeat;
+    background-size: 18px;
+  }
+  .buttons a div.twitter {
+    background-position-y: -18px;
+  }
+
+  .grid-overlay, .hero {
+    padding-bottom: 96px;
+    padding-bottom: 5.333333333333333rem;
+  }
+
+  .hero {
+    padding-bottom: 0;
+  }
+  .hero p {
+    max-width: 630px;
+    max-width: 35rem;
   }
 }
 /* TODO:
