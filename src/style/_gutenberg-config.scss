@@ -6,7 +6,7 @@ $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 // Theme / Fonts
 $theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, Georgia, Times, serif; // [ "Libre Baskerville", Georgia, serif ]
-$custom-font-headings: "jaf-bernino-sans-comp",sans-serif;
+$custom-font-headings: "jaf-bernino-sans-comp", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
