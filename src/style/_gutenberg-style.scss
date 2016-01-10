@@ -1,9 +1,8 @@
 body {
-	-moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga", "dlig";
-    -webkit-font-feature-settings: "liga", "dlig";
-    -o-font-feature-settings: "liga", "dlig";
-    font-feature-settings: "liga", "dlig";
+	font-variant-ligatures: common-ligatures;
+	-moz-font-feature-settings: "liga", "clig";
+	-webkit-font-feature-settings: "liga", "clig";
+	font-feature-settings: "liga", "clig";
 }
 
 article {
@@ -14,93 +13,93 @@ article {
 .btnToggleGrid {
 	@if $edit-mode == true {
 		display: block;
-	} @else if $edit-mode == false {
-		display: none;
+		} @else if $edit-mode == false {
+			display: none;
+		}
+		position: fixed;
+		top: #{$leading + 'px'};
+		right: #{$leading + 'px'};
+		background: url('../assets/images/grid-icons.png') top right no-repeat;
+		background-size: 32px;
+		font-size: 14px;
+		text-decoration: none;
+		padding-right: 40px;
+		height: 32px;
+		line-height: 34px;
+		font-family: $custom-font-headings;
+		text-transform: uppercase;
+		font-weight: 700;
 	}
-	position: fixed;
-	top: #{$leading + 'px'};
-	right: #{$leading + 'px'};
-	background: url('../assets/images/grid-icons.png') top right no-repeat;
-	background-size: 32px;
-	font-size: 14px;
-	text-decoration: none;
-	padding-right: 40px;
-	height: 32px;
-	line-height: 34px;
-	font-family: $custom-font-headings;
-	text-transform: uppercase;
-	font-weight: 700;
-}
 
-.double-grid {
-	background-position-y: -32px;
-}
+	.double-grid {
+		background-position-y: -32px;
+	}
 
-.grid-off {
-	background-position-y: -64px;
-}
+	.grid-off {
+		background-position-y: -64px;
+	}
 
-.alignLeft {
-	text-align: left;
-}
+	.alignLeft {
+		text-align: left;
+	}
 
-.alignCenter {
-	text-align: center;
-}
+	.alignCenter {
+		text-align: center;
+	}
 
-.alignRight {
-	text-align: right;
-}
+	.alignRight {
+		text-align: right;
+	}
 
-.uppercase {
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-}
+	.uppercase {
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
 
-.grid-overlay {
-	max-width: none;
-	width: 100%;
-	padding-bottom: #{ 3 * $leading + 'px' };
-	padding-bottom: #{ 3 * $leading-rem + 'rem' };
-	margin: 0;
-}
+	.grid-overlay {
+		max-width: none;
+		width: 100%;
+		padding-bottom: #{ 3 * $leading + 'px' };
+		padding-bottom: #{ 3 * $leading-rem + 'rem' };
+		margin: 0;
+	}
 
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+	.cf:before,
+	.cf:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
 
-.cf:after {
-    clear: both;
-}
+	.cf:after {
+		clear: both;
+	}
 
-.hero {
-	@extend .grid-overlay;
-	background: #FF1935;
-	padding-bottom: 0;
-	color: white;
-	overflow: visible;
-
-	a {
+	.hero {
+		@extend .grid-overlay;
+		background: #FF1935;
+		padding-bottom: 0;
 		color: white;
-	}
+		overflow: visible;
 
-	a:visited {
-		color: white;
-	}
+		a {
+			color: white;
+		}
 
-	p {
-		max-width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: #{ 2 * $leading + 'px' };
-		margin-bottom: #{ 2 * $leading-rem + 'rem' };
-	}
+		a:visited {
+			color: white;
+		}
 
-	img {
-		margin-bottom: #{ -8 * $leading + 'px' };
-		margin-bottom: #{ -8 * $leading-rem + 'rem' };
+		p {
+			max-width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: #{ 2 * $leading + 'px' };
+			margin-bottom: #{ 2 * $leading-rem + 'rem' };
+		}
+
+		img {
+			margin-bottom: #{ -8 * $leading + 'px' };
+			margin-bottom: #{ -8 * $leading-rem + 'rem' };
 		// float: left;
 		margin-left: auto;
 		margin-right: auto;
@@ -115,22 +114,22 @@ hgroup {
 		font-weight: 900;
 		color: white;
 		-moz-font-feature-settings: "salt";
-  		-webkit-font-feature-settings: "salt";
-  		font-feature-settings: "salt";
-  		text-shadow:
-  				0.5px 0.5px #333E51,
-  				1px 1px #333E51,
-  				1.5px 1.5px #333E51,
-                2px 2px #333E51,
-                2.5px 2.5px #333E51,
-                3px 3px #333E51,
-                3.5px 3.5px #333E51,
-                4px 4px #333E51,
-                4.5px 4.5px #333E51,
-                5px 5px #333E51,
-                5.5px 5.5px #333E51,
-                6px 6px #333E51;
-        letter-spacing: 0.2rem;
+		-webkit-font-feature-settings: "salt";
+		font-feature-settings: "salt";
+		text-shadow:
+		0.5px 0.5px #333E51,
+		1px 1px #333E51,
+		1.5px 1.5px #333E51,
+		2px 2px #333E51,
+		2.5px 2.5px #333E51,
+		3px 3px #333E51,
+		3.5px 3.5px #333E51,
+		4px 4px #333E51,
+		4.5px 4.5px #333E51,
+		5px 5px #333E51,
+		5.5px 5.5px #333E51,
+		6px 6px #333E51;
+		letter-spacing: 0.2rem;
 	}
 
 	h2 {
@@ -240,18 +239,18 @@ hgroup {
 
 	h1 {
 		font-size: #{ 2.5 * $base + 'px'};
-    	font-size: #{ 2.5 + 'rem'};
-    	line-height: #{ 2 * $leading + 'px'};
-    	line-height: #{ 2 * $leading-rem + 'rem'};
-    	margin-top: #{ $leading + 'px'};
-    	margin-top: #{ $leading-rem + 'rem'};
-    	margin-bottom: #{ 0.5 * $leading + 'px'};
-    	margin-bottom: #{ 0.5 * $leading-rem + 'rem'};
+		font-size: #{ 2.5 + 'rem'};
+		line-height: #{ 2 * $leading + 'px'};
+		line-height: #{ 2 * $leading-rem + 'rem'};
+		margin-top: #{ $leading + 'px'};
+		margin-top: #{ $leading-rem + 'rem'};
+		margin-bottom: #{ 0.5 * $leading + 'px'};
+		margin-bottom: #{ 0.5 * $leading-rem + 'rem'};
 	}
 
 	h2, h6 {
 		margin-top: #{ 0.5 * $leading + 'px'};
-    	margin-top: #{ 0.5 * $leading-rem + 'rem'};
+		margin-top: #{ 0.5 * $leading-rem + 'rem'};
 	}
 }
 
@@ -263,7 +262,7 @@ code {
 	h2 {
 		background: rgba(215,228,244,0.3);
 		margin-top: #{ 1.5 * $leading + 'px'};
-    	margin-top: #{ 1.5 * $leading-rem + 'rem'};
+		margin-top: #{ 1.5 * $leading-rem + 'rem'};
 	}
 }
 
@@ -273,26 +272,26 @@ footer {
 	background: #f3f3f3;
 	margin-bottom: 0;
 	margin-top: #{ 3.5 * $leading + 'px'};
-    margin-top: #{ 3.5 * $leading-rem + 'rem'};
+	margin-top: #{ 3.5 * $leading-rem + 'rem'};
 
-    .grid-overlay {
-    	padding-bottom: #{ 2 * $leading + 'px'};
+	.grid-overlay {
+		padding-bottom: #{ 2 * $leading + 'px'};
 		padding-bottom: #{ 2 * $leading-rem + 'rem'};
-    }
+	}
 
 	h2 {
 		text-transform: uppercase;
 		text-shadow:
-  				0.5px 0.5px #b2b2b2,
-  				1px 1px #b2b2b2,
-  				1.5px 1.5px #b2b2b2,
-                2px 2px #b2b2b2;
+		0.5px 0.5px #b2b2b2,
+		1px 1px #b2b2b2,
+		1.5px 1.5px #b2b2b2,
+		2px 2px #b2b2b2;
                 // 2.5px 2.5px #b2b2b2,
                 // 3px 3px #b2b2b2;
-        font-weight: 900;
+                font-weight: 900;
         // color: #fafafa;
         font-size: 1.4375rem;
-	}
+    }
 }
 
 #ads {
@@ -309,24 +308,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  /*padding: 0.5em;*/
-  color: #333;
-  background: #f8f8f8;
+	display: block;
+	overflow-x: auto;
+	/*padding: 0.5em;*/
+	color: #333;
+	background: #f8f8f8;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
-  font-style: italic;
+	color: #998;
+	font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
-  font-weight: bold;
+	color: #333;
+	font-weight: bold;
 }
 
 .hljs-number,
@@ -334,72 +333,72 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+	color: #008080;
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+	color: #d14;
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
-  font-weight: bold;
+	color: #900;
+	font-weight: bold;
 }
 
 .hljs-subst {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
+	color: #458;
+	font-weight: bold;
 }
 
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
-  font-weight: normal;
+	color: #000080;
+	font-weight: normal;
 }
 
 .hljs-regexp,
 .hljs-link {
-  color: #009926;
+	color: #009926;
 }
 
 .hljs-symbol,
 .hljs-bullet {
-  color: #990073;
+	color: #990073;
 }
 
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+	color: #0086b3;
 }
 
 .hljs-meta {
-  color: #999;
-  font-weight: bold;
+	color: #999;
+	font-weight: bold;
 }
 
 .hljs-deletion {
-  background: #fdd;
+	background: #fdd;
 }
 
 .hljs-addition {
-  background: #dfd;
+	background: #dfd;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+	font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .grid-light {
