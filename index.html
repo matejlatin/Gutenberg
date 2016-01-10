@@ -41,23 +41,28 @@
 
 	<link rel="stylesheet" href="assets/combined.min.css">
 	<script src="assets/combined.min.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Roboto+Mono' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
 	<script src="https://use.typekit.net/gib4suc.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
 	<a id="btnToggleGrid" class="btnToggleGrid" href="javascript:void(0)">Turn Grid On</a>
-	<div class="hero clearfix">
-		<div class="grid-overlay clearfix">
+	<div class="hero cf">
+		<div class="grid-overlay grid-light cf">
 			<hgroup>
 				<h1 class="alignCenter">Gutenberg</h1>
 				<h2 class="alignCenter"><span>A Meaningful Web Typography Starter&nbsp;Kit</span></h2>
 			</hgroup>
-			<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" onclick="ga('send', 'event', 'Buttons', 'github');" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click(); ga('send', 'event', 'Buttons', 'twitter');"><div class="twitter">Tweet this</div></a></div>
-			<p class="alignCenter">Gutenberg is a work–in–progress project by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');" target="_blank">Matej Latin</a> that brings meaning and craftsmanship to web typography.</p>
+			<!-- <div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" onclick="ga('send', 'event', 'Buttons', 'github');" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click(); ga('send', 'event', 'Buttons', 'twitter');"><div class="twitter">Tweet this</div></a></div> -->
+			<p class="alignCenter">Gutenberg is a work–in–progress project that brings meaning and craftsmanship to web typography.</p>
+			<img src="devices.png" alt="Devices">
 		</div>
 	</div>
 	<article>
+		<h2 class="alignCenter img-spacing">Gutenberg v1.0</h2>
+		<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
+		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
+		<hr>
 		<h3>Made with Sass</h3>
 		<p>Typography is a living thing. It’s flexible. And this is exactly how Gutenberg is made. It sets the macrotypography so you can focus on the microtypographic details. Flexibility is the most important feature of Gutenberg and Sass makes this possible. Creating a unique and beautiful typographic style is a matter of changing variables. </p>
 
@@ -67,88 +72,88 @@
 $line-height: 1.6;
 $leading: $base-type * $line-height;</code></pre>
 
-		<h3>Vertical rhythm and baseline&nbsp;grid</h3>
-		<p>By calculating the <em>leading</em> Gutenberg sets a vertical rhythm by resetting line-height and margins for all elements.</p>
-		<pre><code class="scss">* {
+			<h3>Vertical rhythm and baseline&nbsp;grid</h3>
+			<p>By calculating the <em>leading</em> Gutenberg sets a vertical rhythm by resetting line-height and margins for all elements.</p>
+			<pre><code class="scss">* {
   line-height: $leading;
   margin-bottom: $leading;
 }</code></pre>
-	<p>Correct vertical rhythm results in consistent spacing between elements that helps clarifying the structure and order of the content and link it with other elements. Its’ ultimate goal is to <em>invite the reader into the text</em> and <em>improve the readability</em>.</p>
-	<figure>
-	<div class="example grid">
-		<b>Johannes Gutenberg</b>
-		<p>Johannes Gensfleisch zur Laden zum Gutenberg (c. 1398–1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe.<br><br></p>
-	</div>
-	</figure>
+			<p>Correct vertical rhythm results in consistent spacing between elements that helps clarifying the structure and order of the content and link it with other elements. Its’ ultimate goal is to <em>invite the reader into the text</em> and <em>improve the readability</em>.</p>
+			<figure>
+				<div class="example grid">
+					<b>Johannes Gutenberg</b>
+					<p>Johannes Gensfleisch zur Laden zum Gutenberg (c. 1398–1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe.<br><br></p>
+				</div>
+			</figure>
 
-	<h3>Correct but flexible</h3>
-	<p>To make Gutenberg more flexible but still correct, <em>half of leading</em> sizes can be used. For example: heading 2 has a default margin-top of 2.5 leading and a line-height of 1.5 leading.</p>
+			<h3>Correct but flexible</h3>
+			<p>To make Gutenberg more flexible but still correct, <em>half of leading</em> sizes can be used. For example: heading 2 has a default margin-top of 2.5 leading and a line-height of 1.5 leading.</p>
 
-	<pre><code>h2 {
+			<pre><code>h2 {
   margin-top: #{2.5 * $leading + 'rem'};
   line-height: #{1.5 * $leading + 'rem'};
 }</code></pre>
-	<div class="example heading2 grid-double">
-		<h2>Heading 2</h2>
-	</div>
+			<div class="example heading2 grid-double">
+				<h2>Heading 2</h2>
+			</div>
 
-	<h3>Modular scale</h3>
-	<p>Typographers have been using scales for centuries. Gutenberg is based on Tim Brown’s <a href="http://modularscale.com" target="_blank">Modular Scale</a> to bring meaning and harmony to the typographic style.</p>
-	<div class="example headings grid-double">
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-	</div>
+			<h3>Modular scale</h3>
+			<p>Typographers have been using scales for centuries. Gutenberg is based on Tim Brown’s <a href="http://modularscale.com" target="_blank">Modular Scale</a> to bring meaning and harmony to the typographic style.</p>
+			<div class="example headings grid-double">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</div>
 
-	<h3>Mobile first</h3>
-	<p>Gutenberg sets base type size, line-height and calculates the leading for the mobile screens first. The break point is calculated based on maximum (ideal) width of elements. When a screen is wider than that, it resets and recalculates all the sizes so they better fit for desktop screens.</p>
-	<pre><code>// Base sizes
+			<h3>Mobile first</h3>
+			<p>Gutenberg sets base type size, line-height and calculates the leading for the mobile screens first. The break point is calculated based on maximum (ideal) width of elements. When a screen is wider than that, it resets and recalculates all the sizes so they better fit for desktop screens.</p>
+			<pre><code>// Base sizes
 $base-font-size: 100 !default;
 $base-font-size-desktop: 112.5 !default;
 $line-height: 1.625;
 $line-height-desktop: 1.8;
 $max-width: 35;</code></pre>
 
-	<h3>Themes &amp; customization</h3>
-	<p>Gutenberg comes with two beautiful pre–defined themes based on two high–quality but free fonts provided by Google Fonts: Merriweather and Open Sans.</p>
-	<p>Feeling creative? Load your own fonts and create a unique typographic style in minutes.</p>
-	<pre><code>$theme: custom; // [ Merriweather / OpenSans / custom ]
+				<h3>Themes &amp; customization</h3>
+				<p>Gutenberg comes with two beautiful pre–defined themes based on two high–quality but free fonts provided by Google Fonts: Merriweather and Open Sans.</p>
+				<p>Feeling creative? Load your own fonts and create a unique typographic style in minutes.</p>
+				<pre><code>$theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, serif;
 $custom-font-headings: "Open Sans", sans-serif;</code></pre>
-	<p>
-		<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">View an example</a>
-	</p>
+					<p>
+						<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">View an example</a>
+					</p>
 
-	<h3>Fix image height</h3>
-	<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of leading.</p>
+					<h3>Fix image height</h3>
+					<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of leading.</p>
 
-	<figure>
-		<img src="assets/images/grid-image.png" alt="Fix image height">
-		<figcaption>Resizing images so they fit in the grid.</figcaption>
-	</figure>
+					<figure>
+						<img src="assets/images/grid-image.png" alt="Fix image height">
+						<figcaption>Resizing images so they fit in the grid.</figcaption>
+					</figure>
 
-	<h2>Why Gutenberg?</h2>
-	<p>More than 500 years ago, Johannes Gutenberg invented a printing press with movable type which lead to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium—the web.</p>
-	<hr>
-	<h2 class="alignCenter">Gutenberg v1.0</h2>
-	<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
-	<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
-</article>
-<footer class="alignCenter clearfix">
-	<div class="grid-overlay clearfix">
-		<h2>Gutenberg</h2>
-		<p>
-			<small>
-				<em>A Meaningful Web Typography Starter Kit</em><br>
-				Handcrafted by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');" target="_blank">Matej Latin</a>.
-			</small>
-		</p>
-	</div>
-</footer>
-<script>
+					<h2>Why Gutenberg?</h2>
+					<p>More than 500 years ago, Johannes Gutenberg invented a printing press with movable type which lead to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium—the web.</p>
+					<hr>
+					<h2 class="alignCenter">Gutenberg v1.0</h2>
+					<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
+					<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
+				</article>
+				<footer class="alignCenter clearfix">
+					<div class="grid-overlay clearfix">
+						<h2>Gutenberg</h2>
+						<p>
+							<small>
+								<em>A Meaningful Web Typography Starter Kit</em><br>
+								Handcrafted by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');" target="_blank">Matej Latin</a>.
+							</small>
+						</p>
+					</div>
+				</footer>
+				<script>
 // Toggle Grid Functionality
 document.getElementById("btnToggleGrid").onclick = toggleGrid;
 
@@ -169,24 +174,24 @@ ga('send', 'pageview');
 
 // Hotjar
 (function(h,o,t,j,a,r){
-    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-    h._hjSettings={hjid:118863,hjsv:5};
-    a=o.getElementsByTagName('head')[0];
-    r=o.createElement('script');r.async=1;
-    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-    a.appendChild(r);
+	h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	h._hjSettings={hjid:118863,hjsv:5};
+	a=o.getElementsByTagName('head')[0];
+	r=o.createElement('script');r.async=1;
+	r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	a.appendChild(r);
 })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 
 // Tweet Button
 function fbs_click() {
-    var twtTitle = document.title;
-    var twtUrl = location.href;
-    var maxLength = 140 - (twtUrl.length + 1);
-    if (twtTitle.length > maxLength) {
-        twtTitle = twtTitle.substr(0, (maxLength - 3)) + '...';
-    }
-    var twtLink = 'http://twitter.com/share?text=' + encodeURIComponent(twtTitle) + '&url=' + encodeURIComponent(twtUrl) + '&hashtags=typography&via=matejlatin&related=matejlatin';
-    window.open(twtLink);
+	var twtTitle = document.title;
+	var twtUrl = location.href;
+	var maxLength = 140 - (twtUrl.length + 1);
+	if (twtTitle.length > maxLength) {
+		twtTitle = twtTitle.substr(0, (maxLength - 3)) + '...';
+	}
+	var twtLink = 'http://twitter.com/share?text=' + encodeURIComponent(twtTitle) + '&url=' + encodeURIComponent(twtUrl) + '&hashtags=typography&via=matejlatin&related=matejlatin';
+	window.open(twtLink);
 }
 </script>
 </body>

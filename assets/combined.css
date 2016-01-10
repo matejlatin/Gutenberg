@@ -203,7 +203,7 @@ img {
 html {
   font-size: 16px;
   font-size: 100%;
-  font-family: Merriweather, Georgia, Times, serif;
+  font-family: "ff-meta-serif-web-pro", Georgia, Times, serif;
   color: #222222;
 }
 
@@ -217,10 +217,10 @@ html {
 /* Headings
    ========================================================================== */
 h1 {
-  font-size: 68.8px;
-  font-size: 4.3rem;
-  line-height: 104px;
-  line-height: 6.5rem;
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  line-height: 78px;
+  line-height: 4.875rem;
   margin-top: 130px;
   margin-top: 8.125rem;
   margin-bottom: 0px;
@@ -308,7 +308,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "jaf-bernino-sans-comp", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-family: "raleway", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Links
@@ -373,7 +373,7 @@ code {
 
 /* Grid
    ========================================================================== */
-.grid, .grid-double {
+.grid, .grid-double, .grid-light {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
   background-position: left top;
   background-repeat: repeat;
@@ -405,13 +405,14 @@ article {
   right: 26px;
   background: url("../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
   padding-right: 40px;
   height: 32px;
   line-height: 34px;
-  font-family: "jaf-bernino-sans-comp", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-family: "raleway", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .double-grid {
@@ -447,44 +448,70 @@ article {
   margin: 0;
 }
 
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
 .hero {
-  background: #FCF5A0;
+  background: #FF1935;
   padding-bottom: 0;
+  color: white;
+  overflow: visible;
+}
+.hero a {
+  color: white;
 }
 .hero a:visited {
-  color: #222222;
+  color: white;
 }
 .hero p {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 52px;
+  margin-bottom: 3.25rem;
+}
+.hero img {
+  margin-bottom: -208px;
+  margin-bottom: -13rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
 }
 
 hgroup h1 {
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 900;
+  color: white;
   -moz-font-feature-settings: "salt";
   -webkit-font-feature-settings: "salt";
   font-feature-settings: "salt";
-  text-shadow: 0.5px 0.5px #C5BD5A, 1px 1px #C5BD5A, 1.5px 1.5px #C5BD5A, 2px 2px #C5BD5A, 2.5px 2.5px #C5BD5A, 3px 3px #C5BD5A, 3.5px 3.5px #C5BD5A, 4px 4px #C5BD5A, 4.5px 4.5px #C5BD5A, 5px 5px #C5BD5A, 5.5px 5.5px #C5BD5A, 6px 6px #C5BD5A;
+  text-shadow: 0.5px 0.5px #333E51, 1px 1px #333E51, 1.5px 1.5px #333E51, 2px 2px #333E51, 2.5px 2.5px #333E51, 3px 3px #333E51, 3.5px 3.5px #333E51, 4px 4px #333E51, 4.5px 4.5px #333E51, 5px 5px #333E51, 5.5px 5.5px #333E51, 6px 6px #333E51;
   letter-spacing: 0.2rem;
 }
 hgroup h2 {
-  font-weight: normal;
-  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #333E51;
   margin-top: 0;
-  max-width: 80%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
-  font-family: Merriweather, Georgia, Times, serif;
   font-size: 16px;
   line-height: 26px;
   line-height: 1.625rem;
 }
 
 .buttons {
-  margin-top: 39px;
-  margin-top: 2.4375rem;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -553,7 +580,7 @@ hgroup h2 {
 .example h4,
 .example h5,
 .example h6 {
-  font-family: Merriweather, Georgia, Serif;
+  font-family: "ff-meta-serif-web-pro", Georgia, Serif;
 }
 .example p {
   margin-bottom: 0;
@@ -574,7 +601,7 @@ hgroup h2 {
 }
 
 code {
-  font-family: 'Roboto Mono' monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .heading2 h2 {
@@ -598,6 +625,8 @@ footer .grid-overlay, footer .hero {
 footer h2 {
   text-transform: uppercase;
   text-shadow: 0.5px 0.5px #b2b2b2, 1px 1px #b2b2b2, 1.5px 1.5px #b2b2b2, 2px 2px #b2b2b2;
+  font-weight: 900;
+  font-size: 1.4375rem;
 }
 
 #ads {
@@ -706,25 +735,34 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold;
 }
 
+.grid-light {
+  background-image: linear-gradient(to bottom, #f46677 1px, transparent 1px);
+}
+
+.img-spacing {
+  margin-top: 234px;
+  margin-top: 14.625rem;
+}
+
 @media screen and (min-width: 40rem) {
   * {
-    max-width: 630px;
+    max-width: 700px;
     max-width: 35rem;
     margin-left: auto !important;
     margin-right: auto !important;
     line-height: 32px;
-    line-height: 1.777777777777778rem;
-    margin-bottom: 1.777777777777778rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.6rem;
   }
 
   html {
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 20px;
+    font-size: 1.25rem;
   }
 
-  .grid, .grid-double {
+  .grid, .grid-double, .grid-light, .grid-light {
     background-size: 100% 32px;
-    background-size: 100% 1.777777777777778rem;
+    background-size: 100% 1.6rem;
   }
 
   .grid-double {
@@ -738,7 +776,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   article {
-    max-width: 945px;
+    max-width: 1050px;
     max-width: 52.5rem;
   }
 
@@ -748,104 +786,104 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h1 {
-    font-size: 77.39999999999998px;
-    font-size: 4.3rem;
-    line-height: 128px;
-    line-height: 7.111111111111111rem;
+    font-size: 48px;
+    font-size: 2.4rem;
+    line-height: 96px;
+    line-height: 4.800000000000001rem;
     margin-top: 160px;
-    margin-top: 8.88888888888889rem;
+    margin-top: 8rem;
     margin-bottom: 0px;
     margin-bottom: 0rem;
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-size: 2rem;
     line-height: 48px;
-    line-height: 2.666666666666667rem;
+    line-height: 2.400000000000001rem;
     margin-top: 80px;
-    margin-top: 4.444444444444445rem;
+    margin-top: 4rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
 
   h3 {
-    font-size: 30.375px;
+    font-size: 33.75px;
     font-size: 1.6875rem;
     line-height: 32px;
-    line-height: 1.777777777777778rem;
+    line-height: 1.6rem;
     margin-top: 64px;
-    margin-top: 3.555555555555556rem;
+    margin-top: 3.2rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
 
   h4 {
-    font-size: 25.875px;
+    font-size: 28.75px;
     font-size: 1.4375rem;
     line-height: 32px;
-    line-height: 1.777777777777778rem;
+    line-height: 1.6rem;
     margin-top: 48px;
-    margin-top: 2.666666666666667rem;
+    margin-top: 2.400000000000001rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
 
   h5 {
-    font-size: 21.599999999999994px;
+    font-size: 24px;
     font-size: 1.2rem;
     line-height: 32px;
-    line-height: 1.777777777777778rem;
+    line-height: 1.6rem;
     margin-top: 80px;
-    margin-top: 4.444444444444445rem;
+    margin-top: 4rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
 
   h6 {
-    font-size: 21.599999999999994px;
+    font-size: 24px;
     font-size: 1.2rem;
     line-height: 32px;
-    line-height: 1.777777777777778rem;
+    line-height: 1.6rem;
     margin-top: 80px;
-    margin-top: 4.444444444444445rem;
+    margin-top: 4rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
 
   h1 {
-    font-size: 144px;
-    font-size: 8rem;
-    margin-bottom: 32px;
-    margin-bottom: 1.777777777777778rem;
+    font-size: 100px;
+    font-size: 5rem;
+    line-height: 128px;
+    line-height: 6.4rem;
   }
 
   h1 + h2 {
     margin-top: 32px;
-    margin-top: 1.777777777777778rem;
+    margin-top: 1.6rem;
   }
 
   h2 + h3, h3 + h4, h4 + h5 {
     margin-top: 16px;
-    margin-top: 0.888888888888889rem;
+    margin-top: 0.8rem;
   }
 
   h5 + h6 {
     margin-top: -16px;
-    margin-top: -0.888888888888889rem;
+    margin-top: -0.8rem;
   }
 
   figure.floatLeft,
   figure.floatRight {
-    max-width: 315px;
+    max-width: 350px;
     max-width: 17.5rem;
     padding: 0 32px;
-    padding: 0 1.777777777777778rem;
+    padding: 0 1.6rem;
   }
 
   figcaption {
     line-height: 32px;
-    line-height: 1.777777777777778rem;
+    line-height: 1.6rem;
     margin-bottom: 0;
   }
 
@@ -868,89 +906,83 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   small {
     line-height: 16px;
-    line-height: 0.888888888888889rem;
+    line-height: 0.8rem;
   }
 
   hr {
     margin: 96px auto;
-    margin: 5.333333333333333rem auto;
+    margin: 4.800000000000001rem auto;
     height: 32px;
-    height: 1.777777777777778rem;
+    height: 1.6rem;
     background-size: 100% 32px;
-    background-size: 100% 1.777777777777778rem;
+    background-size: 100% 1.6rem;
     background-image: linear-gradient(to bottom, transparent 1px, transparent 16px, #222222 16px, transparent 17px, transparent 32px);
   }
 
   code {
     padding: 32px;
-    padding: 1.777777777777778rem;
+    padding: 1.6rem;
+    font-size: 18px;
   }
 
   .example {
     padding: 32px;
-    padding: 1.777777777777778rem;
+    padding: 1.6rem;
   }
   .example p {
     margin-bottom: 0;
   }
   .example h1 {
-    font-size: 63px;
+    font-size: 70px;
     font-size: 3.5rem;
     line-height: 96px;
-    line-height: 5.333333333333333rem;
+    line-height: 4.800000000000001rem;
     margin-top: 32px;
-    margin-top: 1.777777777777778rem;
+    margin-top: 1.6rem;
     margin-bottom: 16px;
-    margin-bottom: 0.888888888888889rem;
+    margin-bottom: 0.8rem;
   }
   .example h6 {
     margin-top: 16px;
-    margin-top: 0.888888888888889rem;
+    margin-top: 0.8rem;
   }
 
   .heading2 h2 {
     margin-top: 48px;
-    margin-top: 2.666666666666667rem;
+    margin-top: 2.400000000000001rem;
   }
 
   footer {
-    margin-top: 96px;
-    margin-top: 5.333333333333333rem;
+    margin-top: 112px;
+    margin-top: 5.600000000000001rem;
   }
   footer .grid-overlay, footer .hero {
     padding-bottom: 64px;
-    padding-bottom: 3.555555555555556rem;
+    padding-bottom: 3.2rem;
+  }
+  footer h2 {
+    font-size: 28.75px;
+    font-size: 1.4375rem;
   }
 
-  hgroup h2 {
-    font-weight: normal;
-    font-style: italic;
-    margin-top: 0;
-    font-family: Merriweather, Georgia, Times, serif;
-    font-size: 20px;
-    background-image: linear-gradient(to bottom, #222222 2px, transparent 2px);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 520px;
-    line-height: 48px;
-    line-height: 2.666666666666667rem;
+  hgroup {
+    max-width: none;
   }
-  hgroup h2 span {
-    background: #FCF5A0;
-    padding: 0 1rem;
-    top: -24px;
-    top: -1.333333333333333rem;
-    position: relative;
+  hgroup h2 {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 32px;
+    line-height: 1.6rem;
+    max-width: none;
   }
 
   .buttons {
-    margin-top: 48px;
-    margin-top: 2.666666666666667rem;
-    max-width: 630px;
+    max-width: 700px;
     max-width: 35rem;
   }
   .buttons a {
     height: 32px;
+    margin-bottom: 0;
   }
   .buttons a div {
     height: 20px;
@@ -967,15 +999,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   .grid-overlay, .hero {
     padding-bottom: 96px;
-    padding-bottom: 5.333333333333333rem;
+    padding-bottom: 4.800000000000001rem;
   }
 
   .hero {
     padding-bottom: 0;
   }
   .hero p {
-    max-width: 630px;
-    max-width: 35rem;
+    max-width: 680px;
+    max-width: 34rem;
+    margin-bottom: 64px;
+    margin-bottom: 3.2rem;
+  }
+  .hero img {
+    margin-bottom: -288px;
+    margin-bottom: -14.4rem;
+    max-width: 479px;
+  }
+
+  .img-spacing {
+    margin-top: 288px;
+    margin-top: 14.4rem;
   }
 }
 /* TODO:

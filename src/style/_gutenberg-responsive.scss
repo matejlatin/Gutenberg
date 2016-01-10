@@ -15,7 +15,7 @@
 		font-size: #{$base-font-size-desktop / 100 + 'rem'};
 	}
 
-	.grid {
+	.grid, .grid-light {
 		background-size: 100% #{$leading-desktop + 'px'};
 		background-size: 100% #{$leading-rem-desktop + 'rem'};
 	}
@@ -56,10 +56,12 @@
 	}
 
 	h1 {
-		font-size: #{ 8 * $base-desktop + 'px'};
-		font-size: #{ 8 + 'rem'};
-		margin-bottom: #{ 1 * $leading-desktop + 'px'};
-		margin-bottom: #{ 1 * $leading-rem-desktop + 'rem'};
+		font-size: #{ 5 * $base-desktop + 'px'};
+		font-size: #{ 5 + 'rem'};
+		line-height: #{4*$leading-desktop + 'px'};
+		line-height: #{4*$leading-rem-desktop + 'rem'};
+		// margin-bottom: #{ 1 * $leading-desktop + 'px'};
+		// margin-bottom: #{ 1 * $leading-rem-desktop + 'rem'};
 	}
 
 	// Set margins between headings
@@ -128,6 +130,7 @@
 	code {
 		padding: #{$leading-desktop + 'px'};
 		padding: #{$leading-rem-desktop + 'rem'};
+		font-size: 18px;
 	}
 
 	.example {
@@ -161,49 +164,42 @@
 	}
 
 	footer {
-		margin-top: #{ 3 * $leading-desktop + 'px'};
-		margin-top: #{ 3 * $leading-rem-desktop + 'rem'};
+		margin-top: #{ 3.5 * $leading-desktop + 'px'};
+		margin-top: #{ 3.5 * $leading-rem-desktop + 'rem'};
 
 		.grid-overlay {
 			padding-bottom: #{ 2 * $leading-desktop + 'px'};
 			padding-bottom: #{ 2 * $leading-rem-desktop + 'rem'};
 		}
+
+		h2 {
+			font-size: #{ 1.4375 * $base-desktop + 'px'};
+			font-size: #{ 1.4375 + 'rem'};
+		}
 	}
 
 	hgroup {
+		max-width: none;
 
 		h2 {
-			font-weight: normal;
-			font-style: italic;
 			margin-top: 0;
-			font-family: Merriweather, Georgia, Times, serif;
-			font-size: 20px;
-			background-image: linear-gradient(to bottom, $color-font-body 2px, transparent 2px);
-			background-position: center top;
-			background-repeat: no-repeat;
-			background-size: 520px;
-			line-height: #{ 1.5 * $leading-desktop + 'px' };
-			line-height: #{ 1.5 * $leading-rem-desktop + 'rem' };
-
-			span {
-				background: #FCF5A0;
-				padding: 0 1rem;
-				top: #{ -0.75 * $leading-desktop + 'px' };
-				top: #{ -0.75 * $leading-rem-desktop + 'rem' };
-				position: relative;
-			}
+			font-size: 22px;
+			line-height: #{ 1 * $leading-desktop + 'px' };
+			line-height: #{ 1 * $leading-rem-desktop + 'rem' };
+			max-width: none;
 		}
 	}
 
 	.buttons {
 
-		margin-top: #{ 1.5 * $leading-desktop + 'px' };
-		margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
+		// margin-top: #{ 1.5 * $leading-desktop + 'px' };
+		// margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
 		max-width: #{$max-width * $base-desktop + 'px'};
 		max-width: #{$max-width + 'rem'};
 
 		a {
 			height: 32px;
+			margin-bottom: 0;
 
 			div {
 				height: 20px;
@@ -230,8 +226,21 @@
 		padding-bottom: 0;
 
 		p {
-			max-width: #{$max-width * $base-desktop + 'px'};
-			max-width: #{$max-width + 'rem'};
+			max-width: #{ 34 * $base-desktop + 'px'};
+			max-width: #{ 34 + 'rem'};
+			margin-bottom: #{ 2 * $leading-desktop + 'px' };
+			margin-bottom: #{ 2 * $leading-rem-desktop + 'rem' };
 		}
+
+		img {
+			margin-bottom: #{ -9 * $leading-desktop + 'px' };
+			margin-bottom: #{ -9 * $leading-rem-desktop + 'rem' };
+			max-width: 479px;
+		}
+	}
+
+	.img-spacing {
+		margin-top: #{ 9 * $leading-desktop + 'px' };
+		margin-top: #{ 9 * $leading-rem-desktop + 'rem' };
 	}
 }
