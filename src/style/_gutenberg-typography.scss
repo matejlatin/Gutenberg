@@ -11,6 +11,7 @@ $base-desktop: 16 * ($base-font-size-desktop / 100);
 $leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
+@import "gutenberg-mixins";
 
 /* Font themes
    ========================================================================== */
@@ -59,12 +60,27 @@ html {
 
 // Line-height & margin reset
 * {
-	line-height: #{$leading + 'px'};
-	line-height: #{$leading-rem + 'rem'};
-	margin: 0 0 #{$leading + 'px'};
-	margin: 0 0 #{$leading-rem + 'rem'};
+	@include line-height(1);
+	@include margin(0, 0, 1);
 }
 
+
+/* Paragraph
+   ========================================================================== */
+
+@if $paragraph-indent == true {
+
+	p + p {
+		@include margin-top(-1);
+		text-indent: #{ $leading + 'px'};
+    	text-indent: #{ $leading-rem + 'rem'};
+	}
+
+	.attention-grabber + p {
+		text-indent: 0;
+		margin-top: 0;
+	}
+}
 
 /* Headings
    ========================================================================== */
@@ -72,31 +88,24 @@ html {
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
     #{$heading} {
-    	font-size: #{nth($properties, 1) * $base + 'px'};
-    	font-size: #{nth($properties, 1) + 'rem'};
-    	line-height: #{nth($properties, 2)*$leading + 'px'};
-    	line-height: #{nth($properties, 2)*$leading-rem + 'rem'};
-        margin-top: #{nth($properties, 3) * $leading + 'px'};
-        margin-top: #{nth($properties, 3) * $leading-rem + 'rem'};
-        margin-bottom: #{nth($properties, 4) * $leading + 'px'};
-        margin-bottom: #{nth($properties, 4) * $leading-rem + 'rem'};
+    	@include font-size(nth($properties, 1));
+    	@include line-height(nth($properties, 2));
+		@include margin-top(nth($properties, 3));
+		@include margin-bottom(nth($properties, 4));
     }
 }
 
 // Set margins between headings
 h1 + h2 {
-	margin-top: #{$leading + 'px'};
-    margin-top: #{$leading-rem + 'rem'};
+	@include margin-top(1);
 }
 
 h2 + h3, h3 + h4, h4 + h5 {
-	margin-top: #{0.5 * $leading + 'px'};
-    margin-top: #{0.5 * $leading-rem + 'rem'};
+	@include margin-top(0.5);
 }
 
 h5 + h6 {
-	margin-top: -#{0.5 * $leading + 'px'};
-    margin-top: -#{0.5 * $leading-rem + 'rem'};
+	@include margin-top(-0.5);
 }
 
 h6 {
@@ -121,9 +130,18 @@ h6 {
 
 a {
 	color: $color-link-normal;
+	transition: all 0.3s;
+
+	&:hover {
+		color: $color-link-hover;
+	}
 
 	&:visited {
 		color: $color-link-visited;
+	}
+
+	&:visited:hover {
+		color: $color-link-hover;
 	}
 
 	&:active {
@@ -139,20 +157,28 @@ figcaption {
 	font-style: italic;
 	font-size: 0.8125rem;
 	text-align: center;
-	line-height: #{$leading + 'px'};
-	line-height: #{$leading-rem + 'rem'};
 	margin-bottom: 0;
+	@include line-height(1);
 }
 
 blockquote {
 	padding-left: 1.4375rem;
-	// font-size: 0.8125rem;
 	font-style: italic;
 	// font-size: 95%;
 }
 
 cite {
 	font-style: normal;
+}
+
+// Quotes
+figure blockquote {
+	@include padding(1, 0);
+
+	p {
+		@include font-size(1.6875);
+		@include line-height(1.5);
+	}
 }
 
 // Lists
@@ -164,23 +190,48 @@ ul, ol {
 
 // Horizontal rule
 hr {
-	margin: #{2 * $leading + 'px'} auto;
-    margin: #{2 * $leading-rem + 'rem'} auto;
-    width: 100%;
+    @include margin-top($hr-margin);
+    margin-right: auto;
+    @include margin-bottom($hr-margin);
+    margin-left: auto;
+    height: #{$leading + 'px'};
+	height: #{$leading-rem + 'rem'};
+	color: $hr-color;
+
+	@if $hr-style == 'line' {
+		background-size: 100% #{$leading + 'px'};
+		background-size: 100% #{$leading-rem + 'rem'};
+		background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+		@if $hr-width == null {
+	    	width: 100%;
+	    } @else {
+	    	width: #{$hr-width + 'px'};
+	    }
+    }
+
+    @if $hr-style == 'type' {
+    	text-align: center;
+
+    	&:before {
+    		content: $hr-type-content;
+    		letter-spacing: 0.2em;
+    	}
+    }
     display: block;
-    background-color: $color-font-light;
-    height: 1px;
     border: 0;
 }
 
 small {
-	line-height: #{0.5 * $leading + 'px'};
-	line-height: #{0.5* $leading-rem + 'rem'};
+	@include line-height(0.5);
 }
 
 code {
-	padding: #{$leading + 'px'};
-	padding: #{$leading-rem + 'rem'};
+	@include padding-equal(1);
+}
+
+// Attention grabber
+.attention-grabber {
+	@include font-size(1.2);
 }
 
 

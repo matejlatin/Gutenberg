@@ -7,6 +7,7 @@ $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 $theme: Merriweather; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
 $custom-font-headings: null !default;
+$paragraph-indent: false; // [ true / false ]
 
 // Base sizes
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
@@ -46,5 +47,15 @@ $color-font-headings: $color-font-body;
 $color-font-light: #888;
 
 $color-link-normal: $color-font-body;
+$color-link-hover: $color-font-body;
 $color-link-active: red;
 $color-link-visited: $color-font-light;
+
+// Horizontal rule
+$hr-style: type; // [ line / type ]
+$hr-type-content: '***'; // [ '***' ]
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-color: $color-font-body;
+$hr-width: 100; // [ 100 ] — In pixels, only for line style
+$hr-height: 4; // [ 2 ] — In pixels, only for line style

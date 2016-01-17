@@ -291,6 +291,8 @@ img {
    ========================================================================== */
 /* Calculations
    ========================================================================== */
+/* Mixins
+   ========================================================================== */
 /* Font themes
    ========================================================================== */
 /* Defaults
@@ -305,10 +307,12 @@ html {
 * {
   line-height: 26px;
   line-height: 1.625rem;
-  margin: 0 0 26px;
-  margin: 0 0 1.625rem;
+  margin: 0px 0px 26px;
+  margin: 0rem 0rem 1.625rem;
 }
 
+/* Paragraph
+   ========================================================================== */
 /* Headings
    ========================================================================== */
 h1 {
@@ -401,9 +405,16 @@ h6 {
    ========================================================================== */
 a {
   color: #222222;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #222222;
 }
 a:visited {
   color: #888;
+}
+a:visited:hover {
+  color: #222222;
 }
 a:active {
   color: red;
@@ -416,9 +427,9 @@ figcaption {
   font-style: italic;
   font-size: 0.8125rem;
   text-align: center;
+  margin-bottom: 0;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-bottom: 0;
 }
 
 blockquote {
@@ -430,18 +441,38 @@ cite {
   font-style: normal;
 }
 
+figure blockquote {
+  padding: 26px 0px;
+  padding: 1.625rem 0rem;
+}
+figure blockquote p {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 39px;
+  line-height: 2.4375rem;
+}
+
 ul li, ol li {
   margin-bottom: 0;
 }
 
 hr {
-  margin: 52px auto;
-  margin: 3.25rem auto;
-  width: 100%;
+  margin-top: 52px;
+  margin-top: 3.25rem;
+  margin-right: auto;
+  margin-bottom: 52px;
+  margin-bottom: 3.25rem;
+  margin-left: auto;
+  height: 26px;
+  height: 1.625rem;
+  color: #222222;
+  text-align: center;
   display: block;
-  background-color: #888;
-  height: 1px;
   border: 0;
+}
+hr:before {
+  content: "***";
+  letter-spacing: 0.2em;
 }
 
 small {
@@ -452,6 +483,11 @@ small {
 code {
   padding: 26px;
   padding: 1.625rem;
+}
+
+.attention-grabber {
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 
 /* Grid
@@ -470,7 +506,7 @@ code {
 
 /* Gutenberg defaults
    ========================================================================== */
-article {
+article, body > footer {
   width: 80%;
   margin: 0 auto;
 }
@@ -487,6 +523,7 @@ article {
   padding-right: 40px;
   height: 32px;
   line-height: 34px;
+  transition: none;
 }
 
 .double-grid {
@@ -517,6 +554,8 @@ article {
 /* Your styles come here
    ========================================================================== */
 @media screen and (min-width: 40em) {
+  /* Mixins
+     ========================================================================== */
   body, html {
     margin: 0;
     width: 100%;
@@ -530,6 +569,7 @@ article {
     margin-right: auto !important;
     line-height: 31px;
     line-height: 1.722222222222222rem;
+    margin-bottom: 31px;
     margin-bottom: 1.722222222222222rem;
   }
 
@@ -558,7 +598,7 @@ article {
   }
 
   h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-size: 2.5rem;
     line-height: 62px;
     line-height: 3.444444444444445rem;
@@ -569,7 +609,7 @@ article {
   }
 
   h2 {
-    font-size: 30.375px;
+    font-size: 27px;
     font-size: 1.6875rem;
     line-height: 46.5px;
     line-height: 2.583333333333334rem;
@@ -580,7 +620,7 @@ article {
   }
 
   h3 {
-    font-size: 24.75px;
+    font-size: 22px;
     font-size: 1.375rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
@@ -591,7 +631,7 @@ article {
   }
 
   h4 {
-    font-size: 21.599999999999994px;
+    font-size: 19.2px;
     font-size: 1.2rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
@@ -602,7 +642,7 @@ article {
   }
 
   h5 {
-    font-size: 18px;
+    font-size: 16px;
     font-size: 1rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
@@ -613,7 +653,7 @@ article {
   }
 
   h6 {
-    font-size: 18px;
+    font-size: 16px;
     font-size: 1rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
@@ -638,12 +678,37 @@ article {
     margin-top: -0.861111111111111rem;
   }
 
+  figure blockquote {
+    padding: 62px 0px 31px;
+    padding: 3.444444444444445rem 0rem 1.722222222222222rem;
+    text-align: center;
+  }
+  figure blockquote p {
+    font-size: 27px;
+    font-size: 1.6875rem;
+    line-height: 46.5px;
+    line-height: 2.583333333333334rem;
+  }
+
   figure.floatLeft,
   figure.floatRight {
     max-width: 315px;
     max-width: 17.5rem;
-    padding: 0 31px;
-    padding: 0 1.722222222222222rem;
+    padding: 0px 31px;
+    padding: 0rem 1.722222222222222rem;
+  }
+  figure.floatLeft blockquote,
+  figure.floatRight blockquote {
+    text-align: left;
+    padding: 0px;
+    padding: 0rem;
+  }
+  figure.floatLeft blockquote p,
+  figure.floatRight blockquote p {
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    line-height: 31px;
+    line-height: 1.722222222222222rem;
   }
 
   figcaption {
@@ -675,18 +740,22 @@ article {
   }
 
   hr {
-    margin: 93px auto;
-    margin: 5.166666666666667rem auto;
+    margin-top: 62px;
+    margin-top: 3.444444444444445rem;
+    margin-bottom: 62px;
+    margin-bottom: 3.444444444444445rem;
     height: 31px;
     height: 1.722222222222222rem;
-    background-size: 100% 31px;
-    background-size: 100% 1.722222222222222rem;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 15.5px, #222222 15.5px, transparent 16.5px, transparent 31px);
   }
 
   code {
     padding: 31px;
     padding: 1.722222222222222rem;
+  }
+
+  .attention-grabber {
+    font-size: 19.2px;
+    font-size: 1.2rem;
   }
 }
 /* TODOs:
