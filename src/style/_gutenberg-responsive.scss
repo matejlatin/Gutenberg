@@ -1,4 +1,11 @@
 @media screen and (min-width: #{ $max-width + 5 + 'em'}){
+
+	$leading: $leading-desktop;
+	$leading-rem: $leading-rem-desktop;
+	$hr-margin: $hr-margin-desktop;
+
+	@import "gutenberg-mixins";
+
 	body, html {
 		margin: 0;
 		width: 100%;
@@ -11,9 +18,8 @@
 		max-width: #{$max-width + 'rem'};
 		margin-left: auto!important;
 		margin-right: auto!important;
-		line-height: #{$leading-desktop + 'px'};
-		line-height: #{$leading-rem-desktop + 'rem'};
-		margin-bottom: #{$leading-rem-desktop + 'rem'};
+		@include line-height(1);
+		@include margin-bottom(1);
 	}
 
 	// Reset base font size for desktop
@@ -22,14 +28,24 @@
 		font-size: #{$base-font-size-desktop / 100 + 'rem'};
 	}
 
+	// Paragraph indent
+	@if $paragraph-indent == true {
+
+		p + p, .floatLeft + p, .floatRight + p {
+			@include margin-top(-1);
+			text-indent: #{ $leading + 'px'};
+	    	text-indent: #{ $leading-rem + 'rem'};
+		}
+	}
+
 	// Reset grid for desktop line-height
 	.grid {
-		background-size: 100% #{$leading-desktop + 'px'};
-    	background-size: 100% #{$leading-rem-desktop + 'rem'};
+		background-size: 100% #{$leading + 'px'};
+		background-size: 100% #{$leading-rem + 'rem'};
 	}
 
 	.grid-double {
-		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
 	}
 
 	// Set max-wdith for article
@@ -39,38 +55,42 @@
 	}
 
 	.btnToggleGrid {
-		top: #{$leading-desktop + 'px'};
-		right: #{$leading-desktop + 'px'};
+		top: #{$leading + 'px'};
+		right: #{$leading + 'px'};
 	}
 
 	// Heading sizes, line-heights and margins
 	@each $heading, $properties in $headings {
-	    #{$heading} {
-	    	font-size: #{nth($properties, 1) * $base-desktop + 'px'};
-	    	font-size: #{nth($properties, 1) + 'rem'};
-	    	line-height: #{nth($properties, 2)*$leading-desktop + 'px'};
-	    	line-height: #{nth($properties, 2)*$leading-rem-desktop + 'rem'};
-	        margin-top: #{nth($properties, 3) * $leading-desktop + 'px'};
-	        margin-top: #{nth($properties, 3) * $leading-rem-desktop + 'rem'};
-	        margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
-	        margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
-	    }
+		#{$heading} {
+			@include font-size(nth($properties, 1));
+			@include line-height(nth($properties, 2));
+			@include margin-top(nth($properties, 3));
+			@include margin-bottom(nth($properties, 4));
+		}
 	}
 
 	// Set margins between headings
 	h1 + h2 {
-		margin-top: #{$leading-desktop + 'px'};
-	    margin-top: #{$leading-rem-desktop + 'rem'};
+		@include margin-top(1);
 	}
 
 	h2 + h3, h3 + h4, h4 + h5 {
-		margin-top: #{0.5 * $leading-desktop + 'px'};
-	    margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
+		@include margin-top(0.5);
 	}
 
 	h5 + h6 {
-		margin-top: -#{0.5 * $leading-desktop + 'px'};
-	    margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
+		@include margin-top(-0.5)
+	}
+
+	// Quotes
+	figure blockquote {
+		@include padding(2, 0, 1);
+		text-align: center;
+
+		p {
+			@include font-size(1.6875);
+			@include line-height(1.5);
+		}
 	}
 
 	// Floated images width & padding
@@ -78,14 +98,31 @@
 	figure.floatRight {
 		max-width: #{0.5 * $max-width * $base-desktop + 'px'};
 		max-width: #{0.5 * $max-width + 'rem'};
-		padding: 0 #{$leading-desktop + 'px'};
-		padding: 0 #{$leading-rem-desktop + 'rem'};
+
+		blockquote {
+			text-align: left;
+			@include padding-equal(0);
+			@if $paragraph-indent == true {
+				@include margin-top(1);
+			}
+
+			p {
+				@include font-size(1.2);
+				@include line-height(1);
+			}
+		}
+
+		@if $paragraph-indent == true {
+			@include padding-equal(1);
+			@include margin-bottom(0);
+		} @else {
+			@include padding(0, 1);
+		}
 	}
 
 	// Set figcaption line-height for desktop
 	figcaption {
-		line-height: #{$leading-desktop + 'px'};
-		line-height: #{$leading-rem-desktop + 'rem'};
+		@include line-height(1);
 		margin-bottom: 0;
 	}
 
@@ -110,22 +147,29 @@
 
 	// Set small line-height
 	small {
-		line-height: #{0.5 * $leading-desktop + 'px'};
-		line-height: #{0.5 * $leading-rem-desktop + 'rem'};
+		@include line-height(0.5);
 	}
 
+	// Horizontal rule
 	hr {
-		margin: #{3 * $leading-desktop + 'px'} auto;
-    	margin: #{3 * $leading-rem-desktop + 'rem'} auto;
-    	height: #{$leading-desktop + 'px'};
-    	height: #{$leading-rem-desktop + 'rem'};
-    	background-size: 100% #{$leading-desktop + 'px'};
-    	background-size: 100% #{$leading-rem-desktop + 'rem'};
-    	background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  $color-font-body #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+		@include margin-top($hr-margin);
+		@include margin-bottom($hr-margin);
+		height: #{$leading + 'px'};
+		height: #{$leading-rem + 'rem'};
+
+		@if $hr-style == 'line' {
+			background-size: 100% #{$leading + 'px'};
+			background-size: 100% #{$leading-rem + 'rem'};
+			background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+		}
 	}
 
 	code {
-		padding: #{$leading-desktop + 'px'};
-		padding: #{$leading-rem-desktop + 'rem'};
+		@include padding-equal(1);
+	}
+
+	// Attention grabber
+	.attention-grabber {
+		@include font-size(1.2);
 	}
 }

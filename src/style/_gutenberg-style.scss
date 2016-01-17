@@ -2,7 +2,7 @@
    ========================================================================== */
 
 // Maximum width of the article (Mobile)
-article {
+article, body > footer {
 	width: 80%;
 	margin: 0 auto;
 }
@@ -19,12 +19,12 @@ article {
 	right: #{$leading + 'px'};
 	background: url('../src/images/bg-grid.png') top right no-repeat;
 	background-size: 32px;
-	// border: 1px solid #ccc;
 	font-size: 14px;
 	text-decoration: none;
 	padding-right: 40px;
 	height: 32px;
 	line-height: 34px;
+	transition: none;
 }
 
 .double-grid {
