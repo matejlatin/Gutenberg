@@ -38,6 +38,7 @@ function toggleGrid(){
 
 	if(flip == 0){
 		body.classList.add("grid");
+		hero.classList.remove("grid-light");
 		hero.classList.add("grid");
 		footer.classList.add("grid");
 		button.textContent = "Turn Double Grid On";
@@ -54,6 +55,7 @@ function toggleGrid(){
 	} else if (flip == 2) {
 		body.classList.remove("grid");
 		hero.classList.remove("grid");
+		hero.classList.add("grid-light");
 		footer.classList.remove("grid");
 		body.classList.remove("grid-double");
 		hero.classList.remove("grid-double");

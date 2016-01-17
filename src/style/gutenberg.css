@@ -239,8 +239,8 @@ h2 {
 }
 
 h3 {
-  font-size: 27px;
-  font-size: 1.6875rem;
+  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 52px;
@@ -250,8 +250,8 @@ h3 {
 }
 
 h4 {
-  font-size: 23px;
-  font-size: 1.4375rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 39px;
@@ -261,8 +261,8 @@ h4 {
 }
 
 h5 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 65px;
@@ -272,8 +272,8 @@ h5 {
 }
 
 h6 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 65px;
@@ -397,21 +397,30 @@ article {
   margin: 0 auto;
 }
 
-.btnToggleGrid {
+.toggleWrapper {
   display: block;
   position: fixed;
   top: 26px;
   right: 26px;
+  background-color: #231F20;
+  border-radius: 25px;
+  padding: 0 10px 0 20px;
+  height: 32px;
+}
+
+.btnToggleGrid {
   background: url("../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
+  display: block;
   font-size: 14px;
   text-decoration: none;
-  padding-right: 40px;
+  padding-right: 35px;
   height: 32px;
   line-height: 34px;
   font-family: "raleway", "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: white;
 }
 
 .double-grid {
@@ -779,7 +788,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     max-width: 52.5rem;
   }
 
-  .btnToggleGrid {
+  .toggleWrapper {
     top: 32px;
     right: 32px;
   }
@@ -807,8 +816,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h3 {
-    font-size: 33.75px;
-    font-size: 1.6875rem;
+    font-size: 28.75px;
+    font-size: 1.4375rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 64px;
@@ -818,8 +827,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h4 {
-    font-size: 28.75px;
-    font-size: 1.4375rem;
+    font-size: 24px;
+    font-size: 1.2rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 48px;
@@ -829,8 +838,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h5 {
-    font-size: 24px;
-    font-size: 1.2rem;
+    font-size: 20px;
+    font-size: 1rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 80px;
@@ -840,8 +849,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   }
 
   h6 {
-    font-size: 24px;
-    font-size: 1.2rem;
+    font-size: 20px;
+    font-size: 1rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 80px;
