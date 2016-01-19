@@ -618,6 +618,15 @@ code {
   margin-top: 2.4375rem;
 }
 
+.grid-light {
+  background-image: linear-gradient(to bottom, #f46677 1px, transparent 1px);
+}
+
+.img-spacing {
+  margin-top: 234px;
+  margin-top: 14.625rem;
+}
+
 footer {
   width: 100%;
   max-width: none;
@@ -644,95 +653,67 @@ footer h2 {
   line-height: 0;
 }
 
-/*
-
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
-*/
-.hljs {
-  display: block;
-  overflow-x: auto;
-  /*padding: 0.5em;*/
-  color: #333;
-  background: #f8f8f8;
-}
-
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #998;
-  font-style: italic;
+  color: #969896;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
-}
-
-.hljs-number,
-.hljs-literal,
+/* Tomorrow Red */
 .hljs-variable,
 .hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-
 .hljs-tag,
 .hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-
+.hljs-selector-id,
+.hljs-selector-class,
 .hljs-regexp,
-.hljs-link {
-  color: #009926;
+.hljs-deletion {
+  color: #ed6a43;
 }
 
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-
+/* Tomorrow Orange */
+.hljs-number,
 .hljs-built_in,
-.hljs-builtin-name {
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
   color: #0086b3;
 }
 
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #0086b3;
 }
 
-.hljs-deletion {
-  background: #fdd;
-}
-
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
 .hljs-addition {
-  background: #dfd;
+  color: #183691;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #a71d5d;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #f7f7f7;
+  color: #4d4d4c;
 }
 
 .hljs-emphasis {
@@ -741,15 +722,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-strong {
   font-weight: bold;
-}
-
-.grid-light {
-  background-image: linear-gradient(to bottom, #f46677 1px, transparent 1px);
-}
-
-.img-spacing {
-  margin-top: 234px;
-  margin-top: 14.625rem;
 }
 
 @media screen and (min-width: 40rem) {
