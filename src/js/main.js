@@ -38,14 +38,12 @@ function toggleGrid(){
 		body.classList.add("grid");
 		hero.classList.remove("grid-light");
 		hero.classList.add("grid");
-		footer.classList.add("grid");
 		button.textContent = "Turn Double Grid On";
 		button.classList.add("double-grid");
 		flip = 1;
 	} else if (flip == 1) {
 		body.classList.add("grid-double");
 		hero.classList.add("grid-double");
-		footer.classList.add("grid-double");
 		button.textContent = "Turn Grid Off";
 		button.classList.remove("double-grid");
 		button.classList.add("grid-off");
@@ -54,10 +52,8 @@ function toggleGrid(){
 		body.classList.remove("grid");
 		hero.classList.remove("grid");
 		hero.classList.add("grid-light");
-		footer.classList.remove("grid");
 		body.classList.remove("grid-double");
 		hero.classList.remove("grid-double");
-		footer.classList.remove("grid-double");
 		button.classList.remove("grid-off");
 		button.textContent = "Turn Grid On";
 		flip = 0;
