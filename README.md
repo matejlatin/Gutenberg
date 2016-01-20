@@ -102,7 +102,8 @@ Gutenberg is an open source project licensed under [Creative Commons 3.0](https:
 - Code optimized and simplified by use of mixins,
 - horizontal rule styling now more flexible with its own configuration,
 - Attention Grabber — a new element,
-- quotes — an alternative to blockquotes; can be floated.
+- quotes — an alternative to blockquotes; can be floated,
+- added an option for paragraph indenting.
 
 ###Gutenberg v1.0
 
