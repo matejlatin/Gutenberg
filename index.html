@@ -61,12 +61,17 @@
 		</div>
 	</div>
 	<article>
-		<h2 class="alignCenter img-spacing">Gutenberg v1.0</h2>
+		<h2 class="alignCenter img-spacing">Gutenberg v1.1</h2>
 		<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
 		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
 		<hr>
-		<h3>Made with Sass</h3>
-		<p>Typography is a living thing. It’s flexible. And this is exactly how Gutenberg is made. It sets the macrotypography so you can focus on the microtypographic details. Flexibility is the most important feature of Gutenberg and Sass makes this possible. Creating a unique and beautiful typographic style is a matter of changing variables. </p>
+		<h3>What is Gutenberg?</h3>
+		<p>Gutenberg is a flexible and simple–to–use starter kit made with Sass. It’s a small step towards a better web typography. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).</p>
+		<blockquote>
+			<p>The reader should be able to read the message of a text easily and comfortably. This depends to a not inconsiderable extent on the size of the type, the length of the lines and the leading.</p>
+			<cite>—Josef Mueller–Brockmann</cite>
+		</blockquote>
+		<p>Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.</p>
 
 		<h3>Base type &amp; line-height</h3>
 		<p>All calculations in Gutenberg depend on <em>base type size</em> and <em>line-height</em>. Multiplication of these two results in <em>leading</em> which is essential for setting a correct vertical rhythm and a baseline grid.</p>
@@ -120,17 +125,25 @@ $line-height-desktop: 1.8;
 $max-width: 35;</code></pre>
 
 				<h3>Themes &amp; customization</h3>
-				<p>Gutenberg comes with two beautiful pre–defined themes based on two high–quality but free fonts provided by Google Fonts: Merriweather and Open Sans.</p>
-				<p>Feeling creative? Load your own fonts and create a unique typographic style in minutes.</p>
+				<p>Gutenberg comes with two beautiful predefined themes based on two typefaces provided by Google Fonts: Merriweather and Open Sans.</p>
+				<p>There is a <em>custom</em> option that allows loading custom typefaces for body text and headings.</p>
 				<pre><code>$theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, serif;
 $custom-font-headings: "Open Sans", sans-serif;</code></pre>
-					<p>
-						<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">View an example</a>
+					<p class="alignCenter">
+						<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">Default theme example</a> |
+						<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">Custom theme example</a>
 					</p>
+					<h3>Sass Mixins</h3>
+					<p>Sass makes it easy to understand and reuse most parts of the code. Line-heights, margins, paddings and font-sizes are all calculated based on <em>base font-size</em> and <em>leading</em>. So there’s a mixin for each that sets its value in both pixels (fallback) and REMs. Below is an example of a mixin that sets the bottom margin to x numbers of <em>leading</em>.</p>
+					<pre><code>// Margin-bottom
+@mixin margin-bottom($number){
+  margin-bottom: #{$number * $leading + 'px'};
+  margin-bottom: #{$number * $leading-rem + 'rem'};
+}</code></pre>
 
 					<h3>Fix image height</h3>
-					<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of leading.</p>
+					<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of <em>leading</em>.</p>
 
 					<figure>
 						<img src="assets/images/grid-image.png" alt="Fix image height">
@@ -138,11 +151,30 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
 					</figure>
 
 					<h2>Why Gutenberg?</h2>
-					<p>More than 500 years ago, Johannes Gutenberg invented a printing press with movable type which led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium—the web.</p>
+					<p>Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.</p>
 					<hr>
-					<h2 class="alignCenter">Gutenberg v1.0</h2>
+					<h2 class="alignCenter">Gutenberg v1.1</h2>
 					<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
 					<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
+					<hr>
+					<h3>History</h3>
+					<p><strong>Gutenberg v1.1</strong> — <em>Jan 20, 2016</em></p>
+					<ul>
+						<li>Code optimized and simplified by use of mixins,</li>
+						<li>horizontal rule styling now more flexible with its own configuration,</li>
+						<li>Attention Grabber — a new element,</li>
+						<li>quotes — an alternative to blockquotes; can be floated.</li>
+					</ul>
+					<p><strong>Gutenberg v1.0</strong> — <em>Dec 23, 2015</em></p>
+					<ul>
+						<li>Includes the basic elements: headings, paragraph, figure, blockquote & cite, horizontal rule, code, sub, sup, ul, ol, small,</li>
+						<li>Gutenberg reset — based on Normalize,</li>
+						<li>headings, body and links colors,</li>
+						<li>two default themes & custom theme options,</li>
+						<li>mobile first with a breakpoint for desktop screens,</li>
+						<li>sizes based on Perfect Fifth modular scale,</li>
+						<li>fixImgHeight.js — a small & lightweight script that resizes images so they fit the baseline grid.</li>
+					</ul>
 				</article>
 				<footer class="alignCenter clearfix">
 					<div class="grid-overlay clearfix">
