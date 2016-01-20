@@ -1,17 +1,23 @@
-# Gutenberg:
+# Gutenberg
 ## A Meaningful Web Typography Starter Kit
 Gutenberg is a work–in–progress project by [Matej Latin](http://matejlatin.co.uk) that brings meaning and craftsmanship to web typography.
 
 [View Example](http://matejlatin.github.io/Gutenberg/example)
 
 ###Made with Sass
-Typography is a living thing. It’s flexible. And this is exactly how Gutenberg is made. It sets the macrotypography so you can focus on the microtypographic details. Flexibility is the most important feature of Gutenberg and Sass makes this possible. Creating a unique and beautiful typographic style is a matter of changing variables.
+Gutenberg is a flexible and simple–to–use starter kit made with Sass. It’s a small step towards a better web typography. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).
+
+>The reader should be able to read the message of a text easily and comfortably. This depends to a not inconsiderable extent on the size of the type, the length of the lines and the leading.
+>
+>—Josef Mueller–Brockmann
+
+Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.
 
 ###Base type & line-height
 All calculations in Gutenberg depend on base type size and line-height. Multiplication of these two results in leading which is essential for setting a correct vertical rhythm and a baseline grid.
 
 ```sass
-$base-type: 100;
+$base-font-size: 100; // Equals 16px
 $line-height: 1.6;
 $leading: $base-type * $line-height;
 ```
@@ -54,14 +60,25 @@ $max-width: 35;
 ```
 
 ###Themes & customization
-Gutenberg comes with two beautiful predefined themes based on two high quality but free fonts provided by Google Fonts: Merriweather and Open Sans.
+Gutenberg comes with two beautiful predefined themes based on two typefaces provided by Google Fonts: Merriweather and Open Sans.
 
-Feeling creative? Load your own fonts and create a unique typographic style in minutes.
+There is a custom option that allows loading custom typefaces for body text and headings.
 
 ```sass
 $theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, serif;
 $custom-font-headings: "Open Sans", sans-serif;
+```
+
+###Sass Mixins
+Sass makes it easy to understand and reuse most parts of the code. Line-heights, margins, paddings and font-sizes are all calculated based on base font-size and leading. So there’s a mixin for each that sets its value in both pixels (fallback) and REMs. Below is an example of a mixin that sets the bottom margin to x numbers of leading.
+
+```sass
+// Margin-bottom
+@mixin margin-bottom($number){
+  margin-bottom: #{$number * $leading + 'px'};
+  margin-bottom: #{$number * $leading-rem + 'rem'};
+}
 ```
 
 ###Fix image height
@@ -70,10 +87,31 @@ Images and figures are resized so they don’t break the baseline grid. This sma
 ![Images grid](grid-image.png)
 
 ##Why Gutenberg?
-More than 500 years ago, Johannes Gutenberg invented a printing press with movable type which lead to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium—the web.
-
-##To Do
-- check browser compatibility
+Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.
 
 ##Contribute
 Gutenberg is an open source project licensed under [Creative Commons 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Feel free to use, adapt or contribute.
+
+---
+
+##History
+###Gutenberg v1.1
+
+*Jan 20, 2016*
+
+- Code optimized and simplified by use of mixins,
+- horizontal rule styling now more flexible with its own configuration,
+- Attention Grabber — a new element,
+- quotes — an alternative to blockquotes; can be floated.
+
+###Gutenberg v1.0
+
+*Jan 20, 2016*
+
+- Includes the basic elements: headings, paragraph, figure, blockquote & cite, horizontal rule, code, sub, sup, ul, ol, small,
+- Gutenberg reset — based on Normalize,
+- headings, body and links colors,
+- two default themes & custom theme options,
+- mobile first with a breakpoint for desktop screens,
+- sizes based on Perfect Fifth modular scale,
+- fixImgHeight.js — a small & lightweight script that resizes images so they fit the baseline grid.
