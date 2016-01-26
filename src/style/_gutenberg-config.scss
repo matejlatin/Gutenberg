@@ -45,6 +45,7 @@ $headings: (
 $color-font-body: #222222;
 $color-font-headings: $color-font-body;
 $color-font-light: #888;
+$color-font-figcaption: $color-font-body;
 
 $color-link-normal: $color-font-body;
 $color-link-hover: $color-font-body;
@@ -54,6 +55,7 @@ $color-link-visited: $color-font-light;
 // Horizontal rule
 $hr-style: type; // [ line / type ]
 $hr-type-content: '***'; // [ '***' ]
+$hr-type-char-spacing: 0.2em; // [ 0.2em ]
 $hr-margin: 2;
 $hr-margin-desktop: $hr-margin;
 $hr-color: $color-font-body;
