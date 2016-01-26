@@ -9,7 +9,6 @@ License ....... Creative Commmons Attribution 3.0
 License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/license.txt
 */
 /*! Gutenberg reset — adapted from Normalize */
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -200,7 +199,7 @@ img {
 html {
   font-size: 16px;
   font-size: 100%;
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
   color: #222222;
 }
 
@@ -213,15 +212,27 @@ html {
 
 /* Paragraph
    ========================================================================== */
+p + p {
+  margin-top: -26px;
+  margin-top: -1.625rem;
+  text-indent: 26px;
+  text-indent: 1.625rem;
+}
+
+.attention-grabber + p {
+  text-indent: 0;
+  margin-top: 0;
+}
+
 /* Headings
    ========================================================================== */
 h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 48px;
+  font-size: 3rem;
   line-height: 52px;
   line-height: 3.25rem;
-  margin-top: 104px;
-  margin-top: 6.5rem;
+  margin-top: 130px;
+  margin-top: 8.125rem;
   margin-bottom: 26px;
   margin-bottom: 1.625rem;
 }
@@ -301,6 +312,15 @@ h6 {
   font-style: italic;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+}
+
 /* Links
    ========================================================================== */
 a {
@@ -371,8 +391,8 @@ hr {
   border: 0;
 }
 hr:before {
-  content: "***";
-  letter-spacing: 0.2em;
+  content: "···";
+  letter-spacing: 1em;
 }
 
 small {
@@ -453,7 +473,17 @@ article, body > footer {
 
 /* Your styles come here
    ========================================================================== */
-@media screen and (min-width: 40em) {
+hgroup h6 {
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
+}
+
+.sc {
+  font-family: "ff-meta-serif-sc-web-pro", Georgia, serif;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+}
+
+@media screen and (min-width: 37em) {
   /* Mixins
      ========================================================================== */
   body, html {
@@ -463,157 +493,175 @@ article, body > footer {
   }
 
   * {
-    max-width: 630px;
-    max-width: 35rem;
+    max-width: 640px;
+    max-width: 32rem;
     margin-left: auto !important;
     margin-right: auto !important;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-bottom: 31px;
-    margin-bottom: 1.722222222222222rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin-bottom: 32px;
+    margin-bottom: 1.6rem;
   }
 
   html {
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  p + p, .floatLeft + p, .floatRight + p {
+    margin-top: -32px;
+    margin-top: -1.6rem;
+    text-indent: 32px;
+    text-indent: 1.6rem;
   }
 
   .grid, .grid-double {
-    background-size: 100% 31px;
-    background-size: 100% 1.722222222222222rem;
+    background-size: 100% 32px;
+    background-size: 100% 1.6rem;
   }
 
   .grid-double {
-    background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 15.5px, rgba(0, 170, 255, 0.2) 15.5px, transparent 16.5px, transparent 31px);
+    background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 16px, rgba(0, 170, 255, 0.2) 16px, transparent 17px, transparent 32px);
   }
 
   article {
-    max-width: 945px;
-    max-width: 52.5rem;
+    max-width: 960px;
+    max-width: 48rem;
   }
 
   .btnToggleGrid {
-    top: 31px;
-    right: 31px;
+    top: 32px;
+    right: 32px;
   }
 
   h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
-    line-height: 62px;
-    line-height: 3.444444444444445rem;
-    margin-top: 124px;
-    margin-top: 6.888888888888889rem;
-    margin-bottom: 31px;
-    margin-bottom: 1.722222222222222rem;
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 64px;
+    line-height: 3.2rem;
+    margin-top: 160px;
+    margin-top: 8rem;
+    margin-bottom: 32px;
+    margin-bottom: 1.6rem;
   }
 
   h2 {
     font-size: 27px;
     font-size: 1.6875rem;
-    line-height: 46.5px;
-    line-height: 2.583333333333334rem;
-    margin-top: 77.5px;
-    margin-top: 4.305555555555556rem;
-    margin-bottom: 15.5px;
-    margin-bottom: 0.861111111111111rem;
+    line-height: 48px;
+    line-height: 2.400000000000001rem;
+    margin-top: 80px;
+    margin-top: 4rem;
+    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
   }
 
   h3 {
     font-size: 22px;
     font-size: 1.375rem;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-top: 62px;
-    margin-top: 3.444444444444445rem;
-    margin-bottom: 15.5px;
-    margin-bottom: 0.861111111111111rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin-top: 64px;
+    margin-top: 3.2rem;
+    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
   }
 
   h4 {
     font-size: 19.2px;
     font-size: 1.2rem;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-top: 46.5px;
-    margin-top: 2.583333333333334rem;
-    margin-bottom: 15.5px;
-    margin-bottom: 0.861111111111111rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin-top: 48px;
+    margin-top: 2.400000000000001rem;
+    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
   }
 
   h5 {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-top: 77.5px;
-    margin-top: 4.305555555555556rem;
-    margin-bottom: 15.5px;
-    margin-bottom: 0.861111111111111rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin-top: 80px;
+    margin-top: 4rem;
+    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
   }
 
   h6 {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-top: 77.5px;
-    margin-top: 4.305555555555556rem;
-    margin-bottom: 15.5px;
-    margin-bottom: 0.861111111111111rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin-top: 80px;
+    margin-top: 4rem;
+    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
+  }
+
+  h1 {
+    font-size: 56px;
+    font-size: 3.5rem;
+    line-height: 80px;
+    line-height: 4rem;
   }
 
   h1 + h2 {
-    margin-top: 31px;
-    margin-top: 1.722222222222222rem;
+    margin-top: 32px;
+    margin-top: 1.6rem;
   }
 
   h2 + h3, h3 + h4, h4 + h5 {
-    margin-top: 15.5px;
-    margin-top: 0.861111111111111rem;
+    margin-top: 16px;
+    margin-top: 0.8rem;
   }
 
   h5 + h6 {
-    margin-top: -15.5px;
-    margin-top: -0.861111111111111rem;
+    margin-top: -16px;
+    margin-top: -0.8rem;
   }
 
   figure blockquote {
-    padding: 62px 0px 31px;
-    padding: 3.444444444444445rem 0rem 1.722222222222222rem;
+    padding: 64px 0px 32px;
+    padding: 3.2rem 0rem 1.6rem;
     text-align: center;
   }
   figure blockquote p {
     font-size: 27px;
     font-size: 1.6875rem;
-    line-height: 46.5px;
-    line-height: 2.583333333333334rem;
+    line-height: 48px;
+    line-height: 2.400000000000001rem;
   }
 
   figure.floatLeft,
   figure.floatRight {
-    max-width: 315px;
-    max-width: 17.5rem;
-    padding: 0px 31px;
-    padding: 0rem 1.722222222222222rem;
+    max-width: 320px;
+    max-width: 16rem;
+    padding: 32px;
+    padding: 1.6rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
   }
   figure.floatLeft blockquote,
   figure.floatRight blockquote {
     text-align: left;
     padding: 0px;
     padding: 0rem;
+    margin-top: 32px;
+    margin-top: 1.6rem;
   }
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p {
     font-size: 19.2px;
     font-size: 1.2rem;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
+    line-height: 32px;
+    line-height: 1.6rem;
   }
 
   figcaption {
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
+    line-height: 32px;
+    line-height: 1.6rem;
     margin-bottom: 0;
   }
 
@@ -635,22 +683,22 @@ article, body > footer {
   }
 
   small {
-    line-height: 15.5px;
-    line-height: 0.861111111111111rem;
+    line-height: 16px;
+    line-height: 0.8rem;
   }
 
   hr {
-    margin-top: 62px;
-    margin-top: 3.444444444444445rem;
-    margin-bottom: 62px;
-    margin-bottom: 3.444444444444445rem;
-    height: 31px;
-    height: 1.722222222222222rem;
+    margin-top: 64px;
+    margin-top: 3.2rem;
+    margin-bottom: 64px;
+    margin-bottom: 3.2rem;
+    height: 32px;
+    height: 1.6rem;
   }
 
   code {
-    padding: 31px;
-    padding: 1.722222222222222rem;
+    padding: 32px;
+    padding: 1.6rem;
   }
 
   .attention-grabber {
