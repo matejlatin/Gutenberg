@@ -196,6 +196,8 @@ img {
    ========================================================================== */
 /* Calculations
    ========================================================================== */
+/* Mixins
+   ========================================================================== */
 /* Font themes
    ========================================================================== */
 /* Defaults
@@ -349,16 +351,21 @@ ul li, ol li {
 }
 
 hr {
-  margin: 78px auto;
-  margin: 4.875rem auto;
-  width: 100px;
-  display: block;
+  margin-top: 52px;
+  margin-top: 3.25rem;
+  margin-right: auto;
+  margin-bottom: 52px;
+  margin-bottom: 3.25rem;
+  margin-left: auto;
   height: 26px;
   height: 1.625rem;
-  border: 0;
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 13px, #222222 13px, transparent 14px, transparent 26px);
+  color: #ccc;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #ccc 11px, #ccc 15px, transparent 15px, transparent 26px);
+  width: 100px;
+  display: block;
+  border: 0;
 }
 
 small {
@@ -421,6 +428,9 @@ article {
   text-transform: uppercase;
   font-weight: 700;
   color: white;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 
 .double-grid {
@@ -484,12 +494,12 @@ article {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 52px;
-  margin-bottom: 3.25rem;
+  margin-bottom: 78px;
+  margin-bottom: 4.875rem;
 }
 .hero img {
-  margin-bottom: -208px;
-  margin-bottom: -13rem;
+  margin-bottom: -156px;
+  margin-bottom: -9.75rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
@@ -725,7 +735,15 @@ footer h2 {
   font-weight: bold;
 }
 
+hr + h1,
+hr + h2,
+hr + h3 {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 40rem) {
+  /* Mixins
+     ========================================================================== */
   * {
     max-width: 700px;
     max-width: 35rem;
@@ -891,13 +909,15 @@ footer h2 {
   }
 
   hr {
-    margin: 96px auto;
-    margin: 4.800000000000001rem auto;
-    height: 32px;
-    height: 1.6rem;
-    background-size: 100% 32px;
-    background-size: 100% 1.6rem;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 16px, #222222 16px, transparent 17px, transparent 32px);
+    margin-top: 52px;
+    margin-top: 3.25rem;
+    margin-bottom: 52px;
+    margin-bottom: 3.25rem;
+    height: 26px;
+    height: 1.625rem;
+    background-size: 100% 26px;
+    background-size: 100% 1.625rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #ccc 11px, #ccc 15px, transparent 15px, transparent 26px);
   }
 
   code {
@@ -993,13 +1013,13 @@ footer h2 {
   .hero p {
     max-width: 680px;
     max-width: 34rem;
-    margin-bottom: 64px;
-    margin-bottom: 3.2rem;
+    margin-bottom: 96px;
+    margin-bottom: 4.800000000000001rem;
   }
   .hero img {
-    margin-bottom: -288px;
-    margin-bottom: -14.4rem;
-    max-width: 479px;
+    margin-bottom: -256px;
+    margin-bottom: -12.8rem;
+    max-width: 638px;
   }
 
   .img-spacing {

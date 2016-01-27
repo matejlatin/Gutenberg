@@ -47,7 +47,18 @@ $headings: (
 $color-font-body: #222222;
 $color-font-headings: $color-font-body;
 $color-font-light: #888;
+$color-gutenberg-red: #FF1935;
 
 $color-link-normal: $color-font-body;
 $color-link-active: red;
 $color-link-visited: $color-font-light;
+
+// Horizontal rule
+$hr-style: line; // [ line / type ]
+$hr-type-content: '***'; // [ '***' ]
+$hr-type-char-spacing: 0.2em; // [ 0.2em ]
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-color: #ccc;
+$hr-width: 100; // [ 100 ] — In pixels, only for line style
+$hr-height: 4; // [ 2 ] — In pixels, only for line style

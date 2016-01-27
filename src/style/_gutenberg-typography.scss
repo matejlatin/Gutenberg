@@ -9,6 +9,8 @@ $base-desktop: 16 * ($base-font-size-desktop / 100);
 $leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
+@import "gutenberg-mixins";
+
 
 /* Font themes
    ========================================================================== */
@@ -162,17 +164,35 @@ ul, ol {
 
 // Horizontal rule
 hr {
-	margin: #{3 * $leading + 'px'} auto;
-    margin: #{3 * $leading-rem + 'rem'} auto;
-    width: 100px;
-    display: block;
+    @include margin-top($hr-margin);
+    margin-right: auto;
+    @include margin-bottom($hr-margin);
+    margin-left: auto;
     height: #{$leading + 'px'};
-    height: #{$leading-rem + 'rem'};
+	height: #{$leading-rem + 'rem'};
+	color: $hr-color;
+
+	@if $hr-style == 'line' {
+		background-size: 100% #{$leading + 'px'};
+		background-size: 100% #{$leading-rem + 'rem'};
+		background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+		@if $hr-width == null {
+	    	width: 100%;
+	    } @else {
+	    	width: #{$hr-width + 'px'};
+	    }
+    }
+
+    @if $hr-style == 'type' {
+    	text-align: center;
+
+    	&:before {
+    		content: $hr-type-content;
+    		letter-spacing: $hr-type-char-spacing;
+    	}
+    }
+    display: block;
     border: 0;
-    // background-color: none;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  $color-font-body #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
-    background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
 }
 
 small {
