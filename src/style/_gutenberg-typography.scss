@@ -56,6 +56,10 @@ html {
 	font-size: #{$base-font-size + '%'};
 	font-family: $font-body;
 	color: $color-font-body;
+	font-variant-ligatures: common-ligatures;
+	  -moz-font-feature-settings: "liga", "clig";
+	  -webkit-font-feature-settings: "liga", "clig";
+	  font-feature-settings: "liga", "clig";
 }
 
 // Line-height & margin reset
@@ -123,6 +127,10 @@ h6 {
 	h6 {
 		font-family: $font-headings;
 	}
+}
+
+h1 {
+	letter-spacing: -0.01em;
 }
 
 /* Links

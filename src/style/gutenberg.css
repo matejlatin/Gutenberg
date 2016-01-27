@@ -201,6 +201,10 @@ html {
   font-size: 100%;
   font-family: "ff-meta-serif-web-pro", Georgia, serif;
   color: #222222;
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "liga", "clig";
+  -webkit-font-feature-settings: "liga", "clig";
+  font-feature-settings: "liga", "clig";
 }
 
 * {
@@ -231,8 +235,8 @@ h1 {
   font-size: 3rem;
   line-height: 52px;
   line-height: 3.25rem;
-  margin-top: 130px;
-  margin-top: 8.125rem;
+  margin-top: 104px;
+  margin-top: 6.5rem;
   margin-bottom: 26px;
   margin-bottom: 1.625rem;
 }
@@ -286,8 +290,8 @@ h6 {
   font-size: 1rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 65px;
-  margin-top: 4.0625rem;
+  margin-top: 39px;
+  margin-top: 2.4375rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem;
 }
@@ -321,6 +325,10 @@ h6 {
   font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  letter-spacing: -0.01em;
+}
+
 /* Links
    ========================================================================== */
 a {
@@ -331,7 +339,7 @@ a:hover {
   color: #222222;
 }
 a:visited {
-  color: #888;
+  color: #222222;
 }
 a:visited:hover {
   color: #222222;
@@ -377,11 +385,11 @@ ul li, ol li {
 }
 
 hr {
-  margin-top: 52px;
-  margin-top: 3.25rem;
+  margin-top: 26px;
+  margin-top: 1.625rem;
   margin-right: auto;
-  margin-bottom: 52px;
-  margin-bottom: 3.25rem;
+  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
   margin-left: auto;
   height: 26px;
   height: 1.625rem;
@@ -431,19 +439,36 @@ article, body > footer {
   margin: 0 auto;
 }
 
-.btnToggleGrid {
+.toggleWrapper {
   display: block;
   position: fixed;
   top: 26px;
   right: 26px;
-  background: url("../src/images/bg-grid.png") top right no-repeat;
+  background-color: #231F20;
+  border-radius: 25px;
+  padding: 0 10px 0 20px;
+  height: 32px;
+}
+
+.btnToggleGrid {
+  background: url("../../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
+  display: block;
   font-size: 14px;
   text-decoration: none;
-  padding-right: 40px;
+  padding-right: 35px;
   height: 32px;
   line-height: 34px;
-  transition: none;
+  font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+.btnToggleGrid:hover {
+  color: white;
+}
+.btnToggleGrid:active {
+  color: red;
 }
 
 .double-grid {
@@ -508,6 +533,11 @@ hgroup h6 {
     font-size: 1.25rem;
   }
 
+  .toggleWrapper {
+    top: 32px;
+    right: 32px;
+  }
+
   p + p, .floatLeft + p, .floatRight + p {
     margin-top: -32px;
     margin-top: -1.6rem;
@@ -539,8 +569,8 @@ hgroup h6 {
     font-size: 3rem;
     line-height: 64px;
     line-height: 3.2rem;
-    margin-top: 160px;
-    margin-top: 8rem;
+    margin-top: 128px;
+    margin-top: 6.4rem;
     margin-bottom: 32px;
     margin-bottom: 1.6rem;
   }
@@ -594,8 +624,8 @@ hgroup h6 {
     font-size: 1rem;
     line-height: 32px;
     line-height: 1.6rem;
-    margin-top: 80px;
-    margin-top: 4rem;
+    margin-top: 48px;
+    margin-top: 2.400000000000001rem;
     margin-bottom: 16px;
     margin-bottom: 0.8rem;
   }
@@ -605,6 +635,7 @@ hgroup h6 {
     font-size: 3.5rem;
     line-height: 80px;
     line-height: 4rem;
+    letter-spacing: -0.025em;
   }
 
   h1 + h2 {
@@ -688,10 +719,10 @@ hgroup h6 {
   }
 
   hr {
-    margin-top: 64px;
-    margin-top: 3.2rem;
-    margin-bottom: 64px;
-    margin-bottom: 3.2rem;
+    margin-top: 32px;
+    margin-top: 1.6rem;
+    margin-bottom: 32px;
+    margin-bottom: 1.6rem;
     height: 32px;
     height: 1.6rem;
   }

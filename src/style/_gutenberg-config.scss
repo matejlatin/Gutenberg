@@ -33,12 +33,12 @@ $modular-scale: (
 // Headings Options
 // [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
 $headings: (
-  h1: (3, 2, 5, 1),
+  h1: (3, 2, 4, 1),
   h2: (1.6875, 1.5, 2.5, 0.5),
   h3: (1.375, 1, 2, 0.5),
   h4: (1.2, 1, 1.5, 0.5),
   h5: (1, 1, 2.5, 0.5),
-  h6: (1, 1, 2.5, 0.5)
+  h6: (1, 1, 1.5, 0.5)
 ) !default;
 
 // Colors
@@ -50,13 +50,13 @@ $color-font-figcaption: $color-font-body;
 $color-link-normal: $color-font-body;
 $color-link-hover: $color-font-body;
 $color-link-active: red;
-$color-link-visited: $color-font-light;
+$color-link-visited: $color-font-body;
 
 // Horizontal rule
 $hr-style: type; // [ line / type ]
 $hr-type-content: '···'; // [ '***' ]
 $hr-type-char-spacing: 1em; // [ 0.2em ]
-$hr-margin: 2;
+$hr-margin: 1;
 $hr-margin-desktop: $hr-margin;
 $hr-color: $color-font-body;
 $hr-width: 100; // [ 100 ] — In pixels, only for line style
