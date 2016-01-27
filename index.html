@@ -130,9 +130,9 @@ $max-width: 35;</code></pre>
 		<pre><code>$theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: Merriweather, serif;
 $custom-font-headings: "Open Sans", sans-serif;</code></pre>
-		<p class="alignCenter">
-			<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">Default theme example</a> |
-			<a href="example" onclick="ga('send', 'event', 'Links', 'example');" target="_blank">Custom theme example</a>
+		<p>
+			<a href="example" onclick="ga('send', 'event', 'Links', 'example - default');" target="_blank">The Birth of Movable Type</a><br>Default theme example <br><br>
+			<a href="example2" onclick="ga('send', 'event', 'Links', 'example - custom');" target="_blank">Humane Typography in the Digital Age</a><br>Custom theme example
 		</p>
 		<h3>Sass Mixins</h3>
 		<p>Sass makes it easy to understand and reuse most parts of the code. Line-heights, margins, paddings and font-sizes are all calculated based on <em>base font-size</em> and <em>leading</em>. So there’s a mixin for each that sets its value in both pixels (fallback) and REMs. Below is an example of a mixin that sets the bottom margin to x numbers of <em>leading</em>.</p>
@@ -141,7 +141,7 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
   margin-bottom: #{$number * $leading-rem + 'rem'};
 }</code></pre>
 
-		<h3>Fix image height</h3>
+		<h3>Correct image height</h3>
 		<p>Images and figures are resized so they don’t break the baseline grid. This small and lightweight JavaScript function takes the original height of a figure and calculates a new height which is a multiplication of <em>leading</em>.</p>
 
 		<figure>

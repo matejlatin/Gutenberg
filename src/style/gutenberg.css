@@ -2,7 +2,7 @@
 /*
 Gutenberg: Web Typography Starter Kit
 Website ....... TBD
-Version ....... 0.1
+Version ....... 1.1
 Github ........ https://github.com/matejlatin/Gutenberg
 Authors ....... Matej Latin (@matejlatin)
 License ....... Creative Commmons Attribution 3.0
@@ -1007,9 +1007,5 @@ footer h2 {
     margin-top: 14.4rem;
   }
 }
-/* TODO:
- - responsive grid (Chrome only) (?)
- - some line heights produce margins with .5 results (?)
- */
 
 /*# sourceMappingURL=gutenberg.css.map */
