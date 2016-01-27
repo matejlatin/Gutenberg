@@ -38,6 +38,11 @@
 		}
 	}
 
+	.toggleWrapper {
+		top: #{$leading-desktop + 'px'};
+		right: #{$leading-desktop + 'px'};
+	}
+
 	// Reset grid for desktop line-height
 	.grid {
 		background-size: 100% #{$leading + 'px'};

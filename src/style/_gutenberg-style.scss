@@ -8,7 +8,7 @@ article, body > footer {
 }
 
 // Grid button
-.btnToggleGrid {
+.toggleWrapper {
 	@if $edit-mode == true {
 		display: block;
 	} @else if $edit-mode == false {
@@ -17,14 +17,33 @@ article, body > footer {
 	position: fixed;
 	top: #{$leading + 'px'};
 	right: #{$leading + 'px'};
-	background: url('../src/images/bg-grid.png') top right no-repeat;
+	background-color: #231F20;
+	border-radius: 25px;
+	padding: 0 10px 0 20px;
+	height: 32px;
+}
+
+.btnToggleGrid {
+	background: url('../../assets/images/grid-icons.png') top right no-repeat;
 	background-size: 32px;
+	display: block;
 	font-size: 14px;
 	text-decoration: none;
-	padding-right: 40px;
+	padding-right: 35px;
 	height: 32px;
 	line-height: 34px;
-	transition: none;
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+
+	&:hover {
+		color: white;
+	}
+
+	&:active {
+		color: red;
+	}
 }
 
 .double-grid {

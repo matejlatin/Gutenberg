@@ -411,19 +411,36 @@ article, body > footer {
   margin: 0 auto;
 }
 
-.btnToggleGrid {
+.toggleWrapper {
   display: block;
   position: fixed;
   top: 26px;
   right: 26px;
-  background: url("../src/images/bg-grid.png") top right no-repeat;
+  background-color: #231F20;
+  border-radius: 25px;
+  padding: 0 10px 0 20px;
+  height: 32px;
+}
+
+.btnToggleGrid {
+  background: url("../../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
+  display: block;
   font-size: 14px;
   text-decoration: none;
-  padding-right: 40px;
+  padding-right: 35px;
   height: 32px;
   line-height: 34px;
-  transition: none;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+.btnToggleGrid:hover {
+  color: white;
+}
+.btnToggleGrid:active {
+  color: red;
 }
 
 .double-grid {
@@ -476,6 +493,11 @@ article, body > footer {
   html {
     font-size: 18px;
     font-size: 1.125rem;
+  }
+
+  .toggleWrapper {
+    top: 31px;
+    right: 31px;
   }
 
   .grid, .grid-double {
