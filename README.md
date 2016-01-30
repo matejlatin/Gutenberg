@@ -4,13 +4,13 @@ Gutenberg is a flexible and simple–to–use web typography starter kit for web
 [View Example](http://matejlatin.github.io/Gutenberg/example2)
 
 ##Installation
-Gutenberg is built with Sass and works great with tools like Grunt or Gulp. Fork or download the repository to get started.
+Gutenberg is built with Sass and works great with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). Fork or download the repository to get started.
 
 ##Getting started
 The most important files in the repository are:
 
 **Sass files in src/style**
-- _gutenberg-reset *custom reset, adapted from [normalize.css](https://necolas.github.io/normalize.css/)*
+- ```_gutenberg-reset``` *custom reset, adapted from [normalize.css](https://necolas.github.io/normalize.css/)*
 - _gutenberg-config *the main configuration file*
 - _gutenberg-mixins *home of all the mixins used in Gutenberg*
 - _gutenberg-typography *this is where the magic happens, don't make changes if you're not 100% sure*
@@ -45,6 +45,10 @@ You need to provide a custom font stack if you go for the custom option: *"Libre
 
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
+
+```sass
+$paragraph-indent: false; // [ true / false ]
+```
 
 ####Base sizes
 Base sizes that are the basis of Gutenberg. All calculations are based on these sizes.
@@ -138,7 +142,7 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ```
 
 ####Attention grabber
-Usually used as an intro of the text. Makes the text slightly bigger than body text so it stands out.
+*New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text so it stands out.
 
 ```html
 <p class="attention-grabber">An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. </p>
@@ -168,7 +172,7 @@ Correct semantic HTML code for blockquotes:
 ```
 
 ####Quotes
-Quotes that are also figures are bigger and can be floated with .floatLeft or floatRight classes.
+*New since 1.1 update.* Quotes that are also figures are bigger and can be floated with .floatLeft or floatRight classes.
 
 HTML code for quotes:
 
