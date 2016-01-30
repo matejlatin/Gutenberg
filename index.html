@@ -66,7 +66,7 @@
 		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
 		<hr>
 		<h3>What is Gutenberg?</h3>
-		<p>Gutenberg is a flexible and simple–to–use starter kit made with Sass. It’s a small step towards a better web typography. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).</p>
+		<p>Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).</p>
 		<blockquote>
 			<p>The reader should be able to read the message of a text easily and comfortably. This depends to a not inconsiderable extent on the size of the type, the length of the lines and the leading.</p>
 			<cite>—Josef Mueller–Brockmann</cite>
@@ -75,9 +75,9 @@
 
 		<h3>Base type &amp; line-height</h3>
 		<p>All calculations in Gutenberg depend on <em>base type size</em> and <em>line-height</em>. Multiplication of these two results in <em>leading</em> which is essential for setting a correct vertical rhythm and a baseline grid.</p>
-		<pre><code class="scss">$base-font-size: 100; // Equals 16px
+		<pre><code class="scss">$base-font-size: 100; // Converts to 16px
 $line-height: 1.6;
-$leading: $base-type * $line-height;</code></pre>
+$leading: $base-font-size * $line-height;</code></pre>
 
 		<h3>Vertical rhythm and baseline&nbsp;grid</h3>
 		<p>By calculating the <em>leading</em> Gutenberg sets a vertical rhythm by resetting line-height and margins for all elements.</p>
@@ -118,8 +118,8 @@ $leading: $base-type * $line-height;</code></pre>
 		<h3>Mobile first</h3>
 		<p>Gutenberg sets base type size, line-height and calculates the leading for the mobile screens first. The break point is calculated based on maximum (ideal) width of elements. When a screen is wider than that, it resets and recalculates all the sizes so they better fit for desktop screens.</p>
 		<pre><code>// Base sizes
-$base-font-size: 100 !default;
-$base-font-size-desktop: 112.5 !default;
+$base-font-size: 100;
+$base-font-size-desktop: 112.5;
 $line-height: 1.625;
 $line-height-desktop: 1.8;
 $max-width: 35;</code></pre>
@@ -134,7 +134,7 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
 			<a href="example" onclick="ga('send', 'event', 'Links', 'example - default');" target="_blank">The Birth of Movable Type</a><br>Default theme example <br><br>
 			<a href="example2" onclick="ga('send', 'event', 'Links', 'example - custom');" target="_blank">Humane Typography in the Digital Age</a><br>Custom theme example
 		</p>
-		<h3>Sass Mixins</h3>
+		<h3>Made with Sass</h3>
 		<p>Sass makes it easy to understand and reuse most parts of the code. Line-heights, margins, paddings and font-sizes are all calculated based on <em>base font-size</em> and <em>leading</em>. So there’s a mixin for each that sets its value in both pixels (fallback) and REMs. Below is an example of a mixin that sets the bottom margin to x numbers of <em>leading</em>.</p>
 		<pre><code>@mixin margin-bottom($number){
   margin-bottom: #{$number * $leading + 'px'};
