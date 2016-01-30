@@ -10,20 +10,20 @@ Gutenberg is built with Sass and works great with tools like [Grunt](http://grun
 The most important files in the repository are:
 
 **Sass files in src/style**
-- ```_gutenberg-reset``` *custom reset, adapted from [normalize.css](https://necolas.github.io/normalize.css/)*
-- _gutenberg-config *the main configuration file*
-- _gutenberg-mixins *home of all the mixins used in Gutenberg*
-- _gutenberg-typography *this is where the magic happens, don't make changes if you're not 100% sure*
-- _gutenberg-style *add your own styles to this file*
-- _gutenberg-responsive *similar to _gutenberg-typography but for desktop*
+- ```_gutenberg-reset.scss``` *custom reset, adapted from [normalize.css](https://necolas.github.io/normalize.css/)*
+- ```_gutenberg-config.scss``` *the main configuration file*
+- ```_gutenberg-mixins.scss``` *home of all the mixins used in Gutenberg*
+- ```_gutenberg-typography.scss``` *this is where the magic happens, don't make changes if you're not 100% sure*
+- ```_gutenberg-style.scss``` *add your own styles to this file*
+- ```_gutenberg-responsive.scss``` *similar to _gutenberg-typography but for desktop*
 
 **JavaScript files in src/js**
-- main.js *includes the 'fix image height' script that resizes images so they fit into grid*
+- ```main.js``` *includes the 'fix image height' script that resizes images so they fit into grid*
 
-*Note: resizing the images with this JavaScript is optional. Images that aren't resized break the grid but the vertical rhythm shouldn't be affected.*
+*Note: resizing the images with this JavaScript is optional. Images that aren't resized break the grid but the vertical rhythm isn't affected.*
 
 ###Basic configuration
-File: _gutenberg-config.scss
+File: ```_gutenberg-config.scss```
 
 ####Edit mode
 Disables or enables the toggle baseline grid button.
@@ -41,7 +41,7 @@ $custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
 $custom-font-headings: null !default;
 ```
 
-You need to provide a custom font stack if you go for the custom option: *"Libre Baskerville", Georgia, serif*
+You need to provide a custom font stack if you go for the custom option: ```"Libre Baskerville", Georgia, serif```
 
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
@@ -142,7 +142,7 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ```
 
 ####Attention grabber
-*New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text so it stands out.
+*New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
 ```html
 <p class="attention-grabber">An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. </p>
@@ -192,8 +192,6 @@ Johannes Gutenberg invented a printing press with movable type more than 500 yea
 
 ##Contribute
 Gutenberg is an open source project licensed under [Creative Commons 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Feel free to use, adapt or contribute.
-
----
 
 ##History
 ###Gutenberg v1.1
