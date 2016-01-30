@@ -51,18 +51,15 @@ $font-headings: null;
 
 // Font defaults
 html {
-	font-size: #{$base + 'px'};
-	font-size: #{$base-font-size + '%'};
+	@include font-size(1);
 	font-family: $font-body;
 	color: $color-font-body;
 }
 
 // Line-height & margin reset
 * {
-	line-height: #{$leading + 'px'};
-	line-height: #{$leading-rem + 'rem'};
-	margin: 0 0 #{$leading + 'px'};
-	margin: 0 0 #{$leading-rem + 'rem'};
+	@include line-height(1);
+	@include margin(0, 0, 1);
 }
 
 
@@ -72,31 +69,24 @@ html {
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
     #{$heading} {
-    	font-size: #{nth($properties, 1) * $base + 'px'};
-    	font-size: #{nth($properties, 1) + 'rem'};
-    	line-height: #{nth($properties, 2)*$leading + 'px'};
-    	line-height: #{nth($properties, 2)*$leading-rem + 'rem'};
-        margin-top: #{nth($properties, 3) * $leading + 'px'};
-        margin-top: #{nth($properties, 3) * $leading-rem + 'rem'};
-        margin-bottom: #{nth($properties, 4) * $leading + 'px'};
-        margin-bottom: #{nth($properties, 4) * $leading-rem + 'rem'};
+    	@include font-size(nth($properties, 1));
+    	@include line-height(nth($properties, 2));
+    	@include margin-top(nth($properties, 3));
+        @include margin-bottom(nth($properties, 4))
     }
 }
 
 // Set margins between headings
 h1 + h2 {
-	margin-top: #{$leading + 'px'};
-    margin-top: #{$leading-rem + 'rem'};
+	@include margin-top(1);
 }
 
 h2 + h3, h3 + h4, h4 + h5 {
-	margin-top: #{0.5 * $leading + 'px'};
-    margin-top: #{0.5 * $leading-rem + 'rem'};
+	@include margin-top(0.5);
 }
 
 h5 + h6 {
-	margin-top: -#{0.5 * $leading + 'px'};
-    margin-top: -#{0.5 * $leading-rem + 'rem'};
+	@include margin-top(-0.5);
 }
 
 h6 {
@@ -139,16 +129,13 @@ figcaption {
 	font-style: italic;
 	font-size: 0.8125rem;
 	text-align: center;
-	line-height: #{$leading + 'px'};
-	line-height: #{$leading-rem + 'rem'};
+	@include line-height(1);
 	margin-bottom: 0;
 }
 
 blockquote {
 	padding-left: 1.4375rem;
-	// font-size: 0.8125rem;
 	font-style: italic;
-	// font-size: 95%;
 }
 
 cite {
@@ -196,13 +183,11 @@ hr {
 }
 
 small {
-	line-height: #{0.5 * $leading + 'px'};
-	line-height: #{0.5 * $leading-rem + 'rem'};
+	@include line-height(0.5);
 }
 
 code {
-	padding: #{$leading + 'px'};
-	padding: #{$leading-rem + 'rem'};
+	@include padding-equal(1);
 }
 
 

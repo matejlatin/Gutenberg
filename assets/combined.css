@@ -304,7 +304,7 @@ img {
    ========================================================================== */
 html {
   font-size: 16px;
-  font-size: 100%;
+  font-size: 1rem;
   font-family: "ff-meta-serif-web-pro", Georgia, Times, serif;
   color: #222222;
 }
@@ -312,8 +312,8 @@ html {
 * {
   line-height: 26px;
   line-height: 1.625rem;
-  margin: 0 0 26px;
-  margin: 0 0 1.625rem;
+  margin: 0px 0px 26px;
+  margin: 0rem 0rem 1.625rem;
 }
 
 /* Headings
@@ -851,6 +851,7 @@ hr + h3 {
     margin-right: auto !important;
     line-height: 32px;
     line-height: 1.6rem;
+    margin-bottom: 32px;
     margin-bottom: 1.6rem;
   }
 
@@ -976,8 +977,8 @@ hr + h3 {
   figure.floatRight {
     max-width: 350px;
     max-width: 17.5rem;
-    padding: 0 32px;
-    padding: 0 1.6rem;
+    padding: 0px 32px;
+    padding: 0rem 1.6rem;
   }
 
   figcaption {
@@ -1009,15 +1010,15 @@ hr + h3 {
   }
 
   hr {
-    margin-top: 52px;
-    margin-top: 3.25rem;
-    margin-bottom: 52px;
-    margin-bottom: 3.25rem;
-    height: 26px;
-    height: 1.625rem;
-    background-size: 100% 26px;
-    background-size: 100% 1.625rem;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #ccc 11px, #ccc 15px, transparent 15px, transparent 26px);
+    margin-top: 64px;
+    margin-top: 3.2rem;
+    margin-bottom: 64px;
+    margin-bottom: 3.2rem;
+    height: 32px;
+    height: 1.6rem;
+    background-size: 100% 32px;
+    background-size: 100% 1.6rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 14px, #ccc 14px, #ccc 18px, transparent 18px, transparent 32px);
   }
 
   code {
@@ -1056,10 +1057,6 @@ hr + h3 {
   footer {
     margin-top: 48px;
     margin-top: 2.400000000000001rem;
-  }
-  footer .grid-overlay, footer .hero {
-    padding-bottom: 64px;
-    padding-bottom: 3.2rem;
   }
   footer h2 {
     font-size: 40px;

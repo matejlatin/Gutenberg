@@ -1,5 +1,8 @@
 @media screen and (min-width: 40rem){
 
+	$leading: $leading-desktop;
+	$leading-rem: $leading-rem-desktop;
+	$hr-margin: $hr-margin-desktop;
 	@import "gutenberg-mixins";
 
 	* {
@@ -7,24 +10,22 @@
 		max-width: #{$max-width + 'rem'};
 		margin-left: auto!important;
 		margin-right: auto!important;
-		line-height: #{$leading-desktop + 'px'};
-		line-height: #{$leading-rem-desktop + 'rem'};
-		margin-bottom: #{$leading-rem-desktop + 'rem'};
+		@include line-height(1);
+		@include margin-bottom(1);
 	}
 
 	html {
-		// font-size: #{$base-font-size-desktop + '%'};
 		font-size: #{$base-desktop + 'px'};
 		font-size: #{$base-font-size-desktop / 100 + 'rem'};
 	}
 
 	.grid, .grid-light {
-		background-size: 100% #{$leading-desktop + 'px'};
-		background-size: 100% #{$leading-rem-desktop + 'rem'};
+		background-size: 100% #{$leading + 'px'};
+		background-size: 100% #{$leading-rem + 'rem'};
 	}
 
 	.grid-double {
-		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading-desktop + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading-desktop + 'px'}, transparent #{ 0.5 * $leading-desktop + 1 + 'px'}, transparent #{$leading-desktop + 'px'});
+		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
 	}
 
 	body, html {
@@ -36,12 +37,11 @@
 	article {
 		max-width: #{1.5 * $max-width * $base-desktop + 'px'};
 		max-width: #{1.5 * $max-width + 'rem'};
-		// max-width: none;
 	}
 
 	.toggleWrapper {
-		top: #{$leading-desktop + 'px'};
-		right: #{$leading-desktop + 'px'};
+		top: #{$leading + 'px'};
+		right: #{$leading + 'px'};
 	}
 
 	// Heading sizes, line-heights and margins
@@ -49,38 +49,29 @@
 		#{$heading} {
 			font-size: #{nth($properties, 1) * $base-desktop + 'px'};
 			font-size: #{nth($properties, 1) + 'rem'};
-			line-height: #{nth($properties, 2)*$leading-desktop + 'px'};
-			line-height: #{nth($properties, 2)*$leading-rem-desktop + 'rem'};
-			margin-top: #{nth($properties, 3) * $leading-desktop + 'px'};
-			margin-top: #{nth($properties, 3) * $leading-rem-desktop + 'rem'};
-			margin-bottom: #{nth($properties, 4) * $leading-desktop + 'px'};
-			margin-bottom: #{nth($properties, 4) * $leading-rem-desktop + 'rem'};
+			@include line-height(nth($properties, 2));
+			@include margin-top(nth($properties, 3));
+			@include margin-bottom(nth($properties, 4));
 		}
 	}
 
 	h1 {
 		font-size: #{ 5 * $base-desktop + 'px'};
 		font-size: #{ 5 + 'rem'};
-		line-height: #{4*$leading-desktop + 'px'};
-		line-height: #{4*$leading-rem-desktop + 'rem'};
-		// margin-bottom: #{ 1 * $leading-desktop + 'px'};
-		// margin-bottom: #{ 1 * $leading-rem-desktop + 'rem'};
+		@include line-height(4);
 	}
 
 	// Set margins between headings
 	h1 + h2 {
-		margin-top: #{$leading-desktop + 'px'};
-		margin-top: #{$leading-rem-desktop + 'rem'};
+		@include margin-top(1);
 	}
 
 	h2 + h3, h3 + h4, h4 + h5 {
-		margin-top: #{0.5 * $leading-desktop + 'px'};
-		margin-top: #{0.5 * $leading-rem-desktop + 'rem'};
+		@include margin-top(0.5);
 	}
 
 	h5 + h6 {
-		margin-top: -#{0.5 * $leading-desktop + 'px'};
-		margin-top: -#{0.5 * $leading-rem-desktop + 'rem'};
+		@include margin-top(-0.5);
 	}
 
 	// Floated images width & padding
@@ -88,13 +79,11 @@
 	figure.floatRight {
 		max-width: #{0.5 * $max-width * $base-desktop + 'px'};
 		max-width: #{0.5 * $max-width + 'rem'};
-		padding: 0 #{$leading-desktop + 'px'};
-		padding: 0 #{$leading-rem-desktop + 'rem'};
+		@include padding(0, 1);
 	}
 
 	figcaption {
-		line-height: #{$leading-desktop + 'px'};
-		line-height: #{$leading-rem-desktop + 'rem'};
+		@include line-height(1);
 		margin-bottom: 0;
 	}
 
@@ -116,8 +105,7 @@
 	}
 
 	small {
-		line-height: #{0.5 * $leading-desktop + 'px'};
-		line-height: #{0.5 * $leading-rem-desktop + 'rem'};
+		@include line-height(0.5);
 	}
 
 	// Horizontal rule
@@ -135,14 +123,12 @@
 	}
 
 	code {
-		padding: #{$leading-desktop + 'px'};
-		padding: #{$leading-rem-desktop + 'rem'};
+		@include padding-equal(1);
 		font-size: 18px;
 	}
 
 	.example {
-		padding: #{ $leading-desktop + 'px' };
-		padding: #{ $leading-rem-desktop + 'rem' };
+		@include padding-equal(1);
 
 		p {
 			margin-bottom: 0;
@@ -151,33 +137,22 @@
 		h1 {
 			font-size: #{ 3.5 * $base-desktop + 'px'};
 			font-size: #{ 3.5 + 'rem'};
-			line-height: #{3 * $leading-desktop + 'px'};
-			line-height: #{ 3 * $leading-rem-desktop + 'rem'};
-			margin-top: #{ $leading-desktop + 'px'};
-			margin-top: #{ $leading-rem-desktop + 'rem'};
-			margin-bottom: #{ 0.5 * $leading-desktop + 'px'};
-			margin-bottom: #{ 0.5 * $leading-rem-desktop + 'rem'};
+			@include line-height(3);
+			@include margin-top(1);
+			@include margin-bottom(0.5);
 		}
 
 		h6 {
-			margin-top: #{ 0.5 * $leading-desktop + 'px'};
-			margin-top: #{ 0.5 * $leading-rem-desktop + 'rem'};
+			@include margin-top(0.5);
 		}
 	}
 
 	.heading2 h2 {
-		margin-top: #{ 1.5 * $leading-desktop + 'px'};
-		margin-top: #{ 1.5 * $leading-rem-desktop + 'rem'};
+		@include margin-top(1.5);
 	}
 
 	footer {
-		margin-top: #{ 1.5 * $leading-desktop + 'px'};
-		margin-top: #{ 1.5 * $leading-rem-desktop + 'rem'};
-
-		.grid-overlay {
-			padding-bottom: #{ 2 * $leading-desktop + 'px'};
-			padding-bottom: #{ 2 * $leading-rem-desktop + 'rem'};
-		}
+		@include margin-top(1.5);
 
 		h2 {
 			font-size: #{ 2 * $base-desktop + 'px'};
@@ -210,16 +185,13 @@
 		h2 {
 			margin-top: 0;
 			font-size: 22px;
-			line-height: #{ 1 * $leading-desktop + 'px' };
-			line-height: #{ 1 * $leading-rem-desktop + 'rem' };
+			@include line-height(1);
 			max-width: none;
 		}
 	}
 
 	.buttons {
 
-		// margin-top: #{ 1.5 * $leading-desktop + 'px' };
-		// margin-top: #{ 1.5 * $leading-rem-desktop + 'rem' };
 		max-width: #{$max-width * $base-desktop + 'px'};
 		max-width: #{$max-width + 'rem'};
 
@@ -244,8 +216,8 @@
 	}
 
 	.grid-overlay {
-		padding-bottom: #{ 3 * $leading-desktop + 'px' };
-		padding-bottom: #{ 3 * $leading-rem-desktop + 'rem' };
+		padding-bottom: #{ 3 * $leading + 'px' };
+		padding-bottom: #{ 3 * $leading-rem + 'rem' };
 	}
 
 	.hero {
@@ -254,19 +226,16 @@
 		p {
 			max-width: #{ 34 * $base-desktop + 'px'};
 			max-width: #{ 34 + 'rem'};
-			margin-bottom: #{ 3 * $leading-desktop + 'px' };
-			margin-bottom: #{ 3 * $leading-rem-desktop + 'rem' };
+			@include margin-bottom(3);
 		}
 
 		img {
-			margin-bottom: #{ -8 * $leading-desktop + 'px' };
-			margin-bottom: #{ -8 * $leading-rem-desktop + 'rem' };
+			@include margin-bottom(-8);
 			max-width: 638px;
 		}
 	}
 
 	.img-spacing {
-		margin-top: #{ 9 * $leading-desktop + 'px' };
-		margin-top: #{ 9 * $leading-rem-desktop + 'rem' };
+		@include margin-top(9);
 	}
 }
