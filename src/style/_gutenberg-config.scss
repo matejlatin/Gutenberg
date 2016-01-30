@@ -7,6 +7,8 @@ $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 $theme: Merriweather; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
 $custom-font-headings: null !default;
+
+// Paragraph indenting
 $paragraph-indent: false; // [ true / false ]
 
 // Base sizes
