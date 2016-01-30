@@ -60,11 +60,11 @@ $line-height: 1.625;
 $line-height-desktop: 1.7;
 $max-width: 35;
 ```
-$base-font-size and $base-font-size-desktop must be set in percentages. They will be converted to pixels and REMs in later calculations.
+```$base-font-size``` and ```$base-font-size-desktop``` must be set in percentages. They will be converted to pixels and REMs in later calculations.
 
-$line-height and $line-height-desktop must be set in decimal numbers.
+```$line-height``` and ```$line-height-desktop``` must be set in decimal numbers.
 
-$max-width must be set in a full number that will be converted to pixels and REMs.
+```$max-width``` must be set in a full number that will be converted to pixels and REMs.
 
 Calculation example for mobile sizes:
 
@@ -77,7 +77,7 @@ $leading-rem: $leading / $base;
 *Note: $leading number gets rounded because different browsers treat decimal pixels differently. You should configure Sass to round numbers to 15 decimals to get the best results with Gutenberg. If not, some sizes might seem to break the baseline grid.*
 
 ####Modular scale
-A collection of sizes based on Modular Scale by Tim Brown. Only used as a guide for now. *A possibility to change modular sizes is planned for future releases.*
+A collection of sizes based on [Modular Scale](http://www.modularscale.com/) by Tim Brown. Only used as a guide for now. *A possibility to change modular sizes is planned for future releases.*
 
 ####Headings options
 All heading sizes, line-heights and margins are all stored in this Sass map.
@@ -145,7 +145,9 @@ Gutenberg has some classes that work very well with elements like figures, quote
 *New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
 ```html
-<p class="attention-grabber">An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. </p>
+<p class="attention-grabber">
+	An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term.
+</p>
 ```
 
 ####Figures
