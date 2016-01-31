@@ -46,7 +46,7 @@ You need to provide a custom font stack if you go for the custom option: ```"Lib
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
 
-![Paragraph indenting](https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png" alt="Indented paragraphs">
 *An example of indented paragraphs.*
 
 ```sass
