@@ -130,10 +130,12 @@ $hr-height: 4; // [ 2 ] — In pixels, only for line style
 
 The line style can be configured by width and height, both set in pixels. The type style variables include ```$hr-type-content``` (characters) and ```$hr-type-char-spacing``` (spacing between the characters).
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png" alt="Line horizontal rule" width="300">
+
 *An example of 'line' horizontal rule.*
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png" alt="Type horizontal rule" width="300">
+
 *An example of 'type' horizontal rule.*
 
 ###Special elements and classes
