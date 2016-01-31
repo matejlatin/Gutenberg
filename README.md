@@ -47,6 +47,7 @@ You need to provide a custom font stack if you go for the custom option: ```"Lib
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
 
 <img src="https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png" alt="Indented paragraphs" width="300">
+
 *An example of indented paragraphs.*
 
 ```sass
@@ -153,7 +154,8 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ####Attention grabber
 *New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png" alt="Attention grabber" width="300">
+
 *An example of an attention grabber at the beginning of the article.*
 
 ```html
@@ -172,7 +174,8 @@ Figures can be floated with the ```.floatLeft``` or ```.floatRight``` classes. F
 </figure>
 ```
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png" alt="Floated figure" width="300">
+
 *An example of a figure with ```.floatLeft``` class applied.*
 
 ####Blockquote
@@ -188,7 +191,8 @@ Correct semantic HTML code for blockquotes:
 </blockquote>
 ```
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png" alt="Blockquote" width="300">
+
 *An example of a blockquote.*
 
 ####Quotes
@@ -207,10 +211,12 @@ HTML code for quotes:
 </figure>
 ```
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png" alt="Figure quote" width="300">
+
 *An example of a quote wrapped in ```<figure>``` tags.*
 
-![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png)
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png" alt="Floated figure" width="300">
+
 *An example of a quote wrapped in ```<figure>``` tags and with ```.floatLeft``` class applied.*
 
 ##Why Gutenberg?
