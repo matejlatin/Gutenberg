@@ -46,7 +46,7 @@ You need to provide a custom font stack if you go for the custom option: ```"Lib
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png" alt="Indented paragraphs" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png" alt="Indented paragraphs" width="450" style="border:1px solid #ccc">
 
 *An example of indented paragraphs.*
 
@@ -130,11 +130,11 @@ $hr-height: 4; // [ 2 ] — In pixels, only for line style
 
 The line style can be configured by width and height, both set in pixels. The type style variables include ```$hr-type-content``` (characters) and ```$hr-type-char-spacing``` (spacing between the characters).
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png" alt="Line horizontal rule" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png" alt="Line horizontal rule" width="450" style="border:1px solid #ccc">
 
 *An example of 'line' horizontal rule.*
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png" alt="Type horizontal rule" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png" alt="Type horizontal rule" width="450" style="border:1px solid #ccc">
 
 *An example of 'type' horizontal rule.*
 
@@ -156,7 +156,7 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ####Attention grabber
 *New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png" alt="Attention grabber" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png" alt="Attention grabber" width="450" style="border:1px solid #ccc">
 
 *An example of an attention grabber at the beginning of the article.*
 
@@ -176,7 +176,7 @@ Figures can be floated with the ```.floatLeft``` or ```.floatRight``` classes. F
 </figure>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png" alt="Floated figure" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
 
 *An example of a figure with ```.floatLeft``` class applied.*
 
@@ -193,7 +193,7 @@ Correct semantic HTML code for blockquotes:
 </blockquote>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png" alt="Blockquote" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png" alt="Blockquote" width="450" style="border:1px solid #ccc">
 
 *An example of a blockquote.*
 
@@ -213,11 +213,11 @@ HTML code for quotes:
 </figure>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png" alt="Figure quote" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png" alt="Figure quote" width="450" style="border:1px solid #ccc">
 
 *An example of a quote wrapped in ```<figure>``` tags.*
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png" alt="Floated figure" width="450">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
 
 *An example of a quote wrapped in ```<figure>``` tags and with ```.floatLeft``` class applied.*
 
