@@ -466,13 +466,12 @@ hr {
   height: 26px;
   height: 1.625rem;
   color: #222222;
-  text-align: center;
+  background-size: 100% 26px;
+  background-size: 100% 1.625rem;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222222 11px, #222222 15px, transparent 15px, transparent 26px);
+  width: 100px;
   display: block;
   border: 0;
-}
-hr:before {
-  content: "***";
-  letter-spacing: 0.2em;
 }
 
 small {
@@ -768,6 +767,9 @@ article, body > footer {
     margin-bottom: 3.444444444444445rem;
     height: 31px;
     height: 1.722222222222222rem;
+    background-size: 100% 31px;
+    background-size: 100% 1.722222222222222rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #222222 13.5px, #222222 17.5px, transparent 17.5px, transparent 31px);
   }
 
   code {

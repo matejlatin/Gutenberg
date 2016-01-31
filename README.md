@@ -1,7 +1,7 @@
 # Gutenberg: A Meaningful Web Typography Starter Kit
 Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width). Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.
 
-[View Example](http://matejlatin.github.io/Gutenberg/example2)
+[View an Example](http://matejlatin.github.io/Gutenberg/example2)
 
 ##Installation
 Gutenberg is built with Sass and works great with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). Fork or download the repository to get started.
@@ -46,6 +46,9 @@ You need to provide a custom font stack if you go for the custom option: ```"Lib
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
 
+![Paragraph indenting](https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png)
+*An example of indented paragraphs.*
+
 ```sass
 $paragraph-indent: false; // [ true / false ]
 ```
@@ -74,7 +77,7 @@ $leading: round($base * $line-height);
 $leading-rem: $leading / $base;
 ```
 
-*Note: $leading number gets rounded because different browsers treat decimal pixels differently. You should configure Sass to round numbers to 15 decimals to get the best results with Gutenberg. If not, some sizes might seem to break the baseline grid.*
+*Note: ```$leading``` number gets rounded because different browsers treat decimal pixels differently. You should configure Sass to round numbers to 15 decimals to get the best results with Gutenberg. If not, some sizes might seem to break the baseline grid.*
 
 ####Modular scale
 A collection of sizes based on [Modular Scale](http://www.modularscale.com/) by Tim Brown. Only used as a guide for now. *A possibility to change modular sizes is planned for future releases.*
@@ -111,7 +114,7 @@ $color-link-visited: $color-font-light;
 ```
 
 ####Horizontal rule
-Horizontal rule comes in two styles: line and type. General settings for horizontal rule are $hr-margin (for mobile), $hr-mobile-desktop (can match $hr-margin if no difference for desktop screens required) and $hr-color.
+Horizontal rule comes in two styles: line and type. General settings for horizontal rule are ```$hr-margin``` (for mobile), ```$hr-mobile-desktop``` (can match $hr-margin if no difference for desktop screens required) and ```$hr-color```.
 
 ```sass
 $hr-style: type; // [ line / type ]
@@ -124,7 +127,13 @@ $hr-width: 100; // [ 100 ] — In pixels, only for line style
 $hr-height: 4; // [ 2 ] — In pixels, only for line style
 ```
 
-The line style can be configured by width and height, both set in pixels. The type style variables include $hr-type-content (characters) and $hr-type-char-spacing (spacing between the characters).
+The line style can be configured by width and height, both set in pixels. The type style variables include ```$hr-type-content``` (characters) and ```$hr-type-char-spacing``` (spacing between the characters).
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png)
+*An example of 'line' horizontal rule.*
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png)
+*An example of 'type' horizontal rule.*
 
 ###Special elements and classes
 
@@ -144,6 +153,9 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ####Attention grabber
 *New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png)
+*An example of an attention grabber at the beginning of the article.*
+
 ```html
 <p class="attention-grabber">
 	An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term.
@@ -151,7 +163,7 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ```
 
 ####Figures
-Figures can be floated with the .floatLeft or .floatRight classes. Floated figures are pushed outside of text content on desktop screens but not on mobile.
+Figures can be floated with the ```.floatLeft``` or ```.floatRight``` classes. Floated figures are pushed outside of text content on desktop screens but not on mobile.
 
 ```html
 <figure class="floatLeft">
@@ -160,18 +172,24 @@ Figures can be floated with the .floatLeft or .floatRight classes. Floated figur
 </figure>
 ```
 
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png)
+*An example of a figure with ```.floatLeft``` class applied.*
+
 ####Blockquote
 Blockquotes are indented, font-size is slightly smaller than body text and in italics.
 
 Correct semantic HTML code for blockquotes:
 ```html
 <blockquote>
-	<p>Quote</p>
+	<p>It is a press, certainly, but a press from which shall flow in inexhaustible streams… Through it, god will spread his word.</p>
 	<footer>
-		<cite>—Author</cite>
+		<cite>—Johannes Gutenberg</cite>
 	</footer>
 </blockquote>
 ```
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png)
+*An example of a blockquote.*
 
 ####Quotes
 *New since 1.1 update.* Quotes that are also figures are bigger and can be floated with .floatLeft or floatRight classes.
@@ -181,13 +199,19 @@ HTML code for quotes:
 ```html
 <figure>
 	<blockquote>
-		Quote
+		<p>It is a press, certainly, but a press from which shall flow in inexhaustible streams… Through it, god will spread his word.</p>
 		<footer>
-			<cite>—Author</cite>
+			<cite>—Johannes Gutenberg</cite>
 		</footer>
 	</blockquote>
 </figure>
 ```
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png)
+*An example of a quote wrapped in ```<figure>``` tags.*
+
+![GitHub Logo](https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png)
+*An example of a quote wrapped in ```<figure>``` tags and with ```.floatLeft``` class applied.*
 
 ##Why Gutenberg?
 Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.
