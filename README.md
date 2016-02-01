@@ -1,5 +1,7 @@
 # Gutenberg: A Meaningful Web Typography Starter Kit
-Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width). Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.
+Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).
+
+Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.
 
 [View an Example](http://matejlatin.github.io/Gutenberg/example2)
 
@@ -46,7 +48,7 @@ You need to provide a custom font stack if you go for the custom option: ```"Lib
 ####Paragraph indenting
 *New since 1.1 update.* Paragraphs have no breaks between them but the first line of a paragraph following another paragraph is indented.
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702517/817c4d6e-c823-11e5-88b1-8706d209b3b7.png" alt="Indented paragraphs" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720213/7a3180fa-c8f1-11e5-8ad4-654681d43f44.png" alt="Indented paragraphs" width="450" style="border:1px solid #ccc">
 
 *An example of indented paragraphs.*
 
@@ -130,11 +132,11 @@ $hr-height: 4; // [ 2 ] — In pixels, only for line style
 
 The line style can be configured by width and height, both set in pixels. The type style variables include ```$hr-type-content``` (characters) and ```$hr-type-char-spacing``` (spacing between the characters).
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702515/81647482-c823-11e5-8c8d-b762fc50d99f.png" alt="Line horizontal rule" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720212/7a2cc272-c8f1-11e5-8eb9-6769d26ab361.png" width="450" style="border:1px solid #ccc">
 
 *An example of 'line' horizontal rule.*
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702516/816779ca-c823-11e5-96bf-d8c8744a6cdf.png" alt="Type horizontal rule" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720209/7a119754-c8f1-11e5-8bcd-e4787cb0b026.png" alt="Type horizontal rule" width="450" style="border:1px solid #ccc">
 
 *An example of 'type' horizontal rule.*
 
@@ -156,7 +158,7 @@ Gutenberg has some classes that work very well with elements like figures, quote
 ####Attention grabber
 *New since 1.1 update.* Usually used as an intro of the text. Makes the text slightly bigger than body text which results in a nice contrast.
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702513/815ec438-c823-11e5-8939-cdfbaf8435e2.png" alt="Attention grabber" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720206/7a0e6c14-c8f1-11e5-8bff-d78521ef13c4.png" alt="Attention grabber" width="450" style="border:1px solid #ccc">
 
 *An example of an attention grabber at the beginning of the article.*
 
@@ -176,7 +178,7 @@ Figures can be floated with the ```.floatLeft``` or ```.floatRight``` classes. F
 </figure>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702511/8155656e-c823-11e5-81c0-c86e103a2ae1.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720211/7a1410f6-c8f1-11e5-8e48-194ec9bd2944.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
 
 *An example of a figure with ```.floatLeft``` class applied.*
 
@@ -193,7 +195,7 @@ Correct semantic HTML code for blockquotes:
 </blockquote>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702514/81614c94-c823-11e5-9a7b-d799563be8b2.png" alt="Blockquote" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720210/7a132362-c8f1-11e5-954b-b2f6a8abee6b.png" alt="Blockquote" width="450" style="border:1px solid #ccc">
 
 *An example of a blockquote.*
 
@@ -213,11 +215,11 @@ HTML code for quotes:
 </figure>
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702510/812dd7e2-c823-11e5-9a24-2a594c8f0d9d.png" alt="Figure quote" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720207/7a0edc44-c8f1-11e5-88fd-f1d72c541832.png" alt="Figure quote" width="450" style="border:1px solid #ccc">
 
 *An example of a quote wrapped in ```<figure>``` tags.*
 
-<img src="https://cloud.githubusercontent.com/assets/3218960/12702512/815e208c-c823-11e5-87f5-0dc776bb9d75.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
+<img src="https://cloud.githubusercontent.com/assets/3218960/12720208/7a0f0688-c8f1-11e5-99a7-14e54b64c847.png" alt="Floated figure" width="450" style="border:1px solid #ccc">
 
 *An example of a quote wrapped in ```<figure>``` tags and with ```.floatLeft``` class applied.*
 
