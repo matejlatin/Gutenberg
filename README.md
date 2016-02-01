@@ -1,5 +1,5 @@
 # Gutenberg: A Meaningful Web Typography Starter Kit
-Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).
+[Gutenberg](http://matejlatin.github.io/Gutenberg/) is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).
 
 Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes sure all elements fit into it. It sets up the macro typography so you can focus on the micro–typographic details.
 
