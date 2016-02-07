@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
 Gutenberg: Web Typography Starter Kit
-Website ....... TBD
-Version ....... 0.1
+Website ....... http://matejlatin.github.io/Gutenberg/
+Version ....... 1.1
 Github ........ https://github.com/matejlatin/Gutenberg
 Authors ....... Matej Latin (@matejlatin)
 License ....... Creative Commmons Attribution 3.0
@@ -683,9 +683,9 @@ article, body > footer {
   }
 }
 /* TODOs:
- - The grid doesn't readjust when resizing browser window in Chrome (?),
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
- - check browser compatibility.
+ - table + side comments elements,
+ - translate to Less and Stylus.
  */
 
 /*# sourceMappingURL=gutenberg.css.map */
