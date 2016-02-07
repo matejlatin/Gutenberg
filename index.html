@@ -51,19 +51,20 @@
 		<a id="btnToggleGrid" class="btnToggleGrid" href="javascript:void(0)">Turn Grid On</a>
 	</div>
 	<div class="hero cf">
-		<div class="grid-overlay grid-light cf">
+		<div class="grid-overlay cf">
+			<img src="gutenberg.png" class="gutenberg" alt="Gutenberg" height="160">
 			<hgroup>
 				<h1 class="alignCenter">Gutenberg</h1>
 				<h2 class="alignCenter"><span>A Meaningful Web Typography Starter&nbsp;Kit</span></h2>
 			</hgroup>
-			<p class="alignCenter">Gutenberg is a work–in–progress project that brings meaning and craftsmanship to web typography.</p>
-			<img src="devices.png" alt="Devices">
+			<p class="alignCenter">Gutenberg is a work–in–progress project by <a href="http://matejlatin.co.uk" target="_blank" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');">Matej Latin</a> that brings meaning and craftsmanship to web typography.</p>
+			<img class="screen" src="devices.png" alt="Devices">
 		</div>
 	</div>
 	<article>
 		<h2 class="alignCenter img-spacing">Gutenberg v1.1</h2>
 		<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
-		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
+		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github" onclick="ga('send', 'event', 'Buttons', 'github');"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click(); ga('send', 'event', 'Buttons', 'twitter');"><div class="twitter">Tweet this</div></a></div>
 		<hr>
 		<h3>What is Gutenberg?</h3>
 		<p>Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).</p>
@@ -154,8 +155,10 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
 		<hr>
 		<h2 class="alignCenter">Gutenberg v1.1</h2>
 		<p class="alignCenter">Gutenberg is an open source project licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons 3.0</a>. Feel free to use, adapt or contribute.</p>
-		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click();"><div class="twitter">Tweet this</div></a></div>
+		<div class="buttons alignCenter"><a href="https://github.com/matejlatin/Gutenberg" target="_blank" class="github" onclick="ga('send', 'event', 'Buttons', 'github');"><div>Fork on Github</div></a> <a class="tweet" href="javascript:void(0)" onclick="fbs_click(); ga('send', 'event', 'Buttons', 'twitter');"><div class="twitter">Tweet this</div></a></div>
 		<hr>
+		<h3>Future upgrades</h3>
+		<p>New elements like tables and side comments will be added soon. Looking for people to translate this project to <strong>Less</strong> and <strong>Stylus</strong>. <a href="mailto:matejlatin@gmail.com">Get in touch</a>.</p>
 		<h3>History</h3>
 		<p><strong>Gutenberg v1.1</strong> — <em>Jan 20, 2016</em></p>
 		<ul>
@@ -177,7 +180,7 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
 		</ul>
 	</article>
 	<footer class="alignCenter clearfix">
-		<div class="grid-overlay clearfix">
+			<img src="gutenberg.png" alt="Gutenberg" height="64">
 			<h2>Gutenberg</h2>
 			<p>
 				<small>
@@ -185,7 +188,6 @@ $custom-font-headings: "Open Sans", sans-serif;</code></pre>
 					Handcrafted by <a href="http://matejlatin.co.uk" onclick="ga('send', 'event', 'Links', 'matejlatin.co.uk');" target="_blank">Matej Latin</a>.
 				</small>
 			</p>
-		</div>
 	</footer>
 	<script>
 		// Toggle Grid Functionality

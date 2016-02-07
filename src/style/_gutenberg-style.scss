@@ -109,13 +109,17 @@ article {
 		margin-bottom: #{ 3 * $leading-rem + 'rem' };
 	}
 
-	img {
+	img.screen {
 		margin-bottom: #{ -6 * $leading + 'px' };
 		margin-bottom: #{ -6 * $leading-rem + 'rem' };
 		// float: left;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 90%;
+	}
+
+	img.gutenberg {
+		@include margin-top(4);
 	}
 }
 
@@ -288,26 +292,15 @@ code {
 footer {
 	width: 100%;
 	max-width: none;
-	// background: #f3f3f3;
 	margin-bottom: 0;
-	margin-top: #{ 1.5 * $leading + 'px'};
-	margin-top: #{ 1.5 * $leading-rem + 'rem'};
-
-	.grid-overlay {
-		padding-bottom: #{ 2 * $leading + 'px'};
-		padding-bottom: #{ 2 * $leading-rem + 'rem'};
-	}
+	@include padding(4, 0, 1);
 
 	h2 {
 		color: #FF1935;
 		text-transform: uppercase;
-		text-shadow:
-		0.5px 0.5px #333E51,
-		1px 1px #333E51,
-		1.5px 1.5px #333E51,
-		2px 2px #333E51;
         font-weight: 900;
-        font-size: 1.4375rem;
+        @include margin-top(0);
+        @include font-size(1.4375);
     }
 }
 

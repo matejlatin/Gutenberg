@@ -51,7 +51,7 @@ function toggleGrid(){
 	} else if (flip == 2) {
 		body.classList.remove("grid");
 		hero.classList.remove("grid");
-		hero.classList.add("grid-light");
+		// hero.classList.add("grid-light");
 		body.classList.remove("grid-double");
 		hero.classList.remove("grid-double");
 		button.classList.remove("grid-off");

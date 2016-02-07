@@ -56,9 +56,10 @@
 	}
 
 	h1 {
-		font-size: #{ 5 * $base-desktop + 'px'};
-		font-size: #{ 5 + 'rem'};
+		font-size: #{ 4 * $base-desktop + 'px'};
+		font-size: #{ 4 + 'rem'};
 		@include line-height(4);
+		@include margin-top(0);
 	}
 
 	// Set margins between headings
@@ -152,11 +153,10 @@
 	}
 
 	footer {
-		@include margin-top(1.5);
+		@include padding(4, 0, 1);
 
 		h2 {
-			font-size: #{ 2 * $base-desktop + 'px'};
-			font-size: #{ 2 + 'rem'};
+			@include font-size(1.4375);
 		}
 	}
 
@@ -226,12 +226,16 @@
 		p {
 			max-width: #{ 34 * $base-desktop + 'px'};
 			max-width: #{ 34 + 'rem'};
-			@include margin-bottom(3);
+			@include margin-bottom(2);
 		}
 
-		img {
+		img.screen {
 			@include margin-bottom(-8);
 			max-width: 638px;
+		}
+
+		img.gutenberg {
+			@include margin-top(3);
 		}
 	}
 

@@ -323,8 +323,8 @@ h1 {
   font-size: 2.4rem;
   line-height: 78px;
   line-height: 4.875rem;
-  margin-top: 130px;
-  margin-top: 8.125rem;
+  margin-top: 0px;
+  margin-top: 0rem;
   margin-bottom: 0px;
   margin-bottom: 0rem;
 }
@@ -597,12 +597,16 @@ article {
   margin-bottom: 78px;
   margin-bottom: 4.875rem;
 }
-.hero img {
+.hero img.screen {
   margin-bottom: -156px;
   margin-bottom: -9.75rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
+}
+.hero img.gutenberg {
+  margin-top: 104px;
+  margin-top: 6.5rem;
 }
 
 hgroup h1 {
@@ -742,18 +746,16 @@ footer {
   width: 100%;
   max-width: none;
   margin-bottom: 0;
-  margin-top: 39px;
-  margin-top: 2.4375rem;
-}
-footer .grid-overlay, footer .hero {
-  padding-bottom: 52px;
-  padding-bottom: 3.25rem;
+  padding: 104px 0px 26px;
+  padding: 6.5rem 0rem 1.625rem;
 }
 footer h2 {
   color: #FF1935;
   text-transform: uppercase;
-  text-shadow: 0.5px 0.5px #333E51, 1px 1px #333E51, 1.5px 1.5px #333E51, 2px 2px #333E51;
   font-weight: 900;
+  margin-top: 0px;
+  margin-top: 0rem;
+  font-size: 23px;
   font-size: 1.4375rem;
 }
 
@@ -890,8 +892,8 @@ hr + h3 {
     font-size: 2.4rem;
     line-height: 96px;
     line-height: 4.800000000000001rem;
-    margin-top: 160px;
-    margin-top: 8rem;
+    margin-top: 0px;
+    margin-top: 0rem;
     margin-bottom: 0px;
     margin-bottom: 0rem;
   }
@@ -952,10 +954,12 @@ hr + h3 {
   }
 
   h1 {
-    font-size: 100px;
-    font-size: 5rem;
+    font-size: 80px;
+    font-size: 4rem;
     line-height: 128px;
     line-height: 6.4rem;
+    margin-top: 0px;
+    margin-top: 0rem;
   }
 
   h1 + h2 {
@@ -1055,12 +1059,12 @@ hr + h3 {
   }
 
   footer {
-    margin-top: 48px;
-    margin-top: 2.400000000000001rem;
+    padding: 128px 0px 32px;
+    padding: 6.4rem 0rem 1.6rem;
   }
   footer h2 {
-    font-size: 40px;
-    font-size: 2rem;
+    font-size: 23px;
+    font-size: 1.4375rem;
   }
 
   hgroup {
@@ -1110,13 +1114,17 @@ hr + h3 {
   .hero p {
     max-width: 680px;
     max-width: 34rem;
-    margin-bottom: 96px;
-    margin-bottom: 4.800000000000001rem;
+    margin-bottom: 64px;
+    margin-bottom: 3.2rem;
   }
-  .hero img {
+  .hero img.screen {
     margin-bottom: -256px;
     margin-bottom: -12.8rem;
     max-width: 638px;
+  }
+  .hero img.gutenberg {
+    margin-top: 96px;
+    margin-top: 4.800000000000001rem;
   }
 
   .img-spacing {
