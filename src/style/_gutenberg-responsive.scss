@@ -242,4 +242,8 @@
 	.img-spacing {
 		@include margin-top(9);
 	}
+
+	.sticker {
+		max-width: 428px;
+	}
 }

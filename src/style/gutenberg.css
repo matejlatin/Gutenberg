@@ -1031,6 +1031,10 @@ hr + h3 {
     margin-top: 288px;
     margin-top: 14.4rem;
   }
+
+  .sticker {
+    max-width: 428px;
+  }
 }
 
 /*# sourceMappingURL=gutenberg.css.map */
