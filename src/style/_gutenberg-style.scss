@@ -3,74 +3,74 @@
 
 // Maximum width of the article (Mobile)
 article, body > footer {
-	width: 80%;
-	margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 // Grid button
 .toggleWrapper {
-	@if $edit-mode == true {
-		display: block;
-	} @else if $edit-mode == false {
-		display: none;
-	}
-	position: fixed;
-	top: #{$leading + 'px'};
-	right: #{$leading + 'px'};
-	background-color: #231F20;
-	border-radius: 25px;
-	padding: 0 10px 0 20px;
-	height: 32px;
+  @if $edit-mode == true {
+    display: block;
+  } @else if $edit-mode == false {
+    display: none;
+  }
+  position: fixed;
+  top: #{$leading + 'px'};
+  right: #{$leading + 'px'};
+  background-color: #231F20;
+  border-radius: 25px;
+  padding: 0 10px 0 20px;
+  height: 32px;
 }
 
 .btnToggleGrid {
-	background: url('../../assets/images/grid-icons.png') top right no-repeat;
-	background-size: 32px;
-	display: block;
-	font-size: 14px;
-	text-decoration: none;
-	padding-right: 35px;
-	height: 32px;
-	line-height: 34px;
-	font-family: Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: white;
+  background: url('../../assets/images/grid-icons.png') top right no-repeat;
+  background-size: 32px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding-right: 35px;
+  height: 32px;
+  line-height: 34px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
 
-	&:hover {
-		color: white;
-	}
+  &:hover {
+    color: white;
+  }
 
-	&:active {
-		color: red;
-	}
+  &:active {
+    color: red;
+  }
 }
 
 .double-grid {
-	background-position-y: -32px;
+  background-position-y: -32px;
 }
 
 .grid-off {
-	background-position-y: -64px;
+  background-position-y: -64px;
 }
 
 // Text Alignment
 .alignLeft {
-	text-align: left;
+  text-align: left;
 }
 
 .alignCenter {
-	text-align: center;
+  text-align: center;
 }
 
 .alignRight {
-	text-align: right;
+  text-align: right;
 }
 
 // Fix letter spacing for uppercase
 .uppercase {
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* Put your styles below this line
