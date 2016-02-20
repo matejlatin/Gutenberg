@@ -2,7 +2,8 @@
    ========================================================================== */
 
 // Maximum width of the article (Mobile)
-article, body > footer {
+article,
+body > footer {
   width: 80%;
   margin: 0 auto;
 }
@@ -35,14 +36,14 @@ article, body > footer {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  color: #fff;
 
   &:hover {
-    color: white;
+    color: #fff;
   }
 
   &:active {
-    color: red;
+    color: #f00;
   }
 }
 
@@ -69,7 +70,7 @@ article, body > footer {
 
 // Fix letter spacing for uppercase
 .uppercase {
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
