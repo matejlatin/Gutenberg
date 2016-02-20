@@ -11,7 +11,7 @@ $base-desktop: 16 * ($base-font-size-desktop / 100);
 $leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
-@import "gutenberg-mixins";
+@import 'gutenberg-mixins';
 
 /* Font themes
    ========================================================================== */
@@ -25,7 +25,7 @@ $font-headings: null;
   @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 
   // Set body font
-  $font-body: "Merriweather", Georgia, serif;
+  $font-body: Merriweather, Georgia, serif;
 
 } @else if $theme == OpenSans {
 
@@ -33,7 +33,7 @@ $font-headings: null;
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
 
   // Set body font
-  $font-body: "Open Sans", Arial, Helvetica, Sans-serif;
+  $font-body: Open Sans, Arial, Helvetica, Sans-serif;
 
 } @else if $theme == custom {
 
@@ -77,8 +77,8 @@ html {
   }
 
   .attention-grabber + p {
-    text-indent: 0;
     margin-top: 0;
+    text-indent: 0;
   }
 }
 
@@ -100,17 +100,19 @@ h1 + h2 {
   @include margin-top(1);
 }
 
-h2 + h3, h3 + h4, h4 + h5 {
-  @include margin-top(0.5);
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+  @include margin-top(.5);
 }
 
 h5 + h6 {
-  @include margin-top(-0.5);
+  @include margin-top(-.5);
 }
 
 h6 {
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
 }
 
 // Change headings font if a heading font is set
@@ -130,7 +132,7 @@ h6 {
 
 a {
   color: $color-link-normal;
-  transition: all 0.3s;
+  transition: all .3s;
 
   &:hover {
     color: $color-link-hover;
@@ -138,10 +140,10 @@ a {
 
   &:visited {
     color: $color-link-visited;
-  }
 
-  &:visited:hover {
-    color: $color-link-hover;
+    &:hover {
+      color: $color-link-hover;
+    }
   }
 
   &:active {
@@ -153,17 +155,17 @@ a {
    ========================================================================== */
 
 figcaption {
-  color: $color-font-figcaption;
-  font-style: italic;
-  font-size: 0.8125rem;
-  text-align: center;
-  margin-bottom: 0;
   @include line-height(1);
+  color: $color-font-figcaption;
+  font-size: .8125rem;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 blockquote {
-  padding-left: 1.4375rem;
   font-style: italic;
+  padding-left: 1.4375rem;
   // font-size: 95%;
 }
 
@@ -182,7 +184,8 @@ figure blockquote {
 }
 
 // Lists
-ul, ol {
+ul,
+ol {
   li {
     margin-bottom: 0;
   }
@@ -191,12 +194,14 @@ ul, ol {
 // Horizontal rule
 hr {
   @include margin-top($hr-margin);
-  margin-right: auto;
   @include margin-bottom($hr-margin);
-  margin-left: auto;
+  border: 0;
+  color: $hr-color;
+  display: block;
   height: #{$leading + 'px'};
   height: #{$leading-rem + 'rem'};
-  color: $hr-color;
+  margin-right: auto;
+  margin-left: auto;
 
   @if $hr-style == 'line' {
     background-size: 100% #{$leading + 'px'};
@@ -218,13 +223,10 @@ hr {
       letter-spacing: $hr-type-char-spacing;
     }
   }
-
-  display: block;
-  border: 0;
 }
 
 small {
-  @include line-height(0.5);
+  @include line-height(.5);
 }
 
 code {
@@ -252,5 +254,5 @@ code {
 // Double grid background
 .grid-double {
   @extend .grid;
-  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'}, hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ .5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
 }

@@ -8,11 +8,11 @@ License ....... Creative Commmons Attribution 3.0
 License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/license.txt
 */
 
-@import "gutenberg-reset";
-@import "gutenberg-config";
-@import "gutenberg-typography";
-@import "gutenberg-style";
-@import "gutenberg-responsive";
+@import 'gutenberg-reset';
+@import 'gutenberg-config';
+@import 'gutenberg-typography';
+@import 'gutenberg-style';
+@import 'gutenberg-responsive';
 
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),

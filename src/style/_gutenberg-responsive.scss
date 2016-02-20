@@ -1,12 +1,13 @@
-@media screen and (min-width: #{ $max-width + 5 + 'em'}){
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
 
   $leading: $leading-desktop;
   $leading-rem: $leading-rem-desktop;
   $hr-margin: $hr-margin-desktop;
 
-  @import "gutenberg-mixins";
+  @import gutenberg-mixins;
 
-  body, html {
+  body,
+  html {
     margin: 0;
     width: 100%;
     max-width: none;
@@ -31,7 +32,9 @@
   // Paragraph indent
   @if $paragraph-indent == true {
 
-    p + p, .floatLeft + p, .floatRight + p {
+    p + p,
+    .floatLeft + p,
+    .floatRight + p {
       @include margin-top(-1);
       text-indent: #{ $leading + 'px'};
       text-indent: #{ $leading-rem + 'rem'};
@@ -39,8 +42,8 @@
   }
 
   .toggleWrapper {
-    top: #{$leading-desktop + 'px'};
     right: #{$leading-desktop + 'px'};
+    top: #{$leading-desktop + 'px'};
   }
 
   // Reset grid for desktop line-height
@@ -50,7 +53,7 @@
   }
 
   .grid-double {
-    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ 0.5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ 0.5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
   }
 
   // Set max-wdith for article
@@ -79,12 +82,14 @@
     @include margin-top(1);
   }
 
-  h2 + h3, h3 + h4, h4 + h5 {
-    @include margin-top(0.5);
+  h2 + h3,
+  h3 + h4,
+  h4 + h5 {
+    @include margin-top(.5);
   }
 
   h5 + h6 {
-    @include margin-top(-0.5)
+    @include margin-top(-.5)
   }
 
   // Quotes
@@ -101,12 +106,13 @@
   // Floated images width & padding
   figure.floatLeft,
   figure.floatRight {
-    max-width: #{0.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{0.5 * $max-width + 'rem'};
+    max-width: #{.5 * $max-width * $base-desktop + 'px'};
+    max-width: #{.5 * $max-width + 'rem'};
 
     blockquote {
       text-align: left;
       @include padding-equal(0);
+
       @if $paragraph-indent == true {
         @include margin-top(1);
       }
@@ -152,7 +158,7 @@
 
   // Set small line-height
   small {
-    @include line-height(0.5);
+    @include line-height(.5);
   }
 
   // Horizontal rule
@@ -165,7 +171,7 @@
     @if $hr-style == 'line' {
       background-size: 100% #{$leading + 'px'};
       background-size: 100% #{$leading-rem + 'rem'};
-      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
     }
   }
 
