@@ -300,8 +300,8 @@ img {
 html {
   font-size: 16px;
   font-size: 100%;
-  font-family: "Merriweather", Georgia, serif;
-  color: #222222;
+  font-family: Merriweather, Georgia, serif;
+  color: #222;
 }
 
 * {
@@ -386,7 +386,9 @@ h1 + h2 {
   margin-top: 1.625rem;
 }
 
-h2 + h3, h3 + h4, h4 + h5 {
+h2 + h3,
+h3 + h4,
+h4 + h5 {
   margin-top: 13px;
   margin-top: 0.8125rem;
 }
@@ -397,44 +399,44 @@ h5 + h6 {
 }
 
 h6 {
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
 }
 
 /* Links
    ========================================================================== */
 a {
-  color: #222222;
-  transition: all 0.3s;
+  color: #222;
+  transition: all .3s;
 }
 a:hover {
-  color: #222222;
+  color: #222;
 }
 a:visited {
   color: #888;
 }
 a:visited:hover {
-  color: #222222;
+  color: #222;
 }
 a:active {
-  color: red;
+  color: #f00;
 }
 
 /* Figures & other elements
    ========================================================================== */
 figcaption {
-  color: #222222;
-  font-style: italic;
-  font-size: 0.8125rem;
-  text-align: center;
-  margin-bottom: 0;
   line-height: 26px;
   line-height: 1.625rem;
+  color: #222;
+  font-size: .8125rem;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 blockquote {
-  padding-left: 1.4375rem;
   font-style: italic;
+  padding-left: 1.4375rem;
 }
 
 cite {
@@ -452,26 +454,27 @@ figure blockquote p {
   line-height: 2.4375rem;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   margin-bottom: 0;
 }
 
 hr {
   margin-top: 52px;
   margin-top: 3.25rem;
-  margin-right: auto;
   margin-bottom: 52px;
   margin-bottom: 3.25rem;
-  margin-left: auto;
+  border: 0;
+  color: #222;
+  display: block;
   height: 26px;
   height: 1.625rem;
-  color: #222222;
+  margin-right: auto;
+  margin-left: auto;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222222 11px, #222222 15px, transparent 15px, transparent 26px);
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222 11px, #222 15px, transparent 15px, transparent 26px);
   width: 100px;
-  display: block;
-  border: 0;
 }
 
 small {
@@ -505,7 +508,8 @@ code {
 
 /* Gutenberg defaults
    ========================================================================== */
-article, body > footer {
+article,
+body > footer {
   width: 80%;
   margin: 0 auto;
 }
@@ -533,13 +537,13 @@ article, body > footer {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  color: #fff;
 }
 .btnToggleGrid:hover {
-  color: white;
+  color: #fff;
 }
 .btnToggleGrid:active {
-  color: red;
+  color: #f00;
 }
 
 .double-grid {
@@ -563,7 +567,7 @@ article, body > footer {
 }
 
 .uppercase {
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
@@ -572,7 +576,8 @@ article, body > footer {
 @media screen and (min-width: 40em) {
   /* Mixins
      ========================================================================== */
-  body, html {
+  body,
+  html {
     margin: 0;
     width: 100%;
     max-width: none;
@@ -595,8 +600,8 @@ article, body > footer {
   }
 
   .toggleWrapper {
-    top: 31px;
     right: 31px;
+    top: 31px;
   }
 
   .grid, .grid-double {
@@ -689,7 +694,9 @@ article, body > footer {
     margin-top: 1.722222222222222rem;
   }
 
-  h2 + h3, h3 + h4, h4 + h5 {
+  h2 + h3,
+  h3 + h4,
+  h4 + h5 {
     margin-top: 15.5px;
     margin-top: 0.861111111111111rem;
   }
@@ -769,7 +776,7 @@ article, body > footer {
     height: 1.722222222222222rem;
     background-size: 100% 31px;
     background-size: 100% 1.722222222222222rem;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #222222 13.5px, #222222 17.5px, transparent 17.5px, transparent 31px);
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #222 13.5px, #222 17.5px, transparent 17.5px, transparent 31px);
   }
 
   code {

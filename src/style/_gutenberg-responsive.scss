@@ -4,7 +4,7 @@
   $leading-rem: $leading-rem-desktop;
   $hr-margin: $hr-margin-desktop;
 
-  @import gutenberg-mixins;
+  @import 'gutenberg-mixins';
 
   body,
   html {
