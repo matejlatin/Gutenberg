@@ -1,6 +1,21 @@
 {
   "name": "gutenberg-web-type",
-  "version": "0.1",
+  "version": "0.1.0",
+  "description": "Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).",
+  "main": "index.html",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matejlatin/Gutenberg.git"
+  },
+  "author": "Matej Latin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matejlatin/Gutenberg/issues"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-cssmin": "~0.10.0",
