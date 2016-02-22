@@ -17,8 +17,8 @@
   * {
     max-width: #{$max-width * $base-desktop + 'px'};
     max-width: #{$max-width + 'rem'};
-    margin-left: auto!important;
-    margin-right: auto!important;
+    margin-left: auto;
+    margin-right: auto;
     @include line-height(1);
     @include margin-bottom(1);
   }
