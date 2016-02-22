@@ -1,5 +1,5 @@
-// (function(window, document) {
-//   'use strict';
+(function(window, document) {
+  'use strict';
 
   /* Toggle grid button
      ========================================================================== */
@@ -110,4 +110,8 @@
     }
   }
 
-// }(window, document));
+  document.getElementById('btnToggleGrid').onclick = toggleGrid;
+
+  fixImgHeight();
+
+}(window, document));
