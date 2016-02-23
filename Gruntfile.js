@@ -17,6 +17,9 @@ module.exports = function(grunt){
         }]
       }
     },
+    scsslint: {
+      files: ['src/style/**/*.scss']
+    },
     concat: {
       css: {
         files: {
@@ -97,7 +100,7 @@ module.exports = function(grunt){
       },
       scss: {
         files: ['src/style/*.scss'],
-        tasks: ['sass', 'concat:css', 'cssmin', 'compress:css'],
+        tasks: ['scsslint', 'sass', 'concat:css', 'cssmin', 'compress:css'],
         options: {
           livereload: true,
         }
@@ -127,6 +130,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-scss-lint');
 
   grunt.registerTask('default', [ 'browserSync', 'watch' ]);
 };
