@@ -486,8 +486,8 @@ body > footer {
   * {
     max-width: 630px;
     max-width: 35rem;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 31px;
     line-height: 1.722222222222222rem;
     margin-bottom: 31px;
