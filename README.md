@@ -8,6 +8,8 @@ Gutenberg sets the baseline grid to establish a proper vertical rhythm and makes
 ##Installation
 Gutenberg is built with Sass and works great with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). Fork or download the repository to get started.
 
+```npm install gutenberg-web-type```
+
 ##Getting started
 The most important files in the repository are:
 
