@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/matejlatin/Gutenberg.git"
   },
+  "keywords": [
+    "typography",
+    "web design",
+    "front end"
+  ],
   "author": "Matej Latin",
   "license": "ISC",
   "bugs": {
