@@ -50,18 +50,50 @@ $font-headings: null;
 /* Defaults
    ========================================================================== */
 
+body,
+html {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+}
+
 // Font defaults
 html {
   font-size: #{$base + 'px'};
   font-size: #{$base-font-size + '%'};
   font-family: $font-body;
   color: $color-font-body;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    font-size: #{$base-desktop + 'px'};
+    font-size: #{$base-font-size-desktop / 100 + 'rem'};
+  }
+
 }
 
 // Line-height & margin reset
 * {
   @include line-height(1);
   @include margin(0, 0, 1);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include line-height(1);
+    @include margin-bottom(1);
+    max-width: #{$max-width * $base-desktop + 'px'};
+    max-width: #{$max-width + 'rem'};
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 
@@ -74,12 +106,44 @@ html {
     @include margin-top(-1);
     text-indent: #{ $leading + 'px'};
     text-indent: #{ $leading-rem + 'rem'};
+
+    .floatLeft + p,
+    .floatRight + p {
+
+      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
+
+        text-indent: #{ $leading + 'px'};
+        text-indent: #{ $leading-rem + 'rem'};
+      }
+
+    }
+
   }
 
   .attention-grabber + p {
     margin-top: 0;
     text-indent: 0;
   }
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  $leading: $leading-desktop;
+  $leading-rem: $leading-rem-desktop;
+
+  @import 'gutenberg-mixins';
+
+  @if $paragraph-indent == true {
+
+    p + p,
+    .floatLeft + p,
+    .floatRight + p {
+      @include margin-top(-1);
+    }
+
+  }
+
 }
 
 /* Headings
@@ -95,19 +159,66 @@ html {
   }
 }
 
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  $leading: $leading-desktop;
+  $leading-rem: $leading-rem-desktop;
+
+  @import 'gutenberg-mixins';
+
+  @each $heading, $properties in $headings {
+    #{$heading} {
+      @include font-size(nth($properties, 1));
+      @include line-height(nth($properties, 2));
+      @include margin-top(nth($properties, 3));
+      @include margin-bottom(nth($properties, 4));
+    }
+  }
+
+}
+
 // Set margins between headings
 h1 + h2 {
   @include margin-top(1);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include margin-top(1);
+  }
+
 }
 
 h2 + h3,
 h3 + h4,
 h4 + h5 {
   @include margin-top(.5);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include margin-top(.5);
+  }
+
 }
 
 h5 + h6 {
   @include margin-top(-.5);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include margin-top(-.5);
+  }
+
 }
 
 h6 {
@@ -154,6 +265,62 @@ a {
 /* Figures & other elements
    ========================================================================== */
 
+figure.floatLeft,
+figure.floatRight {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    max-width: #{.5 * $max-width * $base-desktop + 'px'};
+    max-width: #{.5 * $max-width + 'rem'};
+
+    @if $paragraph-indent == true {
+      @include padding-equal(1);
+      @include margin-bottom(0);
+    } @else {
+      @include padding(0, 1);
+    }
+
+  }
+
+  blockquote {
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      $leading: $leading-desktop;
+      $leading-rem: $leading-rem-desktop;
+
+      @import 'gutenberg-mixins';
+
+      @include padding-equal(0);
+      text-align: left;
+
+      @if $paragraph-indent == true {
+        @include margin-top(1);
+      }
+
+    }
+
+    p {
+
+      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
+
+        @import 'gutenberg-mixins';
+
+        @include font-size(1.2);
+        @include line-height(1);
+      }
+
+    }
+
+  }
+
+}
+
 figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
@@ -161,12 +328,28 @@ figcaption {
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include line-height(1);
+    margin-bottom: 0;
+  }
+
 }
 
 blockquote {
   font-style: italic;
   padding-left: 1.4375rem;
   // font-size: 95%;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    padding-left: 2rem;
+  }
+
 }
 
 cite {
@@ -177,10 +360,32 @@ cite {
 figure blockquote {
   @include padding(1, 0);
 
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include padding(2, 0, 1);
+    text-align: center;
+  }
+
   p {
     @include font-size(1.6875);
     @include line-height(1.5);
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      $leading: $leading-desktop;
+      $leading-rem: $leading-rem-desktop;
+
+      @import 'gutenberg-mixins';
+
+      @include font-size(1.6875);
+      @include line-height(1.5);
+    }
+
   }
+
 }
 
 // Lists
@@ -203,6 +408,18 @@ hr {
   margin-right: auto;
   margin-left: auto;
 
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include margin-top($hr-margin);
+    @include margin-bottom($hr-margin);
+    height: #{$leading + 'px'};
+    height: #{$leading-rem + 'rem'};
+  }
+
   @if $hr-style == 'line' {
     background-size: 100% #{$leading + 'px'};
     background-size: 100% #{$leading-rem + 'rem'};
@@ -213,6 +430,21 @@ hr {
     } @else {
       width: #{$hr-width + 'px'};
     }
+  }
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+    $hr-margin: $hr-margin-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @if $hr-style == 'line' {
+      background-size: 100% #{$leading + 'px'};
+      background-size: 100% #{$leading-rem + 'rem'};
+      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    }
+
   }
 
   @if $hr-style == 'type' {
@@ -227,10 +459,30 @@ hr {
 
 small {
   @include line-height(.5);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include line-height(.5);
+  }
+
 }
 
 code {
   @include padding-equal(1);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import 'gutenberg-mixins';
+
+    @include padding-equal(1);
+  }
+
 }
 
 // Attention grabber
@@ -249,10 +501,27 @@ code {
   background-repeat: repeat;
   background-size: 100% #{$leading + 'px'};
   background-size: 100% #{$leading-rem + 'rem'};
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    background-size: 100% #{$leading + 'px'};
+    background-size: 100% #{$leading-rem + 'rem'};
+  }
+
 }
 
 // Double grid background
 .grid-double {
   @extend .grid;
   background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'}, hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ .5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+  }
+
 }

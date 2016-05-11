@@ -22,6 +22,21 @@ body > footer {
   border-radius: 25px;
   padding: 0 10px 0 20px;
   height: 32px;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    right: #{$leading-desktop + 'px'};
+    top: #{$leading-desktop + 'px'};
+  }
+
+}
+
+article {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    max-width: #{1.5 * $max-width * $base-desktop + 'px'};
+    max-width: #{1.5 * $max-width + 'rem'};
+  }
+
 }
 
 .btnToggleGrid {
@@ -37,6 +52,14 @@ body > footer {
   text-transform: uppercase;
   font-weight: 700;
   color: #fff;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    top: #{$leading + 'px'};
+    right: #{$leading + 'px'};
+  }
 
   &:hover {
     color: #fff;
@@ -72,6 +95,32 @@ body > footer {
 .uppercase {
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+
+// Float defaults
+.floatLeft {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    float: left;
+  }
+
+}
+
+.floatCenter {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.floatRight {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    float: right;
+  }
+
 }
 
 /* Put your styles below this line

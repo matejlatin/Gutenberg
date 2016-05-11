@@ -297,11 +297,26 @@ img {
    ========================================================================== */
 /* Defaults
    ========================================================================== */
+@media screen and (min-width: 40em) {
+  body,
+  html {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+}
+
 html {
   font-size: 16px;
   font-size: 100%;
   font-family: Merriweather, Georgia, serif;
   color: #222;
+}
+@media screen and (min-width: 40em) {
+  html {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 
 * {
@@ -310,9 +325,27 @@ html {
   margin: 0px 0px 26px;
   margin: 0rem 0rem 1.625rem;
 }
+@media screen and (min-width: 40em) {
+  * {
+    /* Mixins
+       ========================================================================== */
+    line-height: 31px;
+    line-height: 1.722222222222222rem;
+    margin-bottom: 31px;
+    margin-bottom: 1.722222222222222rem;
+    max-width: 630px;
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 /* Paragraph
    ========================================================================== */
+@media screen and (min-width: 40em) {
+  /* Mixins
+     ========================================================================== */
+}
 /* Headings
    ========================================================================== */
 h1 {
@@ -381,248 +414,9 @@ h6 {
   margin-bottom: 0.8125rem;
 }
 
-h1 + h2 {
-  margin-top: 26px;
-  margin-top: 1.625rem;
-}
-
-h2 + h3,
-h3 + h4,
-h4 + h5 {
-  margin-top: 13px;
-  margin-top: 0.8125rem;
-}
-
-h5 + h6 {
-  margin-top: -13px;
-  margin-top: -0.8125rem;
-}
-
-h6 {
-  font-style: italic;
-  font-weight: normal;
-}
-
-/* Links
-   ========================================================================== */
-a {
-  color: #222;
-  transition: all .3s;
-}
-a:hover {
-  color: #222;
-}
-a:visited {
-  color: #888;
-}
-a:visited:hover {
-  color: #222;
-}
-a:active {
-  color: #f00;
-}
-
-/* Figures & other elements
-   ========================================================================== */
-figcaption {
-  line-height: 26px;
-  line-height: 1.625rem;
-  color: #222;
-  font-size: .8125rem;
-  font-style: italic;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-blockquote {
-  font-style: italic;
-  padding-left: 1.4375rem;
-}
-
-cite {
-  font-style: normal;
-}
-
-figure blockquote {
-  padding: 26px 0px;
-  padding: 1.625rem 0rem;
-}
-figure blockquote p {
-  font-size: 27px;
-  font-size: 1.6875rem;
-  line-height: 39px;
-  line-height: 2.4375rem;
-}
-
-ul li,
-ol li {
-  margin-bottom: 0;
-}
-
-hr {
-  margin-top: 52px;
-  margin-top: 3.25rem;
-  margin-bottom: 52px;
-  margin-bottom: 3.25rem;
-  border: 0;
-  color: #222;
-  display: block;
-  height: 26px;
-  height: 1.625rem;
-  margin-right: auto;
-  margin-left: auto;
-  background-size: 100% 26px;
-  background-size: 100% 1.625rem;
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222 11px, #222 15px, transparent 15px, transparent 26px);
-  width: 100px;
-}
-
-small {
-  line-height: 13px;
-  line-height: 0.8125rem;
-}
-
-code {
-  padding: 26px;
-  padding: 1.625rem;
-}
-
-.attention-grabber {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-}
-
-/* Grid
-   ========================================================================== */
-.grid, .grid-double {
-  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-  background-position: left top;
-  background-repeat: repeat;
-  background-size: 100% 26px;
-  background-size: 100% 1.625rem;
-}
-
-.grid-double {
-  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px);
-}
-
-/* Gutenberg defaults
-   ========================================================================== */
-article,
-body > footer {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.toggleWrapper {
-  display: block;
-  position: fixed;
-  top: 26px;
-  right: 26px;
-  background-color: #231F20;
-  border-radius: 25px;
-  padding: 0 10px 0 20px;
-  height: 32px;
-}
-
-.btnToggleGrid {
-  background: url("../../assets/images/grid-icons.png") top right no-repeat;
-  background-size: 32px;
-  display: block;
-  font-size: 14px;
-  text-decoration: none;
-  padding-right: 35px;
-  height: 32px;
-  line-height: 34px;
-  font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
-}
-.btnToggleGrid:hover {
-  color: #fff;
-}
-.btnToggleGrid:active {
-  color: #f00;
-}
-
-.double-grid {
-  background-position-y: -32px;
-}
-
-.grid-off {
-  background-position-y: -64px;
-}
-
-.alignLeft {
-  text-align: left;
-}
-
-.alignCenter {
-  text-align: center;
-}
-
-.alignRight {
-  text-align: right;
-}
-
-.uppercase {
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-/* Put your styles below this line
-   ========================================================================== */
 @media screen and (min-width: 40em) {
   /* Mixins
      ========================================================================== */
-  body,
-  html {
-    margin: 0;
-    width: 100%;
-    max-width: none;
-  }
-
-  * {
-    max-width: 630px;
-    max-width: 35rem;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 31px;
-    line-height: 1.722222222222222rem;
-    margin-bottom: 31px;
-    margin-bottom: 1.722222222222222rem;
-  }
-
-  html {
-    font-size: 18px;
-    font-size: 1.125rem;
-  }
-
-  .toggleWrapper {
-    right: 31px;
-    top: 31px;
-  }
-
-  .grid, .grid-double {
-    background-size: 100% 31px;
-    background-size: 100% 1.722222222222222rem;
-  }
-
-  .grid-double {
-    background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 15.5px, rgba(0, 170, 255, 0.2) 15.5px, transparent 16.5px, transparent 31px);
-  }
-
-  article {
-    max-width: 945px;
-    max-width: 52.5rem;
-  }
-
-  .btnToggleGrid {
-    top: 31px;
-    right: 31px;
-  }
-
   h1 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -688,107 +482,377 @@ body > footer {
     margin-bottom: 15.5px;
     margin-bottom: 0.861111111111111rem;
   }
-
+}
+h1 + h2 {
+  margin-top: 26px;
+  margin-top: 1.625rem;
+}
+@media screen and (min-width: 40em) {
   h1 + h2 {
+    /* Mixins
+       ========================================================================== */
     margin-top: 31px;
     margin-top: 1.722222222222222rem;
   }
+}
 
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+  margin-top: 13px;
+  margin-top: 0.8125rem;
+}
+@media screen and (min-width: 40em) {
   h2 + h3,
   h3 + h4,
   h4 + h5 {
+    /* Mixins
+       ========================================================================== */
     margin-top: 15.5px;
     margin-top: 0.861111111111111rem;
   }
+}
 
+h5 + h6 {
+  margin-top: -13px;
+  margin-top: -0.8125rem;
+}
+@media screen and (min-width: 40em) {
   h5 + h6 {
+    /* Mixins
+       ========================================================================== */
     margin-top: -15.5px;
     margin-top: -0.861111111111111rem;
   }
+}
 
-  figure blockquote {
-    padding: 62px 0px 31px;
-    padding: 3.444444444444445rem 0rem 1.722222222222222rem;
-    text-align: center;
-  }
-  figure blockquote p {
-    font-size: 27px;
-    font-size: 1.6875rem;
-    line-height: 46.5px;
-    line-height: 2.583333333333334rem;
-  }
+h6 {
+  font-style: italic;
+  font-weight: normal;
+}
 
+/* Links
+   ========================================================================== */
+a {
+  color: #222;
+  transition: all .3s;
+}
+a:hover {
+  color: #222;
+}
+a:visited {
+  color: #888;
+}
+a:visited:hover {
+  color: #222;
+}
+a:active {
+  color: #f00;
+}
+
+/* Figures & other elements
+   ========================================================================== */
+@media screen and (min-width: 40em) {
   figure.floatLeft,
   figure.floatRight {
+    /* Mixins
+       ========================================================================== */
     max-width: 315px;
     max-width: 17.5rem;
     padding: 0px 31px;
     padding: 0rem 1.722222222222222rem;
   }
+}
+@media screen and (min-width: 40em) {
   figure.floatLeft blockquote,
   figure.floatRight blockquote {
-    text-align: left;
+    /* Mixins
+       ========================================================================== */
     padding: 0px;
     padding: 0rem;
+    text-align: left;
   }
+}
+@media screen and (min-width: 40em) {
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p {
+    /* Mixins
+       ========================================================================== */
     font-size: 19.2px;
     font-size: 1.2rem;
     line-height: 31px;
     line-height: 1.722222222222222rem;
   }
+}
 
+figcaption {
+  line-height: 26px;
+  line-height: 1.625rem;
+  color: #222;
+  font-size: .8125rem;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+@media screen and (min-width: 40em) {
   figcaption {
+    /* Mixins
+       ========================================================================== */
     line-height: 31px;
     line-height: 1.722222222222222rem;
     margin-bottom: 0;
   }
+}
 
-  .floatLeft {
-    float: left;
-  }
-
-  .floatCenter {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .floatRight {
-    float: right;
-  }
-
+blockquote {
+  font-style: italic;
+  padding-left: 1.4375rem;
+}
+@media screen and (min-width: 40em) {
   blockquote {
     padding-left: 2rem;
   }
+}
 
-  small {
-    line-height: 15.5px;
-    line-height: 0.861111111111111rem;
+cite {
+  font-style: normal;
+}
+
+figure blockquote {
+  padding: 26px 0px;
+  padding: 1.625rem 0rem;
+}
+@media screen and (min-width: 40em) {
+  figure blockquote {
+    /* Mixins
+       ========================================================================== */
+    padding: 62px 0px 31px;
+    padding: 3.444444444444445rem 0rem 1.722222222222222rem;
+    text-align: center;
   }
+}
+figure blockquote p {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 39px;
+  line-height: 2.4375rem;
+}
+@media screen and (min-width: 40em) {
+  figure blockquote p {
+    /* Mixins
+       ========================================================================== */
+    font-size: 27px;
+    font-size: 1.6875rem;
+    line-height: 46.5px;
+    line-height: 2.583333333333334rem;
+  }
+}
 
+ul li,
+ol li {
+  margin-bottom: 0;
+}
+
+hr {
+  margin-top: 52px;
+  margin-top: 3.25rem;
+  margin-bottom: 52px;
+  margin-bottom: 3.25rem;
+  border: 0;
+  color: #222;
+  display: block;
+  height: 26px;
+  height: 1.625rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% 26px;
+  background-size: 100% 1.625rem;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222 11px, #222 15px, transparent 15px, transparent 26px);
+  width: 100px;
+}
+@media screen and (min-width: 40em) {
   hr {
+    /* Mixins
+       ========================================================================== */
     margin-top: 62px;
     margin-top: 3.444444444444445rem;
     margin-bottom: 62px;
     margin-bottom: 3.444444444444445rem;
     height: 31px;
     height: 1.722222222222222rem;
+  }
+}
+@media screen and (min-width: 40em) {
+  hr {
+    /* Mixins
+       ========================================================================== */
     background-size: 100% 31px;
     background-size: 100% 1.722222222222222rem;
     background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #222 13.5px, #222 17.5px, transparent 17.5px, transparent 31px);
   }
+}
 
+small {
+  line-height: 13px;
+  line-height: 0.8125rem;
+}
+@media screen and (min-width: 40em) {
+  small {
+    /* Mixins
+       ========================================================================== */
+    line-height: 15.5px;
+    line-height: 0.861111111111111rem;
+  }
+}
+
+code {
+  padding: 26px;
+  padding: 1.625rem;
+}
+@media screen and (min-width: 40em) {
   code {
+    /* Mixins
+       ========================================================================== */
     padding: 31px;
     padding: 1.722222222222222rem;
   }
+}
 
-  .attention-grabber {
-    font-size: 19.2px;
-    font-size: 1.2rem;
+.attention-grabber {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+
+/* Grid
+   ========================================================================== */
+.grid, .grid-double {
+  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: 100% 26px;
+  background-size: 100% 1.625rem;
+}
+@media screen and (min-width: 40em) {
+  .grid, .grid-double {
+    background-size: 100% 31px;
+    background-size: 100% 1.722222222222222rem;
   }
 }
+
+.grid-double {
+  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px);
+}
+@media screen and (min-width: 40em) {
+  .grid-double {
+    background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 15.5px, rgba(0, 170, 255, 0.2) 15.5px, transparent 16.5px, transparent 31px);
+  }
+}
+
+/* Gutenberg defaults
+   ========================================================================== */
+article,
+body > footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.toggleWrapper {
+  display: block;
+  position: fixed;
+  top: 26px;
+  right: 26px;
+  background-color: #231F20;
+  border-radius: 25px;
+  padding: 0 10px 0 20px;
+  height: 32px;
+}
+@media screen and (min-width: 40em) {
+  .toggleWrapper {
+    right: 31px;
+    top: 31px;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  article {
+    max-width: 945px;
+    max-width: 52.5rem;
+  }
+}
+
+.btnToggleGrid {
+  background: url("../../assets/images/grid-icons.png") top right no-repeat;
+  background-size: 32px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding-right: 35px;
+  height: 32px;
+  line-height: 34px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+@media screen and (min-width: 40em) {
+  .btnToggleGrid {
+    top: 31px;
+    right: 31px;
+  }
+}
+.btnToggleGrid:hover {
+  color: #fff;
+}
+.btnToggleGrid:active {
+  color: #f00;
+}
+
+.double-grid {
+  background-position-y: -32px;
+}
+
+.grid-off {
+  background-position-y: -64px;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.uppercase {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 40em) {
+  .floatLeft {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .floatCenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .floatRight {
+    float: right;
+  }
+}
+
+/* Put your styles below this line
+   ========================================================================== */
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
  - table + side comments elements,
