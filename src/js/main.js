@@ -98,6 +98,9 @@
     // For each image in images get original height, calculate height rounded to baseline grid, set new height
     for (i = 0; i < length; ++i) {
 
+      //Reset height first
+      images[i].style.height = 'auto';
+
       // Get original height
       imgOriginalHeight = images[i].offsetHeight;
 
@@ -112,6 +115,27 @@
 
   document.getElementById('btnToggleGrid').onclick = toggleGrid;
 
+  //Fix once on first page load
   fixImgHeight();
+
+  //Make sure that we fix images on each window resize (add debounce for performance)
+  window.addEventListener('resize', debounce(fixImgHeight, 50), true);
+
+
+  //helper: debounce
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
 
 }(window, document));
