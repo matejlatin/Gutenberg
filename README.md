@@ -19,7 +19,6 @@ The most important files in the repository are:
 - ```_gutenberg-mixins.scss``` *home of all the mixins used in Gutenberg*
 - ```_gutenberg-typography.scss``` *this is where the magic happens, don't make changes if you're not 100% sure*
 - ```_gutenberg-style.scss``` *add your own styles to this file*
-- ```_gutenberg-responsive.scss``` *similar to _gutenberg-typography but for desktop*
 
 **JavaScript files in src/js**
 - ```main.js``` *includes the 'fix image height' script that resizes images so they fit into grid*
