@@ -1,0 +1,13 @@
+// Lists
+ul,
+ol {
+
+  article & {
+    box-sizing: border-box;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+}

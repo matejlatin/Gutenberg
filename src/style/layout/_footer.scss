@@ -1,0 +1,10 @@
+footer {
+  box-sizing: border-box;
+  display: block;
+
+  body > & {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+}

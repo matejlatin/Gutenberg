@@ -1,0 +1,69 @@
+// Horizontal rule
+$hr-style: line; // [ line / type ]
+$hr-type-content: '***'; // [ '***' ]
+$hr-type-char-spacing: .2em; // [ .2em ]
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-color: $color-font-body;
+$hr-width: 100; // [ 100 ] — In pixels, only for line style
+$hr-height: 4; // [ 2 ] — In pixels, only for line style
+
+hr {
+  @include margin-top($hr-margin);
+  @include margin-bottom($hr-margin);
+
+  box-sizing: content-box;
+  border: 0;
+  color: $hr-color;
+  display: block;
+  height: #{$leading + 'px'};
+  height: #{$leading-rem + 'rem'};
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/margin';
+
+    @include margin-top($hr-margin);
+    @include margin-bottom($hr-margin);
+    height: #{$leading + 'px'};
+    height: #{$leading-rem + 'rem'};
+  }
+
+  @if $hr-style == 'line' {
+    background-size: 100% #{$leading + 'px'};
+    background-size: 100% #{$leading-rem + 'rem'};
+    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+
+    @if $hr-width == null {
+      width: 100%;
+    } @else {
+      width: #{$hr-width + 'px'};
+    }
+  }
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+    $hr-margin: $hr-margin-desktop;
+
+    @if $hr-style == 'line' {
+      background-size: 100% #{$leading + 'px'};
+      background-size: 100% #{$leading-rem + 'rem'};
+      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    }
+
+  }
+
+  @if $hr-style == 'type' {
+    text-align: center;
+
+    &:before {
+      content: $hr-type-content;
+      letter-spacing: $hr-type-char-spacing;
+    }
+  }
+}

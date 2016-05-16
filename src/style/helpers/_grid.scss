@@ -1,11 +1,36 @@
-/* Gutenberg defaults
+/* Grid
    ========================================================================== */
 
-// Maximum width of the article (Mobile)
-article,
-body > footer {
-  width: 80%;
-  margin: 0 auto;
+// Grid background
+.grid {
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: 100% #{$leading + 'px'};
+  background-size: 100% #{$leading-rem + 'rem'};
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    background-size: 100% #{$leading + 'px'};
+    background-size: 100% #{$leading-rem + 'rem'};
+  }
+
+}
+
+// Double grid background
+.grid-double {
+  @extend .grid;
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'}, hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ .5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+  }
+
 }
 
 // Grid button
@@ -26,15 +51,6 @@ body > footer {
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     right: #{$leading-desktop + 'px'};
     top: #{$leading-desktop + 'px'};
-  }
-
-}
-
-article {
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    max-width: #{1.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{1.5 * $max-width + 'rem'};
   }
 
 }
@@ -77,51 +93,3 @@ article {
 .grid-off {
   background-position-y: -64px;
 }
-
-// Text Alignment
-.alignLeft {
-  text-align: left;
-}
-
-.alignCenter {
-  text-align: center;
-}
-
-.alignRight {
-  text-align: right;
-}
-
-// Fix letter spacing for uppercase
-.uppercase {
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-// Float defaults
-.floatLeft {
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    float: left;
-  }
-
-}
-
-.floatCenter {
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
-.floatRight {
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    float: right;
-  }
-
-}
-
-/* Put your styles below this line
-   ========================================================================== */

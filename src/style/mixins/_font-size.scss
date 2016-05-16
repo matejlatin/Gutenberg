@@ -1,0 +1,5 @@
+// Font-size
+@mixin font-size($number) {
+  font-size: #{ $number * $base + 'px'};
+  font-size: #{ $number + 'rem'};
+}
