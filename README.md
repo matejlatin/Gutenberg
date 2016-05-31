@@ -21,6 +21,7 @@ Johannes Gutenberg invented a printing press with movable type more than 500 yea
 ##Contributors
 * [@matejlatin](https://github.com/matejlatin)
 * [@marcobiedermann](https://github.com/marcobiedermann)
+* [@GeorgeStrakhov](https://github.com/GeorgeStrakhov)
 
 Gutenberg is an open source project licensed under [Creative Commons 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Feel free to use, adapt or contribute.
 
