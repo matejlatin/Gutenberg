@@ -14,6 +14,7 @@ html {
 
 // Font defaults
 html {
+  box-sizing: border-box;
   font-size: #{$base + 'px'};
   font-size: #{$base-font-size + '%'};
   font-family: $font-body;
@@ -50,11 +51,12 @@ html {
 
 }
 
-body {
-  box-sizing: border-box;
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-div {
-  box-sizing: border-box;
+body {
+  margin: 0;
 }

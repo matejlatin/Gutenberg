@@ -226,6 +226,7 @@ aside {
 }
 
 html {
+  box-sizing: border-box;
   font-size: 16px;
   font-size: 100%;
   font-family: Merriweather, Georgia, serif;
@@ -259,17 +260,17 @@ html {
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  box-sizing: border-box;
   margin: 0;
 }
 
-div {
-  box-sizing: border-box;
-}
-
 footer {
-  box-sizing: border-box;
   display: block;
 }
 body > footer {
@@ -278,7 +279,6 @@ body > footer {
 }
 
 header {
-  box-sizing: border-box;
   display: block;
 }
 
@@ -287,7 +287,6 @@ main {
 }
 
 section {
-  box-sizing: border-box;
   display: block;
 }
 
@@ -315,7 +314,6 @@ a:active {
 }
 
 article {
-  box-sizing: border-box;
   display: block;
   margin: 0 auto;
   width: 80%;
@@ -391,7 +389,6 @@ figcaption {
 }
 
 figure {
-  box-sizing: border-box;
   display: block;
 }
 
@@ -420,10 +417,6 @@ figure {
     line-height: 31px;
     line-height: 1.722222222222222rem;
   }
-}
-
-input {
-  box-sizing: border-box;
 }
 
 /* Headings
@@ -654,17 +647,12 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-article ul, article
-ol {
-  box-sizing: border-box;
-}
 ul li,
 ol li {
   margin-bottom: 0;
 }
 
 nav {
-  box-sizing: border-box;
   display: block;
 }
 
@@ -674,7 +662,6 @@ progress {
 }
 
 blockquote {
-  box-sizing: border-box;
   font-style: italic;
   padding-left: 1.4375rem;
 }
