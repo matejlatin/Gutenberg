@@ -1,0 +1,108 @@
+/* Headings
+   ========================================================================== */
+
+// Headings Options
+// [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
+$headings: (
+  h1: (2.5, 2, 4, 1),
+  h2: (1.6875, 1.5, 2.5, .5),
+  h3: (1.375, 1, 2, .5),
+  h4: (1.2, 1, 1.5, .5),
+  h5: (1, 1, 2.5, .5),
+  h6: (1, 1, 2.5, .5)
+) !default;
+
+// Set headings sizes, line-heights and margins
+@each $heading, $properties in $headings {
+  #{$heading} {
+    @include font-size(nth($properties, 1));
+    @include line-height(nth($properties, 2));
+    @include margin-top(nth($properties, 3));
+    @include margin-bottom(nth($properties, 4));
+  }
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  $leading: $leading-desktop;
+  $leading-rem: $leading-rem-desktop;
+
+  @import '../mixins/font-size';
+  @import '../mixins/line-height';
+  @import '../mixins/margin';
+
+  @each $heading, $properties in $headings {
+    #{$heading} {
+      @include font-size(nth($properties, 1));
+      @include line-height(nth($properties, 2));
+      @include margin-top(nth($properties, 3));
+      @include margin-bottom(nth($properties, 4));
+    }
+  }
+
+}
+
+// Set margins between headings
+h1 + h2 {
+  @include margin-top(1);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/margin';
+
+    @include margin-top(1);
+  }
+
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+  @include margin-top(.5);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/margin';
+
+    @include margin-top(.5);
+  }
+
+}
+
+h5 + h6 {
+  @include margin-top(-.5);
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/margin';
+
+    @include margin-top(-.5);
+  }
+
+}
+
+h6 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+// Change headings font if a heading font is set
+@if $font-headings != null {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-headings;
+  }
+}
+
+hgroup {
+  display: block;
+}

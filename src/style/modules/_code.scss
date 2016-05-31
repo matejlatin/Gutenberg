@@ -1,0 +1,28 @@
+// Contain overflow in all browsers.
+pre {
+  overflow: auto;
+}
+
+// Address odd `em`-unit font size rendering in all browsers.
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+
+code {
+  @include padding-equal(1);
+
+  display: block;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/padding';
+
+    @include padding-equal(1);
+  }
+
+}

@@ -1,0 +1,140 @@
+// Enable small caps if available & fix letter spacing
+abbr {
+  letter-spacing: 0.1em;
+}
+
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+b,
+strong {
+  font-weight: bold;
+}
+
+// Address styling not present in Safari and Chrome.
+dfn {
+  font-style: italic;
+}
+
+// Prevent `em` and `i` affecting `line-height` in all browsers.
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+// Address styling not present in IE 8/9.
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  @include line-height(.5);
+
+  font-size: 70%;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/line-height';
+
+    @include line-height(.5);
+  }
+
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Paragraph
+   ========================================================================== */
+
+@if $paragraph-indent == true {
+
+  p + p {
+    @include margin-top(-1);
+    text-indent: #{ $leading + 'px'};
+    text-indent: #{ $leading-rem + 'rem'};
+
+    .floatLeft + p,
+    .floatRight + p {
+
+      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
+
+        text-indent: #{ $leading + 'px'};
+        text-indent: #{ $leading-rem + 'rem'};
+      }
+
+    }
+
+  }
+
+  .attention-grabber + p {
+    margin-top: 0;
+    text-indent: 0;
+  }
+}
+
+// Attention grabber
+.attention-grabber {
+  @include font-size(1.2);
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  $leading: $leading-desktop;
+  $leading-rem: $leading-rem-desktop;
+
+  @import '../mixins/margin';
+
+  @if $paragraph-indent == true {
+
+    p + p,
+    .floatLeft + p,
+    .floatRight + p {
+      @include margin-top(-1);
+    }
+
+  }
+
+}
+
+// Text Alignment
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+// Fix letter spacing for uppercase
+.uppercase {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}

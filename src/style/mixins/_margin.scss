@@ -1,0 +1,25 @@
+// Margin-top
+@mixin margin-top($number) {
+  margin-top: #{ $number * $leading + 'px'};
+  margin-top: #{ $number * $leading-rem + 'rem'};
+}
+
+// Margin-bottom
+@mixin margin-bottom($number) {
+  margin-bottom: #{ $number * $leading + 'px'};
+  margin-bottom: #{ $number * $leading-rem + 'rem'};
+}
+
+// Margin
+@mixin margin($top, $right, $bottom:null, $left:null) {
+  @if $left == null and $bottom == null {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'};
+    margin: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'};
+  } @else if $left == null or $left == $right {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
+    margin: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'};
+  } @else {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+    margin: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
+  }
+}
