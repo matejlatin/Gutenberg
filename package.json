@@ -1,6 +1,6 @@
 {
   "name": "gutenberg-web-type",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Gutenberg is a flexible and simple–to–use web typography starter kit for web designers and developers. It’s a small step towards a better typography on the web. Beautiful typographic styles can be made by setting base type size, line-height (leading) and measure (max-width).",
   "main": "index.html",
   "dependencies": {},
