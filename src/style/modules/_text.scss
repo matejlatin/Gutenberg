@@ -1,3 +1,8 @@
+// Clear margin for line breaks
+br {
+  margin-bottom: 0;
+}
+
 // Enable small caps if available & fix letter spacing
 abbr {
   letter-spacing: 0.1em;
