@@ -6,7 +6,8 @@ module.exports = function(grunt){
       dist: {
         options: {
           style: 'expanded',
-          precision: 15
+          precision: 15,
+          outputStyle: 'expanded'
         },
         files: [{
           expand: true,
@@ -124,7 +125,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
