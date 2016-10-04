@@ -29,6 +29,20 @@ Gutenberg is an open source project licensed under [Creative Commons 3.0](https:
 ##History
 Follow [@gutenbergtype](http://twitter.com/gutenbergtype) for updates.
 
+###Gutenberg v1.2.2
+
+*Oct 4, 2016*
+
+- Fixed minor bugs,
+- updated the gruntfile.js
+
+###Gutenberg v1.2.1
+
+*Jun 1, 2016*
+
+- Improved box-sizing,
+- fixed the import heading bug
+
 ###Gutenberg v1.2
 
 *May 31, 2016*
