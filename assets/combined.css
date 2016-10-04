@@ -717,6 +717,10 @@ template {
   display: none;
 }
 
+br {
+  margin-bottom: 0;
+}
+
 abbr {
   letter-spacing: 0.1em;
 }
@@ -775,7 +779,7 @@ sub {
 }
 
 /* Paragraph
-   ========================================================================== */
+========================================================================== */
 .attention-grabber {
   font-size: 19.2px;
   font-size: 1.2rem;
