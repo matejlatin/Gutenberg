@@ -116,6 +116,24 @@ module.exports = function(grunt){
           livereload: true,
         }
       }
+    },
+    // Linting
+    postcss: {
+      scsslint: {
+        options: {
+          writeDest: false,
+          syntax: require('postcss-scss'),
+          processors: [
+            require('stylelint')(),
+            require('postcss-reporter')({ clearMessages: true })
+          ]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/style',
+          src: ['*.scss']
+        }]
+      },
     }
   });
 
@@ -127,6 +145,8 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 
   grunt.registerTask('default', [ 'browserSync', 'watch' ]);
+  grunt.registerTask('lint', [ 'postcss:scsslint' ]);
 };

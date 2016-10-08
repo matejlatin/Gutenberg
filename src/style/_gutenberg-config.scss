@@ -29,7 +29,7 @@ $modular-scale: (
   xs: 1.4375,
   xxs: 1.2,
   xxxs: 1,
-  xxxxs: .8125
+  xxxxs: 0.8125
 ) !default;
 
 // Colors
@@ -60,20 +60,22 @@ $font-headings: null;
 @if $theme == Merriweather {
 
   // Import Merriweather
-  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+  @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic");
 
   // Set body font
   $font-body: Merriweather, Georgia, serif;
 
-} @else if $theme == OpenSans {
+}
+@else if $theme == OpenSans {
 
   // Import Open Sans
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic");
 
   // Set body font
   $font-body: Open Sans, Arial, Helvetica, Sans-serif;
 
-} @else if $theme == custom {
+}
+@else if $theme == custom {
 
   // Set custom body font
   $font-body: $custom-font-body;

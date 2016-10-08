@@ -1,7 +1,7 @@
 /*
-Gutenberg: Web Typography Starter Kit
+Gutenberg: A Meaningful Web Typography Starter Kit
 Website ....... http://matejlatin.github.io/Gutenberg/
-Version ....... 1.1
+Version ....... 1.2.3
 Github ........ https://github.com/matejlatin/Gutenberg
 Authors ....... Matej Latin (@matejlatin)
 License ....... Creative Commmons Attribution 3.0
@@ -13,7 +13,7 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
    ========================================================================== */
 /* Font themes
    ========================================================================== */
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic");
 @media screen and (min-width: 40em) {
   .floatLeft {
     float: left;
@@ -709,8 +709,7 @@ video {
 
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
- - table + side comments elements,
- - translate to Less and Stylus.
+ - add table and side comments elements,
  */
 
 /*# sourceMappingURL=gutenberg.css.map */
