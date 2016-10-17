@@ -38,17 +38,17 @@ mark {
 }
 
 small {
-  @include line-height(.5);
+  @include line-height(0.5);
 
   font-size: 70%;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    @import '../mixins/line-height';
+    @import "../mixins/line-height";
 
-    @include line-height(.5);
+    @include line-height(0.5);
   }
 
 }
@@ -77,20 +77,20 @@ sub {
 
   p + p {
     @include margin-top(-1);
-    text-indent: #{ $leading + 'px'};
-    text-indent: #{ $leading-rem + 'rem'};
+    text-indent: #{ $leading + "px"};
+    text-indent: #{ $leading-rem + "rem"};
 
   }
 
-  .floatLeft + p,
-  .floatRight + p {
+  .align-left + p,
+  .align-right + p {
 
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    @media screen and (min-width: #{ $max-width + 5 + "em"}) {
       $leading: $leading-desktop;
       $leading-rem: $leading-rem-desktop;
 
-      text-indent: #{ $leading + 'px'};
-      text-indent: #{ $leading-rem + 'rem'};
+      text-indent: #{ $leading + "px"};
+      text-indent: #{ $leading-rem + "rem"};
     }
 
   }
@@ -106,17 +106,16 @@ sub {
   @include font-size(1.2);
 }
 
-@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+@media screen and (min-width: #{ $max-width + 5 + "em"}) {
   $leading: $leading-desktop;
   $leading-rem: $leading-rem-desktop;
 
-  @import '../mixins/margin';
+  @import "../mixins/margin";
 
   @if $paragraph-indent == true {
-
     p + p,
-    .floatLeft + p,
-    .floatRight + p {
+    .align-left + p,
+    .align-right + p {
       @include margin-top(-1);
     }
 
@@ -139,6 +138,6 @@ sub {
 
 // Fix letter spacing for uppercase
 .uppercase {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }

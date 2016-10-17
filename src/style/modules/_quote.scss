@@ -3,7 +3,7 @@ blockquote {
   padding-left: 1.4375rem;
   // font-size: 95%;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     padding-left: 2rem;
   }
 
@@ -18,11 +18,11 @@ cite {
 figure blockquote {
   @include padding(1, 0);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    @import '../mixins/padding';
+    @import "../mixins/padding";
 
     @include padding(2, 0, 1);
     text-align: center;
@@ -32,12 +32,12 @@ figure blockquote {
     @include font-size(1.6875);
     @include line-height(1.5);
 
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    @media screen and (min-width: #{ $max-width + 5 + "em"}) {
       $leading: $leading-desktop;
       $leading-rem: $leading-rem-desktop;
 
-      @import '../mixins/font-size';
-      @import '../mixins/line-height';
+      @import "../mixins/font-size";
+      @import "../mixins/line-height";
 
       @include font-size(1.6875);
       @include line-height(1.5);

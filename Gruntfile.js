@@ -131,7 +131,7 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           cwd: 'src/style',
-          src: ['*.scss']
+          src: ['**/*.scss']
         }]
       },
     }

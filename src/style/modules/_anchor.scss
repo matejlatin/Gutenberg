@@ -9,7 +9,7 @@ $color-link-visited: $color-font-light;
 a {
   background: transparent;
   color: $color-link-normal;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:active,
   &:hover {

@@ -3,9 +3,9 @@ article {
   margin: 0 auto;
   width: 80%;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    max-width: #{1.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{1.5 * $max-width + 'rem'};
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
+    max-width: #{1.5 * $max-width * $base-desktop + "px"};
+    max-width: #{1.5 * $max-width + "rem"};
   }
 
 }

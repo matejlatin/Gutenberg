@@ -2,16 +2,16 @@ figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
   display: block;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    @import '../mixins/line-height';
+    @import "../mixins/line-height";
 
     @include line-height(1);
     margin-bottom: 0;
@@ -23,18 +23,18 @@ figure {
   display: block;
 }
 
-figure.floatLeft,
-figure.floatRight {
+figure.align-left,
+figure.align-right {
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    @import '../mixins/margin';
-    @import '../mixins/padding';
+    @import "../mixins/margin";
+    @import "../mixins/padding";
 
-    max-width: #{.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{.5 * $max-width + 'rem'};
+    max-width: #{0.5 * $max-width * $base-desktop + "px"};
+    max-width: #{0.5 * $max-width + "rem"};
 
     @if $paragraph-indent == true {
       @include padding-equal(1);
@@ -47,12 +47,12 @@ figure.floatRight {
 
   blockquote {
 
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    @media screen and (min-width: #{ $max-width + 5 + "em"}) {
       $leading: $leading-desktop;
       $leading-rem: $leading-rem-desktop;
 
-      @import '../mixins/margin';
-      @import '../mixins/padding';
+      @import "../mixins/margin";
+      @import "../mixins/padding";
 
       @include padding-equal(0);
       text-align: left;
@@ -65,12 +65,12 @@ figure.floatRight {
 
     p {
 
-      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      @media screen and (min-width: #{ $max-width + 5 + "em"}) {
         $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
 
-        @import '../mixins/font-size';
-        @import '../mixins/line-height';
+        @import "../mixins/font-size";
+        @import "../mixins/line-height";
 
         @include font-size(1.2);
         @include line-height(1);

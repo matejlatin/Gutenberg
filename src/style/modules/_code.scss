@@ -16,11 +16,11 @@ code {
 
   display: block;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    @import '../mixins/padding';
+    @import "../mixins/padding";
 
     @include padding-equal(1);
   }

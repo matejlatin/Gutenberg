@@ -1,24 +1,24 @@
 // Float defaults
-.floatLeft {
+.align-left {
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     float: left;
   }
 
 }
 
-.floatCenter {
+.align-center {
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    margin-left: auto;
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     margin-right: auto;
+    margin-left: auto;
   }
 
 }
 
-.floatRight {
+.align-right {
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     float: right;
   }
 

@@ -3,18 +3,18 @@
 
 // Grid background
 .grid {
-  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
-  background-position: left top;
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px);
   background-repeat: repeat;
-  background-size: 100% #{$leading + 'px'};
-  background-size: 100% #{$leading-rem + 'rem'};
+  background-position: left top;
+  background-size: 100% #{$leading + "px"};
+  background-size: 100% #{$leading-rem + "rem"};
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
+    background-size: 100% #{$leading + "px"};
+    background-size: 100% #{$leading-rem + "rem"};
   }
 
 }
@@ -22,59 +22,60 @@
 // Double grid background
 .grid-double {
   @extend .grid;
-  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'}, hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ .5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px, transparent #{ 0.5 * $leading + "px"}, hsla(200, 100%, 50%, 0.2) #{ 0.5 * $leading + "px"}, transparent #{ 0.5 * $leading + 1 + "px"}, transparent #{$leading + "px"});
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
+    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px, transparent #{ 0.5 * $leading + "px"}, hsla(200, 100%, 50%, 0.2) #{ 0.5 * $leading + "px"}, transparent #{ 0.5 * $leading + 1 + "px"}, transparent #{$leading + "px"});
   }
 
 }
 
 // Grid button
-.toggleWrapper {
+.toggle-wrapper {
   @if $edit-mode == true {
     display: block;
-  } @else if $edit-mode == false {
+  }
+  @else if $edit-mode == false {
     display: none;
   }
   position: fixed;
-  top: #{$leading + 'px'};
-  right: #{$leading + 'px'};
-  background-color: #231F20;
-  border-radius: 25px;
-  padding: 0 10px 0 20px;
+  top: #{$leading + "px"};
+  right: #{$leading + "px"};
   height: 32px;
+  padding: 0 10px 0 20px;
+  background-color: #231f20;
+  border-radius: 25px;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    right: #{$leading-desktop + 'px'};
-    top: #{$leading-desktop + 'px'};
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
+    top: #{$leading-desktop + "px"};
+    right: #{$leading-desktop + "px"};
   }
 
 }
 
-.btnToggleGrid {
+.btn-toggle-grid {
+  display: block;
+  height: 32px;
+  padding-right: 35px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
   background: url("../../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
-  display: block;
-  font-size: 14px;
-  text-decoration: none;
-  padding-right: 35px;
-  height: 32px;
-  line-height: 34px;
-  font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    top: #{$leading + 'px'};
-    right: #{$leading + 'px'};
+    top: #{$leading + "px"};
+    right: #{$leading + "px"};
   }
 
   &:hover {

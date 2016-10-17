@@ -113,22 +113,21 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
    ========================================================================== */
 /* Font themes
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic");
 @media screen and (min-width: 40em) {
-  .floatLeft {
+  .align-left {
     float: left;
   }
 }
 
 @media screen and (min-width: 40em) {
-  .floatCenter {
-    margin-left: auto;
+  .align-center {
     margin-right: auto;
+    margin-left: auto;
   }
 }
 
 @media screen and (min-width: 40em) {
-  .floatRight {
+  .align-right {
     float: right;
   }
 }
@@ -137,8 +136,8 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
    ========================================================================== */
 .grid, .grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-  background-position: left top;
   background-repeat: repeat;
+  background-position: left top;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
 }
@@ -158,47 +157,47 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
   }
 }
 
-.toggleWrapper {
+.toggle-wrapper {
   display: block;
   position: fixed;
   top: 26px;
   right: 26px;
-  background-color: #231F20;
-  border-radius: 25px;
-  padding: 0 10px 0 20px;
   height: 32px;
+  padding: 0 10px 0 20px;
+  background-color: #231f20;
+  border-radius: 25px;
 }
 @media screen and (min-width: 40em) {
-  .toggleWrapper {
-    right: 31px;
+  .toggle-wrapper {
     top: 31px;
+    right: 31px;
   }
 }
 
-.btnToggleGrid {
+.btn-toggle-grid {
+  display: block;
+  height: 32px;
+  padding-right: 35px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
   background: url("../../assets/images/grid-icons.png") top right no-repeat;
   background-size: 32px;
-  display: block;
-  font-size: 14px;
-  text-decoration: none;
-  padding-right: 35px;
-  height: 32px;
-  line-height: 34px;
-  font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
 }
 @media screen and (min-width: 40em) {
-  .btnToggleGrid {
+  .btn-toggle-grid {
     top: 31px;
     right: 31px;
   }
 }
-.btnToggleGrid:hover {
+.btn-toggle-grid:hover {
   color: #fff;
 }
-.btnToggleGrid:active {
+.btn-toggle-grid:active {
   color: #f00;
 }
 
@@ -229,7 +228,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-size: 100%;
-  font-family: Merriweather, Georgia, serif;
+  font-family: "Droid Serif", Georgia, serif;
   color: #222;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -295,7 +294,7 @@ section {
 a {
   background: transparent;
   color: #222;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 a:active, a:hover {
   outline: 0;
@@ -375,7 +374,7 @@ figcaption {
   line-height: 1.625rem;
   color: #222;
   display: block;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
@@ -393,8 +392,8 @@ figure {
 }
 
 @media screen and (min-width: 40em) {
-  figure.floatLeft,
-  figure.floatRight {
+  figure.align-left,
+  figure.align-right {
     max-width: 315px;
     max-width: 17.5rem;
     padding: 0px 31px;
@@ -402,16 +401,16 @@ figure {
   }
 }
 @media screen and (min-width: 40em) {
-  figure.floatLeft blockquote,
-  figure.floatRight blockquote {
+  figure.align-left blockquote,
+  figure.align-right blockquote {
     padding: 0px;
     padding: 0rem;
     text-align: left;
   }
 }
 @media screen and (min-width: 40em) {
-  figure.floatLeft blockquote p,
-  figure.floatRight blockquote p {
+  figure.align-left blockquote p,
+  figure.align-right blockquote p {
     font-size: 19.2px;
     font-size: 1.2rem;
     line-height: 31px;
@@ -798,7 +797,7 @@ sub {
 }
 
 .uppercase {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
