@@ -16,7 +16,7 @@ Gutenberg is built with Sass and [Grunt](http://gruntjs.com/). Fork or download 
 
 
 ##Why Gutenberg?
-Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.
+Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to the improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do the same for another medium — the web.
 
 ##Contributors
 * [@matejlatin](https://github.com/matejlatin)
@@ -60,7 +60,7 @@ Follow [@gutenbergtype](http://twitter.com/gutenbergtype) for updates.
 *Jan 20, 2016*
 
 - Code optimized and simplified by use of mixins,
-- horizontal rule styling now more flexible with its own configuration,
+- horizontal rule styling now more flexible with its configuration,
 - Attention Grabber — a new element,
 - quotes — an alternative to blockquotes; can be floated,
 - added an option for paragraph indenting.
@@ -75,4 +75,4 @@ Follow [@gutenbergtype](http://twitter.com/gutenbergtype) for updates.
 - two default themes & custom theme options,
 - mobile first with a breakpoint for desktop screens,
 - sizes based on Perfect Fifth modular scale,
-- fixImgHeight.js — a small & lightweight script that resizes images so they fit the baseline grid.
+- fixImgHeight.js — a small & lightweight script that resizes images, so they fit the baseline grid.
