@@ -21,7 +21,7 @@ Gutenberg is built with Sass and [Grunt](http://gruntjs.com/). Fork or download 
 
 Johannes Gutenberg invented a printing press with movable type more than 500 years ago. His invention led to improved readability of books and enabled a distribution on a large scale. His invention improved a medium and took it to another level. This web typography starter kit aims to do exactly the same for another medium — the web.
 
-##Contributors
+## Contributors
 
 * [@matejlatin](https://github.com/matejlatin)
 * [@marcobiedermann](https://github.com/marcobiedermann)
