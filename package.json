@@ -5,7 +5,7 @@
   "main": "index.html",
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "stylelint src/style/**/*.scss"
   },
   "repository": {
     "type": "git",
