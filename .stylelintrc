@@ -1,3 +1,40 @@
 {
-  "extends": "stylelint-config-primer"
+  "extends": "stylelint-config-primer",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "selector-max-type": 3,
+    "order/properties-order": [],
+    "order/properties-alphabetical-order": true,
+    "selector-no-qualifying-type": [true, {
+      "ignore": ["attribute", "class"]
+    }],
+    "at-rule-blacklist": [],
+    "plugin/no-unsupported-browser-features": [true, {
+      "severity": "warning",
+      "browsers": [
+        "> 5%",
+        "last 2 firefox versions",
+        "last 2 chrome versions",
+        "last 2 safari versions",
+        "last 2 edge versions",
+        "ie 11"
+      ],
+      "ignore": ["rem", "text-size-adjust"]
+    }],
+    "declaration-property-value-blacklist": {
+      "/^background/": [
+        "http:",
+        "https:"
+      ],
+      "/^border/": [
+        "none"
+      ],
+      "/.+/": [
+        "initial"
+      ]
+    },
+    "property-no-vendor-prefix": null
+  }
 }
