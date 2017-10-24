@@ -5,8 +5,7 @@
   "main": "index.html",
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "grunt lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -37,6 +36,7 @@
     "postcss-reporter": "^1.4.1",
     "postcss-scss": "^1.0.2",
     "stylelint": "^8.2.0",
-    "stylelint-config-primer": "^2.1.0"
+    "stylelint-config-primer": "^2.1.0",
+    "stylelint-scss": "^2.1.0"
   }
 }
