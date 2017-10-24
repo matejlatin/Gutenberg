@@ -74,7 +74,6 @@ sub {
 ========================================================================== */
 
 @if $paragraph-indent == true {
-
   p + p {
     @include margin-top(-1);
     text-indent: #{ $leading + "px"};

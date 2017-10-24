@@ -4,8 +4,8 @@
 // Grid background
 .grid {
   background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, 0.3) 1px, transparent 1px);
-  background-repeat: repeat;
   background-position: left top;
+  background-repeat: repeat;
   background-size: 100% #{$leading + "px"};
   background-size: 100% #{$leading-rem + "rem"};
 
@@ -41,41 +41,40 @@
   @else if $edit-mode == false {
     display: none;
   }
-  position: fixed;
-  top: #{$leading + "px"};
-  right: #{$leading + "px"};
-  height: 32px;
-  padding: 0 10px 0 20px;
   background-color: #231f20;
   border-radius: 25px;
+  height: 32px;
+  padding: 0 10px 0 20px;
+  position: fixed;
+  right: #{$leading + "px"};
+  top: #{$leading + "px"};
 
   @media screen and (min-width: #{ $max-width + 5 + "em"}) {
-    top: #{$leading-desktop + "px"};
     right: #{$leading-desktop + "px"};
+    top: #{$leading-desktop + "px"};
   }
 
 }
 
 .btn-toggle-grid {
+  background: url("../../assets/images/grid-icons.png") top right/32px no-repeat;
+  color: #fff;
   display: block;
-  height: 32px;
-  padding-right: 35px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
+  height: 32px;
   line-height: 34px;
-  color: #fff;
+  padding-right: 35px;
   text-decoration: none;
   text-transform: uppercase;
-  background: url("../../assets/images/grid-icons.png") top right no-repeat;
-  background-size: 32px;
 
   @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
-    top: #{$leading + "px"};
     right: #{$leading + "px"};
+    top: #{$leading + "px"};
   }
 
   &:hover {

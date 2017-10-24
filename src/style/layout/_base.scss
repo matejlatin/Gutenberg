@@ -6,8 +6,8 @@ html {
 
   @media screen and (min-width: #{ $max-width + 5 + "em"}) {
     margin: 0;
-    width: 100%;
     max-width: none;
+    width: 100%;
   }
 
 }
@@ -15,15 +15,15 @@ html {
 // Font defaults
 html {
   box-sizing: border-box;
-  font-size: #{$base + "px"};
-  font-size: #{$base-font-size + '%'};
-  font-family: $font-body;
   color: $color-font-body;
+  font-family: $font-body;
+  font-size: #{$base + "px"};
+  font-size: #{$base-font-size + "%"};
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
   @media screen and (min-width: #{ $max-width + 5 + "em"}) {
-    font-size: #{$base-desktop + 'px'};
+    font-size: #{$base-desktop + "px"};
     font-size: #{$base-font-size-desktop / 100 + "rem"};
   }
 
@@ -43,10 +43,10 @@ html {
 
     @include line-height(1);
     @include margin-bottom(1);
-    max-width: #{$max-width * $base-desktop + "px"};
-    max-width: #{$max-width + "rem"};
     margin-left: auto;
     margin-right: auto;
+    max-width: #{$max-width * $base-desktop + "px"};
+    max-width: #{$max-width + "rem"};
   }
 
 }
