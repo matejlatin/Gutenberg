@@ -39,7 +39,9 @@ figure.align-right {
     @if $paragraph-indent == true {
       @include padding-equal(1);
       @include margin-bottom(0);
-    } @else {
+    }
+
+    @else {
       @include padding(0, 1);
     }
 
