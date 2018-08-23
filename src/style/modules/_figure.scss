@@ -2,7 +2,7 @@ figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
   display: block;
-  font-size: .8125rem;
+  @include font-size(0.8125);
   font-style: italic;
   margin-bottom: 0;
   text-align: center;

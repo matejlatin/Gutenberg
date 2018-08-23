@@ -10,7 +10,7 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 
 @import "gutenberg-config";
 
-.gutenberg {
+#{$gutenberg-selector} {
   @import "mixins/font-size";
   @import "mixins/line-height";
   @import "mixins/margin";
@@ -20,9 +20,7 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
   @import "helpers/grid";
 
   @import "layout/aside";
-  @at-root {
-    @import "layout/base";
-  }
+  @import "layout/base";
   @import "layout/footer";
   @import "layout/header";
   @import "layout/main";

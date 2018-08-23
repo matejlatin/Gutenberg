@@ -3,28 +3,11 @@
    ========================================================================== */
 }
 
-body,
-html {
+& {
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     margin: 0;
     width: 100%;
     max-width: none;
-  }
-}
-
-// Font defaults
-html {
-  box-sizing: border-box;
-  font-size: #{$base + 'px'};
-  font-size: #{$base-font-size + '%'};
-  font-family: $font-body;
-  color: $color-font-body;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    font-size: #{$base-desktop + 'px'};
-    @if $use-rem { font-size: #{$base-font-size-desktop / 100 + 'rem'}; }
   }
 }
 
@@ -50,12 +33,17 @@ html {
 
 }
 
+// Font defaults
+& {
+  @include font-size(1);
+  font-family: $font-body;
+  color: $color-font-body;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
+  box-sizing: border-box;
 }
