@@ -132,22 +132,22 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 }
 /* Grid
    ========================================================================== */
-.gutenberg .grid, .gutenberg .grid-double {
+.gutenberg.grid, .gutenberg.grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
   background-position: left top;
   background-repeat: repeat;
   background-size: 100% 26px;
 }
 @media screen and (min-width: 40em) {
-  .gutenberg .grid, .gutenberg .grid-double {
+  .gutenberg.grid, .gutenberg.grid-double {
     background-size: 100% 31px;
   }
 }
-.gutenberg .grid-double {
+.gutenberg.grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px);
 }
 @media screen and (min-width: 40em) {
-  .gutenberg .grid-double {
+  .gutenberg.grid-double {
     background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 15.5px, rgba(0, 170, 255, 0.2) 15.5px, transparent 16.5px, transparent 31px);
   }
 }
@@ -205,35 +205,18 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 /* Defaults
    ========================================================================== */
 @media screen and (min-width: 40em) {
-  body,
-  html {
+  .gutenberg {
     margin: 0;
     width: 100%;
     max-width: none;
   }
 }
-
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-size: 100%;
-  font-family: Merriweather, Georgia, serif;
-  color: #222;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-@media screen and (min-width: 40em) {
-  html {
-    font-size: 18px;
-  }
-}
-
-* {
+.gutenberg * {
   line-height: 26px;
   margin: 0px 0px 26px;
 }
 @media screen and (min-width: 40em) {
-  * {
+  .gutenberg * {
     line-height: 31px;
     margin-bottom: 31px;
     max-width: 630px;
@@ -241,15 +224,22 @@ html {
     margin-right: auto;
   }
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.gutenberg {
+  font-size: 16px;
+  font-family: Merriweather, Georgia, serif;
+  color: #222;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-
-body {
-  margin: 0;
+@media screen and (min-width: 40em) {
+  .gutenberg {
+    font-size: 18px;
+  }
+}
+.gutenberg *,
+.gutenberg *::before,
+.gutenberg *::after {
+  box-sizing: border-box;
 }
 .gutenberg footer {
   display: block;
@@ -339,10 +329,15 @@ body > .gutenberg footer {
   line-height: 26px;
   color: #222;
   display: block;
-  font-size: .8125rem;
+  font-size: 13px;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
+}
+@media screen and (min-width: 40em) {
+  .gutenberg figcaption {
+    font-size: 14.625px;
+  }
 }
 @media screen and (min-width: 40em) {
   .gutenberg figcaption {
