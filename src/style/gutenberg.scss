@@ -10,40 +10,44 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 
 @import "gutenberg-config";
 
-@import "mixins/font-size";
-@import "mixins/line-height";
-@import "mixins/margin";
-@import "mixins/padding";
+.gutenberg {
+  @import "mixins/font-size";
+  @import "mixins/line-height";
+  @import "mixins/margin";
+  @import "mixins/padding";
 
-@import "helpers/alignment";
-@import "helpers/grid";
+  @import "helpers/alignment";
+  @import "helpers/grid";
 
-@import "layout/aside";
-@import "layout/base";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
-@import "layout/section";
+  @import "layout/aside";
+  @at-root {
+    @import "layout/base";
+  }
+  @import "layout/footer";
+  @import "layout/header";
+  @import "layout/main";
+  @import "layout/section";
 
-@import "modules/anchor";
-@import "modules/article";
-@import "modules/audio";
-@import "modules/canvas";
-@import "modules/code";
-@import "modules/details";
-@import "modules/figure";
-@import "modules/form";
-@import "modules/heading";
-@import "modules/horizontal-rule";
-@import "modules/image";
-@import "modules/list";
-@import "modules/navigation";
-@import "modules/progress";
-@import "modules/quote";
-@import "modules/table";
-@import "modules/template";
-@import "modules/text";
-@import "modules/video";
+  @import "modules/anchor";
+  @import "modules/article";
+  @import "modules/audio";
+  @import "modules/canvas";
+  @import "modules/code";
+  @import "modules/details";
+  @import "modules/figure";
+  @import "modules/form";
+  @import "modules/heading";
+  @import "modules/horizontal-rule";
+  @import "modules/image";
+  @import "modules/list";
+  @import "modules/navigation";
+  @import "modules/progress";
+  @import "modules/quote";
+  @import "modules/table";
+  @import "modules/template";
+  @import "modules/text";
+  @import "modules/video";
+}
 
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),

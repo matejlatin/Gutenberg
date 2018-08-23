@@ -1,5 +1,7 @@
+@at-root {
 /* Grid
    ========================================================================== */
+}
 
 // Grid background
 .grid {
@@ -7,14 +9,14 @@
   background-position: left top;
   background-repeat: repeat;
   background-size: 100% #{$leading + 'px'};
-  background-size: 100% #{$leading-rem + 'rem'};
+  @if $use-rem { background-size: 100% #{$leading-rem + 'rem'}; }
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
     background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
+    @if $use-rem { background-size: 100% #{$leading-rem + 'rem'}; }
   }
 
 }

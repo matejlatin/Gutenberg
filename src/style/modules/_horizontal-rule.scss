@@ -1,5 +1,4 @@
 // Horizontal rule
-$hr-style: line; // [ line / type ]
 $hr-type-content: '***'; // [ '***' ]
 $hr-type-char-spacing: .2em; // [ .2em ]
 $hr-margin: 2;
@@ -17,7 +16,7 @@ hr {
   color: $hr-color;
   display: block;
   height: #{$leading + 'px'};
-  height: #{$leading-rem + 'rem'};
+  @if $use-rem { height: #{$leading-rem + 'rem'}; }
   margin-right: auto;
   margin-left: auto;
 
@@ -30,12 +29,12 @@ hr {
     @include margin-top($hr-margin);
     @include margin-bottom($hr-margin);
     height: #{$leading + 'px'};
-    height: #{$leading-rem + 'rem'};
+    @if $use-rem { height: #{$leading-rem + 'rem'}; }
   }
 
   @if $hr-style == 'line' {
     background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
+    @if $use-rem { background-size: 100% #{$leading-rem + 'rem'}; }
     background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
 
     @if $hr-width == null {
@@ -52,7 +51,7 @@ hr {
 
     @if $hr-style == 'line' {
       background-size: 100% #{$leading + 'px'};
-      background-size: 100% #{$leading-rem + 'rem'};
+      @if $use-rem { background-size: 100% #{$leading-rem + 'rem'}; }
       background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
     }
 

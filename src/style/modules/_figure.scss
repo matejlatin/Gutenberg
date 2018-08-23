@@ -34,7 +34,7 @@ figure.floatRight {
     @import '../mixins/padding';
 
     max-width: #{.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{.5 * $max-width + 'rem'};
+    @if $use-rem { max-width: #{.5 * $max-width + 'rem'}; }
 
     @if $paragraph-indent == true {
       @include padding-equal(1);

@@ -1,15 +1,15 @@
+@at-root {
 /* Defaults
    ========================================================================== */
+}
 
 body,
 html {
-
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     margin: 0;
     width: 100%;
     max-width: none;
   }
-
 }
 
 // Font defaults
@@ -24,9 +24,8 @@ html {
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     font-size: #{$base-desktop + 'px'};
-    font-size: #{$base-font-size-desktop / 100 + 'rem'};
+    @if $use-rem { font-size: #{$base-font-size-desktop / 100 + 'rem'}; }
   }
-
 }
 
 // Line-height & margin reset
@@ -44,7 +43,7 @@ html {
     @include line-height(1);
     @include margin-bottom(1);
     max-width: #{$max-width * $base-desktop + 'px'};
-    max-width: #{$max-width + 'rem'};
+    @if $use-rem { max-width: #{$max-width + 'rem'}; }
     margin-left: auto;
     margin-right: auto;
   }
