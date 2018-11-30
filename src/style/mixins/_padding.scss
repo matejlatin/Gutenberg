@@ -2,13 +2,13 @@
 @mixin padding($top, $right, $bottom:null, $left:null) {
   @if $left == null and $bottom == null {
     padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'};
-    padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'};
+    @if $use-rem { padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'}; }
   } @else if $left == null or $left == $right {
     padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
-    padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'};
+    @if $use-rem { padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'}; }
   } @else {
     padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
-    padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
+    @if $use-rem { padding: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'}; }
   }
 
   // padding-top: #{ $top * $leading + 'px'};
@@ -23,5 +23,5 @@
 
 @mixin padding-equal($number) {
   padding: #{ $number * $leading + 'px'};
-  padding: #{ $number * $leading-rem + 'rem'};
+  @if $use-rem { padding: #{ $number * $leading-rem + 'rem'}; }
 }

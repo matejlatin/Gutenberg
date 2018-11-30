@@ -3,6 +3,15 @@
 
 $edit-mode: true !default; // [ true / false ] - Enables/disables the grid toggle button.
 
+$gutenberg-selector: ".gutenberg" !default; // Can be complex selector such as "[data-slate-editor=\"true\"]"
+
+$use-rem: false !default; // disable 'rem' units which depend on global <html> element style.
+
+$use-grid-button: true !default;
+
+// Horizontal Rule style
+$hr-style: type !default; // [ line / type ]
+
 // Theme / Fonts
 $theme: Merriweather !default; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]

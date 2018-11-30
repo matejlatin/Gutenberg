@@ -69,15 +69,17 @@ sub {
   bottom: -0.25em;
 }
 
+@at-root {
 /* Paragraph
 ========================================================================== */
+}
 
 @if $paragraph-indent == true {
 
   p + p {
     @include margin-top(-1);
     text-indent: #{ $leading + 'px'};
-    text-indent: #{ $leading-rem + 'rem'};
+    @if $use-rem { text-indent: #{ $leading-rem + 'rem'}; }
 
   }
 
@@ -89,7 +91,7 @@ sub {
       $leading-rem: $leading-rem-desktop;
 
       text-indent: #{ $leading + 'px'};
-      text-indent: #{ $leading-rem + 'rem'};
+      @if $use-rem { text-indent: #{ $leading-rem + 'rem'}; }
     }
 
   }

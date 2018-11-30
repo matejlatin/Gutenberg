@@ -1,5 +1,10 @@
 // Font-size
 @mixin font-size($number) {
   font-size: #{ $number * $base + 'px'};
-  font-size: #{ $number + 'rem'};
+  @if $use-rem { font-size: #{ $number + 'rem'}; }
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    font-size: #{ $number * $base-desktop + 'px'};
+    @if $use-rem { font-size: #{ $number + 'rem'}; }
+  }
 }

@@ -2,7 +2,7 @@ figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
   display: block;
-  font-size: .8125rem;
+  @include font-size(0.8125);
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
@@ -34,7 +34,7 @@ figure.floatRight {
     @import '../mixins/padding';
 
     max-width: #{.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{.5 * $max-width + 'rem'};
+    @if $use-rem { max-width: #{.5 * $max-width + 'rem'}; }
 
     @if $paragraph-indent == true {
       @include padding-equal(1);

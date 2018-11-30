@@ -80,46 +80,48 @@
 
   // 2. THE JAVASCRIPT WAY
   // Construct the function
-  function fixImgHeight() {
+  function fixImagesHeight() {
+
+    function fixImgHeight (img) {
+      //Reset height first
+      img.style.height = 'auto';
+      // Get original height
+      var imgOriginalHeight = img.offsetHeight;
+      // Calculate new height
+      var div = Math.floor(imgOriginalHeight / lineHeight);
+      var imgNewHeight = lineHeight * div;
+      // Set new height
+      img.style.height = imgNewHeight + 'px';
+    }
 
     // Get all images
     var images = document.querySelectorAll('img');
-
-    // Get line-height
-    var element = document.getElementsByTagName('body')[0];
-    var style = window.getComputedStyle(element);
-    var lineHeight = parseInt(style.getPropertyValue('line-height'));
-    var i;
     var length = images.length;
-    var imgOriginalHeight;
-    var div;
-    var imgNewHeight;
 
     // For each image in images get original height, calculate height rounded to baseline grid, set new height
-    for (i = 0; i < length; ++i) {
+    for (var i = 0; i < length; ++i) {
+      // Get line-height
+      var style = window.getComputedStyle(images[i]);
+      var lineHeight = parseInt(style.getPropertyValue('line-height'));
 
-      //Reset height first
-      images[i].style.height = 'auto';
-
-      // Get original height
-      imgOriginalHeight = images[i].offsetHeight;
-
-      // Calculate new height
-      div = Math.floor(imgOriginalHeight / lineHeight);
-      imgNewHeight = lineHeight * div;
-
-      // Set new height
-      images[i].style.height = imgNewHeight + 'px';
+      // Wait until the image is loaded to measure its height.
+      if (images[i].complete) {
+        fixImgHeight(images[i]);
+      } else {
+        images[i].addEventListener('load', function () {
+          fixImgHeight(this)
+        })
+      }
     }
   }
 
   document.getElementById('btnToggleGrid').onclick = toggleGrid;
 
   //Fix once on first page load
-  fixImgHeight();
+  fixImagesHeight();
 
   //Make sure that we fix images on each window resize (add debounce for performance)
-  window.addEventListener('resize', debounce(fixImgHeight, 50), true);
+  window.addEventListener('resize', debounce(fixImagesHeight, 50), true);
 
 
   //helper: debounce

@@ -6,8 +6,21 @@
   <title>Gutenberg — Meaningful Web Typography Starter Kit</title>
   <link rel="stylesheet" href="assets/combined.min.css">
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
+  <style>
+    @media screen and (min-width: 40em) {
+      body,
+      html {
+          margin: 0;
+          width: 100%;
+          max-width: none;
+      }
+    }
+    body {
+      margin: 0;
+    }
+  </style>
 </head>
-<body>
+<body class="gutenberg">
   <div class="toggleWrapper">
     <a id="btnToggleGrid" class="btnToggleGrid" href="javascript:void(0)">Turn Grid On</a>
   </div>
