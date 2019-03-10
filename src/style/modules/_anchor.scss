@@ -1,10 +1,10 @@
 /* Links
    ========================================================================== */
 
-$color-link-normal: $color-font-body;
-$color-link-hover: $color-font-body;
-$color-link-active: #f00;
-$color-link-visited: $color-font-light;
+$color-link-normal: $color-font-body !default;
+$color-link-hover: $color-font-body !default;
+$color-link-active: #f00 !default;
+$color-link-visited: $color-font-light !default;
 
 a {
   background: transparent;
