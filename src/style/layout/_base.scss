@@ -24,7 +24,7 @@ html {
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     font-size: #{$base-desktop + 'px'};
-    font-size: #{$base-font-size-desktop / 100 + 'rem'};
+    font-size: #{calc($base-font-size-desktop / 100) + 'rem'};
   }
 
 }
