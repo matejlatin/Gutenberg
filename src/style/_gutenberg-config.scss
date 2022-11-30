@@ -42,14 +42,14 @@ $color-font-figcaption: $color-font-body !default;
    ========================================================================== */
 
 // Mobile base & leading
-$base: 16 * ($base-font-size / 100);
+$base: 16 * calc($base-font-size / 100);
 $leading: round($base * $line-height);
-$leading-rem: $leading / $base;
+$leading-rem: calc($leading / $base);
 
 // Desktop base & leading
-$base-desktop: 16 * ($base-font-size-desktop / 100);
+$base-desktop: 16 * calc($base-font-size-desktop / 100);
 $leading-desktop: round($base-desktop * $line-height-desktop);
-$leading-rem-desktop: $leading-desktop / $base-desktop;
+$leading-rem-desktop: calc($leading-desktop / $base-desktop);
 
 /* Font themes
    ========================================================================== */
